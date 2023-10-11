@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: self-hosted  # Run on any available GitHub-hosted runner
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies and build
+      run: |
+        # Add your build commands here
+
+    - name: Run linter (Clang-Format)
+      run: |
+        # Add your Clang-Format command here
+
+    - name: Run tests
+      run: |
+        # Add your test commands here
