@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Proj"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Tristan/Documents/UP/Semseter\ 2\ 2023/COS214/Proj/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Tristan/Documents/UP/Semseter\ 2\ 2023/COS214/Proj/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Tristan/Documents/UP/Semseter\ 2\ 2023/COS214/Proj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Tristan/Documents/UP/Semseter\ 2\ 2023/COS214/Proj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Tristan/Documents/UP/Semseter\ 2\ 2023/COS214/Proj/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Tristan/Documents/UP/Semseter\ 2\ 2023/COS214/Proj/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Tristan/Documents/UP/Semseter\ 2\ 2023/COS214/Proj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Tristan/Documents/UP/Semseter\ 2\ 2023/COS214/Proj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Tristan/Documents/UP/Semseter\ 2\ 2023/COS214/Proj/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Tristan/Documents/UP/Semseter\ 2\ 2023/COS214/Proj/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Tristan/Documents/UP/Semseter\ 2\ 2023/COS214/Proj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Tristan/Documents/UP/Semseter\ 2\ 2023/COS214/Proj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Proj">
+				<Option output="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/cmake-build-debug/Proj" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/root/StockAndFinance"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Tristan/Documents/UP/Semseter\ 2\ 2023/COS214/Proj/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proj"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Tristan/Documents/UP/Semseter\ 2\ 2023/COS214/Proj/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Tristan/Documents/UP/Semseter\ 2\ 2023/COS214/Proj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Tristan/Documents/UP/Semseter\ 2\ 2023/COS214/Proj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Proj/fast">
+				<Option output="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/cmake-build-debug/Proj" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/root/StockAndFinance"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Tristan/Documents/UP/Semseter\ 2\ 2023/COS214/Proj/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proj/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Tristan/Documents/UP/Semseter\ 2\ 2023/COS214/Proj/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Tristan/Documents/UP/Semseter\ 2\ 2023/COS214/Proj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/Tristan/Documents/UP/Semseter\ 2\ 2023/COS214/Proj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/root/StockAndFinance/Finance.cpp">
+			<Option target="Proj"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/root/StockAndFinance/Finance.h">
+			<Option target="Proj"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/root/StockAndFinance/Shelf.cpp">
+			<Option target="Proj"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/root/StockAndFinance/Shelf.h">
+			<Option target="Proj"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/root/StockAndFinance/Stock.cpp">
+			<Option target="Proj"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/root/StockAndFinance/Stock.h">
+			<Option target="Proj"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/root/StockAndFinance/StockAndFinanceFacade.cpp">
+			<Option target="Proj"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/root/StockAndFinance/StockAndFinanceFacade.h">
+			<Option target="Proj"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
