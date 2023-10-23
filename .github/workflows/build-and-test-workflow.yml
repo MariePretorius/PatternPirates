@@ -16,7 +16,7 @@ jobs:
 
     - name: Compile
       run: |
-        g++ -o main code/main.cpp
+        make
     - name: Execute
       run: |
-        ./main
+        make run
