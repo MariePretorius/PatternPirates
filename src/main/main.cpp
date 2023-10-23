@@ -4,7 +4,7 @@
 using namespace std;
 int main(){
     Person p;
-    Kitchen k;
+    Kitchen k
 
     p.sayHello();
     k.sayHello();
