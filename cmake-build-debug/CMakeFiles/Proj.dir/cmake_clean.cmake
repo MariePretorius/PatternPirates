@@ -4,6 +4,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/Proj.dir/root/StockAndFinance/Stock.cpp.o"
   "CMakeFiles/Proj.dir/root/StockAndFinance/StockAndFinanceFacade.cpp.o"
   "CMakeFiles/Proj.dir/root/main.cpp.o"
+  "CMakeFiles/Proj.dir/src/Floor/Floor.cpp.o"
+  "CMakeFiles/Proj.dir/src/Floor/FloorAndWaitersFacade.cpp.o"
+  "CMakeFiles/Proj.dir/src/Floor/Waiter.cpp.o"
   "Proj"
   "Proj.pdb"
 )

@@ -122,13 +122,55 @@ CMakeFiles/Proj.dir/root/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proj.dir/root/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/root/main.cpp" -o CMakeFiles/Proj.dir/root/main.cpp.s
 
+CMakeFiles/Proj.dir/src/Floor/FloorAndWaitersFacade.cpp.o: CMakeFiles/Proj.dir/flags.make
+CMakeFiles/Proj.dir/src/Floor/FloorAndWaitersFacade.cpp.o: ../src/Floor/FloorAndWaitersFacade.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Proj.dir/src/Floor/FloorAndWaitersFacade.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Proj.dir/src/Floor/FloorAndWaitersFacade.cpp.o -c "/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/src/Floor/FloorAndWaitersFacade.cpp"
+
+CMakeFiles/Proj.dir/src/Floor/FloorAndWaitersFacade.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Proj.dir/src/Floor/FloorAndWaitersFacade.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/src/Floor/FloorAndWaitersFacade.cpp" > CMakeFiles/Proj.dir/src/Floor/FloorAndWaitersFacade.cpp.i
+
+CMakeFiles/Proj.dir/src/Floor/FloorAndWaitersFacade.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proj.dir/src/Floor/FloorAndWaitersFacade.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/src/Floor/FloorAndWaitersFacade.cpp" -o CMakeFiles/Proj.dir/src/Floor/FloorAndWaitersFacade.cpp.s
+
+CMakeFiles/Proj.dir/src/Floor/Waiter.cpp.o: CMakeFiles/Proj.dir/flags.make
+CMakeFiles/Proj.dir/src/Floor/Waiter.cpp.o: ../src/Floor/Waiter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Proj.dir/src/Floor/Waiter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Proj.dir/src/Floor/Waiter.cpp.o -c "/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/src/Floor/Waiter.cpp"
+
+CMakeFiles/Proj.dir/src/Floor/Waiter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Proj.dir/src/Floor/Waiter.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/src/Floor/Waiter.cpp" > CMakeFiles/Proj.dir/src/Floor/Waiter.cpp.i
+
+CMakeFiles/Proj.dir/src/Floor/Waiter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proj.dir/src/Floor/Waiter.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/src/Floor/Waiter.cpp" -o CMakeFiles/Proj.dir/src/Floor/Waiter.cpp.s
+
+CMakeFiles/Proj.dir/src/Floor/Floor.cpp.o: CMakeFiles/Proj.dir/flags.make
+CMakeFiles/Proj.dir/src/Floor/Floor.cpp.o: ../src/Floor/Floor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Proj.dir/src/Floor/Floor.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Proj.dir/src/Floor/Floor.cpp.o -c "/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/src/Floor/Floor.cpp"
+
+CMakeFiles/Proj.dir/src/Floor/Floor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Proj.dir/src/Floor/Floor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/src/Floor/Floor.cpp" > CMakeFiles/Proj.dir/src/Floor/Floor.cpp.i
+
+CMakeFiles/Proj.dir/src/Floor/Floor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proj.dir/src/Floor/Floor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/src/Floor/Floor.cpp" -o CMakeFiles/Proj.dir/src/Floor/Floor.cpp.s
+
 # Object files for target Proj
 Proj_OBJECTS = \
 "CMakeFiles/Proj.dir/root/StockAndFinance/Finance.cpp.o" \
 "CMakeFiles/Proj.dir/root/StockAndFinance/Shelf.cpp.o" \
 "CMakeFiles/Proj.dir/root/StockAndFinance/StockAndFinanceFacade.cpp.o" \
 "CMakeFiles/Proj.dir/root/StockAndFinance/Stock.cpp.o" \
-"CMakeFiles/Proj.dir/root/main.cpp.o"
+"CMakeFiles/Proj.dir/root/main.cpp.o" \
+"CMakeFiles/Proj.dir/src/Floor/FloorAndWaitersFacade.cpp.o" \
+"CMakeFiles/Proj.dir/src/Floor/Waiter.cpp.o" \
+"CMakeFiles/Proj.dir/src/Floor/Floor.cpp.o"
 
 # External object files for target Proj
 Proj_EXTERNAL_OBJECTS =
@@ -138,9 +180,12 @@ Proj: CMakeFiles/Proj.dir/root/StockAndFinance/Shelf.cpp.o
 Proj: CMakeFiles/Proj.dir/root/StockAndFinance/StockAndFinanceFacade.cpp.o
 Proj: CMakeFiles/Proj.dir/root/StockAndFinance/Stock.cpp.o
 Proj: CMakeFiles/Proj.dir/root/main.cpp.o
+Proj: CMakeFiles/Proj.dir/src/Floor/FloorAndWaitersFacade.cpp.o
+Proj: CMakeFiles/Proj.dir/src/Floor/Waiter.cpp.o
+Proj: CMakeFiles/Proj.dir/src/Floor/Floor.cpp.o
 Proj: CMakeFiles/Proj.dir/build.make
 Proj: CMakeFiles/Proj.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Proj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Proj"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Proj.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

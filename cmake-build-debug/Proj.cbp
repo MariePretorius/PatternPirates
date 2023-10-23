@@ -111,6 +111,24 @@
 		<Unit filename="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/root/main.cpp">
 			<Option target="Proj"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/src/Floor/Floor.cpp">
+			<Option target="Proj"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/src/Floor/Floor.h">
+			<Option target="Proj"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/src/Floor/FloorAndWaitersFacade.cpp">
+			<Option target="Proj"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/src/Floor/FloorAndWaitersFacade.h">
+			<Option target="Proj"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/src/Floor/Waiter.cpp">
+			<Option target="Proj"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/src/Floor/Waiter.h">
+			<Option target="Proj"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

@@ -258,6 +258,87 @@ root/main.cpp.s:
 	$(MAKE) -f CMakeFiles/Proj.dir/build.make CMakeFiles/Proj.dir/root/main.cpp.s
 .PHONY : root/main.cpp.s
 
+src/Floor/Floor.o: src/Floor/Floor.cpp.o
+
+.PHONY : src/Floor/Floor.o
+
+# target to build an object file
+src/Floor/Floor.cpp.o:
+	$(MAKE) -f CMakeFiles/Proj.dir/build.make CMakeFiles/Proj.dir/src/Floor/Floor.cpp.o
+.PHONY : src/Floor/Floor.cpp.o
+
+src/Floor/Floor.i: src/Floor/Floor.cpp.i
+
+.PHONY : src/Floor/Floor.i
+
+# target to preprocess a source file
+src/Floor/Floor.cpp.i:
+	$(MAKE) -f CMakeFiles/Proj.dir/build.make CMakeFiles/Proj.dir/src/Floor/Floor.cpp.i
+.PHONY : src/Floor/Floor.cpp.i
+
+src/Floor/Floor.s: src/Floor/Floor.cpp.s
+
+.PHONY : src/Floor/Floor.s
+
+# target to generate assembly for a file
+src/Floor/Floor.cpp.s:
+	$(MAKE) -f CMakeFiles/Proj.dir/build.make CMakeFiles/Proj.dir/src/Floor/Floor.cpp.s
+.PHONY : src/Floor/Floor.cpp.s
+
+src/Floor/FloorAndWaitersFacade.o: src/Floor/FloorAndWaitersFacade.cpp.o
+
+.PHONY : src/Floor/FloorAndWaitersFacade.o
+
+# target to build an object file
+src/Floor/FloorAndWaitersFacade.cpp.o:
+	$(MAKE) -f CMakeFiles/Proj.dir/build.make CMakeFiles/Proj.dir/src/Floor/FloorAndWaitersFacade.cpp.o
+.PHONY : src/Floor/FloorAndWaitersFacade.cpp.o
+
+src/Floor/FloorAndWaitersFacade.i: src/Floor/FloorAndWaitersFacade.cpp.i
+
+.PHONY : src/Floor/FloorAndWaitersFacade.i
+
+# target to preprocess a source file
+src/Floor/FloorAndWaitersFacade.cpp.i:
+	$(MAKE) -f CMakeFiles/Proj.dir/build.make CMakeFiles/Proj.dir/src/Floor/FloorAndWaitersFacade.cpp.i
+.PHONY : src/Floor/FloorAndWaitersFacade.cpp.i
+
+src/Floor/FloorAndWaitersFacade.s: src/Floor/FloorAndWaitersFacade.cpp.s
+
+.PHONY : src/Floor/FloorAndWaitersFacade.s
+
+# target to generate assembly for a file
+src/Floor/FloorAndWaitersFacade.cpp.s:
+	$(MAKE) -f CMakeFiles/Proj.dir/build.make CMakeFiles/Proj.dir/src/Floor/FloorAndWaitersFacade.cpp.s
+.PHONY : src/Floor/FloorAndWaitersFacade.cpp.s
+
+src/Floor/Waiter.o: src/Floor/Waiter.cpp.o
+
+.PHONY : src/Floor/Waiter.o
+
+# target to build an object file
+src/Floor/Waiter.cpp.o:
+	$(MAKE) -f CMakeFiles/Proj.dir/build.make CMakeFiles/Proj.dir/src/Floor/Waiter.cpp.o
+.PHONY : src/Floor/Waiter.cpp.o
+
+src/Floor/Waiter.i: src/Floor/Waiter.cpp.i
+
+.PHONY : src/Floor/Waiter.i
+
+# target to preprocess a source file
+src/Floor/Waiter.cpp.i:
+	$(MAKE) -f CMakeFiles/Proj.dir/build.make CMakeFiles/Proj.dir/src/Floor/Waiter.cpp.i
+.PHONY : src/Floor/Waiter.cpp.i
+
+src/Floor/Waiter.s: src/Floor/Waiter.cpp.s
+
+.PHONY : src/Floor/Waiter.s
+
+# target to generate assembly for a file
+src/Floor/Waiter.cpp.s:
+	$(MAKE) -f CMakeFiles/Proj.dir/build.make CMakeFiles/Proj.dir/src/Floor/Waiter.cpp.s
+.PHONY : src/Floor/Waiter.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -282,6 +363,15 @@ help:
 	@echo "... root/main.o"
 	@echo "... root/main.i"
 	@echo "... root/main.s"
+	@echo "... src/Floor/Floor.o"
+	@echo "... src/Floor/Floor.i"
+	@echo "... src/Floor/Floor.s"
+	@echo "... src/Floor/FloorAndWaitersFacade.o"
+	@echo "... src/Floor/FloorAndWaitersFacade.i"
+	@echo "... src/Floor/FloorAndWaitersFacade.s"
+	@echo "... src/Floor/Waiter.o"
+	@echo "... src/Floor/Waiter.i"
+	@echo "... src/Floor/Waiter.s"
 .PHONY : help
 
 
