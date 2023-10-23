@@ -14,4 +14,5 @@ add_executable(Proj
         root/StockAndFinance/StockAndFinanceFacade.h
         root/StockAndFinance/StockAndFinanceFacade.cpp
         root/StockAndFinance/Stock.h
-        root/StockAndFinance/Stock.cpp)
+        root/StockAndFinance/Stock.cpp
+        root/main.cpp)

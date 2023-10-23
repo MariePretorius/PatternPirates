@@ -5,13 +5,15 @@
 #ifndef PROJ_SHELF_H
 #define PROJ_SHELF_H
 
+#include "Stock.h"
+#include <list>
 
 class Shelf
 {
 public:
 
 private:
-    List<Stock> stockList;
+    std::list<Stock> stockList;
     int currentCapacity;
     int maxCapacity;
 };

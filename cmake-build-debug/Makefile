@@ -231,6 +231,33 @@ root/StockAndFinance/StockAndFinanceFacade.cpp.s:
 	$(MAKE) -f CMakeFiles/Proj.dir/build.make CMakeFiles/Proj.dir/root/StockAndFinance/StockAndFinanceFacade.cpp.s
 .PHONY : root/StockAndFinance/StockAndFinanceFacade.cpp.s
 
+root/main.o: root/main.cpp.o
+
+.PHONY : root/main.o
+
+# target to build an object file
+root/main.cpp.o:
+	$(MAKE) -f CMakeFiles/Proj.dir/build.make CMakeFiles/Proj.dir/root/main.cpp.o
+.PHONY : root/main.cpp.o
+
+root/main.i: root/main.cpp.i
+
+.PHONY : root/main.i
+
+# target to preprocess a source file
+root/main.cpp.i:
+	$(MAKE) -f CMakeFiles/Proj.dir/build.make CMakeFiles/Proj.dir/root/main.cpp.i
+.PHONY : root/main.cpp.i
+
+root/main.s: root/main.cpp.s
+
+.PHONY : root/main.s
+
+# target to generate assembly for a file
+root/main.cpp.s:
+	$(MAKE) -f CMakeFiles/Proj.dir/build.make CMakeFiles/Proj.dir/root/main.cpp.s
+.PHONY : root/main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -252,6 +279,9 @@ help:
 	@echo "... root/StockAndFinance/StockAndFinanceFacade.o"
 	@echo "... root/StockAndFinance/StockAndFinanceFacade.i"
 	@echo "... root/StockAndFinance/StockAndFinanceFacade.s"
+	@echo "... root/main.o"
+	@echo "... root/main.i"
+	@echo "... root/main.s"
 .PHONY : help
 
 

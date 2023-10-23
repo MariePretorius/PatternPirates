@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Proj.dir/root/StockAndFinance/Shelf.cpp.o"
   "CMakeFiles/Proj.dir/root/StockAndFinance/Stock.cpp.o"
   "CMakeFiles/Proj.dir/root/StockAndFinance/StockAndFinanceFacade.cpp.o"
+  "CMakeFiles/Proj.dir/root/main.cpp.o"
   "Proj"
   "Proj.pdb"
 )
