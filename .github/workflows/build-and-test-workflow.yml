@@ -1,0 +1,22 @@
+name: CI Workflow
+
+on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Compile
+      run: |
+        g++ -o main code/main.cpp
+    - name: Execute
+      run: |
+        ./main
