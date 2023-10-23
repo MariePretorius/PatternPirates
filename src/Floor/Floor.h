@@ -7,7 +7,7 @@
 
 #include <list>
 
-class Tables;
+class Table;
 
 class Floor
 {
@@ -16,7 +16,7 @@ public:
     int getCapacity();
 
 private:
-    std::list<Tables> tables;
+    //std::list<Table> tables;
     int numberOfTables;
 };
 
