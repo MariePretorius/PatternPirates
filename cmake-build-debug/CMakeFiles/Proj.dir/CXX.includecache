@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/root/StockAndFinance/Finance.h
+
+/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/root/StockAndFinance/Shelf.cpp
+Shelf.h
+/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/root/StockAndFinance/Shelf.h
+
+/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/root/StockAndFinance/Shelf.h
+Stock.h
+/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/root/StockAndFinance/Stock.h
+list
+-
+
+/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/root/StockAndFinance/Stock.h
+
+/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/root/StockAndFinance/StockAndFinanceFacade.cpp
+StockAndFinanceFacade.h
+/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/root/StockAndFinance/StockAndFinanceFacade.h
+
+/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/root/StockAndFinance/StockAndFinanceFacade.h
+Finance.h
+/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/root/StockAndFinance/Finance.h
+Shelf.h
+/mnt/c/Users/Tristan/Documents/UP/Semseter 2 2023/COS214/Proj/root/StockAndFinance/Shelf.h
+
