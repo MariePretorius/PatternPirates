@@ -1,6 +1,6 @@
 #include <iostream>
-#include "../kitchen/Kitchen.h"
-#include "../customer/Person.h"
+#include "../Kitchen/Kitchen.h"
+#include "../Floor/Person.h"
 using namespace std;
 int main(){
     Person p;
