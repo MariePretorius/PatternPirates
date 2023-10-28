@@ -7,18 +7,24 @@
 
 #include <list>
 
-class Table;
+class Customer;
+class Host;
+
+#include "Table.h"
 
 class Floor
 {
 public:
     Floor();
+    Host * createHost();
     int getCapacity();
 
 private:
-    //std::list<Table> tables;
+    std::list<Table> tables;
     int numberOfTables;
+    std::list<Customer *> customers;
 };
+
 
 
 #endif //PROJ_FLOOR_H
