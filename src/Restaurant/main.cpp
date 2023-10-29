@@ -1,9 +1,6 @@
 #include <iostream>
-#include "../Kitchen/Kitchen.h"
-
+#include "Restaurant.h"
 using namespace std;
 int main(){
-    Kitchen k;
-    
-    k.sayHello();
+    Restaurant::instance()->setup();
 }
