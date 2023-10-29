@@ -1,5 +1,11 @@
 #include "Table.h"
 
+Table::Table(int tableNumber, int capacity)
+{
+    this->tableNumber = tableNumber;
+    this->capacity = capacity;
+}
+
 void Table::assignCustomers(list<Customer> customers)
 {
     this->customers = customers;
