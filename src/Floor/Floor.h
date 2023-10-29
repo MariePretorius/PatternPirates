@@ -9,6 +9,7 @@
 
 class Customer;
 class Host;
+class Waiter;
 
 #include "Table.h"
 
@@ -19,12 +20,16 @@ public:
     Host * createHost();
     int getCapacity();
 
+    int getNumWaiters();
+    int setNumWaiters();
+
 private:
     std::list<Table> tables;
     int numberOfTables;
+    int numberOfWaiters;
     std::list<Customer *> customers;
+    std::list<Waiter *> waiters;
 };
-
 
 
 #endif //PROJ_FLOOR_H
