@@ -1,24 +1,28 @@
 #ifndef CUSTOMER_H
 #define CUSTOMER_H
 
+#include "CustomerState.h"
+#include "../Restaurant/FoodOrder.h"
+#include "Bill.h"
+
 class Customer {
 
 private:
-	CustomerState state;
-	boolean waiting;
-	boolean seated;
-	boolean readyToOrder;
-	boolean orderPlaced;
-	boolean eating;
-	boolean requestingBill;
-	boolean billPaid;
+	CustomerState *state;
+	bool waiting;
+	bool seated;
+	bool readyToOrder;
+	bool orderPlaced;
+	bool eating;
+	bool requestingBill;
+	bool billPaid;
 	FoodOrder order;
 	Bill* bill;
 
 public:
 	void placeOrder(FoodOrder order);
 
-	void changeState(CustomerState state);
+	void changeState(CustomerState* state);
 
 	void payBill(Bill bill);
 
