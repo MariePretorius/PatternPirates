@@ -1,19 +1,25 @@
 #ifndef TABLE_H
 #define TABLE_H
 
+#include "iostream"
+#include <list>
+#include "Customer.h"
+
+using namespace std;
+
 class Table {
 
 private:
 	int tableNumber;
 	int capacity;
-	List<Customer> customers;
+	list<Customer> customers;
 
 public:
-	void assignCustomers(List<Customer> customers);
+	void assignCustomers(list<Customer> customers);
 
-	void removeCustomers(List<Customer> customers);
+	void removeCustomers(list<Customer> customers);
 
-	List<Customer> getCustomers();
+	list<Customer> getCustomers();
 
 	int getCapacity();
 };
