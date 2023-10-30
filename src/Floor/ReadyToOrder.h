@@ -1,7 +1,12 @@
 #ifndef READYTOORDER_H
 #define READYTOORDER_H
 
-class ReadyToOrder {
+#include "CustomerState.h"
+#include "OrderPlaced.h"
+
+class ReadyToOrder : public CustomerState {
+public:
+    CustomerState* getNextState() override;
 };
 
 #endif

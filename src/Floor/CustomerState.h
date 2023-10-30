@@ -1,6 +1,8 @@
 #ifndef CUSTOMERSTATE_H
 #define CUSTOMERSTATE_H
 
+#include "Customer.h"
+
 class CustomerState {
 private:
 
