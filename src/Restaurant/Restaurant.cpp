@@ -1,5 +1,5 @@
 #include "Restaurant.h"
-//hi
+//test
 Restaurant* Restaurant::uniqueInstance=0;
 
 Restaurant *Restaurant::instance()
