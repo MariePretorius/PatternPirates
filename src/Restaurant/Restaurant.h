@@ -1,13 +1,21 @@
 #ifndef RESTAURANT_H
 #define RESTAURANT_H
 
+#include "Finance.h"
+#include "../Floor/Floor.h"
+#include "../Kitchen/Kitchen.h"
+#include <iostream>
+
+using namespace std;
 class Restaurant {
 
 private:
-	Restaurant* uniqueInstance;
-
+	static Restaurant* uniqueInstance;
+    Finance* funds;
+    Floor* floor;
+    Kitchen* kitchen;
 public:
-	Restaurant* instance();
+	static Restaurant* instance();
 
 protected:
 	Restaurant();
@@ -20,6 +28,9 @@ public:
 	void setup();
 
 	void simulate();
-};
 
+    double getFunds();
+
+    void subtractFunds(double x);
+};
 #endif

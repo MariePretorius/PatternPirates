@@ -1,9 +1,7 @@
 #include <iostream>
-#include "../Kitchen/Kitchen.h"
 
-using namespace std;
-int main(){
-    Kitchen k;
-    
-    k.sayHello();
-}
+#include "../Kitchen/Kitchen.h"
+#include "../Floor/Customer.h"
+
+#include "Restaurant.h"
+
