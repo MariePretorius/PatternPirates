@@ -24,6 +24,7 @@ public:
     int setNumWaiters();
 
 private:
+
     std::list<Table> tables;
     int numberOfTables;
     int numberOfWaiters;
