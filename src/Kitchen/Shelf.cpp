@@ -3,3 +3,8 @@
 //
 
 #include "Shelf.h"
+
+void Shelf::addStock(Stock newStock)
+{
+    this->stockList
+}
