@@ -3,6 +3,7 @@
 //
 
 #include "Floor.h"
+#include "Waiter.h"
 
 Floor::Floor()
 {

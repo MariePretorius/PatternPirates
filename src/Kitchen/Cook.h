@@ -5,7 +5,7 @@ class Cook {
 
 
 public:
-	Ingredient* cookIngredient();
+	//Ingredient* cookIngredient();
 };
 
 #endif

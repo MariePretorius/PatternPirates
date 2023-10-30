@@ -1,7 +1,12 @@
 #ifndef ORDERPLACED_H
 #define ORDERPLACED_H
 
-class OrderPlaced {
+#include "CustomerState.h"
+#include "Eating.h"
+
+class OrderPlaced : public CustomerState {
+public:
+    CustomerState* getNextState() override;
 };
 
 #endif

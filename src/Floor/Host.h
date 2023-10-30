@@ -3,6 +3,8 @@
 #include "Table.h"
 #include "Floor.h"
 
+#include "Table.h"
+
 class Host {
 
 
