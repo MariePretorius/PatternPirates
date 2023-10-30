@@ -76,3 +76,35 @@ bool Bill :: isPaid()
 {
     return paid;
 }
+
+// example usage
+// std::cout << "\x1B[35m"; 
+
+// Bill bill;
+// BillCaretaker caretaker;
+
+// bill.addItem("Burger", 40.99);
+// bill.addItem("Fries", 25.99);
+
+// caretaker.saveMemento(bill.createMemento());
+
+// bill.addItem("Soda", 15.95);
+
+// std::cout << "Current Bill:\n";
+// bill.showBill();
+
+// bill.restoreFromMemento(caretaker.getMemento(0));
+
+// std::cout << "\nRestored Bill:\n";
+// bill.showBill();
+
+// bill.setTab(true);
+// bill.payBill();
+
+// bool paid = bill.isPaid();
+// if (paid)
+//     std::cout << "Bill Paid" << std::endl;
+// else
+//     std::cout << "Not Paid" << std::endl;
+
+// std::cout << "\x1B[0m"; 
