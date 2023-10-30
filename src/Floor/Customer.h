@@ -4,6 +4,9 @@
 #include "CustomerState.h"
 #include "../Restaurant/FoodOrder.h"
 #include "Bill.h"
+#include <string>
+
+using namespace std;
 
 class Customer {
 
@@ -20,6 +23,8 @@ private:
 	Bill* bill;
 
 public:
+	Customer(string paymentMethod);
+
 	void placeOrder(FoodOrder order);
 
 	void changeState(CustomerState* state);

@@ -1,5 +1,14 @@
 #include "Customer.h"
 
+Customer::Customer(string paymentMethod)
+{
+    if (paymentMethod == "Tab") {
+
+    } else if (paymentMethod == "Bill") {
+        
+    }
+}
+
 void Customer::placeOrder(FoodOrder order)
 {
 }
