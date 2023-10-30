@@ -9,7 +9,6 @@ double Customer::calculateRating()
 Customer::Customer(string paymentMethod)
 {
     state = new WaitingForTable();
-    waiting = true;
 
     if (paymentMethod == "Tab") {
 

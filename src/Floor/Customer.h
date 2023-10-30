@@ -13,13 +13,6 @@ class Customer {
 
 private:
 	CustomerState *state;
-	bool waiting = false;
-	bool seated = false;
-	bool readyToOrder = false;
-	bool orderPlaced = false;
-	bool eating = false;
-	bool requestingBill = false;
-	bool billPaid = false;
 	FoodOrder order;
 	Bill* bill;
 
