@@ -1,5 +1,7 @@
 #include "BillMemento.h"
 
+//comment added somewhere
+
 BillMemento :: BillMemento(const std::vector<std::string>& billItems, double cost) : items(billItems), totalCost(cost) {}
 
 const std::vector<std::string>& BillMemento :: getItems() const

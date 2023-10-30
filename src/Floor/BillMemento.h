@@ -10,6 +10,7 @@ class BillMemento
 		//std::string myBill;
 		double totalCost;
 		std::vector<std::string> items;
+		//comment added somewhere
 
 	public:
 		BillMemento(const std::vector<std::string>& billItems, double cost);
