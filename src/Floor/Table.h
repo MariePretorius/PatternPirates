@@ -6,14 +6,14 @@ class Table {
 private:
 	int tableNumber;
 	int capacity;
-	List<Customer> customers;
+	//List<Customer> customers;
 
 public:
-	void assignCustomers(List<Customer> customers);
+	//void assignCustomers(List<Customer> customers);
 
-	void removeCustomers(List<Customer> customers);
+	//void removeCustomers(List<Customer> customers);
 
-	List<Customer> getCustomers();
+	//List<Customer> getCustomers();
 
 	int getCapacity();
 };
