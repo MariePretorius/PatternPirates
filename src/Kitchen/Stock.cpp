@@ -12,17 +12,21 @@ Stock::Stock(std::string name, int initialQuantity, double costPerUnit, int key)
     this->key = key;
 }
 
-void Stock::addStock()
-{
-
-}
-
-void Stock::removeStock()
-{
-
-}
-
 double Stock::getCostPerUnit()
 {
     return costPerUnit;
+}
+
+void Stock::addStock(int quantity)
+{
+    this->quantity += quantity;
+}
+
+void Stock::removeStock(int quantity)
+{
+    this->quantity -= quantity;
+}
+
+std::string Stock::getName() {
+    return this->name;
 }

@@ -13,6 +13,7 @@ public:
     void addStock(int quantity);
     void removeStock(int quantity);
     double getCostPerUnit();
+    std::string getName();
 
 private:
     std::string name;
