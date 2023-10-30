@@ -1,6 +1,8 @@
 #include "Bill.h"
 #include <sstream>
 
+//comment added somewhere
+
 Bill :: Bill()  //(Customer& customer)
 {
     totalCost = 0.0;
