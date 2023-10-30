@@ -1,27 +1,24 @@
 #ifndef FOODORDER_H
 #define FOODORDER_H
 
-#include "../Floor/Customer.h"
-#include <iostream>
-
 class FoodOrder {
 
 private:
-	std::string ingredients;
-	std::string cookingMethod;
+	string ingredients;
+	string cookingMethod;
 	int tableNumber;
 	Customer& customer;
 
 public:
-	FoodOrder(std::string ingredients, std::string method, std::string tableNumber, Customer& customer);
+	FoodOrder(string ingredients, string method, string tableNumber, Customer& customer);
 
 	FoodOrder();
 
 	void execute();
 
-	void addToBill(std::string ingredient);
+	void addToBill(string ingredient);
 
-	std::string getIngredients();
+	string getIngredients();
 };
 
 #endif

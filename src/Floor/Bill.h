@@ -3,27 +3,17 @@
 
 #include "BillMemento.h"
 
+class Bill {
 
-#include <iostream>
-#include <vector>
-class Bill 
-{
-	private:
-		//std::string myBill;
-		std::vector<std::string> items;
-		double totalCost;
+private:
+	string myBill;
 
-		bool tab;
-		bool paid;
-		//int count;
+public:
+	Bill();
 
-	public:
-		Bill();
-		void addItem(const std::string& item, double cost);
-		BillMemento createMemento() const;
-		void restoreFromMemento(const BillMemento& memento);
-		void showBill() const;
-		void isTab(bool tab);
+	BillMemento createMemento();
+
+	void restoreMemento(const BillMemento memento);
 };
 
 #endif

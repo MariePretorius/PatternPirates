@@ -2,29 +2,31 @@
 #define BILLCARETAKER_H
 
 #include "BillMemento.h"
+#include <string>
 
+using namespace std;
 
-#include <iostream>
-#include <vector>
+class BillCaretaker {
 
-class BillCaretaker 
-{
-	private:
-		bool tab;
-		//std::string items;
-		bool paid;
-		int count;
+private:
+	bool tab;
+	string items;
+	bool paid;
 
-		std::vector<BillMemento> mementos;
+	int count;
 
-	public:
-		BillCaretaker();
-		void saveMemento(const BillMemento& memento);
-		BillMemento getMemento(int index) const;
-		int getMementoCount() const;
+public:
+	BillCaretaker();
 
-		//void payBill();    move to Bill class
-		//double calculateTotal();
+	void saveMemento(const BillMemento& memento);
+
+	BillMemento getMemento(int index);
+
+	int getMementoCount();
+
+	void payBill();
+
+	double calculateTotal();
 };
 
 #endif
