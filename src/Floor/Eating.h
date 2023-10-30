@@ -1,7 +1,12 @@
 #ifndef EATING_H
 #define EATING_H
 
-class Eating {
+#include "CustomerState.h"
+#include "RequestingBill.h"
+
+class Eating : public CustomerState {
+public:
+    CustomerState* getNextState() override;
 };
 
 #endif
