@@ -27,7 +27,7 @@ public:
 
 	void placeOrder(FoodOrder order);
 
-	void changeState(CustomerState* state);
+	void nextState();
 
 	void payBill(Bill bill);
 

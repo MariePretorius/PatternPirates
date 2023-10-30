@@ -1,11 +1,14 @@
 #include "Customer.h"
+#include "WaitingForTable.h"
 
 Customer::Customer(string paymentMethod)
 {
+    state = new WaitingForTable();
+
     if (paymentMethod == "Tab") {
 
     } else if (paymentMethod == "Bill") {
-        
+
     }
 }
 
@@ -13,7 +16,7 @@ void Customer::placeOrder(FoodOrder order)
 {
 }
 
-void Customer::changeState(CustomerState* state)
+void Customer::nextState() 
 {
     this->state = state;
 }
