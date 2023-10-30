@@ -4,6 +4,7 @@
 #include "CustomerState.h"
 #include "../Restaurant/FoodOrder.h"
 #include "Bill.h"
+#include "Ratings.h"
 #include <string>
 
 using namespace std;
@@ -12,15 +13,17 @@ class Customer {
 
 private:
 	CustomerState *state;
-	bool waiting;
-	bool seated;
-	bool readyToOrder;
-	bool orderPlaced;
-	bool eating;
-	bool requestingBill;
-	bool billPaid;
+	bool waiting = false;
+	bool seated = false;
+	bool readyToOrder = false;
+	bool orderPlaced = false;
+	bool eating = false;
+	bool requestingBill = false;
+	bool billPaid = false;
 	FoodOrder order;
 	Bill* bill;
+
+	double calculateRating();
 
 public:
 	Customer(string paymentMethod);
@@ -31,7 +34,7 @@ public:
 
 	void payBill(Bill bill);
 
-	void leaveRating(int rating);
+	void leaveRating(Ratings allRatings);
 
 	void notifyHost();
 
