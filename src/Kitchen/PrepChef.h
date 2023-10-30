@@ -1,11 +1,13 @@
 #ifndef PREPCHEF_H
 #define PREPCHEF_H
 
+#include "Chef.h"
+
 class PrepChef : Chef {
 
 
 private:
-	void sendOrder(Order* order);
+	void sendOrder(FoodOrder* order);
 
 	void handleStock();
 

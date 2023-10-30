@@ -1,6 +1,9 @@
 #ifndef BILLCARETAKER_H
 #define BILLCARETAKER_H
 
+#include "BillMemento.h"
+#include <string>
+
 using namespace std;
 
 class BillCaretaker {

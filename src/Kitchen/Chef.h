@@ -1,6 +1,11 @@
 #ifndef CHEF_H
 #define CHEF_H
 
+#include <string>
+#include "../Restaurant/FoodOrder.h"
+
+using namespace std;
+
 class Chef {
 
 private:
@@ -9,7 +14,7 @@ private:
 	int chefID;
 	int workingSpeed;
 	Chef* nextChef;
-	Order* currentOrder;
+	FoodOrder* currentOrder;
 
 public:
 	void handleOrder();

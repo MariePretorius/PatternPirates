@@ -1,7 +1,12 @@
 #ifndef SEATED_H
 #define SEATED_H
 
-class Seated {
+#include "CustomerState.h"
+#include "ReadyToOrder.h"
+
+class Seated : public CustomerState {
+public:
+    CustomerState* getNextState() override;
 };
 
 #endif
