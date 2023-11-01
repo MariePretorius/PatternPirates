@@ -3,7 +3,7 @@
 #include "../Kitchen/Kitchen.h"
 #include "../Floor/Bill.h"
 
-FoodOrder :: FoodOrder(std::string* ingredients, double* prices, int num, std::string method, int tableNumber, Customer& customer, Kitchen& k, Bill& bill) : kitchen{k}, bill(bill)
+FoodOrder :: FoodOrder(std::string* ingredients, double* prices, int num, std::string method, int tableNumber, Customer& customer, Kitchen* k, Bill* bill) : kitchen{k}, bill(bill)
 {
     this->customer = &customer;
     //this->kitchen = &k;
@@ -29,12 +29,12 @@ FoodOrder :: ~FoodOrder()
 
 void FoodOrder :: execute()
 {
-    //kitchen.prepareFood(ingredients, cookingMethod);
+    //kitchen->prepareFood(ingredients, cookingMethod);
 }
 
 void FoodOrder :: addToBill(std::string ingredient, double cost)
 {
-    bill.addItem(ingredient, cost);
+    bill->addItem(ingredient, cost);
 }
 
 std::string* FoodOrder :: getIngredients()

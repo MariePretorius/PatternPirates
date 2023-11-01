@@ -17,14 +17,14 @@ class FoodOrder
 		std::string cookingMethod;
 		int tableNumber;
 		Customer* customer;
-		Kitchen& kitchen;
-		Bill& bill;
+		Kitchen* kitchen;
+		Bill* bill;
 		double* prices;
 
 		// prices map
 
 	public:
-		FoodOrder(std::string* ingredients, double* prices, int num, std::string method, int tableNumber, Customer& customer, Kitchen& k, Bill& bill);
+		FoodOrder(std::string* ingredients, double* prices, int num, std::string method, int tableNumber, Customer& customer, Kitchen* k, Bill* bill);
 		~FoodOrder();
 		void execute();
 		void addToBill(std::string ingredient, double cost);
