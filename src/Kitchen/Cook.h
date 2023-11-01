@@ -3,9 +3,9 @@
 
 class Cook {
 
-
 public:
-	Ingredient* cookIngredient();
+	virtual void prepareStation() = 0;//pure virtual function
+	virtual Ingredient* cookIngredient(Ingredient* ingredient) = 0;//pure virtual function
 };
 
 #endif

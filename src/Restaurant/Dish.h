@@ -3,6 +3,9 @@
 
 class Dish {
 
+public: 			//CREATED BY:
+	int getId();	//FRANCO
+
 private:
 	int id;
 	double condition;
