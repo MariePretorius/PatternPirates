@@ -44,7 +44,6 @@ void Bill :: showBill() const
 }
 
 void Bill :: setTab(bool tab)
-
 {
     this->tab = tab;
 
@@ -56,21 +55,51 @@ void Bill :: setTab(bool tab)
     std::cout << "\x1B[0m";
 }
 
-void Bill :: payBill()
+void Bill :: payBill(double amount)
 {
     double costPaid = totalCost;
-    totalCost = 0.0;
-    paid = true;
     std::stringstream ss;
-    std::string cost;
-
-    ss << costPaid;
-    ss >> cost;
+    std::stringstream os;
+    std::string cost = "", owe = "";
 
     std::cout << "\x1B[35m";
+    
+    // std::string split = "";
+    // int numSplit = 1;
+    // double splitSingleTotal = 0.0;
 
-    std::cout << "Customer's bill has been paid. Total was: R" << cost << std::endl;
-    //std::cout << "Customer " << custID << " bill has been paid." << std::endl;
+    // std::cout << "Do you wan to spit the bill? (y/n)";
+    // std::cin >> split;
+
+    // if (split == "y")
+    // {
+    //     std::cout << "How many are splitting?";
+    //     std::cin >> numSplit;
+    //     splitSingleTotal = totalCost / numSplit;
+    //     std::cout << "Everyone should pay " << splitSingleTotal << std::endl;
+    // }
+
+    if (totalCost - amount > 0)
+    {
+        ss << totalCost;
+        ss >> owe;
+        std::cout << "Not enough money given! You owe " << owe << std::endl;
+    }
+    else
+    {
+        totalCost = 0.0;
+        
+        //call finances function to add money
+
+        paid = true;
+
+        ss << costPaid;
+        ss >> cost;
+
+        std::cout << "Customer's bill has been paid. Total was: R" << cost << std::endl;
+        //std::cout << "Customer " << custID << " bill has been paid." << std::endl;
+    }
+
 
     std::cout << "\x1B[0m";
 }
@@ -102,7 +131,7 @@ bool Bill :: isPaid()
 // bill.showBill();
 
 // bill.setTab(true);
-// bill.payBill();
+// bill.payBill(100.00);
 
 // bool paid = bill.isPaid();
 // if (paid)

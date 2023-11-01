@@ -30,7 +30,7 @@ class Bill
 		void restoreFromMemento(const BillMemento& memento);
 		void showBill() const;
 		void setTab(bool tab);
-		void payBill();
+		void payBill(double amount);
 		bool isPaid();
 };
 
