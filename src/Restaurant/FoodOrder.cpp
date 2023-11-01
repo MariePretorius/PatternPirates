@@ -56,3 +56,32 @@ Customer* FoodOrder :: getCustomer()
 {
     return this->customer;
 }
+
+// In Waiter: 
+// void takeOrder()
+// {
+//     // order parameters : 
+//     // std::string* ingredients : array of ingredients
+//     // double* prices : array of prices corresponding to the array of ingredients
+//     // int num : number of ingredients/prices
+//     // std::string method : cooking method
+//     // int tableNumber : table number corresponding to the order
+//     // Customer& customer : customer whose order it is
+//     // Kitchen& k : reference to the kitchen
+//     // Bill& bill : reference to the bill [used to add the order onto the bill]
+
+//     // contents of function
+//     FoodOrder order(ingredients, prices, num, method, tableNumber, customer, kitchen, bill);
+
+//     order.execute();
+// }
+
+// In Kitchen
+// void prepareFood(const std::string* ingredients, std::string cookingMethod) 
+// {
+//     // set cooking method
+//     // add ingredients
+    
+//     // start process basically
+//     // add to queue
+// }
