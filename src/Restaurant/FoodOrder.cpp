@@ -22,7 +22,8 @@ FoodOrder :: FoodOrder(std::string* ingredients, double* prices, int num, std::s
 
 FoodOrder :: ~FoodOrder()
 {
-
+    delete ingredients;
+    delete prices;
 }
 
 void FoodOrder :: execute()
@@ -32,25 +33,25 @@ void FoodOrder :: execute()
 
 void FoodOrder :: addToBill(std::string ingredient, double cost)
 {
- 
+
 }
 
 std::string* FoodOrder :: getIngredients()
 {
- 
+    return this->ingredients;
 }
 
 std::string FoodOrder :: getCookingMethod()
 {
-    
+    return this->cookingMethod;
 }
 
 int FoodOrder :: getTableNumber()
 {
-   
+    return this->tableNumber;
 }
 
 Customer* FoodOrder :: getCustomer()
 {
-   
+    return this->customer;
 }
