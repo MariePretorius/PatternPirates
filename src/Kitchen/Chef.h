@@ -1,5 +1,8 @@
 #ifndef CHEF_H
 #define CHEF_H
+#include <string>
+#include "FoodOrder.h"
+#include "Kitchen.h"
 
 #include <string>
 #include "../Restaurant/FoodOrder.h"
@@ -7,19 +10,21 @@
 using namespace std;
 
 class Chef {
+	private:
+		std::string chefName;
+		double chefExperience;
+		int chefID;
+		int workingSpeed;
+		Chef* nextChef;
 
-private:
-	string chefName;
-	double chefExperience;
-	int chefID;
-	int workingSpeed;
-	Chef* nextChef;
-	FoodOrder* currentOrder;
 
-public:
-	void handleOrder();
+	protected:
+		Kitchen* kitchen;
 
-	void setNextChef(Chef* nextChef);
+
+	public:
+		void handleOrder();
+		void setNextChef(Chef* nextChef);
 };
 
 #endif
