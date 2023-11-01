@@ -4,15 +4,20 @@
 #include "Cook.h"
 #include "Chef.h"
 
+#include "Chef.h"
+#include "Cook.h"
+
 class CookingChef : Chef {
 
 private:
+
 	Cook* cook; //Strategy
 	void changeCook(Cook* cook);//Change cook used at runtime (change strategy)
 
 public:
 	CookingChef(Cook* cook);
 	void handleOrder();//Use strategy here
+
 };
 
 #endif

@@ -1,28 +1,33 @@
 #ifndef CUSTOMER_H
 #define CUSTOMER_H
 
+#include "CustomerState.h"
+#include "../Restaurant/FoodOrder.h"
+#include "Bill.h"
+#include "Ratings.h"
+#include <string>
+
+using namespace std;
+
 class Customer {
 
 private:
-	CustomerState state;
-	boolean waiting;
-	boolean seated;
-	boolean readyToOrder;
-	boolean orderPlaced;
-	boolean eating;
-	boolean requestingBill;
-	boolean billPaid;
+	CustomerState *state;
 	FoodOrder order;
 	Bill* bill;
 
+	double calculateRating();
+
 public:
+	Customer(string paymentMethod);
+
 	void placeOrder(FoodOrder order);
 
-	void changeState(CustomerState state);
+	void nextState();
 
 	void payBill(Bill bill);
 
-	void leaveRating(int rating);
+	void leaveRating(Ratings allRatings);
 
 	void notifyHost();
 

@@ -6,11 +6,15 @@
 #include <thread>
 #include <chrono>
 
+#include "Cook.h"
+
 class Fryer : Cook {
+
 
 	public:
 		void prepareStation() override;//override pure virtual function in Cook
 		Ingredient* cookIngredient(Ingredient* ingredient) override;//fry ingredient
 	};
+
 
 #endif
