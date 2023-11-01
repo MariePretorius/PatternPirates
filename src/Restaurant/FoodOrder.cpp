@@ -17,6 +17,7 @@ FoodOrder :: FoodOrder(std::string* ingredients, double* prices, int num, std::s
     {
         this->ingredients[i] = ingredients[i];
         this->prices[i] = prices[i];
+        addToBill(ingredients[i], prices[i]);
     }
 }
 
@@ -28,12 +29,12 @@ FoodOrder :: ~FoodOrder()
 
 void FoodOrder :: execute()
 {
-
+    //kitchen.prepareFood(ingredients, cookingMethod);
 }
 
 void FoodOrder :: addToBill(std::string ingredient, double cost)
 {
-
+    bill.addItem(ingredient, cost);
 }
 
 std::string* FoodOrder :: getIngredients()
