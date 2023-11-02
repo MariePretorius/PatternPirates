@@ -3,8 +3,22 @@
 #include "../Floor/Bill.h"
 #include "../Kitchen/Kitchen.h"
 
+/**
+ * @brief Default constructor for the class.
+*/
 FoodOrder :: FoodOrder() {}
 
+/**
+ * Parameterized constructor for the class.
+ * @param ingredients List of ingredients in the order.
+ * @param prices List of prices for the ingredients.
+ * @param num Number of ingredients in order.
+ * @param method The cooking method of the order.
+ * @param tableNumber Table number the order came from.
+ * @param customer Reference to the customer who ordered this.
+ * @param k Reference to the kitchen object.
+ * @param bill Reference to the bill for this order.
+*/
 FoodOrder :: FoodOrder(std::vector<std::string> ingredients, std::vector<double> prices, int num, std::string method, int tableNumber, Customer& customer, Kitchen* k, Bill* bill) : kitchen{k}, bill(bill)
 {
     this->customer = &customer;
@@ -26,42 +40,73 @@ FoodOrder :: FoodOrder(std::vector<std::string> ingredients, std::vector<double>
     }
 }
 
+/**
+ * @brief Destructor for this class.
+*/
 FoodOrder :: ~FoodOrder()
 {
     //delete ingredients;
     //delete prices;
 }
 
+/**
+ * @brief Execute function to pass order to kitchen.
+*/
 void FoodOrder :: execute()
 {
     kitchen->addNewOrder(*this);
 }
 
+/**
+ * @brief Function to add all the ingredients onto the bill.
+ * @param ingredient Single ingredient to add to bill.
+ * @param cost Cost of the ingredient being added.
+*/
 void FoodOrder :: addToBill(std::string ingredient, double cost)
 {
     bill->addItem(ingredient, cost);
 }
 
+/**
+ * @brief Returns the ingredient list.
+ * @return Returns a vector of ingredients.
+*/
 std::list<std::string> FoodOrder :: getIngredients()
 {
     return this->ingredients;
 }
 
+/**
+ * @brief Returns the cooking method.
+ * @return Returns a string of the cooking method.
+*/
 std::string FoodOrder :: getCookingMethod()
 {
     return this->cookingMethod;
 }
 
+/**
+ * @brief Returns the table number the order belongs to.
+ * @return Returns integer value of the table number.
+*/
 int FoodOrder :: getTableNumber()
 {
     return this->tableNumber;
 }
 
+/**
+ * @brief Returns a pointer to the customer the order belongs to.
+ * @return Customer object pointer.
+*/
 Customer* FoodOrder :: getCustomer()
 {
     return this->customer;
 }
 
+/**
+ * @brief Returns a random id between 1000 and 9999.
+ * @return Return an integer value for the id.
+*/
 int FoodOrder :: getRandomID()   //add vector if necessary
 {
     std::srand(static_cast<unsigned int>(time(nullptr)));
