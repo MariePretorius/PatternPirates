@@ -9,6 +9,7 @@ Table::Table(int tableNumber, int capacity)
 void Table::assignCustomers(list<Customer> customers)
 {
     this->customers = customers;
+    occupied = true;
 }
 
 void Table::removeCustomers(list<Customer> customers)
@@ -16,6 +17,9 @@ void Table::removeCustomers(list<Customer> customers)
     for (auto it = customers.begin(); it != customers.end(); ) {
         auto customer = *it;
         this->customers.remove(customer);
+    }
+    if (customers.size() == 0) {
+        occupied = false;
     }
 }
 
@@ -27,4 +31,14 @@ list<Customer> Table::getCustomers()
 int Table::getCapacity()
 {
     return capacity;
+}
+
+int Table::getTableNumber()
+{
+    return tableNumber;
+}
+
+bool Table::isOccupied()
+{
+    return occupied;
 }

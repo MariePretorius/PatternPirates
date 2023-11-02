@@ -15,9 +15,12 @@ private:
 	CustomerState *state;
 	FoodOrder order;
 	Bill* bill;
+	static int nextID;
+	int id;
+	string cookingMethod;
+	
 
 	double calculateRating();
-
 public:
 	Customer(string paymentMethod);
 
@@ -34,6 +37,10 @@ public:
 	FoodOrder getOrder();
 
 	CustomerState* getState();
+
+	int getCustomerID();
 };
+
+int Customer::nextID = 1;
 
 #endif
