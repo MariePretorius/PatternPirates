@@ -15,6 +15,8 @@ Customer::Customer(string paymentMethod)
     } else if (paymentMethod == "Bill") {
 
     }
+
+    id = nextID++;
 }
 
 void Customer::placeOrder(FoodOrder order)
@@ -48,4 +50,9 @@ FoodOrder Customer::getOrder()
 CustomerState *Customer::getState()
 {
     return state;
+}
+
+int Customer::getCustomerID()
+{
+    return id;
 }
