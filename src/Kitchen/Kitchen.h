@@ -5,7 +5,6 @@
 #include "../Restaurant/FoodOrder.h"
 #include "../Restaurant/Dish.h"
 #include "Ingredient.h"
-#include "FoodOrder.h"
 #include "Shelf.h"
 
 class Kitchen {
@@ -17,6 +16,7 @@ class Kitchen {
         void addDish(Dish* dish);
         Dish* takeDish(int id);
         FoodOrder* getNextOrder();
+
         Shelf* getShelf();
         void addCookedIngredient(Ingredient* ingredient);
         void addUncookedIngredient(Ingredient* ingredient);

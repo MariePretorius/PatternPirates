@@ -13,7 +13,7 @@ void PrepChef::handleStock(FoodOrder* order) {
     Shelf* currentShelf = kitchen->getShelf();
     for (const std::string& ingredient : ingredients) {
         stockNeeded++;
-        Ingredient* takenIngredient = currentShelf->deductStock(ingredient);
+        Ingredient* takenIngredient = (Ingredient*)currentShelf->deductStock(ingredient);
         if (takenIngredient == NULL) {
             stockMissing++;
         } else {
@@ -22,6 +22,4 @@ void PrepChef::handleStock(FoodOrder* order) {
     }
 
     int condition = (stockNeeded - stockMissing) / stockNeeded;
-
-    order->setCondition(condition);
 }

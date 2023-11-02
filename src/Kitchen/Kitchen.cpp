@@ -48,8 +48,22 @@ void Kitchen::addDish(Dish* dish) {
 }
 
 Dish* Kitchen::takeDish(int id) {
+
+    list<Dish*>::iterator it = completedOrders.begin();
+
+    while(it != completedOrders.end())
+    {
+        if((*it)->getId() == id)
+        {
+            std::cout << "Order " << id << "was succesfully collected by a waiter :)" << std::endl;
+            return *it;
+        }
+    }
+    std::cout << "Order " << id << "is not yet ready to be collected." << std::endl;
+
+    /*
     if (!completedOrders.empty()) {
-        auto it = std::find_if(completedOrders.begin(), completedOrders.end(), [id](const Dish& dish) {
+        list<Dish*>::iterator it = std::find_if(completedOrders.begin(), completedOrders.end(), [id](const Dish& dish) {
             return dish;   
         });
          if (it != completedOrders.end()) {
@@ -60,5 +74,6 @@ Dish* Kitchen::takeDish(int id) {
             std::cout << "Order " << id << "is not yet ready to be collected." << std::endl;
         }
     }
+    */
 }
 
