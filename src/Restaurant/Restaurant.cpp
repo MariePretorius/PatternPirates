@@ -47,6 +47,10 @@ void Restaurant::setup()
     cout << "\033[1;32mHow many waiters should be employed:\033[0m" << endl;
     int w;
     cin>>w;
+    for(int i = 0; i < w; i++)
+    {
+        floor->addWaiter();
+    }
     //floor->setNumWaiters(w); // Tristan- add int input for setNumWaiters
 
     cout << "\033[1;32mSetup complete!\033[0m" << endl;
