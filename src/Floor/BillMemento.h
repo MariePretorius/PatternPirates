@@ -1,19 +1,27 @@
 #ifndef BILLMEMENTO_H
 #define BILLMEMENTO_H
 
-class BillMemento {
+#include <vector>
+#include <iostream>
 
-private:
-	string myBill;
+class BillMemento 
+{
+	private:
+		//std::string myBill;
+		double totalCost;
+		std::vector<std::string> items;
+		//comment added somewhere
 
-public:
-	void setBill(string bill);
+	public:
+		BillMemento(const std::vector<std::string>& billItems, double cost);
+		const std::vector<std::string>& getItems() const;
+		double getTotalCost() const;
 
-	string getBill();
+		//BillMemento(const Bill& bill);
+		//BillMemento();
+		//void setBill(std::string bill);
+		//std::string getBill();
 
-	BillMemento(const Bill& bill);
-
-	BillMemento();
 };
 
 #endif

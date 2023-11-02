@@ -1,7 +1,7 @@
 #ifndef FOODORDER_H
 #define FOODORDER_H
 
-#include "../Floor/Customer.h"
+class Customer;
 #include <iostream>
 
 class FoodOrder {
@@ -10,7 +10,7 @@ private:
 	std::string ingredients;
 	std::string cookingMethod;
 	int tableNumber;
-	Customer& customer;
+	Customer * customer;
 
 public:
 	FoodOrder(std::string ingredients, std::string method, std::string tableNumber, Customer& customer);
@@ -23,5 +23,6 @@ public:
 
 	std::string getIngredients();
 };
+
 
 #endif
