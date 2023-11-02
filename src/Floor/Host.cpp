@@ -49,8 +49,17 @@ Table *Host::next(Table * curr)
 bool Host::isFull()
 {
     //loop through tables + check whether they are all occupied - return true if so
-
-    return false;
+    list<Table*>::iterator it = tables.begin();
+    bool full = true;
+    for (it; it != tables.end(); )
+    {
+        Table* temp = *it;
+        if (!temp->isOccupied())
+        {
+            full = false;
+        }
+    }
+    return full;
 }
 
 Table *Host::getNextOpenTable()
