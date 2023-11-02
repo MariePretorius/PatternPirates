@@ -9,8 +9,8 @@ Bill :: Bill()  //(Customer& customer)
     totalCost = 0.0;
     tab = false;
     paid = false;
-    //this->customer = customer;
-    //custID = customer->getID();
+    this->customer = customer;
+    custID = customer.getCustomerID();
 }
 
 /**
@@ -70,8 +70,8 @@ void Bill :: setTab(bool tab)
 
     std::cout << "\x1B[35m";
 
-    std::cout << "This bill has been set to a tab." << std::endl;
-    //std::cout << "Customer " << custID << " has set their bill to a tab." << std::endl;
+    //std::cout << "This bill has been set to a tab." << std::endl;
+    std::cout << "Customer " << custID << " has set their bill to a tab." << std::endl;
 
     std::cout << "\x1B[0m";
 }

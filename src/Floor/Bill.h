@@ -2,10 +2,7 @@
 #define BILL_H
 
 #include "BillMemento.h"
-//#include "Customer.h"
-
-//comment added somewhere
-
+#include "Customer.h"
 
 #include <iostream>
 #include <vector>
@@ -19,9 +16,9 @@ class Bill
 {
 	private:
 		std::vector<std::string> items;  ///< List of items on the bill.
-		double totalCost;  ///< Current total cost of the bill
-		//Customer& customer;
-		//std::string custID/name;  add when that function is added to customer
+		double totalCost;  ///< Current total cost of the bill.
+		Customer& customer;  ///< Reference to a customer object.
+		std::string custID;  ///< ID of the customer the bill belongs to.
 
 		bool tab;  ///< Boolean value set to indicate whether the bill is a tab.
 		bool paid;  ///< Boolean value set to indicate whether the bill has been paid.
