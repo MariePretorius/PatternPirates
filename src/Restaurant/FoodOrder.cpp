@@ -17,18 +17,19 @@ FoodOrder :: FoodOrder(std::vector<std::string> ingredients, std::vector<double>
     //this->prices = new double[numberOfIngredients];
     for (int i = 0; i < numberOfIngredients; i++)
     {
-        this->ingredients[i] = ingredients[i];
+        //this->ingredients[i] = ingredients[i];
+        this->ingredients.push_back(ingredients[i]);
+        //this->prices[i] = prices[i];
+        this->ingredients.push_back(ingredients[i]);
         
-        this->prices[i] = prices[i];
-        
-        addToBill(ingredients[i], prices[i]);
+        addToBill(this->ingredients[i], this->prices[i]);
     }
 }
 
 FoodOrder :: ~FoodOrder()
 {
-    delete ingredients;
-    delete prices;
+    //delete ingredients;
+    //delete prices;
 }
 
 void FoodOrder :: execute()
