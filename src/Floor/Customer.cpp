@@ -10,10 +10,11 @@ Customer::Customer(string paymentMethod)
 {
     state = new WaitingForTable();
 
-    if (paymentMethod == "Tab") {
+    if (paymentMethod == "tab") {
+        this->paymentMethod = "tab";
 
-    } else if (paymentMethod == "Bill") {
-
+    } else if (paymentMethod == "bill") {
+        this->paymentMethod = "bill";
     }
 
     id = nextID++;
@@ -31,24 +32,11 @@ Customer::Customer(string paymentMethod)
     mt19937 gen(other());
     uniform_int_distribution<int> distribution2(1, 2);
     int otherNum = distribution2(gen);
-
-    if (otherNum == 1) {
-        paymentMethod = "tab";
-        //tab = true
-    } else paymentMethod = "bill";
-}
-
-void Customer::placeOrder(FoodOrder order)
-{
 }
 
 void Customer::nextState() 
 {
     this->state = state->getNextState();
-}
-
-void Customer::payBill(Bill bill)
-{
 }
 
 void Customer::leaveRating(Ratings allRatings)
@@ -59,11 +47,6 @@ void Customer::leaveRating(Ratings allRatings)
 
 void Customer::notifyHost()
 {
-}
-
-FoodOrder Customer::getOrder()
-{
-    return FoodOrder();
 }
 
 CustomerState *Customer::getState()
