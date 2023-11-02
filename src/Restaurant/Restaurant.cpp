@@ -42,7 +42,6 @@ void Restaurant::setup()
     //buy stock with finances - in shelf - use addStock - call kitchen's setup function # wait for Franco
     cout << "\033[1;32mYour shelf:\033[0m" << endl;
     //kitchen.setup(); //function to allow user to buy stock and save it in shelf
-    // remember to print out shelf
 
     cout << "\033[1;32mHow many waiters should be employed:\033[0m" << endl;
     int w;
@@ -51,7 +50,6 @@ void Restaurant::setup()
     {
         floor->addWaiter();
     }
-    //floor->setNumWaiters(w); // Tristan- add int input for setNumWaiters
 
     cout << "\033[1;32mSetup complete!\033[0m" << endl;
     cout << "\033[1;32mThe restaurant simulation will now begin:\033[0m" << endl;
@@ -60,13 +58,53 @@ void Restaurant::setup()
 
 void Restaurant::simulate()
 {
-    floor->createHost();
+    //set variables
+    int numCustomers =10;
+    int numTables =10;
+
+    //variables to create customers:
+    int r; // for random values
+    bool split;
+    int paymentMethod;
+    string pay ="";
+
+    //variables to create tables:
+    int maxCap =4;  // capacity of a table can at most be 4
+
+    ///Creating randomized customers to queue to be seated at tables
+    srand(1234);
+    vector<Customer*> customers;
+    for (int i = 0; i < numCustomers; ++i) {
+        r = rand()%2;
+        split=r ;       // if 0-dont split else if 1 split
+        paymentMethod=r; // if 1 - bill, else tab
+        if (paymentMethod == 1)
+        {
+            pay="bill";
+        } else
+            pay="tab";
+       Customer* newCustomer = new Customer(pay,split);
+       customers.push_back(newCustomer);
+    }
+
+    /// sending customers vector to floor for storing so that host can seat the customers
+
+     floor->addCustomers(customers);
+
+    /// Creating all the tables on the floor so that host and waiter can access the tables
+    for (int i = 0; i < numTables; ++i) {
+        r = rand()% maxCap+1;
+        floor->addTable(r);
+    }
+
+    ///Creating Host who will get waiting customers and seating them at tables
+    Host* manager = floor->createHost();
+    manager->setCustomers(customers);
+    manager->setTables(floor->getTables());
+    manager->assignCustomer();
+
     // create function in floor to tell waiters to do rounds
-    //spawn floor + kitchen - constructors for floor + kitchen+waiter+customer
-
-    // host assigns customers to tables - call host - assignCustomer under floor
-
-    //decide whether bill is split/not - customer- not for me
+    //spawn floor + kitchen
 
     // waiters talk to customers - start iteration
 
