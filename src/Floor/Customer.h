@@ -5,7 +5,12 @@
 #include "../Restaurant/FoodOrder.h"
 #include "Bill.h"
 #include "Ratings.h"
+#include "../Kitchen/Ingredient.h"
+
+#include <list>
+#include <iostream>
 #include <string>
+#include <random>
 
 using namespace std;
 
@@ -18,9 +23,10 @@ private:
 	static int nextID;
 	int id;
 	string cookingMethod;
+	list<Ingredient> ingredients;
 	
-
 	double calculateRating();
+
 public:
 	Customer(string paymentMethod);
 
@@ -39,6 +45,12 @@ public:
 	CustomerState* getState();
 
 	int getCustomerID();
+
+	list<Ingredient> getIngredients();
+
+	list<double> getPrices();
+
+	string getCookingMethod();
 };
 
 int Customer::nextID = 1;

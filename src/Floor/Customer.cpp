@@ -17,6 +17,14 @@ Customer::Customer(string paymentMethod)
     }
 
     id = nextID++;
+
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_int_distribution<int> distribution(1, 2);
+    int num = distribution(gen);
+    if (num == 1) {
+        cookingMethod = "grilled";
+    } else cookingMethod = "fried";
 }
 
 void Customer::placeOrder(FoodOrder order)
@@ -55,4 +63,19 @@ CustomerState *Customer::getState()
 int Customer::getCustomerID()
 {
     return id;
+}
+
+list<Ingredient> Customer::getIngredients()
+{
+    return ingredients;
+}
+
+list<double> Customer::getPrices()
+{
+    return list<double>();
+}
+
+string Customer::getCookingMethod()
+{
+    return cookingMethod;
 }
