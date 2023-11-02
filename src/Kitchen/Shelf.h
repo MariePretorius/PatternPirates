@@ -12,13 +12,16 @@ class Stock;
 class Shelf
 {
 public:
-    void addStock(Stock newStock);
+    void addStock(Stock * newStock);
     void removeStock(std::string stock);
     void clearStock();
+    Stock * deductStock(std::string stock);
+
+    std::string getStockList();
 
 private:
 
-    std::list<Stock> stockList;
+    std::list<Stock*> stockList;
     int currentCapacity;
     int maxCapacity;
 };
