@@ -1,6 +1,6 @@
 #ifndef COOK_H
 #define COOK_H
-
+class Ingredient;
 class Cook {
 
 public:

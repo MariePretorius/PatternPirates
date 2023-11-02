@@ -6,9 +6,20 @@ void PrepChef::handleOrder() {
 }
 
 void PrepChef::handleStock(FoodOrder* order) {
+    int stockMissing = 0;
+    int stockNeeded = 0;
     //Get the list of ingredients in order and handle the stock
     std::list<std::string> ingredients = order->getIngredients();
-    for (const auto& item : ingredients) {
-        
+    Shelf* currentShelf = kitchen->getShelf();
+    for (const std::string& ingredient : ingredients) {
+        stockNeeded++;
+        Ingredient* takenIngredient = (Ingredient*)currentShelf->deductStock(ingredient);
+        if (takenIngredient == NULL) {
+            stockMissing++;
+        } else {
+            kitchen->addUncookedIngredient(takenIngredient);
+        }
     }
+
+    int condition = (stockNeeded - stockMissing) / stockNeeded;
 }

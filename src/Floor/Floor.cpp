@@ -29,7 +29,7 @@ int Floor::getCapacity()
 
 Host *Floor::createHost()
 {
-    return new Host();
+    return new Host(this);
 }
 
 int Floor::getNumWaiters()

@@ -31,7 +31,7 @@ private:
     std::list<Table*> tables;
     int numberOfTables;
     int numberOfWaiters;
-    std::list<Customer *> customers;
+    std::vector<Customer *> customers;
     std::list<Waiter *> waiters;
 };
 

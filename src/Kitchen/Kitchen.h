@@ -5,7 +5,7 @@
 #include "../Restaurant/FoodOrder.h"
 #include "../Restaurant/Dish.h"
 #include "Ingredient.h"
-
+#include "Shelf.h"
 
 class Kitchen {
     public:
@@ -17,13 +17,17 @@ class Kitchen {
         Dish* takeDish(int id);
         FoodOrder* getNextOrder();
 
+        Shelf* getShelf();
+        void addCookedIngredient(Ingredient* ingredient);
+        void addUncookedIngredient(Ingredient* ingredient);
+
     private:
         std::list<FoodOrder*> orders;
         std::list<Dish*> completedOrders;
         std::list<Ingredient*> uncookedIngredients;
         std::list<Ingredient*> cookedIngredients;
         FoodOrder* currentOrder;
-        
+        Shelf* shelf;
 };
 
 #endif
