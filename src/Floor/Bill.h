@@ -3,6 +3,7 @@
 
 #include "BillMemento.h"
 #include "Customer.h"
+#include "../Restaurant/Finance.h"
 
 #include <iostream>
 #include <vector>
@@ -18,7 +19,8 @@ class Bill
 		std::vector<std::string> items;  ///< List of items on the bill.
 		double totalCost;  ///< Current total cost of the bill.
 		Customer& customer;  ///< Reference to a customer object.
-		std::string custID;  ///< ID of the customer the bill belongs to.
+		int custID;  ///< ID of the customer the bill belongs to.
+		Finance& bank;
 
 		bool tab;  ///< Boolean value set to indicate whether the bill is a tab.
 		bool paid;  ///< Boolean value set to indicate whether the bill has been paid.
@@ -28,7 +30,7 @@ class Bill
 		/**
 		 * @brief Default constructor for Bill.
 		*/
-		Bill();  //(Customer& customer);
+		Bill(Customer& customer, Finance& f);
 
 		/**
 		 * @brief Function to add items onto the bill
@@ -62,9 +64,9 @@ class Bill
 
 		/**
 		 * @brief Pay the bill with the given amount if at least the cost is given.
-		 * @param amount Amount of money to be payed.
+		 * @param id ID of the customer the bill belongs to
 		*/
-		void payBill(double amount);
+		void payBill(int id);
 
 		/**
 		 * @brief Function to check whether the bill has been paid.
