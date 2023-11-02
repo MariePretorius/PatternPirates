@@ -13,16 +13,19 @@ private:
 
 public:
     Host(Floor* fl);
+
     void getAllTables(list<Table*> table);
+
 	Table* first();
 
 	Table* next(Table* curr);
 
 	bool isFull();
 
-	Table* currentTable();
+	Table* getNextOpenTable();
 
-    bool operator==(Table* op1,Table* op2);
+    bool assignCustomer();
+
 };
 
 #endif
