@@ -10,6 +10,7 @@ class Host {
 private:
     Floor *f;
     list<Table *>tables;
+    vector<Customer* >customers;
 
 public:
     Host(Floor* fl);
@@ -25,6 +26,10 @@ public:
 	Table* getNextOpenTable();
 
     bool assignCustomer();
+
+    void setCustomers(vector<Customer*> c);
+
+    void setTables(list<Table*> t);
 
 };
 
