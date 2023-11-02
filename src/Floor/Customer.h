@@ -17,8 +17,10 @@ private:
 	Bill* bill;
 	static int nextID;
 	int id;
-	double calculateRating();
+	string cookingMethod;
+	
 
+	double calculateRating();
 public:
 	Customer(string paymentMethod);
 
