@@ -20,6 +20,18 @@ FoodOrder* Kitchen::getNextOrder() {
     }
 }
 
+Shelf* Kitchen::getShelf() {
+    return shelf;
+}
+
+void Kitchen::addCookedIngredient(Ingredient* ingredient) {
+    cookedIngredients.push_back(ingredient);
+}
+
+void Kitchen::addUncookedIngredient(Ingredient* ingredient) {
+    uncookedIngredients.push_back(ingredient);
+}
+
 void Kitchen::addNewOrder(FoodOrder* newOrder) {
     orders.push_back(newOrder);
     cout << "\033[1;36mA new order was just added to the kitchen!\033[0m" << endl;
@@ -37,13 +49,14 @@ void Kitchen::addDish(Dish* dish) {
 Dish* Kitchen::takeDish(int id) {
     if (!completedOrders.empty()) {
         auto it = std::find_if(completedOrders.begin(), completedOrders.end(), [id](const Dish& dish) {
-        return dish; 
-    });
-    
-    if (it != completedOrders.end()) {
-        std::cout << "Order " << id << "was succesfully collected by a waiter :)" << std::endl;
-    } else {
-        //If for some reason, the dish is not ready, notify
-        std::cout << "Order " << id << "is not yet ready to be collected." << std::endl;
+            return dish;   
+        });
+         if (it != completedOrders.end()) {
+            //Dish is in the list
+            std::cout << "Order " << id << "was succesfully collected by a waiter :)" << std::endl;
+        } else {
+            //If for some reason, the dish is not ready, notify
+            std::cout << "Order " << id << "is not yet ready to be collected." << std::endl;
+        }
     }
 }
