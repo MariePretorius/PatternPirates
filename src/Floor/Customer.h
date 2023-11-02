@@ -47,6 +47,6 @@ public:
 	bool getPaymentMethod();
 };
 
-int Customer::nextID = 1;
+
 
 #endif

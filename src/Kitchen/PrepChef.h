@@ -1,7 +1,7 @@
 #ifndef PREPCHEF_H
 #define PREPCHEF_H
 #include "Chef.h"
-#include "FoodOrder.h"
+#include "../Restaurant/FoodOrder.h"
 
 #include "Chef.h"
 

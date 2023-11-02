@@ -1,6 +1,6 @@
 #include "Customer.h"
 #include "WaitingForTable.h"
-
+int Customer::nextID = 1;
 double Customer::calculateRating()
 {
     return 5.0;
