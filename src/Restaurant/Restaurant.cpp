@@ -40,13 +40,24 @@ void Restaurant::setup()
     funds->setFunds(f);
 
     //buy stock with finances - in shelf - use addStock - call kitchen's setup function # wait for Franco
+    cout << "\033[1;32mYour shelf:\033[0m" << endl;
+    //kitchen.setup(); //function to allow user to buy stock and save it in shelf
+    // remember to print out shelf
 
+    cout << "\033[1;32mHow many waiters should be employed:\033[0m" << endl;
+    int w;
+    cin>>w;
+    //floor->setNumWaiters(w); // Tristan- add int input for setNumWaiters
 
-    //assign waiters - floor? # wait for Tristan
+    cout << "\033[1;32mSetup complete!\033[0m" << endl;
+    cout << "\033[1;32mThe restaurant simulation will now begin:\033[0m" << endl;
+    simulate();
 }
 
 void Restaurant::simulate()
 {
+    floor->createHost();
+    // create function in floor to tell waiters to do rounds
     //spawn floor + kitchen - constructors for floor + kitchen+waiter+customer
 
     // host assigns customers to tables - call host - assignCustomer under floor
