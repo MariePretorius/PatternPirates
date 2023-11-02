@@ -3,31 +3,44 @@
 
 double Customer::calculateRating()
 {
-    return 0.0;
+    return 5.0;
 }
 
-Customer::Customer(string paymentMethod)
+Customer::Customer(string paymentMethod, bool split)
 {
     state = new WaitingForTable();
 
-    if (paymentMethod == "Tab") {
+    if (split) {
+        this->split = true;
+    } else this->split = false;
 
-    } else if (paymentMethod == "Bill") {
+    if (paymentMethod == "tab") {
+        this->paymentMethod = "tab";
 
+    } else if (paymentMethod == "bill") {
+        this->paymentMethod = "bill";
     }
-}
 
-void Customer::placeOrder(FoodOrder order)
-{
+    id = nextID++;
+
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_int_distribution<int> distribution(1, 2);
+    int num = distribution(gen);
+
+    if (num == 1) {
+        cookingMethod = "grilled";
+    } else cookingMethod = "fried";
+
+    random_device other;
+    mt19937 gen2(other());
+    uniform_int_distribution<int> distribution2(1, 2);
+    int otherNum = distribution2(gen2);
 }
 
 void Customer::nextState() 
 {
     this->state = state->getNextState();
-}
-
-void Customer::payBill(Bill bill)
-{
 }
 
 void Customer::leaveRating(Ratings allRatings)
@@ -40,12 +53,34 @@ void Customer::notifyHost()
 {
 }
 
-FoodOrder Customer::getOrder()
-{
-    return FoodOrder();
-}
-
 CustomerState *Customer::getState()
 {
     return state;
+}
+
+int Customer::getCustomerID()
+{
+    return id;
+}
+
+list<Ingredient> Customer::getIngredients()
+{
+    return ingredients;
+}
+
+list<double> Customer::getPrices()
+{
+    return list<double>();
+}
+
+string Customer::getCookingMethod()
+{
+    return cookingMethod;
+}
+
+bool Customer::getPaymentMethod()
+{
+    if (paymentMethod == "tab") {
+        return true;
+    } else return false;
 }

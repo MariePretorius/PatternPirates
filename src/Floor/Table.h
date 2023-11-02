@@ -13,6 +13,7 @@ private:
 	int tableNumber;
 	int capacity;
 	list<Customer> customers;
+	bool occupied = false;
 
 public:
 	Table(int tableNumber, int capacity);
@@ -24,6 +25,10 @@ public:
 	list<Customer> getCustomers();
 
 	int getCapacity();
+
+	int getTableNumber();
+
+	bool isOccupied();
 };
 
 #endif
