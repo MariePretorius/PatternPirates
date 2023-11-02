@@ -84,3 +84,23 @@ void Floor::addWaiter()
     numberOfWaiters++;
     std::cout << "Added new Waiter" << std::endl;
 }
+
+void Floor::addCustomers(vector<Customer *> newCustomers)
+{
+    for(Customer * c : newCustomers)
+    {
+        customers.push_back(c);
+    }
+}
+
+std::list<Table *> Floor::getTables()
+{
+    std::list<Table*> temp = std::list<Table*>();
+    std::list<Table*>::iterator it = tables.begin();
+    while(it != tables.end())
+    {
+        temp.push_front(*it);
+    }
+
+    return temp;
+}

@@ -17,9 +17,11 @@ class Floor
 {
 public:
     Floor();
+    void addCustomers(vector<Customer*> newCustomers);
+
     Host * createHost();
     int getCapacity();
-
+    std::list<Table*> getTables();
     int getNumWaiters();
     int setNumWaiters();
 
