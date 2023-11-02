@@ -22,9 +22,20 @@ Customer::Customer(string paymentMethod)
     mt19937 gen(rd());
     uniform_int_distribution<int> distribution(1, 2);
     int num = distribution(gen);
+
     if (num == 1) {
         cookingMethod = "grilled";
     } else cookingMethod = "fried";
+
+    random_device other;
+    mt19937 gen(other());
+    uniform_int_distribution<int> distribution2(1, 2);
+    int otherNum = distribution2(gen);
+
+    if (otherNum == 1) {
+        paymentMethod = "tab";
+        //tab = true
+    } else paymentMethod = "bill";
 }
 
 void Customer::placeOrder(FoodOrder order)
@@ -78,4 +89,11 @@ list<double> Customer::getPrices()
 string Customer::getCookingMethod()
 {
     return cookingMethod;
+}
+
+bool Customer::getPaymentMethod()
+{
+    if (paymentMethod == "tab") {
+        return true;
+    } else return false;
 }

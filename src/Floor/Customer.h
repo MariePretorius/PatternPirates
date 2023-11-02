@@ -24,6 +24,7 @@ private:
 	int id;
 	string cookingMethod;
 	list<Ingredient> ingredients;
+	string paymentMethod;
 	
 	double calculateRating();
 
@@ -51,6 +52,8 @@ public:
 	list<double> getPrices();
 
 	string getCookingMethod();
+
+	bool getPaymentMethod();
 };
 
 int Customer::nextID = 1;
