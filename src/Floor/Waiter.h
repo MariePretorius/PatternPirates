@@ -17,11 +17,13 @@ public:
     void moveToNext();
     void addTableToWait(Table * newTable);
     void addOrder(Order * newOrder);
+    std::list<Order*> * giveOrders();
+    void getOrdersFromCurrTable();
 
 private:
     std::list<Table *> tables;
     std::list<Order *> orders;
-    Table * curr;
+    //Table * curr;
 };
 
 

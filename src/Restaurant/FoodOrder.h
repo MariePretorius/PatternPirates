@@ -1,24 +1,28 @@
 #ifndef FOODORDER_H
 #define FOODORDER_H
 
+class Customer;
+#include <iostream>
+
 class FoodOrder {
 
 private:
-	string ingredients;
-	string cookingMethod;
+	std::string ingredients;
+	std::string cookingMethod;
 	int tableNumber;
-	Customer& customer;
+	Customer * customer;
 
 public:
-	FoodOrder(string ingredients, string method, string tableNumber, Customer& customer);
+	FoodOrder(std::string ingredients, std::string method, std::string tableNumber, Customer& customer);
 
 	FoodOrder();
 
 	void execute();
 
-	void addToBill(string ingredient);
+	void addToBill(std::string ingredient);
 
-	string getIngredients();
+	std::string getIngredients();
 };
+
 
 #endif

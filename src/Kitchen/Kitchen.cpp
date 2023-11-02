@@ -1,7 +1,51 @@
 #include "Kitchen.h"
+using namespace std;
 
-Kitchen::Kitchen(){};
+Kitchen::Kitchen(){
 
-void Kitchen::sayHello(){
-    std::cout<<"Hello from Kitchen!"<<std::endl;
+
+};
+
+Kitchen::~Kitchen() {
+
 }
+
+FoodOrder* Kitchen::getNextOrder() {
+    if (!orders.empty()) {
+        FoodOrder* nextOrder = orders.front();
+        orders.erase(orders.begin());
+        currentOrder = nextOrder;
+        return nextOrder;
+    } else {
+        cout << "\033[1;36mAll orders are handled,  for now...\033[0m" << endl;
+    }
+}
+
+void Kitchen::addNewOrder(FoodOrder* newOrder) {
+    orders.push_back(newOrder);
+    cout << "\033[1;36mA new order was just added to the kitchen!\033[0m" << endl;
+}
+
+void Kitchen::notifyWaiter() {
+    //Notify waiter that dish is ready
+}
+
+void Kitchen::addDish(Dish* dish) {
+    completedOrders.push_back(dish);
+    cout << "\033[1;36mA new order was just completed!  Order up!\033[0m" << endl;
+}
+
+Dish* Kitchen::takeDish(int id) {
+    if (!completedOrders.empty()) {
+        auto it = std::find_if(completedOrders.begin(), completedOrders.end(), [id](const Dish& dish) {
+        return dish; 
+    });
+    
+    if (it != completedOrders.end()) {
+        std::cout << "Order " << id << "was succesfully collected by a waiter :)" << std::endl;
+    } else {
+        //If for some reason, the dish is not ready, notify
+        std::cout << "Order " << id << "is not yet ready to be collected." << std::endl;
+    }
+}
+
