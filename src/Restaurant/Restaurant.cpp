@@ -48,10 +48,15 @@ void Restaurant::setup()
 void Restaurant::simulate()
 {
     //spawn floor + kitchen - constructors for floor + kitchen+waiter+customer
+
     // host assigns customers to tables - call host - assignCustomer under floor
+
     //decide whether bill is split/not - customer- not for me
+
     // waiters talk to customers - start iteration
+
     //table orders OR waits - customer-not for me
+
     // waiter takes order if ready to order -  part of iteration-not for me
     //waiter takes order to kitchen -  get orders + give to kitchen
     //kitchen prepares items - kitchen -not for me
