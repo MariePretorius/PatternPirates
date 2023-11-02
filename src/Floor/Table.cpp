@@ -14,9 +14,9 @@ void Table::assignCustomers(list<Customer> customers)
 
 void Table::removeCustomers(list<Customer> customers)
 {
-    for (auto it = customers.begin(); it != customers.end(); ) {
-        auto customer = *it;
-        this->customers.remove(customer);
+    for (list<Customer>::iterator it = customers.begin(); it != customers.end(); ) {
+        Customer customer = *it;
+        this->customers.erase(it);
     }
     if (customers.size() == 0) {
         occupied = false;
