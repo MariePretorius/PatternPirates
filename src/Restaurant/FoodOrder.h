@@ -10,29 +10,28 @@ class Bill;
 #include <iostream>
 #include <cstdlib>
 #include <algorithm>
+#include <list>
 
 class FoodOrder 
 {
 	private:
-		std::string* ingredients;
+		std::vector<std::string> ingredients;
 		int numberOfIngredients;
 		std::string cookingMethod;
 		int tableNumber;
 		Customer* customer;
 		Kitchen* kitchen;
 		Bill* bill;
-		double* prices;
+		std::vector<double> prices;
 		int id;
-
-		// prices map
 
 	public:
 		FoodOrder();
-		FoodOrder(std::string* ingredients, double* prices, int num, std::string method, int tableNumber, Customer& customer, Kitchen* k, Bill* bill);
+		FoodOrder(std::vector<std::string> ingredients, std::vector<double> prices, int num, std::string method, int tableNumber, Customer& customer, Kitchen* k, Bill* bill);
 		~FoodOrder();
 		void execute();
 		void addToBill(std::string ingredient, double cost);
-		std::string* getIngredients();
+		std::vector<std::string> getIngredients();
 		std::string getCookingMethod();
 		int getTableNumber();
 		Customer* getCustomer();
