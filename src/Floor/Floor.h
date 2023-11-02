@@ -23,9 +23,12 @@ public:
     int getNumWaiters();
     int setNumWaiters();
 
+    void addTable(int capacity);
+    void addWaiter();
+
 private:
 
-    std::list<Table> tables;
+    std::list<Table*> tables;
     int numberOfTables;
     int numberOfWaiters;
     std::list<Customer *> customers;
