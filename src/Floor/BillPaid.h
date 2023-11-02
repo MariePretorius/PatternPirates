@@ -6,6 +6,7 @@
 class BillPaid : public CustomerState {
 public:
     CustomerState* getNextState() override;
+    string getName() override;
 };
 
 #endif

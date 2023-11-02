@@ -6,6 +6,7 @@
 
 class RequestingBill : public CustomerState {
     CustomerState* getNextState() override;
+    string getName() override;
 };
 
 #endif
