@@ -44,6 +44,7 @@ void Bill :: showBill() const
 }
 
 void Bill :: setTab(bool tab)
+
 {
     this->tab = tab;
 

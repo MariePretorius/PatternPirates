@@ -1,3 +1,4 @@
+
 //
 // Created by Tristan on 2023/11/01.
 //
@@ -21,5 +22,6 @@ std::string Ingredient::getCondition()
 
 void Ingredient::setCondition(std::string condition)
 {
+
     this->condition = condition;
 }

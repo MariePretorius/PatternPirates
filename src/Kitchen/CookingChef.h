@@ -1,5 +1,8 @@
 #ifndef COOKINGCHEF_H
 #define COOKINGCHEF_H
+#include <list>
+#include "Cook.h"
+#include "Chef.h"
 
 #include "Chef.h"
 #include "Cook.h"
@@ -7,16 +10,14 @@
 class CookingChef : Chef {
 
 private:
-	//List<Ingredient*> uncookedIngredients;
-	//List<Ingredient*> cookedIngredients;
-	Cook* cook;
 
-	//Ingredient* cookingIngredient();
+	Cook* cook; //Strategy
+	void changeCook(Cook* cook);//Change cook used at runtime (change strategy)
 
 public:
-	//void setIngredients(List<Ingredient*> ingredients);
+	CookingChef(Cook* cook);
+	void handleOrder();//Use strategy here
 
-	void handleOrder();
 };
 
 #endif
