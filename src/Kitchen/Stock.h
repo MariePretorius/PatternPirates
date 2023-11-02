@@ -14,6 +14,10 @@ public:
     void removeStock(int quantity);
     double getCostPerUnit();
 
+    virtual std::string getName();
+
+    std::string toString();
+
 private:
     std::string name;
     int quantity;

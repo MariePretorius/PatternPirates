@@ -3,6 +3,7 @@ using namespace std;
 
 Kitchen::Kitchen(){
 
+
 };
 
 Kitchen::~Kitchen() {
@@ -47,3 +48,4 @@ Dish* Kitchen::takeDish(int id) {
         std::cout << "Order " << id << "is not yet ready to be collected." << std::endl;
     }
 }
+
