@@ -1,7 +1,9 @@
 #include "FoodOrder.h"
 #include "../Floor/Customer.h"
-#include "../Kitchen/Kitchen.h"
 #include "../Floor/Bill.h"
+#include "../Kitchen/Kitchen.h"
+
+FoodOrder :: FoodOrder() {}
 
 FoodOrder :: FoodOrder(std::string* ingredients, double* prices, int num, std::string method, int tableNumber, Customer& customer, Kitchen* k, Bill* bill) : kitchen{k}, bill(bill)
 {
@@ -29,7 +31,7 @@ FoodOrder :: ~FoodOrder()
 
 void FoodOrder :: execute()
 {
-    //kitchen->prepareFood(ingredients, cookingMethod);
+    kitchen->addNewOrder(*this);
 }
 
 void FoodOrder :: addToBill(std::string ingredient, double cost)
@@ -55,6 +57,53 @@ int FoodOrder :: getTableNumber()
 Customer* FoodOrder :: getCustomer()
 {
     return this->customer;
+}
+
+int FoodOrder :: getRandomID()   //add vector if necessary
+{
+    std::srand(static_cast<unsigned int>(time(nullptr)));
+    int randomNumber = std::rand() % 9000 + 1000;
+
+    return randomNumber;
+
+    // std::vector<int> ids;
+    // int k = 1111;
+    // bool found = false;
+    // bool done = false;
+    // int randomNumber = 0;
+
+    // for (int i = 0; i < 10; i++)
+    // {
+    //     ids.push_back(k);
+    //     k++;
+    // }
+
+    // do
+    // {
+    //     //std::srand(static_cast<unsigned int>(time(nullptr)));
+    //     randomNumber = std::rand() % 9000 + 1000;
+
+    //     auto it = std::find(ids.begin(), ids.end(), randomNumber);
+
+    //     if (it != ids.end()) 
+    //     {
+    //         found = true;
+    //     } 
+
+    //     // for (int i = 0; i < ids.size(); i++)
+    //     // {
+    //     //     if (ids[i] == random)
+    //     //     {
+    //     //         found = true;
+    //     //         break;
+    //     //     }
+    //     // }
+    // }
+    // while (found == true);
+
+    // ids.push_back(randomNumber);
+    
+    // return randomNumber;
 }
 
 // In Waiter: 

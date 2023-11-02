@@ -8,6 +8,8 @@ class Bill;
 //#include "../Kitchen/Kitchen.h"
 //#include "../Floor/Bill.h"
 #include <iostream>
+#include <cstdlib>
+#include <algorithm>
 
 class FoodOrder 
 {
@@ -20,10 +22,12 @@ class FoodOrder
 		Kitchen* kitchen;
 		Bill* bill;
 		double* prices;
+		int id;
 
 		// prices map
 
 	public:
+		FoodOrder();
 		FoodOrder(std::string* ingredients, double* prices, int num, std::string method, int tableNumber, Customer& customer, Kitchen* k, Bill* bill);
 		~FoodOrder();
 		void execute();
@@ -32,6 +36,7 @@ class FoodOrder
 		std::string getCookingMethod();
 		int getTableNumber();
 		Customer* getCustomer();
+		int getRandomID();  //can add vecter imput to check against duplicates
 };
 
 #endif
