@@ -33,9 +33,9 @@ Customer::Customer(string paymentMethod, bool split)
     } else cookingMethod = "fried";
 
     random_device other;
-    mt19937 gen(other());
+    mt19937 gen2(other());
     uniform_int_distribution<int> distribution2(1, 2);
-    int otherNum = distribution2(gen);
+    int otherNum = distribution2(gen2);
 }
 
 void Customer::nextState() 
