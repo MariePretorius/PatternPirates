@@ -1,8 +1,9 @@
 #include "Bill.h"
 #include <sstream>
 
-//comment added somewhere
-
+/**
+ * @brief Default constructor for Bill.
+*/
 Bill :: Bill()  //(Customer& customer)
 {
     totalCost = 0.0;
@@ -12,23 +13,39 @@ Bill :: Bill()  //(Customer& customer)
     //custID = customer->getID();
 }
 
+/**
+ * @brief Function to add items onto the bill
+ * @param item The menu item to be added onto the bill.
+ * @param cost The price of the menu item to be added onto the bill.
+*/
 void Bill :: addItem(const std::string& item, double cost)
 {
     items.push_back(item);
     totalCost += cost;
 }
 
+/**
+ * @brief Function to create the Bill Memento.
+ * @return BillMemento object is returned.
+*/
 BillMemento Bill :: createMemento() const
 {
     return BillMemento(items, totalCost);
 }
 
+/**
+ * @brief Restores the info from the given Memento.
+ * @param memento BillMemento object.
+*/
 void Bill :: restoreFromMemento(const BillMemento& memento)
 {
     items = memento.getItems();
     totalCost = memento.getTotalCost();
 }
 
+/**
+ * @brief Displayes the current state of the bill.
+*/
 void Bill :: showBill() const
 {
     std::cout << "\x1B[35m";  //Change color to purple
@@ -43,6 +60,10 @@ void Bill :: showBill() const
     std::cout << "\x1B[0m";  //Change color back to normal
 }
 
+/**
+ * @brief Set the tab boolean value.
+ * @param tab Boolean value to set the tab variable.
+*/
 void Bill :: setTab(bool tab)
 {
     this->tab = tab;
@@ -55,6 +76,10 @@ void Bill :: setTab(bool tab)
     std::cout << "\x1B[0m";
 }
 
+/**
+ * @brief Pay the bill with the given amount if at least the cost is given.
+ * @param amount Amount of money to be payed.
+*/
 void Bill :: payBill(double amount)
 {
     double costPaid = totalCost;
@@ -104,6 +129,10 @@ void Bill :: payBill(double amount)
     std::cout << "\x1B[0m";
 }
 
+/**
+ * @brief Function to check whether the bill has been paid.
+ * @return Returns true if bill is paid and false otherwise.
+*/
 bool Bill :: isPaid()
 {
     return paid;
