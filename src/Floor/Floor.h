@@ -7,17 +7,32 @@
 
 #include <list>
 
-class Table;
+class Customer;
+class Host;
+class Waiter;
+
+#include "Table.h"
 
 class Floor
 {
 public:
     Floor();
+    Host * createHost();
     int getCapacity();
 
+    int getNumWaiters();
+    int setNumWaiters();
+
+    void addTable(int capacity);
+    void addWaiter();
+
 private:
-    //std::list<Table> tables;
+
+    std::list<Table*> tables;
     int numberOfTables;
+    int numberOfWaiters;
+    std::list<Customer *> customers;
+    std::list<Waiter *> waiters;
 };
 
 

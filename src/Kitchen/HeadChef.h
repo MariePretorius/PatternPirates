@@ -4,13 +4,18 @@
 #include <list>
 #include "Dish.h"
 
+#include "Chef.h"
+#include "../Restaurant/Dish.h"
+
 class HeadChef : Chef {
 
 private:
+
 	list<Ingredient*> cookedIngredients;
 	Dish* prepareOrder();
 
 public:
+
 	void handleOrder();
 
 protected:

@@ -5,6 +5,11 @@
 #include "Kitchen.h"
 #include "Shelf.h"
 
+#include <string>
+#include "../Restaurant/FoodOrder.h"
+
+using namespace std;
+
 class Chef {
 	private:
 		std::string chefName;
@@ -13,8 +18,10 @@ class Chef {
 		int workingSpeed;
 		Chef* nextChef;
 
+
 	protected:
 		Kitchen* kitchen;
+
 
 	public:
 		void handleOrder();

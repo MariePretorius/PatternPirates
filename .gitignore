@@ -2,3 +2,8 @@
 /cmake-build-debug
 /.idea
 CMakeLists.txt
+src/Restaurant/.idea/discord.xml
+src/Restaurant/.idea/modules.xml
+src/Restaurant/.idea/Restaurant.iml
+src/Restaurant/.idea/vcs.xml
+src/Restaurant/.idea/workspace.xml

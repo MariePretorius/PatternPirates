@@ -3,6 +3,7 @@ using namespace std;
 
 Kitchen::Kitchen(){
 
+
 };
 
 Kitchen::~Kitchen() {
@@ -60,3 +61,4 @@ Dish* Kitchen::takeDish(int id) {
         }
     }
 }
+

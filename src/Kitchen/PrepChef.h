@@ -3,12 +3,16 @@
 #include "Chef.h"
 #include "FoodOrder.h"
 
+#include "Chef.h"
+
 class PrepChef : Chef {
 	private:
 		void handleStock(FoodOrder* order);
 
+
 	public:
 		void handleOrder();
+
 };
 
 #endif
