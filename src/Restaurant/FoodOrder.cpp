@@ -5,7 +5,7 @@
 
 FoodOrder :: FoodOrder() {}
 
-FoodOrder :: FoodOrder(std::string* ingredients, double* prices, int num, std::string method, int tableNumber, Customer& customer, Kitchen* k, Bill* bill) : kitchen{k}, bill(bill)
+FoodOrder :: FoodOrder(std::vector<std::string> ingredients, std::vector<double> prices, int num, std::string method, int tableNumber, Customer& customer, Kitchen* k, Bill* bill) : kitchen{k}, bill(bill)
 {
     this->customer = &customer;
     //this->kitchen = &k;
@@ -13,25 +13,28 @@ FoodOrder :: FoodOrder(std::string* ingredients, double* prices, int num, std::s
     this->numberOfIngredients = num;
     this->cookingMethod = method;
     this->tableNumber = tableNumber;
-    this->ingredients = new std::string[numberOfIngredients];
-    this->prices = new double[numberOfIngredients];
+    //this->ingredients = new std::string[numberOfIngredients];
+    //this->prices = new double[numberOfIngredients];
     for (int i = 0; i < numberOfIngredients; i++)
     {
-        this->ingredients[i] = ingredients[i];
-        this->prices[i] = prices[i];
-        addToBill(ingredients[i], prices[i]);
+        //this->ingredients[i] = ingredients[i];
+        this->ingredients.push_back(ingredients[i]);
+        //this->prices[i] = prices[i];
+        this->ingredients.push_back(ingredients[i]);
+        
+        addToBill(this->ingredients[i], this->prices[i]);
     }
 }
 
 FoodOrder :: ~FoodOrder()
 {
-    delete ingredients;
-    delete prices;
+    //delete ingredients;
+    //delete prices;
 }
 
 void FoodOrder :: execute()
 {
-    kitchen->addNewOrder(this);
+    kitchen->addNewOrder(*this);
 }
 
 void FoodOrder :: addToBill(std::string ingredient, double cost)
@@ -39,7 +42,7 @@ void FoodOrder :: addToBill(std::string ingredient, double cost)
     bill->addItem(ingredient, cost);
 }
 
-std::string* FoodOrder :: getIngredients()
+std::list<std::string> FoodOrder :: getIngredients()
 {
     return this->ingredients;
 }

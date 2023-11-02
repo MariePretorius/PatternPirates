@@ -6,7 +6,7 @@ Table::Table(int tableNumber, int capacity)
     this->capacity = capacity;
 }
 
-void Table::assignCustomers(list<Customer> customers)
+void Table::assignCustomers(list<Customer*> customers)
 {
     this->customers = customers;
     occupied = true;

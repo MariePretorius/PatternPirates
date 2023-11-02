@@ -18,7 +18,7 @@ private:
 public:
 	Table(int tableNumber, int capacity);
 	
-	void assignCustomers(list<Customer> customers);
+	void assignCustomers(list<Customer*> customers);
 
 	void removeCustomers(list<Customer> customers);
 
