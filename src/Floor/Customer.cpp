@@ -3,12 +3,16 @@
 
 double Customer::calculateRating()
 {
-    return 0.0;
+    return 5.0;
 }
 
-Customer::Customer(string paymentMethod)
+Customer::Customer(string paymentMethod, bool split)
 {
     state = new WaitingForTable();
+
+    if (split) {
+        this->split = true;
+    } else this->split = false;
 
     if (paymentMethod == "tab") {
         this->paymentMethod = "tab";

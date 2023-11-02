@@ -21,11 +21,12 @@ private:
 	string cookingMethod;
 	list<Ingredient> ingredients;
 	string paymentMethod = "bill";
+	bool split = false;
 	
 	double calculateRating();
 
 public:
-	Customer(string paymentMethod);
+	Customer(string paymentMethod, bool split);
 
 	void nextState();
 
