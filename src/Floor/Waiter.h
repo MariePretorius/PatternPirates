@@ -7,7 +7,7 @@
 
 #include <list>
 
-class Table;
+#include "Table.h"
 class Order;
 
 class Waiter
@@ -17,12 +17,15 @@ public:
     void moveToNext();
     void addTableToWait(Table * newTable);
     void addOrder(Order * newOrder);
-    std::list<Order*> * giveOrders();
+    std::vector<Order*> * giveOrders();
     void getOrdersFromCurrTable();
+    void createBill(bool split, Table * currTable);
+
+    void getOrders();
 
 private:
-    std::list<Table *> tables;
-    std::list<Order *> orders;
+    std::vector<Table *> tables;
+    std::vector<Order *> orders;
     //Table * curr;
 };
 

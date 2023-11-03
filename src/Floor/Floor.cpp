@@ -29,7 +29,7 @@ int Floor::getCapacity()
 
 Host *Floor::createHost()
 {
-    return new Host();
+    return new Host(this);
 }
 
 int Floor::getNumWaiters()
@@ -83,4 +83,34 @@ void Floor::addWaiter()
     waiters.push_back(new Waiter());
     numberOfWaiters++;
     std::cout << "Added new Waiter" << std::endl;
+}
+
+void Floor::addCustomers(vector<Customer *> newCustomers)
+{
+    for(Customer * c : newCustomers)
+    {
+        customers.push_back(c);
+    }
+}
+
+std::list<Table *> Floor::getTables()
+{
+    std::list<Table*> temp = std::list<Table*>();
+    std::list<Table*>::iterator it = tables.begin();
+    while(it != tables.end())
+    {
+        temp.push_front(*it);
+
+        it++;
+
+    }
+
+    return temp;
+}
+
+void Floor::waitersGetOrders() {
+    for(std::list<Waiter*>::iterator it = waiters.begin(); it != waiters.end();it++)
+    {
+        (*it)->getOrders();
+    }
 }

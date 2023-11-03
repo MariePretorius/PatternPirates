@@ -8,7 +8,7 @@
 
 #include "Cook.h"
 
-class Fryer : Cook {
+class Fryer : public Cook {
 
 
 	public:

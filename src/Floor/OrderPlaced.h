@@ -7,6 +7,7 @@
 class OrderPlaced : public CustomerState {
 public:
     CustomerState* getNextState() override;
+    string getName() override;
 };
 
 #endif

@@ -5,6 +5,7 @@
 #include "../Floor/Floor.h"
 #include "../Kitchen/Kitchen.h"
 #include <iostream>
+#include "../Floor/Host.h"
 //hellos
 using namespace std;
 class Restaurant {

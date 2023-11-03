@@ -1,4 +1,6 @@
 #include "Fryer.h"
+#include "iostream"
+using namespace std;
 
 void Fryer::prepareStation() {
     cout << "\033[1;36mThe fryer is filling the fryer with oil...\033[0m" << endl;

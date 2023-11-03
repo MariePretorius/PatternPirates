@@ -18,9 +18,9 @@ class Bill
 	private:
 		std::vector<std::string> items;  ///< List of items on the bill.
 		double totalCost;  ///< Current total cost of the bill.
-		Customer& customer;  ///< Reference to a customer object.
+		Customer * customer;  ///< Reference to a customer object.
 		int custID;  ///< ID of the customer the bill belongs to.
-		Finance& bank;
+		Finance * bank;
 
 		bool tab;  ///< Boolean value set to indicate whether the bill is a tab.
 		bool paid;  ///< Boolean value set to indicate whether the bill has been paid.
@@ -30,7 +30,7 @@ class Bill
 		/**
 		 * @brief Default constructor for Bill.
 		*/
-		Bill(Customer& customer, Finance& f);
+		Bill(Customer * customer, Finance * f);
 
 		/**
 		 * @brief Function to add items onto the bill

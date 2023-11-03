@@ -54,7 +54,7 @@ FoodOrder :: ~FoodOrder()
 */
 void FoodOrder :: execute()
 {
-    kitchen->addNewOrder(*this);
+    kitchen->addNewOrder(this);
 }
 
 /**
@@ -71,7 +71,7 @@ void FoodOrder :: addToBill(std::string ingredient, double cost)
  * @brief Returns the ingredient list.
  * @return Returns a vector of ingredients.
 */
-std::list<std::string> FoodOrder :: getIngredients()
+std::vector<std::string> FoodOrder :: getIngredients()
 {
     return this->ingredients;
 }
