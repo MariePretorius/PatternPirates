@@ -31,7 +31,7 @@ void PrepChef::handleStock(FoodOrder* order) {
     int stockMissing = 0;
     int stockNeeded = 0;
     //Get the list of ingredients in order and handle the stock
-    std::list<std::string> ingredients = order->getIngredients();
+    std::vector<std::string> ingredients = order->getIngredients();
     Shelf* currentShelf = kitchen->getShelf();
     for (const std::string& ingredient : ingredients) {
         stockNeeded++;
