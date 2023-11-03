@@ -10,7 +10,7 @@ class PrepChef : public Chef {
 		void handleStock(FoodOrder* order);
 
 	public:
-        PrepChef();
+        PrepChef(Kitchen* thisKitchen);
 		void handleOrder();
 };
 
