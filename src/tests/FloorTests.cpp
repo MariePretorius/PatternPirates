@@ -3,3 +3,7 @@
 //
 
 #include "FloorTests.h"
+
+void FloorTests::run() {
+
+}
