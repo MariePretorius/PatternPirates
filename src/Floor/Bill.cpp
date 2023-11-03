@@ -4,13 +4,14 @@
 /**
  * @brief Default constructor for Bill.
 */
-Bill :: Bill()  //(Customer& customer)
+Bill :: Bill(Customer& customer, Finance& f)
 {
     totalCost = 0.0;
     tab = false;
     paid = false;
-    //this->customer = customer;
-    //custID = customer->getID();
+    this->customer = customer;
+    custID = customer.getCustomerID();
+    this->bank = f;
 }
 
 /**
@@ -70,63 +71,53 @@ void Bill :: setTab(bool tab)
 
     std::cout << "\x1B[35m";
 
-    std::cout << "This bill has been set to a tab." << std::endl;
-    //std::cout << "Customer " << custID << " has set their bill to a tab." << std::endl;
+    //std::cout << "This bill has been set to a tab." << std::endl;
+    std::cout << "Customer " << custID << " has set their bill to a tab." << std::endl;
 
     std::cout << "\x1B[0m";
 }
 
 /**
  * @brief Pay the bill with the given amount if at least the cost is given.
- * @param amount Amount of money to be payed.
+ * @param id ID of the customer the bill belongs to
 */
-void Bill :: payBill(double amount)
+void Bill :: payBill(int id)
 {
-    double costPaid = totalCost;
-    std::stringstream ss;
-    std::stringstream os;
-    std::string cost = "", owe = "";
-
-    std::cout << "\x1B[35m";
-    
-    // std::string split = "";
-    // int numSplit = 1;
-    // double splitSingleTotal = 0.0;
-
-    // std::cout << "Do you wan to spit the bill? (y/n)";
-    // std::cin >> split;
-
-    // if (split == "y")
-    // {
-    //     std::cout << "How many are splitting?";
-    //     std::cin >> numSplit;
-    //     splitSingleTotal = totalCost / numSplit;
-    //     std::cout << "Everyone should pay " << splitSingleTotal << std::endl;
-    // }
-
-    if (totalCost - amount > 0)
+    if (id == custID)
     {
-        ss << totalCost;
-        ss >> owe;
-        std::cout << "Not enough money given! You owe " << owe << std::endl;
-    }
-    else
-    {
+        double costPaid = totalCost;
+        std::stringstream ss;
+        std::string cost = "";
+        double tip = 0.0;
+
+        tip = costPaid * 0.15;
+        costPaid = costPaid + tip;
+
+        std::cout << "\x1B[35m";
+
         totalCost = 0.0;
         
         //call finances function to add money
+        bank.addFunds(costPaid);
 
         paid = true;
 
         ss << costPaid;
         ss >> cost;
 
-        std::cout << "Customer's bill has been paid. Total was: R" << cost << std::endl;
-        //std::cout << "Customer " << custID << " bill has been paid." << std::endl;
+        //std::cout << "Customer's bill has been paid. Total was: R" << cost << std::endl;
+        std::cout << "Customer " << custID << "'s bill has been paid." << std::endl;
+
+        std::cout << "\x1B[0m";
     }
+    else
+    {
+        std::cout << "\x1B[35m";
 
+        std::cout << "ID given does not match the ID of this bill" << std::cout;
 
-    std::cout << "\x1B[0m";
+        std::cout << "\x1B[0m";
+    }
 }
 
 /**
@@ -137,6 +128,7 @@ bool Bill :: isPaid()
 {
     return paid;
 }
+
 
 // example usage
 // std::cout << "\x1B[35m"; 
