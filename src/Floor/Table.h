@@ -1,3 +1,8 @@
+/**
+ * @class Table
+ * @brief This class represents the tables customer will be seated at.
+ */
+
 #ifndef TABLE_H
 #define TABLE_H
 

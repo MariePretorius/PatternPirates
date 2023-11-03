@@ -1,3 +1,8 @@
+/**
+ * @class WaitingForTable
+ * @brief This class is a state the customer can be in when they are waiting to be seated at a table.
+ */
+
 #ifndef WAITINGFORTABLE_H
 #define WAITINGFORTABLE_H
 

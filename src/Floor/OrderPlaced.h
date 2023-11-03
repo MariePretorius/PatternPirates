@@ -1,3 +1,8 @@
+/**
+ * @class OrderPlaced
+ * @brief This class is a state the customer will be in when they have placed their order.
+ */
+
 #ifndef ORDERPLACED_H
 #define ORDERPLACED_H
 

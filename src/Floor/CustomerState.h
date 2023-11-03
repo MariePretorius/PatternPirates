@@ -1,3 +1,8 @@
+/**
+ * @class CustomerState
+ * @brief This class covers all states a customer can be in.
+ */
+
 #ifndef CUSTOMERSTATE_H
 #define CUSTOMERSTATE_H
 

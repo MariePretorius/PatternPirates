@@ -1,3 +1,8 @@
+/**
+ * @class Customer
+ * @brief This class represents the customers who enter the restaurant.
+ */
+
 #ifndef CUSTOMER_H
 #define CUSTOMER_H
 
