@@ -16,7 +16,7 @@ class Chef {
 		int workingSpeed;
 
 	protected:
-		Kitchen* kitchen;
+		static Kitchen* kitchen;
 		Chef* nextChef; //CoR
 
 	public:
