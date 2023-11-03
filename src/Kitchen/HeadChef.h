@@ -2,24 +2,14 @@
 #define HEADCHEF_H
 #include "Chef.h"
 #include <list>
-#include "Dish.h"
+#include "../Restaurant/Dish.h"
 
 #include "Chef.h"
 #include "../Restaurant/Dish.h"
 
-class HeadChef : Chef {
-
-private:
-
-	list<Ingredient*> cookedIngredients;
-	Dish* prepareOrder();
-
-public:
-
-	void handleOrder();
-
-protected:
-	void setIngredients(list<Ingredient*> cookedIngredients);
+class HeadChef : public Chef {
+	public:
+		void handleOrder();
 };
 
 #endif
