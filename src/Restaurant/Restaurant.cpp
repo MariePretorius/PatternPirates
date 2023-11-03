@@ -15,7 +15,7 @@ Restaurant::Restaurant()
     //Singleton function
     funds = new Finance();
     floor = new Floor(funds);
-    kitchen = new Kitchen();
+    kitchen = new Kitchen(funds);
 }
 
 Restaurant::Restaurant(Restaurant &restaurant)
@@ -29,7 +29,8 @@ void Restaurant::operator=(Restaurant &restaurant)
     //Singleton function
 
 }
-
+///
+///Setup part of Restaurant: get user input to set funds,buy stock and set thenumber of waiters
 void Restaurant::setup()
 {
     // setting the finance's amount for later use
@@ -57,6 +58,8 @@ void Restaurant::setup()
     cout << "\033[1;32mThe restaurant simulation will now begin:\033[0m" << endl;
     simulate();
 }
+///
+///Simulation part of Restaurant: starts the game loop
 
 void Restaurant::simulate()
 {
@@ -111,7 +114,9 @@ void Restaurant::simulate()
     // for each order in foodorder list call foodOrder->execute
 
     //kitchen prepares items - kitchen -not for me
+    kitchen->startKitchenProcess();
     //waiter takes order to correct table num - get order from kitchen + give to waiter
+
     // customers eat - waiter+customer - not for me
     //customer requests bill/tab - not sure
     //waiter brings bill - call waiter.bill
@@ -122,6 +127,4 @@ void Restaurant::simulate()
 
 }
 
-/*Kitchen *Restaurant::getKitchen() {
-    return kitchen;
-}*/
+///
