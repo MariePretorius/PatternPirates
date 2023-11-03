@@ -5,12 +5,17 @@
 
 
 #include "Restaurant.h"
+#include "../tests/CustomerTests.h"
 
 
 
 using namespace std;
 int main(){
     Restaurant::instance()->setup();
-    Restaurant::instance()->simulate();
+    // CUSTOMER TESTS
+    CustomerTests* customerTests = new CustomerTests();
+    customerTests->runTests();
+
+    return 0;
 }
 

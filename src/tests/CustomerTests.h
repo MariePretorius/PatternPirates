@@ -5,6 +5,7 @@
 
 class CustomerTests {
 public:
+    CustomerTests();
     void runTests();
 };
 
