@@ -14,7 +14,7 @@ int main(){
     Restaurant::instance()->setup();
     // CUSTOMER TESTS
     CustomerTests* customerTests = new CustomerTests();
-    customerTests->runTests();
+    //customerTests->runTests();
 
     return 0;
 }

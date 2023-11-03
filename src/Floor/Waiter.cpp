@@ -46,9 +46,9 @@ std::vector<Order *> *Waiter::giveOrders() {
 }
 
 void Waiter::createBill(bool split, Table *table) {
-    std::list<Customer> temp = table->getCustomers();
-    list<Customer>::iterator it = table->getCustomers().begin();
-    if(it->getPaymentMethod())
+    std::list<Customer*> temp = table->getCustomers();
+    list<Customer*>::iterator it = table->getCustomers().begin();
+    if((*it)->getPaymentMethod())
     {
         //if split
 
