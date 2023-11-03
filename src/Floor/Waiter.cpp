@@ -5,7 +5,7 @@ using namespace std;
 #include "Waiter.h"
 #include "Customer.h"
 #include "Bill.h"
-
+#include "../Restaurant/FoodOrder.h"
 #include <vector>
 void Waiter::moveToNext()
 {
@@ -58,4 +58,25 @@ void Waiter::createBill(bool split, Table *table) {
     {
 
     }
+}
+
+void Waiter::getOrders() {
+    //call getter for each customer
+    for(vector<Table*>::iterator it = tables.begin(); it != tables.end(); it++)
+    {
+        list<Customer*>::iterator ir = (*it)->getCustomers().begin();
+        while(ir != (*it)->getCustomers().end())
+        {
+            list<Ingredient> tempIngredient = (*ir)->getIngredients();
+            list<double> tempPrices = (*ir)->getPrices();
+            string method = (*ir)->getCookingMethod();
+            FoodOrder * tempFoodOrder = new FoodOrder();
+        }
+    }
+    //call getter for each element of an order
+    //create a foodorder object and put it into list with reference to customer that ordered it
+    //repeat for all customers in table
+    //repeat for all tables
+    //call execute once all tables have been served
+    //repeat for all waiters
 }

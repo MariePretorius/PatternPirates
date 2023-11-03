@@ -107,3 +107,10 @@ std::list<Table *> Floor::getTables()
 
     return temp;
 }
+
+void Floor::waitersGetOrders() {
+    for(std::list<Waiter*>::iterator it = waiters.begin(); it != waiters.end();it++)
+    {
+        (*it)->getOrders();
+    }
+}
