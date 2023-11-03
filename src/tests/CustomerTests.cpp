@@ -1,5 +1,10 @@
 #include "CustomerTests.h"
 
+CustomerTests::CustomerTests()
+{
+    
+}
+
 void CustomerTests::runTests()
 {
     cout << "\033[34mCUSTOMER CLASS TESTS\033[0m" << endl;
