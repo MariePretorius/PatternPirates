@@ -54,6 +54,10 @@ public:
 	double getRating();
 
 	bool getSplit();
+
+	string getStateName();
+
+	string getPaymentName();
 };
 
 

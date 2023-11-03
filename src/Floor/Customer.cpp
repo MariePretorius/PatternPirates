@@ -94,3 +94,13 @@ bool Customer::getSplit()
 {
     return split;
 }
+
+string Customer::getStateName()
+{
+    return state->getName();
+}
+
+string Customer::getPaymentName()
+{
+    return paymentMethod;
+}
