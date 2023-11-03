@@ -1,4 +1,6 @@
 #include "Kitchen.h"
+#include "Chef.h"
+#include "PrepChef.h"
 using namespace std;
 
 Kitchen::Kitchen(){
@@ -104,6 +106,24 @@ void Kitchen::buyStock() {
 Ingredient* Kitchen::getUncookedIngredient() {
     Ingredient* nextIngredient = uncookedIngredients.front();
     uncookedIngredients.pop_front();
+}
+
+Ingredient* Kitchen::getCookedIngredient() {
+    Ingredient* nextIngredient = cookedIngredients.front();
+    cookedIngredients.pop_front();
+}
+
+int Kitchen::getIngredientAmt() {
+    return uncookedIngredients.size();
+}
+
+Dish* Kitchen::getCurrentDish() {
+    return currentDish;
+}
+
+void Kitchen::startKitchenProcess() {
+    this->prepChef->handleOrder();
+
 }
 
 Ingredient* Kitchen::getCookedIngredient() {
