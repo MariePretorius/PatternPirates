@@ -3,8 +3,10 @@
 #include "PrepChef.h"
 using namespace std;
 
-Kitchen::Kitchen(){
+Kitchen::Kitchen(Finance* finance){
+    this->finance = finance;
     this->prepChef = new PrepChef(this);
+    this->shelf = new Shelf();
 };
 
 Kitchen::~Kitchen() {

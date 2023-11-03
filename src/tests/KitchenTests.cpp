@@ -6,7 +6,7 @@ KitchenTests::KitchenTests() {
 }
 
 void KitchenTests::runTests() {
-    Kitchen* kitchen = new Kitchen();
+    Kitchen* kitchen = new Kitchen(new Finance());
 
     FoodOrder* food1 = new FoodOrder();
     FoodOrder* food2 = new FoodOrder();
