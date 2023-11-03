@@ -25,7 +25,7 @@ public:
 	
 	void assignCustomers(list<Customer*> customers);
 
-	void removeCustomers(list<Customer*> customers);
+	void removeCustomers();
 
 	list<Customer*> getCustomers();
 

@@ -12,18 +12,10 @@ void Table::assignCustomers(list<Customer*> customers)
     occupied = true;
 }
 
-void Table::removeCustomers(list<Customer*> customers)
+void Table::removeCustomers()
 {
-    for (list<Customer*>::iterator it = customers.begin(); it != customers.end(); ) {
-        Customer* customer = *it;
-        it = customers.erase(it);
-    }
-    if (customers.size() == 0) {
-        occupied = false;
-    }
-    if (customers.size() == 0) {
-        occupied = false;
-    }
+    customers.clear();
+    occupied = false;
 }
 
 list<Customer*> Table::getCustomers()

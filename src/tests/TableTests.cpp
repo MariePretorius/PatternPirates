@@ -35,7 +35,7 @@ void TableTests::runTests()
     table->assignCustomers(customers);
     cout << "Customers After Adding: ";
     list<Customer*> listed = table->getCustomers();
-    for (list<Customer*>::iterator it = listed.begin(); it != listed.end(); ) {
+    for (list<Customer*>::iterator it = listed.begin(); it != listed.end(); ++it) {
         cout << *it << " ";
     }
     cout << endl;
@@ -43,9 +43,9 @@ void TableTests::runTests()
     cout << "Customers After Removing: ";
     list<Customer*> other;
     other.push_back(customer1);
-    table->removeCustomers(other);
+    table->removeCustomers();
     list<Customer*> more = table->getCustomers();
-    for (list<Customer*>::iterator iter = more.begin(); iter != more.end(); ) {
+    for (list<Customer*>::iterator iter = more.begin(); iter != more.end(); ++iter) {
         cout << *iter << " ";
     }
     cout << endl;
