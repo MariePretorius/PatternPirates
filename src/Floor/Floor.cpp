@@ -100,6 +100,7 @@ std::list<Table *> Floor::getTables()
     while(it != tables.end())
     {
         temp.push_front(*it);
+        it++;
     }
 
     return temp;

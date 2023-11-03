@@ -52,7 +52,7 @@ bool Host::isFull()
     //true = full
     list<Table*>::iterator it = tables.begin();
     bool full = true;
-    for (it; it != tables.end(); )
+    for (it; it != tables.end(); it++)
     {
         Table* temp = *it;
         if (!temp->isOccupied())
