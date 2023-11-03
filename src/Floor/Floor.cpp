@@ -100,8 +100,17 @@ std::list<Table *> Floor::getTables()
     while(it != tables.end())
     {
         temp.push_front(*it);
+
         it++;
+
     }
 
     return temp;
+}
+
+void Floor::waitersGetOrders() {
+    for(std::list<Waiter*>::iterator it = waiters.begin(); it != waiters.end();it++)
+    {
+        (*it)->getOrders();
+    }
 }

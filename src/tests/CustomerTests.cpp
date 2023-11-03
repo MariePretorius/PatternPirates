@@ -17,6 +17,7 @@ void CustomerTests::runTests()
 
     cout << "Customer ID: 1" << endl;
     cout << "Customer State: Waiting For Table" << endl;
+
     cout << "Payment Method: bill" << endl;
     cout << "Cooking Method: grilled / fried" << endl;
     cout << "Splt: false" << endl;
@@ -31,4 +32,5 @@ void CustomerTests::runTests()
     cout << "Cooking Method: " << customer.getCookingMethod() << endl;
     cout << "Split: " << customer.getSplit() << endl;
     cout << "Rating: " << customer.getRating() << endl;
+
 }

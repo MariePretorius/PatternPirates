@@ -21,6 +21,8 @@ public:
     void getOrdersFromCurrTable();
     void createBill(bool split, Table * currTable);
 
+    void getOrders();
+
 private:
     std::vector<Table *> tables;
     std::vector<Order *> orders;
