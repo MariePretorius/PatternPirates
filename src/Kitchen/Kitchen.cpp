@@ -4,7 +4,7 @@
 using namespace std;
 
 Kitchen::Kitchen(){
-    this->prepChef = new PrepChef();
+    this->prepChef = new PrepChef(this);
 };
 
 Kitchen::~Kitchen() {

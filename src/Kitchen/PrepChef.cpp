@@ -1,7 +1,8 @@
 #include "PrepChef.h"
 
-PrepChef::PrepChef() {
+PrepChef::PrepChef(Kitchen* thisKitchen) {
     this->nextChef = new CookingChef();
+    this->kitchen = thisKitchen;
 }
 
 void PrepChef::handleOrder() {
