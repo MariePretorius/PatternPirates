@@ -3,11 +3,12 @@
 
 class Customer;
 #include <iostream>
+#include <list>
 
 class FoodOrder {
 
 private:
-	std::string ingredients;
+	std::list<std::string> ingredients;
 	std::string cookingMethod;
 	int tableNumber;
 	Customer * customer;
@@ -21,7 +22,7 @@ public:
 
 	void addToBill(std::string ingredient);
 
-	std::string getIngredients();
+	std::list<std::string> getIngredients();
 };
 
 
