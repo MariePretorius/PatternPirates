@@ -17,6 +17,11 @@ void Table::removeCustomers(list<Customer*> customers)
     for (list<Customer*>::iterator it = customers.begin(); it != customers.end(); ) {
         Customer* customer = *it;
         it = customers.erase(it);
+
+    }
+    if (customers.size() == 0) {
+        occupied = false;
+
     }
     if (customers.size() == 0) {
         occupied = false;

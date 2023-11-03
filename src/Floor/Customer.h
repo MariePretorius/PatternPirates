@@ -45,6 +45,10 @@ public:
 	string getCookingMethod();
 
 	bool getPaymentMethod();
+
+	double getRating();
+
+	bool getSplit();
 };
 
 

@@ -52,7 +52,7 @@ bool Host::isFull()
     //true = full
     list<Table*>::iterator it = tables.begin();
     bool full = true;
-    for (it; it != tables.end(); )
+    for (it; it != tables.end(); it++)
     {
         Table* temp = *it;
         if (!temp->isOccupied())
@@ -111,7 +111,9 @@ bool Host::assignCustomer() {
         to_string(openTable->getTableNumber())+"\033[0m" << endl;
 
         //GET INFO FROM MARIE
+
         //getPaymentMethod :true = tab ;false= bill
+
         if ( seatedCustomers.back()->getPaymentMethod())
         {
             paymentMethod ="tab";

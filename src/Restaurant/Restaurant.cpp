@@ -33,19 +33,19 @@ void Restaurant::operator=(Restaurant &restaurant)
 void Restaurant::setup()
 {
     // setting the finance's amount for later use
-    double f;
+    double f = 420.69;
     cout << "\033[1;32mSetup Phase:\033[0m" << endl;
     cout << "\033[1;32mAmount of finances for this round:\033[0m"<< endl;
-    cin>> f;
     funds->setFunds(f);
 
     //buy stock with finances - in shelf - use addStock - call kitchen's setup function # wait for Franco
     cout << "\033[1;32mYour shelf:\033[0m" << endl;
+
     kitchen->buyStock(); //function to allow user to buy stock and save it in shelf
 
+
     cout << "\033[1;32mHow many waiters should be employed:\033[0m" << endl;
-    int w;
-    cin>>w;
+    int w = 3;
     for(int i = 0; i < w; i++)
     {
         floor->addWaiter();
@@ -103,7 +103,9 @@ void Restaurant::simulate()
     manager->setTables(floor->getTables());
     manager->assignCustomer();
 
+
     // use loop for this part:
+
     // create function in floor to tell waiters to do rounds
     //spawn floor + kitchen
 

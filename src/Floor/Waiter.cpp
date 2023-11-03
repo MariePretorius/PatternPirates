@@ -1,7 +1,7 @@
 //
 // Created by Tristan on 2023/10/23.
 //
-
+using namespace std;
 #include "Waiter.h"
 #include "Customer.h"
 #include "Bill.h"
@@ -46,8 +46,12 @@ std::vector<Order *> *Waiter::giveOrders() {
 }
 
 void Waiter::createBill(bool split, Table *table) {
-    if(split)
+    std::list<Customer*> temp = table->getCustomers();
+    list<Customer*>::iterator it = table->getCustomers().begin();
+    if((*it)->getPaymentMethod())
     {
+        //if split
+
         //creates a bill based on orders
     }
     else
