@@ -5,20 +5,17 @@
 
 
 #include "Restaurant.h"
+#include "../tests/CustomerTests.h"
 
 
 
 using namespace std;
 int main(){
     Restaurant::instance()->setup();
-
-}
-
-using namespace std;
-int main(){
-    Kitchen k;
-    //this is a test commit
-    //k.sayHello();
+    // CUSTOMER TESTS
+    CustomerTests* customerTests = new CustomerTests();
+    customerTests->runTests();
 
     return 0;
 }
+

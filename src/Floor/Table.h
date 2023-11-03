@@ -12,15 +12,15 @@ class Table {
 private:
 	int tableNumber;
 	int capacity;
-	list<Customer> customers;
+	list<Customer>* customers;
 	bool occupied = false;
 
 public:
 	Table(int tableNumber, int capacity);
 	
-	void assignCustomers(list<Customer> customers);
+	void assignCustomers(list<Customer>* customers);
 
-	void removeCustomers(list<Customer> customers);
+	void removeCustomers(list<Customer>* customers);
 
 	list<Customer> getCustomers();
 
