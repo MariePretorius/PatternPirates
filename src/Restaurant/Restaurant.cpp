@@ -14,7 +14,7 @@ Restaurant::Restaurant()
 {
     //Singleton function
     funds = new Finance();
-    floor = new Floor();
+    floor = new Floor(funds);
     kitchen = new Kitchen();
 }
 
@@ -108,11 +108,8 @@ void Restaurant::simulate()
 
     // use loop for this part:
     floor->waitersGetOrders();
+    // for each order in foodorder list call foodOrder->execute
 
-    //table orders OR waits - customer-not for me
-
-    // waiter takes order if ready to order -  part of iteration
-    //waiter takes order to kitchen -  get orders + give to kitchen
     //kitchen prepares items - kitchen -not for me
     //waiter takes order to correct table num - get order from kitchen + give to waiter
     // customers eat - waiter+customer - not for me
