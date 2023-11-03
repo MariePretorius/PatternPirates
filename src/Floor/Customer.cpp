@@ -84,3 +84,13 @@ bool Customer::getPaymentMethod()
         return true;
     } else return false;
 }
+
+double Customer::getRating()
+{
+    return 5.0;
+}
+
+bool Customer::getSplit()
+{
+    return split;
+}
