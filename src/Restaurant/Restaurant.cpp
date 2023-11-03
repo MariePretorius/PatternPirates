@@ -14,7 +14,7 @@ Restaurant::Restaurant()
 {
     //Singleton function
     funds = new Finance();
-    floor = new Floor();
+    floor = new Floor(this);
     kitchen = new Kitchen();
 }
 
@@ -33,19 +33,19 @@ void Restaurant::operator=(Restaurant &restaurant)
 void Restaurant::setup()
 {
     // setting the finance's amount for later use
-    double f = 420.69;
+    double f;
     cout << "\033[1;32mSetup Phase:\033[0m" << endl;
     cout << "\033[1;32mAmount of finances for this round:\033[0m"<< endl;
+    cin>> f;
     funds->setFunds(f);
 
     //buy stock with finances - in shelf - use addStock - call kitchen's setup function # wait for Franco
     cout << "\033[1;32mYour shelf:\033[0m" << endl;
-
     kitchen->buyStock(); //function to allow user to buy stock and save it in shelf
 
-
     cout << "\033[1;32mHow many waiters should be employed:\033[0m" << endl;
-    int w = 3;
+    int w;
+    cin>>w;
     for(int i = 0; i < w; i++)
     {
         floor->addWaiter();
@@ -125,4 +125,8 @@ void Restaurant::simulate()
     //customer leaves - customer
     // tabs pay at end of round - at end of round call pay tabs
 
+}
+
+Kitchen *Restaurant::getKitchen() {
+    return kitchen;
 }
