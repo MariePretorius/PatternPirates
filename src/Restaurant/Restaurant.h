@@ -34,6 +34,6 @@ public:
 
     void subtractFunds(double x);
 
-    Kitchen* getKitchen();
+    //Kitchen* getKitchen();
 };
 #endif
