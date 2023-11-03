@@ -11,6 +11,6 @@
 using namespace std;
 int main(){
     Restaurant::instance()->setup();
-
+    Restaurant::instance()->simulate();
 }
 
