@@ -21,6 +21,9 @@ void Table::removeCustomers(list<Customer*> customers)
     if (customers.size() == 0) {
         occupied = false;
     }
+    if (customers.size() == 0) {
+        occupied = false;
+    }
 }
 
 list<Customer*> Table::getCustomers()

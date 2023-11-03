@@ -1,9 +1,12 @@
 //
 // Created by Tristan on 2023/10/23.
 //
-
+using namespace std;
 #include "Waiter.h"
+#include "Customer.h"
+#include "Bill.h"
 
+#include <vector>
 void Waiter::moveToNext()
 {
     //will iterate to the next table in the tables list
@@ -24,20 +27,35 @@ void Waiter::getOrdersFromCurrTable()
 
 Waiter::Waiter()
 {
-    tables = std::list<Table*>();
-    orders = std::list<Order*>();
+    tables = std::vector<Table*>();
+    orders = std::vector<Order*>();
 }
 
 void Waiter::addTableToWait(Table *newTable)
 {
-    tables.push_front(newTable);
+    tables.push_back(newTable);
 }
 
 void Waiter::addOrder(Order *newOrder)
 {
-    orders.push_front(newOrder);
+    orders.push_back(newOrder);
 }
 
-std::list<Order *> *Waiter::giveOrders() {
+std::vector<Order *> *Waiter::giveOrders() {
     return &(this->orders);
+}
+
+void Waiter::createBill(bool split, Table *table) {
+    std::list<Customer*> temp = table->getCustomers();
+    list<Customer*>::iterator it = table->getCustomers().begin();
+    if((*it)->getPaymentMethod())
+    {
+        //if split
+
+        //creates a bill based on orders
+    }
+    else
+    {
+
+    }
 }

@@ -56,6 +56,6 @@ public:
 	bool getSplit();
 };
 
-int Customer::nextID = 1;
+
 
 #endif

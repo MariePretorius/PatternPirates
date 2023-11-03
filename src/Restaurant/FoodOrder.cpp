@@ -4,6 +4,7 @@
 
 #include "FoodOrder.h"
 #include "../Floor/Customer.h"
+#include <list>
 
 FoodOrder::FoodOrder(std::string ingredients, std::string method, std::string tableNumber, Customer &customer) {
     this->customer = &customer;
@@ -21,6 +22,6 @@ void FoodOrder::addToBill(std::string ingredient) {
 
 }
 
-std::string FoodOrder::getIngredients() {
-    return std::string();
+std::list<std::string> FoodOrder::getIngredients() {
+    return ingredients;
 }
