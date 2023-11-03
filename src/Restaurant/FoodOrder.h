@@ -45,10 +45,9 @@ class FoodOrder : public OrderCommand
 		 * @param method The cooking method of the order.
 		 * @param tableNumber Table number the order came from.
 		 * @param customer Reference to the customer who ordered this.
-		 * @param k Reference to the kitchen object.
 		 * @param bill Reference to the bill for this order.
 		*/
-		FoodOrder(std::vector<std::string> ingredients, std::vector<double> prices, int num, std::string method, int tableNumber, Customer& customer, Kitchen* k, Bill* bill);
+		FoodOrder(std::vector<std::string> ingredients, std::vector<double> prices, int num, std::string method, int tableNumber, Customer& customer, Bill* bill);
 		
 		/**
 		 * @brief Destructor for this class.
@@ -96,6 +95,12 @@ class FoodOrder : public OrderCommand
 		 * @return Return an integer value for the id.
 		*/
 		int getRandomID();  //can add vecter imput to check against duplicates
+
+		/**
+		 * @brief Sets the kitchen pointer.
+		 * @param k Pointer to a kitchen object.
+		*/
+		void setKitchen(Kitchen* k);
 };
 
 #endif

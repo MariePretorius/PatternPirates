@@ -19,7 +19,7 @@ FoodOrder :: FoodOrder() {}
  * @param k Reference to the kitchen object.
  * @param bill Reference to the bill for this order.
 */
-FoodOrder :: FoodOrder(std::vector<std::string> ingredients, std::vector<double> prices, int num, std::string method, int tableNumber, Customer& customer, Kitchen* k, Bill* bill) : kitchen{k}, bill(bill)
+FoodOrder :: FoodOrder(std::vector<std::string> ingredients, std::vector<double> prices, int num, std::string method, int tableNumber, Customer& customer, Bill* bill) : bill(bill)
 {
     this->customer = &customer;
     //this->kitchen = &k;
@@ -152,6 +152,15 @@ int FoodOrder :: getRandomID()   //add vector if necessary
     // ids.push_back(randomNumber);
     
     // return randomNumber;
+}
+
+/**
+ * @brief Sets the kitchen pointer.
+ * @param k Pointer to a kitchen object.
+*/
+void FoodOrder :: setKitchen(Kitchen* k)
+{
+    this->kitchen = k;
 }
 
 // In Waiter: 
