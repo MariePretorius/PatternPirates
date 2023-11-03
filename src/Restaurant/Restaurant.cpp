@@ -14,8 +14,8 @@ Restaurant::Restaurant()
 {
     //Singleton function
     funds = new Finance();
-    floor = new Floor();
-    kitchen = new Kitchen();
+    floor = new Floor(funds);
+    kitchen = new Kitchen(funds);
 }
 
 Restaurant::Restaurant(Restaurant &restaurant)
@@ -29,23 +29,26 @@ void Restaurant::operator=(Restaurant &restaurant)
     //Singleton function
 
 }
-
+///
+///Setup part of Restaurant: get user input to set funds,buy stock and set thenumber of waiters
 void Restaurant::setup()
 {
     // setting the finance's amount for later use
-    double f = 420.69;
+    double f;
     cout << "\033[1;32mSetup Phase:\033[0m" << endl;
-    cout << "\033[1;32mAmount of finances for this round:\033[0m"<< endl;
+    cout << "\033[1;32mAmount of finances for this round:\033[0m";
+    cin>> f;
+    cout<< endl;
     funds->setFunds(f);
 
     //buy stock with finances - in shelf - use addStock - call kitchen's setup function # wait for Franco
-    cout << "\033[1;32mYour shelf:\033[0m" << endl;
-
+    cout << "\033[1;32mYour shelf is currently empty\033[0m" << endl;
+    cout<<endl;
     kitchen->buyStock(); //function to allow user to buy stock and save it in shelf
 
-
     cout << "\033[1;32mHow many waiters should be employed:\033[0m" << endl;
-    int w = 3;
+    int w;
+    cin>>w;
     for(int i = 0; i < w; i++)
     {
         floor->addWaiter();
@@ -55,6 +58,8 @@ void Restaurant::setup()
     cout << "\033[1;32mThe restaurant simulation will now begin:\033[0m" << endl;
     simulate();
 }
+///
+///Simulation part of Restaurant: starts the game loop
 
 void Restaurant::simulate()
 {
@@ -105,18 +110,13 @@ void Restaurant::simulate()
 
 
     // use loop for this part:
+    floor->waitersGetOrders();
+    // for each order in foodorder list call foodOrder->execute
 
-    // create function in floor to tell waiters to do rounds
-    //spawn floor + kitchen
-
-    // waiters talk to customers - start iteration
-
-    //table orders OR waits - customer-not for me
-
-    // waiter takes order if ready to order -  part of iteration
-    //waiter takes order to kitchen -  get orders + give to kitchen
     //kitchen prepares items - kitchen -not for me
+    kitchen->startKitchenProcess();
     //waiter takes order to correct table num - get order from kitchen + give to waiter
+
     // customers eat - waiter+customer - not for me
     //customer requests bill/tab - not sure
     //waiter brings bill - call waiter.bill
@@ -126,3 +126,5 @@ void Restaurant::simulate()
     // tabs pay at end of round - at end of round call pay tabs
 
 }
+
+///
