@@ -5,7 +5,7 @@
 #include "Shelf.h"
 #include <string>
 #include "../Restaurant/FoodOrder.h"
-
+class Kitchen;
 using namespace std;
 
 class Chef {

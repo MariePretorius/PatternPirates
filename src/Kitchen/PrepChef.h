@@ -4,13 +4,12 @@
 #include "../Restaurant/FoodOrder.h"
 #include "CookingChef.h"
 
-class Chef;
-
 class PrepChef : public Chef {
 	private:
 		void handleStock(FoodOrder* order);
 
 	public:
+        PrepChef();
 		void handleOrder();
 };
 

@@ -1,4 +1,6 @@
 #include "Kitchen.h"
+#include "Chef.h"
+#include "PrepChef.h"
 using namespace std;
 
 Kitchen::Kitchen(){

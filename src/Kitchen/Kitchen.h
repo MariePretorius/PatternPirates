@@ -7,8 +7,7 @@
 #include "Ingredient.h"
 #include "Shelf.h"
 #include "../Restaurant/Finance.h"
-#include "PrepChef.h"
-#include "Chef.h"
+class Chef;
 
 class Kitchen {
     public:

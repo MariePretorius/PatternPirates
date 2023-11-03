@@ -10,4 +10,4 @@ public:
     void leaveRating(double rating);
 };
 
-#endif RATINGS_H
+#endif
