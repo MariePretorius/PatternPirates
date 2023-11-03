@@ -8,12 +8,12 @@
 
 void Shelf::addStock(Stock * newStock)
 {
-    this->stockList.push_front(newStock);
+    this->stockList.push_back(newStock);
 }
 
 void Shelf::removeStock(std::string stock)
 {
-    std::list<Stock*>::iterator it = stockList.begin();
+    std::vector<Stock*>::iterator it = stockList.begin();
     while(it != stockList.end() && (*it)->getName() != stock)
     {
         it++;
@@ -29,7 +29,7 @@ void Shelf::clearStock()
 {
     for(int i = 0; i < this->stockList.size(); i++)
     {
-        stockList.pop_front();
+        stockList.pop_back();
     }
 }
 
@@ -47,7 +47,7 @@ std::string Shelf::getStockList() {
 
 Stock * Shelf::deductStock(std::string stock)
 {
-    std::list<Stock*>::iterator it = stockList.begin();
+    std::vector<Stock*>::iterator it = stockList.begin();
     while(it != stockList.end() && (*it)->getName() != stock)
     {
         it++;
@@ -58,4 +58,10 @@ Stock * Shelf::deductStock(std::string stock)
         return (*it);
     }
     return nullptr;
+}
+
+Shelf::Shelf() {
+    stockList = std::vector<Stock*>();
+    currentCapacity = 0;
+    maxCapacity = 0;
 }

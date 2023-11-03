@@ -12,11 +12,12 @@ class Host;
 class Waiter;
 
 #include "Table.h"
+class Finance;
 
 class Floor
 {
 public:
-    Floor();
+    Floor(Finance * finance);
     void addCustomers(vector<Customer*> newCustomers);
     void waitersGetOrders();
     Host * createHost();
@@ -30,6 +31,7 @@ public:
 
 private:
 
+    Finance * finance;
     std::list<Table*> tables;
     int numberOfTables;
     int numberOfWaiters;
