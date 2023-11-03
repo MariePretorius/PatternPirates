@@ -40,7 +40,9 @@ void Restaurant::setup()
 
     //buy stock with finances - in shelf - use addStock - call kitchen's setup function # wait for Franco
     cout << "\033[1;32mYour shelf:\033[0m" << endl;
-    //kitchen.setup(); //function to allow user to buy stock and save it in shelf
+
+    kitchen->buyStock(); //function to allow user to buy stock and save it in shelf
+
 
     cout << "\033[1;32mHow many waiters should be employed:\033[0m" << endl;
     int w = 3;
@@ -101,6 +103,9 @@ void Restaurant::simulate()
     manager->setTables(floor->getTables());
     manager->assignCustomer();
 
+
+    // use loop for this part:
+
     // create function in floor to tell waiters to do rounds
     //spawn floor + kitchen
 
@@ -108,7 +113,7 @@ void Restaurant::simulate()
 
     //table orders OR waits - customer-not for me
 
-    // waiter takes order if ready to order -  part of iteration-not for me
+    // waiter takes order if ready to order -  part of iteration
     //waiter takes order to kitchen -  get orders + give to kitchen
     //kitchen prepares items - kitchen -not for me
     //waiter takes order to correct table num - get order from kitchen + give to waiter

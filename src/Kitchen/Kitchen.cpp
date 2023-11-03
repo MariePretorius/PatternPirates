@@ -123,5 +123,25 @@ Dish* Kitchen::getCurrentDish() {
 
 void Kitchen::startKitchenProcess() {
     this->prepChef->handleOrder();
+
 }
+
+Ingredient* Kitchen::getCookedIngredient() {
+    Ingredient* nextIngredient = cookedIngredients.front();
+    cookedIngredients.pop_front();
+}
+
+int Kitchen::getIngredientAmt() {
+    return uncookedIngredients.size();
+}
+
+Dish* Kitchen::getCurrentDish() {
+    return currentDish;
+}
+
+void Kitchen::startKitchenProcess() {
+    this->prepChef->handleOrder();
+}
+
+
 
