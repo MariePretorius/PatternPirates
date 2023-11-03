@@ -4,13 +4,13 @@
 /**
  * @brief Default constructor for Bill.
 */
-Bill :: Bill(Customer& customer, Finance& f)
+Bill :: Bill(Customer * customer, Finance * f)
 {
     totalCost = 0.0;
     tab = false;
     paid = false;
     this->customer = customer;
-    custID = customer.getCustomerID();
+    custID = customer->getCustomerID();
     this->bank = f;
 }
 
@@ -98,7 +98,7 @@ void Bill :: payBill(int id)
         totalCost = 0.0;
         
         //call finances function to add money
-        bank.addFunds(costPaid);
+        bank->addFunds(costPaid);
 
         paid = true;
 
@@ -114,7 +114,7 @@ void Bill :: payBill(int id)
     {
         std::cout << "\x1B[35m";
 
-        std::cout << "ID given does not match the ID of this bill" << std::cout;
+        std::cout << "ID given does not match the ID of this bill" << std::endl;
 
         std::cout << "\x1B[0m";
     }
