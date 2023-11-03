@@ -111,7 +111,7 @@ bool Host::assignCustomer() {
         to_string(openTable->getTableNumber())+"\033[0m" << endl;
 
         //GET INFO FROM MARIE
-        //getPaymentMethod :true = ;false=
+        //getPaymentMethod :true = tab ;false= bill
         if ( seatedCustomers.back()->getPaymentMethod())
         {
             paymentMethod ="tab";

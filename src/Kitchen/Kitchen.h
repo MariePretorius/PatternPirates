@@ -20,6 +20,7 @@ class Kitchen {
         Shelf* getShelf();
         void addCookedIngredient(Ingredient* ingredient);
         void addUncookedIngredient(Ingredient* ingredient);
+        void addStock();
 
     private:
         std::list<FoodOrder*> orders;
