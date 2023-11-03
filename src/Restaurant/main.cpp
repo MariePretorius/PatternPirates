@@ -19,8 +19,8 @@ int main(){
     // customerTests->runTests();
 
     //TABLE TESTS
-    TableTests* tableTests = new TableTests();
-    tableTests->runTests();
+    // TableTests* tableTests = new TableTests();
+    // tableTests->runTests();
 
     return 0;
 }

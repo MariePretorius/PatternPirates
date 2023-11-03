@@ -10,7 +10,19 @@
 
 class BillPaid : public CustomerState {
 public:
+    /**
+     * @brief Get the next state of the customer.
+     * This function returns the next state that the customer transitions to
+     * after their bill has been paid.
+     * @return A pointer to the next customer state.
+     */
     CustomerState* getNextState() override;
+
+    /**
+     * @brief Get the name of the customer state.
+     * This function returns the name of the customer state, which is "BillPaid."
+     * @return The name of the customer state.
+     */
     string getName() override;
 };
 
