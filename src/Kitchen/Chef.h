@@ -2,10 +2,10 @@
 #define CHEF_H
 #include <string>
 #include "Kitchen.h"
-
+#include "Shelf.h"
 #include <string>
 #include "../Restaurant/FoodOrder.h"
-
+class Kitchen;
 using namespace std;
 
 class Chef {
@@ -14,16 +14,13 @@ class Chef {
 		double chefExperience;
 		int chefID;
 		int workingSpeed;
-		Chef* nextChef;
-
 
 	protected:
 		Kitchen* kitchen;
-
+		Chef* nextChef; //CoR
 
 	public:
-		void handleOrder();
-		void setNextChef(Chef* nextChef);
+		virtual void handleOrder() = 0;
 };
 
 #endif

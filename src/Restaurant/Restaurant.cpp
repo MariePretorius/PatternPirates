@@ -41,7 +41,7 @@ void Restaurant::setup()
 
     //buy stock with finances - in shelf - use addStock - call kitchen's setup function # wait for Franco
     cout << "\033[1;32mYour shelf:\033[0m" << endl;
-    kitchen->addStock(); //function to allow user to buy stock and save it in shelf
+    kitchen->buyStock(); //function to allow user to buy stock and save it in shelf
 
     cout << "\033[1;32mHow many waiters should be employed:\033[0m" << endl;
     int w;

@@ -3,21 +3,19 @@
 #include <list>
 #include "Cook.h"
 #include "Chef.h"
+#include "HeadChef.h"
+#include "Fryer.h"
+#include "Griller.h"
 
-#include "Chef.h"
-#include "Cook.h"
-
-class CookingChef : Chef {
+class CookingChef : public Chef {
 
 private:
-
 	Cook* cook; //Strategy
 	void changeCook(Cook* cook);//Change cook used at runtime (change strategy)
 
 public:
-	CookingChef(Cook* cook);
+	CookingChef();
 	void handleOrder();//Use strategy here
-
 };
 
 #endif

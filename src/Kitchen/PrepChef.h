@@ -2,17 +2,16 @@
 #define PREPCHEF_H
 #include "Chef.h"
 #include "../Restaurant/FoodOrder.h"
+#include "CookingChef.h"
 
-#include "Chef.h"
+class Chef;
 
-class PrepChef : Chef {
+class PrepChef : public Chef {
 	private:
 		void handleStock(FoodOrder* order);
 
-
 	public:
 		void handleOrder();
-
 };
 
 #endif
