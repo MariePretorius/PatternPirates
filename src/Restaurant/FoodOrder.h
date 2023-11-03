@@ -13,6 +13,7 @@ class Bill;
 #include <cstdlib>
 #include <algorithm>
 #include <list>
+#include <vector>
 
 /**
  * @class FoodOrder Class
