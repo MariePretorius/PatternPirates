@@ -6,10 +6,12 @@
 #include "Waiter.h"
 #include "Host.h"
 #include "Table.h"
+#include "../Restaurant/Finance.h"
 #include <random>
 
-Floor::Floor()
+Floor::Floor(Finance * finance)
 {
+    this->finance = finance;
     this->numberOfTables = 0;
     this->numberOfWaiters = 0;
 }
@@ -80,9 +82,9 @@ void Floor::addTable(int capacity)
 
 void Floor::addWaiter()
 {
-    waiters.push_back(new Waiter());
+    waiters.push_back(new Waiter(this->finance));
     numberOfWaiters++;
-    std::cout << "Added new Waiter" << std::endl;
+    std::cout << "\033[35mAdded new Waiter\033[0m" << std::endl;
 }
 
 void Floor::addCustomers(vector<Customer *> newCustomers)
