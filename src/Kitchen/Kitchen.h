@@ -13,7 +13,7 @@ class Chef;
 
 class Kitchen {
     public:
-        Kitchen();
+        Kitchen(Finance* finance);
         ~Kitchen();
         void addNewOrder(FoodOrder* newOrder);
         void notifyWaiter();

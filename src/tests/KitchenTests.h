@@ -7,6 +7,6 @@ class KitchenTests {
     public:
         KitchenTests();
         void runTests();
-}
+};
 
 #endif 
