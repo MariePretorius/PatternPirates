@@ -41,3 +41,36 @@ bool Table::isOccupied()
 {
     return occupied;
 }
+
+void Table::assignDishes(vector<Dish*> *dishes)
+{
+    this->dishes = dishes;
+}
+
+void Table::checkDishes()
+{
+    bool allFinished = true;
+    for (Customer* customer : customers) {
+        if (customer->getStateName() != "Bill Requested") {
+            allFinished = false;
+            break;
+        }
+        if (allFinished) {
+            dishes->clear();
+        }
+    }
+}
+
+bool Table::doneEating()
+{
+    bool allFinished = true;
+    for (Customer* customer : customers) {
+        if (customer->getStateName() != "Bill Requested") {
+            allFinished = false;
+            break;
+        }
+        if (allFinished) {
+            return true;
+        } else return false;
+    }
+}

@@ -9,6 +9,8 @@
 #include "iostream"
 #include <list>
 #include "Customer.h"
+#include <vector>
+#include "../Restaurant/Dish.h"
 
 using namespace std;
 
@@ -19,7 +21,7 @@ private:
 	int capacity; ///< The maximum number of customers the table can accommodate.
 	list<Customer*> customers; ///< A list of customers currently seated at the table.
 	bool occupied = false; ///< Indicates whether the table is currently occupied.
-
+     vector<Dish*> * dishes;
 public:
 	/**
      * @brief Constructor for the Table class.
@@ -64,6 +66,27 @@ public:
      * @return True if the table is occupied, false otherwise.
      */
 	bool isOccupied();
+
+     /**
+     * @brief Assign a vector of Dish pointers to the Restaurant.
+     * This function sets the dishes on the Table by assigning a vector of Dish pointers.
+     * @param dishes A vector of Dish pointers to be assigned to the Table.
+     */
+     void assignDishes(vector<Dish*>* dishes);
+
+     /**
+     * @brief Check the state of the Customers and clear the dishes if necessary.
+     * This function checks the state of the Customers at the Table and clears the dishes
+     * if all customers are in the "Bill Requested" state.
+     */
+     void checkDishes();
+
+     /**
+     * @brief Check if all customers have finished eating.
+     * This function checks the state of all customers to determine if they have finished eating.
+     * @return True if all customers have finished eating; False otherwise.
+     */
+     bool doneEating();
 };
 
 #endif
