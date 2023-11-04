@@ -7,11 +7,13 @@
 
 #include "Stock.h"
 #include <list>
+#include <vector>
 class Stock;
 
 class Shelf
 {
 public:
+    Shelf();
     void addStock(Stock * newStock);
     void removeStock(std::string stock);
     void clearStock();
@@ -21,7 +23,7 @@ public:
 
 private:
 
-    std::list<Stock*> stockList;
+    std::vector<Stock*> stockList;
     int currentCapacity;
     int maxCapacity;
 };

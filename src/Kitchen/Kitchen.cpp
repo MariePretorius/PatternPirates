@@ -21,6 +21,8 @@ FoodOrder* Kitchen::getNextOrder() {
         return nextOrder;
     } else {
         cout << "\033[1;36mAll orders are handled,  for now...\033[0m" << endl;
+        //adding explicit null return value so that empty orders can be considered
+        return nullptr;
     }
 }
 
@@ -61,6 +63,7 @@ Dish* Kitchen::takeDish(int id) {
             std::cout << "Order " << id << "was succesfully collected by a waiter :)" << std::endl;
             return *it;
         }
+        it++;
     }
     std::cout << "Order " << id << "is not yet ready to be collected." << std::endl;
 
@@ -74,6 +77,7 @@ void Kitchen::buyStock() {
     int buyOption;
     int quantity;
     char continueBuying='Y';
+    int counter=0;
 
     double PriceArr[10]={30.50,48.60,12.99,50.20,10.00,17.10,60.00,
                          20.00,30.05};
@@ -81,21 +85,20 @@ void Kitchen::buyStock() {
                              "Salad","Pizza base","Onions","Eggs"};
     do {
         cout << "\033[1;36mList of possible items for your shelf:\033[0m" << endl;
-        cout << "\033[1;36m1:\tBeef \033[0m" << endl;
-        for (int i = 0; i < 10; ++i) {
+        for (int i = 0; i < 9; ++i) {
             cout << "\033[1;36m"+ to_string(i)+"\t"+OptionsArr[i]+" \033[0m" << endl;
         }
         cout<<endl;
         cout<<"\033[1;36mPlease enter the item number you want to buy:";
         cin>>buyOption;
         cout<<endl;
-        cout<<OptionsArr[buyOption]+ " costs R" + to_string(PriceArr[buyOption])+", enter quantity:" ;
+        cout<<OptionsArr[buyOption]<< " costs R" << PriceArr[buyOption]<<", enter quantity:" ;
         cin>>quantity;
-        //shelf->addStock(new Ingredient()); //Ingredient needs a constructor
-        finance->removeFunds(PriceArr[buyOption]);
+        shelf->addStock(new Stock(OptionsArr[buyOption],quantity,PriceArr[buyOption],counter++)); //Ingredient needs a constructor
+        finance->removeFunds(quantity*PriceArr[buyOption]);
         cout<< to_string(quantity)+" [" + OptionsArr[buyOption] + "] has been bought !";
         cout<<endl;
-        cout<<"Amount of funds left: R"<< to_string(finance->getFunds());
+        cout<<"Amount of funds left: R"<< finance->getFunds()<<endl;
         cout<<"Your shelf:"<<endl;
         cout<<shelf->getStockList()<<endl;
         cout<<"Do you want to buy more stock?[Y/n]: \033[0m";

@@ -22,7 +22,8 @@ public:
 
 	void removeCustomers(list<Customer*> customers);
 
-	list<Customer*> getCustomers();
+    //pointer return to prevent segfaults.
+	list<Customer*> * getCustomers();
 
 	int getCapacity();
 
