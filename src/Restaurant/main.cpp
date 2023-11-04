@@ -6,11 +6,13 @@
 
 #include "Restaurant.h"
 #include "../tests/CustomerTests.h"
+
 #include "../tests/FinanceTests.h"
 #include "../tests/StockTests.h"
 #include "../tests/WaiterTests.h"
 #include "../tests/FloorTests.h"
 #include "../tests/KitchenTests.h"
+
 
 
 using namespace std;
@@ -165,6 +167,7 @@ void testing()
 
 int main(){
 
+
     testing();
     Restaurant::instance()->setup();
 
@@ -182,6 +185,7 @@ int main(){
     }
      */
     // CUSTOMER TESTS
+
 
 
     return 0;
