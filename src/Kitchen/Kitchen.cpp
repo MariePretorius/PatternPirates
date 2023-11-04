@@ -62,7 +62,7 @@ std::vector<Dish*> Kitchen::takeDishes() {
 }
 
 void Kitchen::setCurrentDish(double cond) {
-    currentDish = new Dish(cond, currentOrder->getCustomer(),currentOrder->getTableNumber());
+    currentDish = new Dish(cond, currentOrder->getCustomer(),currentOrder->getTableNumber(),currentOrder->getBill());
 }
 
 void Kitchen::buyStock() {
