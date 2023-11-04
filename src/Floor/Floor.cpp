@@ -135,3 +135,8 @@ void Floor::waitersGetOrders() {
 vector<FoodOrder *> *Floor::fetchOrders() {
     return &stashedOrders;
 }
+
+// when waiter gives finished orders to customers, change their state - should be eating state
+void Floor::waitersDoRounds() {
+
+}
