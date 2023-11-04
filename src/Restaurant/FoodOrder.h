@@ -71,7 +71,8 @@ class FoodOrder : public OrderCommand
 		 * @brief Returns the ingredient list.
 		 * @return Returns a vector of ingredients.
 		*/
-		std::vector<std::string> getIngredients();
+		//pass by reference to prevent segfault
+		std::vector<std::string> * getIngredients();
 
 		/**
 		 * @brief Returns the cooking method.

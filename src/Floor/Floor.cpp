@@ -11,6 +11,7 @@
 
 Floor::Floor(Finance * finance)
 {
+    this->stashedOrders = vector<FoodOrder*>();
     this->finance = finance;
     this->numberOfTables = 0;
     this->numberOfWaiters = 0;
@@ -64,7 +65,7 @@ void Floor::addTable(int capacity)
     }
     std::list<Waiter*>::iterator it = waiters.begin();
     int i = 0;
-    std::cout << randomInteger << std::endl;
+    //std::cout << randomInteger << std::endl;
     while(i < randomInteger)
     {
         if(i != numberOfWaiters)
@@ -87,7 +88,7 @@ void Floor::addWaiter()
     std::cout << "\033[35mAdded new Waiter\033[0m" << std::endl;
 }
 
-void Floor::addCustomers(vector<Customer *> newCustomers)
+void Floor::addCustomers(const vector<Customer *>& newCustomers)
 {
     for(Customer * c : newCustomers)
     {
@@ -115,4 +116,22 @@ void Floor::waitersGetOrders() {
     {
         (*it)->getOrders();
     }
+
+    vector<FoodOrder *> * allOrders = new vector<FoodOrder *>();
+    for(std::list<Waiter*>::iterator it = waiters.begin(); it != waiters.end();it++)
+    {
+        vector<FoodOrder*> * temp = (*it)->fetchOrders();
+        vector<FoodOrder *>::iterator ij = temp->begin();
+        for(int i = 0; i < temp->size(); i++)
+        {
+            allOrders->push_back((*ij));
+            ij++;
+        }
+    }
+
+    stashedOrders = *allOrders;
+}
+
+vector<FoodOrder *> *Floor::fetchOrders() {
+    return &stashedOrders;
 }

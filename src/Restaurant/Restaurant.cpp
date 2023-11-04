@@ -13,6 +13,8 @@ Restaurant *Restaurant::instance()
 Restaurant::Restaurant()
 {
     //Singleton function
+//added gap because it was 11pm and I struggle to read without sleep
+
     funds = new Finance();
     floor = new Floor(funds);
     kitchen = new Kitchen(funds);
@@ -111,6 +113,16 @@ void Restaurant::simulate()
 
     // use loop for this part:
     floor->waitersGetOrders();
+
+    //Loop added to call execute for all the foodorders. it moves them to the kitchen so it has someting to work with.
+    vector<FoodOrder*> * temp = floor->fetchOrders();
+    for(FoodOrder * foodOrder : *temp)
+    {
+        (*foodOrder).setKitchen(this->kitchen);
+        (*foodOrder).execute();
+    }
+
+
     // for each order in foodorder list call foodOrder->execute
 
     //kitchen prepares items - kitchen -not for me
