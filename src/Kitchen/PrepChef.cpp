@@ -22,7 +22,7 @@ void PrepChef::handleOrder() {
     while (currentOrder) {
         handleStock(currentOrder);
         this->nextChef->handleOrder();
-        FoodOrder* currentOrder = kitchen->getNextOrder();
+        currentOrder = kitchen->getNextOrder();
     }
 }
 

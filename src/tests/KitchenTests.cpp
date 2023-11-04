@@ -8,17 +8,17 @@ KitchenTests::KitchenTests() {
 
 void KitchenTests::runTests() {
     Kitchen* kitchen = new Kitchen(new Finance());
-
+    Table * table = new Table(0,5);
     Customer* customer1 = new Customer("Bill", false);
-    Bill* bill1 = new Bill(customer1, kitchen->getFinance());
+    Bill* bill1 = new Bill(customer1, kitchen->getFinance(), table);
     Customer* customer2 = new Customer("Bill", false);
-    Bill* bill2 = new Bill(customer2, kitchen->getFinance());
+    Bill* bill2 = new Bill(customer2, kitchen->getFinance(), table);
     Customer* customer3 = new Customer("Bill", false);
-    Bill* bill3 = new Bill(customer3, kitchen->getFinance());
+    Bill* bill3 = new Bill(customer3, kitchen->getFinance(), table);
     Customer* customer4 = new Customer("Bill", false);
-    Bill* bill4 = new Bill(customer4, kitchen->getFinance());
+    Bill* bill4 = new Bill(customer4, kitchen->getFinance(), table);
     Customer* customer5 = new Customer("Bill", false);
-    Bill* bill5 = new Bill(customer5, kitchen->getFinance());
+    Bill* bill5 = new Bill(customer5, kitchen->getFinance(), table);
 
     std::vector<std::string> food1{"Egg", "Egg", "Breadroll", "Steak", "Pumpkin"};
     std::vector<double> prices1{12, 12, 3, 45, 30};

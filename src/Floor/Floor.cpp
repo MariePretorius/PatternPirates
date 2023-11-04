@@ -8,6 +8,7 @@
 #include "Table.h"
 #include "../Restaurant/Finance.h"
 #include <random>
+#include <algorithm>
 
 Floor::Floor(Finance * finance)
 {
@@ -160,4 +161,39 @@ void Floor::giveFinishedOrders(vector<Dish *> finishedOrders) {
     {
         this->finishedOrders.push_back(d);
     }
+}
+/**
+ * @brief Tells all waiters to pass the orders to their respective tables
+ */
+void Floor::waitersPassOrdersToTables() {
+    //for each dish in the finished orders...
+    while (!finishedOrders.empty())
+    {
+        Dish * d = finishedOrders.front();
+        //go through each waiter...
+        for(Waiter * w: waiters)
+        {
+            //then go through each waiter's tables
+            for(Table * t: *w->getTables())
+            {
+                //if the dish's table ID is equal to the table
+                if(d->getTableId() == t->getTableNumber())
+                {
+                    //add it to the waiter's hand
+                    w->addDishToHand(d);
+                    //and remove it from the finished orders
+                    vector<Dish*>::iterator it = std::find(finishedOrders.begin(), finishedOrders.end(), d);
+                    finishedOrders.erase(it);
+                    //then continue for the whole list.
+                }
+            }
+        }
+    }
+
+    //then tell each waiter to drop their orders to tables
+    for(Waiter * w: waiters)
+    {
+        w->passOrdersToTables();
+    }
+
 }

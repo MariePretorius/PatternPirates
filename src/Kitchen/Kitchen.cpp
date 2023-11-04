@@ -86,7 +86,7 @@ void Kitchen::buyStock() {
         cout<<endl;
         cout<<OptionsArr[buyOption]<< " costs R" << PriceArr[buyOption]<<", enter quantity:" ;
         cin>>quantity;
-        shelf->addStock(new Stock(OptionsArr[buyOption],quantity,PriceArr[buyOption],counter++)); //Ingredient needs a constructor
+        shelf->addStock(new Ingredient(OptionsArr[buyOption],quantity,PriceArr[buyOption],counter++)); //Ingredient needs a constructor
         finance->removeFunds(quantity*PriceArr[buyOption]);
         cout<< to_string(quantity)+" [" + OptionsArr[buyOption] + "] has been bought !";
         cout<<endl;

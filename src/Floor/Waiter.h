@@ -23,8 +23,10 @@ public:
     void getOrdersFromCurrTable();
     void createBill(bool split, Table * currTable);
     std::vector<FoodOrder *> * fetchOrders();
-
+    void addDishToHand(Dish* dish);
     void getOrders();
+    std::vector<Table*> * getTables();
+    void passOrdersToTables();
 
     void doRounds();
 
@@ -33,6 +35,7 @@ private:
     std::vector<Table *> tables;
     std::vector<FoodOrder *> orders;
     std::vector<Bill*> bills;
+    std::vector<Dish*> dishesInHand;
     //Table * curr;
 };
 

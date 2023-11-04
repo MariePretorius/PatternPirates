@@ -32,7 +32,7 @@ public:
     void addWaiter();
 
     vector<FoodOrder *> *fetchOrders();
-
+    void waitersPassOrdersToTables();
     void waitersDoRounds();
     void giveFinishedOrders(vector<Dish*> finishedOrders);
 
