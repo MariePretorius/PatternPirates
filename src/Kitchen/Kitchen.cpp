@@ -21,6 +21,8 @@ FoodOrder* Kitchen::getNextOrder() {
         return nextOrder;
     } else {
         cout << "\033[1;36mAll orders are handled,  for now...\033[0m" << endl;
+        //adding explicit null return value so that empty orders can be considered
+        return nullptr;
     }
 }
 

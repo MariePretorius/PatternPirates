@@ -21,6 +21,7 @@ public:
     std::vector<FoodOrder*> * giveOrders();
     void getOrdersFromCurrTable();
     void createBill(bool split, Table * currTable);
+    std::vector<FoodOrder *> * fetchOrders();
 
     void getOrders();
 

@@ -47,8 +47,8 @@ std::vector<FoodOrder *> *Waiter::giveOrders() {
 }
 
 void Waiter::createBill(bool split, Table *table) {
-    std::list<Customer*> temp = table->getCustomers();
-    list<Customer*>::iterator it = table->getCustomers().begin();
+    std::list<Customer*> * temp = table->getCustomers();
+    list<Customer*>::iterator it = table->getCustomers()->begin();
     if((*it)->getPaymentMethod())
     {
         //if split
@@ -65,15 +65,16 @@ void Waiter::getOrders() {
     //call getter for each customer
     for(vector<Table*>::iterator table = tables.begin(); table != tables.end(); table++)
     {
-        list<Customer*>::iterator ir = (*table)->getCustomers().begin();
-        while(ir != (*table)->getCustomers().end())
+        list<Customer*>::iterator customers = (*table)->getCustomers()->begin();
+
+        while(customers != (*table)->getCustomers()->end())
         {
-            list<Ingredient> tempIngredient = (*ir)->getIngredients();
-            list<double> tempPrices = (*ir)->getPrices();
-            string method = (*ir)->getCookingMethod();
+            list<Ingredient> * tempIngredient = (*customers)->getIngredients();
+            list<double> tempPrices = (*customers)->getPrices();
+            string method = (*customers)->getCookingMethod();
             vector<string> vectorIngredients = vector<string>();
             vector<double> vectorDouble = vector<double>();
-            for(Ingredient &ingredient : tempIngredient)
+            for(Ingredient &ingredient : *tempIngredient)
             {
                 vectorIngredients.push_back(ingredient.getName());
             }
@@ -83,8 +84,9 @@ void Waiter::getOrders() {
             }
             //FoodOrder(std::vector<std::string> ingredients, std::vector<double> prices, int num, std::string method, int tableNumber, Customer& customer, Bill* bill);
             FoodOrder * tempFoodOrder = new FoodOrder(vectorIngredients,vectorDouble,vectorIngredients.size(),
-                                                      (*ir)->getCookingMethod(), (*table)->getTableNumber(), **ir,new Bill(*ir,this->finance));
+                                                      (*customers)->getCookingMethod(), (*table)->getTableNumber(), **customers,new Bill(*customers,this->finance));
             this->orders.push_back(tempFoodOrder);
+            customers++;
         }
     }
     //call getter for each element of an order
@@ -93,4 +95,8 @@ void Waiter::getOrders() {
     //repeat for all tables
     //call execute once all tables have been served
     //repeat for all waiters
+}
+
+std::vector<FoodOrder *> * Waiter::fetchOrders() {
+    return &orders;
 }
