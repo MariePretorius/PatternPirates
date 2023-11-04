@@ -103,14 +103,17 @@ bool Host::assignCustomer() {
             Customer* CustomerToBeSeated= customers.back();
             customers.pop_back();
             seatedCustomers.push_back(CustomerToBeSeated);
+            CustomerToBeSeated->nextState();
+            cout<<"\033[1;34mCustomer state is:"<<CustomerToBeSeated->getState()->getName()<<"\033[0m"<<endl;
+            CustomerToBeSeated->nextState();
+            cout<<"\033[1;34mCustomer state is:"<<CustomerToBeSeated->getState()->getName()<<"\033[0m"<<endl;
+
         }
         //  add all necessary customers to a list and call openTable.assignCustomers() and remove from floor list
         openTable->assignCustomers(seatedCustomers);
 
-        cout << "\033[1;32mHost has seated a party of "+ to_string(amount)+" at table"+
+        cout << "\033[1;32mHost has seated a party of "+ to_string(amount)+" at table "+
         to_string(openTable->getTableNumber())+"\033[0m" << endl;
-
-        //GET INFO FROM MARIE
 
         //getPaymentMethod :true = tab ;false= bill
 
@@ -120,11 +123,12 @@ bool Host::assignCustomer() {
         } else
             paymentMethod="bill";
 
-        cout<< "\033[1;34m" + to_string(openTable->getTableNumber())+" has decided to request a"+
-        paymentMethod+" \033[0m";
+        cout<< "\033[1;34m" + to_string(openTable->getTableNumber())+" has decided to request a "+
+        paymentMethod+" \033[0m"<<endl;
 
-        return true;
     }
+    return true;
+
 }
 
 

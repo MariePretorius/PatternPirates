@@ -13,8 +13,6 @@ Restaurant *Restaurant::instance()
 Restaurant::Restaurant()
 {
     //Singleton function
-//added gap because it was 11pm and I struggle to read without sleep
-
     funds = new Finance();
     floor = new Floor(funds);
     kitchen = new Kitchen(funds);
@@ -91,6 +89,7 @@ void Restaurant::simulate()
         } else
             pay="tab";
        Customer* newCustomer = new Customer(pay,split);
+       cout<<"\033[1;34m Customer state is:"<<newCustomer->getState()->getName()<<"\033[0m"<<endl;
        customers.push_back(newCustomer);
     }
 
