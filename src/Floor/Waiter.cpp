@@ -25,10 +25,11 @@ void Waiter::getOrdersFromCurrTable()
     //repeat for all waiters
 }
 
-Waiter::Waiter()
+Waiter::Waiter(Finance * finance)
 {
+    this->finance = finance;
     tables = std::vector<Table*>();
-    orders = std::vector<Order*>();
+    orders = std::vector<FoodOrder*>();
 }
 
 void Waiter::addTableToWait(Table *newTable)
@@ -36,18 +37,18 @@ void Waiter::addTableToWait(Table *newTable)
     tables.push_back(newTable);
 }
 
-void Waiter::addOrder(Order *newOrder)
+void Waiter::addOrder(FoodOrder *newOrder)
 {
     orders.push_back(newOrder);
 }
 
-std::vector<Order *> *Waiter::giveOrders() {
+std::vector<FoodOrder *> *Waiter::giveOrders() {
     return &(this->orders);
 }
 
 void Waiter::createBill(bool split, Table *table) {
-    std::list<Customer*> temp = table->getCustomers();
-    list<Customer*>::iterator it = table->getCustomers().begin();
+    std::list<Customer*> * temp = table->getCustomers();
+    list<Customer*>::iterator it = table->getCustomers()->begin();
     if((*it)->getPaymentMethod())
     {
         //if split
@@ -62,15 +63,37 @@ void Waiter::createBill(bool split, Table *table) {
 
 void Waiter::getOrders() {
     //call getter for each customer
-    for(vector<Table*>::iterator it = tables.begin(); it != tables.end(); it++)
+    for(vector<Table*>::iterator table = tables.begin(); table != tables.end(); table++)
     {
-        list<Customer*>::iterator ir = (*it)->getCustomers().begin();
-        while(ir != (*it)->getCustomers().end())
+        list<Customer*>::iterator customers = (*table)->getCustomers()->begin();
+
+        while(customers != (*table)->getCustomers()->end())
         {
-            list<Ingredient> tempIngredient = (*ir)->getIngredients();
-            list<double> tempPrices = (*ir)->getPrices();
-            string method = (*ir)->getCookingMethod();
-            FoodOrder * tempFoodOrder = new FoodOrder();
+            std::cout << "\033[35mCustomer state is:\t\t"<< (*customers)->getState()->getName() <<"!\033[0m" << std::endl;
+            if((*customers)->getState()->getName() == "Ready To Order")
+            {
+                list<Ingredient> * tempIngredient = (*customers)->getIngredients();
+                list<double> tempPrices = (*customers)->getPrices();
+                string method = (*customers)->getCookingMethod();
+                vector<string> vectorIngredients = vector<string>();
+                vector<double> vectorDouble = vector<double>();
+                for(Ingredient &ingredient : *tempIngredient)
+                {
+                    vectorIngredients.push_back(ingredient.getName());
+                }
+                for(double &d : tempPrices)
+                {
+                    vectorDouble.push_back(d);
+                }
+                //FoodOrder(std::vector<std::string> ingredients, std::vector<double> prices, int num, std::string method, int tableNumber, Customer& customer, Bill* bill);
+                FoodOrder * tempFoodOrder = new FoodOrder(vectorIngredients,vectorDouble,vectorIngredients.size(),
+                                                          (*customers)->getCookingMethod(), (*table)->getTableNumber(), **customers,new Bill(*customers,this->finance));
+                this->orders.push_back(tempFoodOrder);
+                (*customers)->nextState();
+                std::cout << "\033[35mCustomer state has changed to:\t\t"<< (*customers)->getState()->getName() <<"!\033[0m" << std::endl;
+            }
+
+            customers++;
         }
     }
     //call getter for each element of an order
@@ -79,4 +102,8 @@ void Waiter::getOrders() {
     //repeat for all tables
     //call execute once all tables have been served
     //repeat for all waiters
+}
+
+std::vector<FoodOrder *> * Waiter::fetchOrders() {
+    return &orders;
 }

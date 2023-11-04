@@ -23,6 +23,8 @@ FoodOrder :: FoodOrder() {}
 */
 FoodOrder :: FoodOrder(std::vector<std::string> ingredients, std::vector<double> prices, int num, std::string method, int tableNumber, Customer& customer, Bill* bill) : bill(bill)
 {
+    //added pre-instantiation to prevent segfault
+    ingredients = vector<string>();
     this->customer = &customer;
     //this->kitchen = &k;
     //this->bill = &bill;
@@ -36,7 +38,9 @@ FoodOrder :: FoodOrder(std::vector<std::string> ingredients, std::vector<double>
         //this->ingredients[i] = ingredients[i];
         this->ingredients.push_back(ingredients[i]);
         //this->prices[i] = prices[i];
-        this->ingredients.push_back(ingredients[i]);
+
+        //I'm not sure why you were pushing the same ingredient twice. Assumed it was a mistake.
+        //this->ingredients.push_back(ingredients[i]);
         
         addToBill(this->ingredients[i], this->prices[i]);
     }
@@ -84,9 +88,9 @@ void FoodOrder :: addToBill(std::string ingredient, double cost)
  * @brief Returns the ingredient list.
  * @return Returns a vector of ingredients.
 */
-std::vector<std::string> FoodOrder :: getIngredients()
+std::vector<std::string> * FoodOrder :: getIngredients()
 {
-    return this->ingredients;
+    return &this->ingredients;
 }
 
 /**
@@ -114,6 +118,15 @@ int FoodOrder :: getTableNumber()
 Customer* FoodOrder :: getCustomer()
 {
     return this->customer;
+}
+
+/**
+ * @brief Returns a pointer to the bill the order belongs to.
+ * @return Bill object pointer.
+*/
+Bill* FoodOrder :: getBill()
+{
+    return this->bill;
 }
 
 /**

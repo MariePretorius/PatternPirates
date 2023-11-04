@@ -38,7 +38,8 @@ public:
 
 	int getCustomerID();
 
-	list<Ingredient> getIngredients();
+    //changed to pointer to prevent seg fault
+	list<Ingredient> * getIngredients();
 
 	list<double> getPrices();
 

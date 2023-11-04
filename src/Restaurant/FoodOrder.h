@@ -71,7 +71,8 @@ class FoodOrder : public OrderCommand
 		 * @brief Returns the ingredient list.
 		 * @return Returns a vector of ingredients.
 		*/
-		std::vector<std::string> getIngredients();
+		//pass by reference to prevent segfault
+		std::vector<std::string> * getIngredients();
 
 		/**
 		 * @brief Returns the cooking method.
@@ -96,6 +97,12 @@ class FoodOrder : public OrderCommand
 		 * @return Return an integer value for the id.
 		*/
 		int getRandomID();  //can add vecter imput to check against duplicates
+
+		/**
+		 * @brief Returns the Bill object pointer.
+		 * @return Return a pointer for the Bill object.
+		*/
+		Bill* getBill();
 
 		/**
 		 * @brief Sets the kitchen pointer.
