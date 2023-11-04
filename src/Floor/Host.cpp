@@ -70,7 +70,7 @@ Table *Host::getNextOpenTable()
 
     list<Table*>::iterator it = tables.begin();
 
-    for (it; it != tables.end(); ) {
+    for (it; it != tables.end(); it++) {
         Table* temp = *it;
         if (!temp->isOccupied())
         {

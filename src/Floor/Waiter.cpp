@@ -70,7 +70,7 @@ void Waiter::getOrders() {
         while(customers != (*table)->getCustomers()->end())
         {
             std::cout << "\033[35mCustomer state is:\t\t"<< (*customers)->getState()->getName() <<"!\033[0m" << std::endl;
-            if((*customers)->getState()->getName() == "ReadyToOrder")
+            if((*customers)->getState()->getName() == "Ready To Order")
             {
                 list<Ingredient> * tempIngredient = (*customers)->getIngredients();
                 list<double> tempPrices = (*customers)->getPrices();
@@ -90,6 +90,7 @@ void Waiter::getOrders() {
                                                           (*customers)->getCookingMethod(), (*table)->getTableNumber(), **customers,new Bill(*customers,this->finance));
                 this->orders.push_back(tempFoodOrder);
                 (*customers)->nextState();
+                std::cout << "\033[35mCustomer state has changed to:\t\t"<< (*customers)->getState()->getName() <<"!\033[0m" << std::endl;
             }
 
             customers++;
