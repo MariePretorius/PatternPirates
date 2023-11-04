@@ -29,10 +29,5 @@ void TableTests::runTests()
     assert(table.isOccupied() == false);
     assert(table.getCustomers().size() == 0);
 
-    // Additional test cases
-    // Test with different table numbers, capacities, and combinations of occupied and unoccupied tables.
-    // Test edge cases and error handling for invalid inputs if applicable.
-
-    // If all assertions pass, the tests were successful
     std::cout << "All Table tests passed" << std::endl;
 }
