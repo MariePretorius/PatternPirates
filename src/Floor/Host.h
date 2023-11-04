@@ -6,10 +6,10 @@
 #include <list>
 
 using namespace std;
-/**
- * @class Host
- * @brief Host is responsible for the seating of customers at the start of the simulation. Host is an Iterator.
-*/
+    /**
+     * @class Host
+     * @brief Host is responsible for the seating of customers at the start of the simulation. Host is an Iterator.
+    */
 class Host {
 private:
     Floor *f; ///<Reference to the floor.
