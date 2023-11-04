@@ -40,6 +40,10 @@ int Floor::getNumWaiters()
     return numberOfWaiters;
 }
 
+/**
+ *
+ * @return
+ */
 int Floor::setNumWaiters() {
     return 0;
 }
@@ -132,8 +136,8 @@ void Floor::waitersGetOrders() {
     stashedOrders = *allOrders;
 }
 /**
- *
- * @return
+ * @brief Returns all the orders collected by the waiters
+ * @return vector of FoodOrder pointers
  */
 vector<FoodOrder *> *Floor::fetchOrders() {
     return &stashedOrders;

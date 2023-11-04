@@ -55,14 +55,14 @@ void Waiter::createBill(bool split, Table *table) {
         //creates a bill for each customer
         for(it; it != table->getCustomers()->end(); it++)
         {
-            bills.push_back(new Bill(*it, this->finance));
+
         }
 
         //creates a bill based on orders
     }
     else
     {
-        bills.push_back(new Bill())
+        //bills.push_back(new Bill())
         //creates a bill for the whole table
     }
 }
@@ -120,11 +120,33 @@ void Waiter::doRounds() {
     for (Table *t : tables) {
         if(t->doneEating())
         {
+            //writes up the bill for the table
             list<Customer *>::iterator customer = t->getCustomers()->begin();
-            for(customer; customer != t->getCustomers()->end(); customer++)
+            if((*customer)->getSplit())
             {
+                //if splitting
+                for(customer; customer != t->getCustomers()->end(); customer++)
+                {
+                    for(Bill * b : bills)
+                    {
+                        if(/*customer iterator is equal to customer on bill*/)
+                        {
 
+                        }
+                    }
+                }
+                for(customer = t->getCustomers()->begin(); customer != t->getCustomers()->end(); customer++)
+                {
+                    (*customer)->nextState();
+                }
             }
+            else
+            {
+                //iterate through the bills associated with a table and then have one id pay it
+            }
+
         }
     }
 }
+
+
