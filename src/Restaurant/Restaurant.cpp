@@ -109,8 +109,6 @@ void Restaurant::simulate()
     manager->setTables(floor->getTables());
     manager->assignCustomer();
 
-
-    // use loop for this part:
     floor->waitersGetOrders();
 
     //Loop added to call execute for all the foodorders. it moves them to the kitchen so it has someting to work with.
@@ -122,18 +120,22 @@ void Restaurant::simulate()
     }
 
 
-    // for each order in foodorder list call foodOrder->execute
-
-    //kitchen prepares items - kitchen -not for me
     kitchen->startKitchenProcess();
-    //waiter takes order to correct table num - get order from kitchen + give to waiter
+    //Franco - work on loops for all the orders and handling the all of them.
 
-    // customers eat - waiter+customer - not for me
-    //customer requests bill/tab - not sure
-    //waiter brings bill - call waiter.bill
+    //waiter takes order to correct table num - get order from kitchen + give to waiter
+    // ask franco to remove the id input from takeDish - let restaurant just get all finished orders -- return list of finished orders
+    //kitchen->takeDish(); // Franco
+    // push through finished orders list to floor
+    // floor.giveFinishedOrders(list) // Tristan
+    // when waiter gives finished orders to customers, change their state - should be eating state
+    // floor.WaitersDoRounds()  // this is to set the customers' state to RequestingBill - if they want a bill!
+
+    //waiter brings bill - call waiter.bill // change customer state to billPaid
     //customer pays with waiter - call pay function in waiter
-    //customer leaves rating + tip - at waiter
-    //customer leaves - customer
+    //customer leaves rating + tip - at waiter - maybe save in floor? So that we can output the results
+    //customer leaves - remove all customers from their table
+
     // tabs pay at end of round - at end of round call pay tabs
 
 }
