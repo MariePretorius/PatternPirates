@@ -147,9 +147,9 @@ void Restaurant::simulate()
     // ask franco to remove the id input from takeDish - let restaurant just get all finished orders -- return list of finished orders
     //kitchen->takeDish(); // Franco
     // push through finished orders list to floor
-    // floor.giveFinishedOrders(list) // Tristan
+    //floor->giveFinishedOrders(list); // Tristan
     // when waiter gives finished orders to customers, change their state - should be eating state
-    // floor.WaitersDoRounds()  // this is to set the customers' state to RequestingBill - if they want a bill!
+    //floor->waitersDoRounds();  // this is to set the customers' state to RequestingBill - if they want a bill!
 
     //waiter brings bill - call waiter.bill // change customer state to billPaid
     //customer pays with waiter - call pay function in waiter
