@@ -1,7 +1,10 @@
 #include "Restaurant.h"
 
 Restaurant* Restaurant::uniqueInstance=0;
-
+/**
+ * instance checks if uniqueInstance is null. If it is, it then initiates uniqueInstance and then returns it.
+ * @return returns the uniqueInstance
+ */
 Restaurant *Restaurant::instance()
 {
     if(uniqueInstance==0){
@@ -10,6 +13,9 @@ Restaurant *Restaurant::instance()
     return uniqueInstance;
 }
 
+/**
+ * Default constructor initialises the funds,kitchen and floor. It is protected and only accessed in the instance function.
+ */
 Restaurant::Restaurant()
 {
     //Singleton function
@@ -18,19 +24,29 @@ Restaurant::Restaurant()
     kitchen = new Kitchen(funds);
 }
 
+/**
+ * Copy constructor doesn't do anything, its just declared and protected so that no other class can initialise another restaurant object
+ * @param restaurant object which should be copied
+ */
 Restaurant::Restaurant(Restaurant &restaurant)
 {
     //Singleton function
 
 }
 
+/**
+ * Overloading operator= and since it is protected, ensures that no other class can call this and creating another instance of restaurant
+ * @param restaurant object that needs to be created
+ */
 void Restaurant::operator=(Restaurant &restaurant)
 {
     //Singleton function
-
 }
-///
-///Setup part of Restaurant: get user input to set funds,buy stock and set thenumber of waiters
+
+/**
+ * Setup part of Restaurant gets user input to set funds,buy stock and set the number of waiters employed
+ */
+
 void Restaurant::setup()
 {
     // setting the finance's amount for later use
@@ -58,8 +74,12 @@ void Restaurant::setup()
     cout << "\033[1;32mThe restaurant simulation will now begin:\033[0m" << endl;
     simulate();
 }
-///
-///Simulation part of Restaurant: starts the game loop
+/**
+ * Simulation part of Restaurant creates the customers waiting to be seated,all the tables on the floor and tells the host to
+ * seat all the customers.Then sends the waiters to wait on the occupied tables.Simulation is also responsible for
+ * the transferring of orders from waiters to the kitchen and finished orders back from the kitchen to the waiters
+ */
+
 
 void Restaurant::simulate()
 {
@@ -122,12 +142,8 @@ void Restaurant::simulate()
 
     kitchen->startKitchenProcess();
     //Franco - work on loops for all the orders and handling the all of them.
-
-    //waiter takes order to correct table num - get order from kitchen + give to waiter
-    // ask franco to remove the id input from takeDish - let restaurant just get all finished orders -- return list of finished orders
-    //kitchen->takeDish(); // Franco
-    // push through finished orders list to floor
-    //floor->giveFinishedOrders(list); // Tristan
+    std::vector<Dish*> finishedOrder =kitchen->takeDishes();
+     //floor->giveFinishedOrders(finishedOrder);
     // when waiter gives finished orders to customers, change their state - should be eating state
     //floor->waitersDoRounds();  // this is to set the customers' state to RequestingBill - if they want a bill!
 
@@ -140,4 +156,3 @@ void Restaurant::simulate()
 
 }
 
-///
