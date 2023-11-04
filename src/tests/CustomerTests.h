@@ -1,3 +1,8 @@
+/**
+ * @class CustomerTests
+ * @brief This class tests the Customer class.
+ */
+
 #ifndef CUSTOMERTESTS_H
 #define CUSTOMERTESTS_H
 
