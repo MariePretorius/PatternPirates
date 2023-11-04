@@ -9,7 +9,6 @@ double Customer::calculateRating()
 Customer::Customer(string paymentMethod, bool split)
 {
     state = new WaitingForTable();
-
     if (split) {
         this->split = true;
     } else this->split = false;
@@ -28,9 +27,10 @@ Customer::Customer(string paymentMethod, bool split)
     uniform_int_distribution<int> distribution(1, 2);
     int num = distribution(gen);
 
+    //Changed to reference 'this' to make sure it was assigning to the correct variable.
     if (num == 1) {
-        cookingMethod = "grilled";
-    } else cookingMethod = "fried";
+        this->cookingMethod = "grilled";
+    } else this->cookingMethod = "fried";
 
     random_device other;
     mt19937 gen2(other());
@@ -63,9 +63,9 @@ int Customer::getCustomerID()
     return id;
 }
 
-list<Ingredient> Customer::getIngredients()
+list<Ingredient> * Customer::getIngredients()
 {
-    return ingredients;
+    return &ingredients;
 }
 
 list<double> Customer::getPrices()
@@ -75,7 +75,10 @@ list<double> Customer::getPrices()
 
 string Customer::getCookingMethod()
 {
-    return cookingMethod;
+    //Added this line becuase waiter didn't like that the variable it was fetching was private for some reason
+    string temp = cookingMethod;
+    //cout<<cookingMethod<<endl;
+    return temp;
 }
 
 bool Customer::getPaymentMethod()

@@ -12,13 +12,15 @@ class Host;
 class Waiter;
 
 #include "Table.h"
+#include "../Restaurant/FoodOrder.h"
+
 class Finance;
 
 class Floor
 {
 public:
     Floor(Finance * finance);
-    void addCustomers(vector<Customer*> newCustomers);
+    void addCustomers(const vector<Customer*>& newCustomers);
     void waitersGetOrders();
     Host * createHost();
     int getCapacity();
@@ -29,6 +31,8 @@ public:
     void addTable(int capacity);
     void addWaiter();
 
+    vector<FoodOrder *> *fetchOrders();
+
 private:
 
     Finance * finance;
@@ -37,6 +41,7 @@ private:
     int numberOfWaiters;
     std::vector<Customer *> customers;
     std::list<Waiter *> waiters;
+    vector<FoodOrder *> stashedOrders;
 };
 
 
