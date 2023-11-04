@@ -14,12 +14,6 @@ void Host::setTables(list<Table *> t) {
     tables = t;
 }
 
-
-void Host::getAllTables(list<Table*> table)
-{
-    tables = table;
-}
-
 Table *Host::first()
 {
     return tables.front();
