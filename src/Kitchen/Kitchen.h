@@ -7,9 +7,9 @@
 #include "Ingredient.h"
 #include "Shelf.h"
 #include "../Restaurant/Finance.h"
+#include <vector>
 
 class Chef;
-
 
 class Kitchen {
     public:
@@ -18,7 +18,7 @@ class Kitchen {
         void addNewOrder(FoodOrder* newOrder);
         void notifyWaiter();
         void addDish(Dish* dish);
-        Dish* takeDish(int id);
+        std::vector<Dish*> takeDishes();
         FoodOrder* getNextOrder();     
         Shelf* getShelf();
         void addCookedIngredient(Ingredient* ingredient);
@@ -35,7 +35,7 @@ class Kitchen {
     private:
         Dish* currentDish;
         std::list<FoodOrder*> orders;
-        std::list<Dish*> completedOrders;
+        std::vector<Dish*> completedOrders;
         std::list<Ingredient*> uncookedIngredients;
         std::list<Ingredient*> cookedIngredients;
         FoodOrder* currentOrder;
