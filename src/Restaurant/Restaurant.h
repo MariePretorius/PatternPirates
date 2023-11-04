@@ -36,7 +36,7 @@ protected:
      */
 	Restaurant(Restaurant& restaurant);
     /**
-     * Operator overloading of operator== made protected so that outside classes can't call it
+     * Operator overloading of operator= made protected so that outside classes can't call it
      */
 	void operator=(Restaurant& restaurant);
 
