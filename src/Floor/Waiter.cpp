@@ -69,23 +69,29 @@ void Waiter::getOrders() {
 
         while(customers != (*table)->getCustomers()->end())
         {
-            list<Ingredient> * tempIngredient = (*customers)->getIngredients();
-            list<double> tempPrices = (*customers)->getPrices();
-            string method = (*customers)->getCookingMethod();
-            vector<string> vectorIngredients = vector<string>();
-            vector<double> vectorDouble = vector<double>();
-            for(Ingredient &ingredient : *tempIngredient)
+            std::cout << "\033[35mCustomer state is:\t\t"<< (*customers)->getState()->getName() <<"!\033[0m" << std::endl;
+            if((*customers)->getState()->getName() == "ReadyToOrder")
             {
-                vectorIngredients.push_back(ingredient.getName());
+                list<Ingredient> * tempIngredient = (*customers)->getIngredients();
+                list<double> tempPrices = (*customers)->getPrices();
+                string method = (*customers)->getCookingMethod();
+                vector<string> vectorIngredients = vector<string>();
+                vector<double> vectorDouble = vector<double>();
+                for(Ingredient &ingredient : *tempIngredient)
+                {
+                    vectorIngredients.push_back(ingredient.getName());
+                }
+                for(double &d : tempPrices)
+                {
+                    vectorDouble.push_back(d);
+                }
+                //FoodOrder(std::vector<std::string> ingredients, std::vector<double> prices, int num, std::string method, int tableNumber, Customer& customer, Bill* bill);
+                FoodOrder * tempFoodOrder = new FoodOrder(vectorIngredients,vectorDouble,vectorIngredients.size(),
+                                                          (*customers)->getCookingMethod(), (*table)->getTableNumber(), **customers,new Bill(*customers,this->finance));
+                this->orders.push_back(tempFoodOrder);
+                (*customers)->nextState();
             }
-            for(double &d : tempPrices)
-            {
-                vectorDouble.push_back(d);
-            }
-            //FoodOrder(std::vector<std::string> ingredients, std::vector<double> prices, int num, std::string method, int tableNumber, Customer& customer, Bill* bill);
-            FoodOrder * tempFoodOrder = new FoodOrder(vectorIngredients,vectorDouble,vectorIngredients.size(),
-                                                      (*customers)->getCookingMethod(), (*table)->getTableNumber(), **customers,new Bill(*customers,this->finance));
-            this->orders.push_back(tempFoodOrder);
+
             customers++;
         }
     }
