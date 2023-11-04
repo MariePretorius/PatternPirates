@@ -128,7 +128,10 @@ Dish* Kitchen::getCurrentDish() {
 
 void Kitchen::startKitchenProcess() {
     this->prepChef->handleOrder();
+}
 
+Finance* Kitchen::getFinance() {
+    return this->finance;
 }
 
 

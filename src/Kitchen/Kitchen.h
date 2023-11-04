@@ -30,6 +30,7 @@ class Kitchen {
         int getIngredientAmt();
         Dish* getCurrentDish();
         void startKitchenProcess();
+        Finance* getFinance(); //Used for testing...might remove later
 
     private:
         Dish* currentDish;
