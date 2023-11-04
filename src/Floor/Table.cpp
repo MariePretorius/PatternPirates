@@ -14,20 +14,11 @@ void Table::assignCustomers(list<Customer*> customers)
     occupied = true;
 }
 
-void Table::removeCustomers(list<Customer*> customers)
+void Table::removeCustomers()
 {
-    for (list<Customer*>::iterator it = customers.begin(); it != customers.end(); ) {
-        Customer* customer = *it;
-        it = customers.erase(it);
+    customers.clear();
+    occupied = false;
 
-    }
-    if (customers.size() == 0) {
-        occupied = false;
-
-    }
-    if (customers.size() == 0) {
-        occupied = false;
-    }
 }
 
 //idk, c++ just stopped segfaulting when I made it a pointer.
@@ -49,4 +40,37 @@ int Table::getTableNumber()
 bool Table::isOccupied()
 {
     return occupied;
+}
+
+void Table::assignDishes(vector<Dish*> *dishes)
+{
+    this->dishes = dishes;
+}
+
+void Table::checkDishes()
+{
+    bool allFinished = true;
+    for (Customer* customer : customers) {
+        if (customer->getStateName() != "Bill Requested") {
+            allFinished = false;
+            break;
+        }
+        if (allFinished) {
+            dishes->clear();
+        }
+    }
+}
+
+bool Table::doneEating()
+{
+    bool allFinished = true;
+    for (Customer* customer : customers) {
+        if (customer->getStateName() != "Bill Requested") {
+            allFinished = false;
+            break;
+        }
+        if (allFinished) {
+            return true;
+        } else return false;
+    }
 }
