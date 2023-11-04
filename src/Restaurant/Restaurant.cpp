@@ -108,9 +108,12 @@ void Restaurant::simulate()
             pay="bill";
         } else
             pay="tab";
-       Customer* newCustomer = new Customer(pay,split);
-       cout<<"\033[1;34m Customer state is:"<<newCustomer->getState()->getName()<<"\033[0m"<<endl;
-       customers.push_back(newCustomer);
+        Shelf*shelf = kitchen->getShelf();
+        vector<Stock*> stockList = shelf->returnStockList();
+        Customer* newCustomer = new Customer(pay,split); // old definition
+        //Customer* newCustomer = new Customer(pay,split,stockList);
+        cout<<"\033[1;34m Customer state is:"<<newCustomer->getState()->getName()<<"\033[0m"<<endl;
+        customers.push_back(newCustomer);
     }
 
     /// sending customers vector to floor for storing so that host can seat the customers
@@ -139,13 +142,14 @@ void Restaurant::simulate()
         (*foodOrder).execute();
     }
 
-
     kitchen->startKitchenProcess();
-    //Franco - work on loops for all the orders and handling the all of them.
+
     std::vector<Dish*> finishedOrder =kitchen->takeDishes();
     floor->giveFinishedOrders(finishedOrder);
+
     floor->waitersPassOrdersToTables();
     // when waiter gives finished orders to customers, change their state - should be eating state
+
     floor->waitersDoRounds();  // this is to set the customers' state to RequestingBill - if they want a bill!
 
     //waiter brings bill - call waiter.bill // change customer state to billPaid
