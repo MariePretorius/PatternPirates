@@ -4,6 +4,7 @@
 #include "BillMemento.h"
 #include "Customer.h"
 #include "../Restaurant/Finance.h"
+#include "Table.h"
 
 #include <iostream>
 #include <vector>
@@ -21,6 +22,7 @@ class Bill
 		Customer * customer;  ///< Reference to a customer object.
 		int custID;  ///< ID of the customer the bill belongs to.
 		Finance * bank;
+		Table* table;
 
 		bool tab;  ///< Boolean value set to indicate whether the bill is a tab.
 		bool paid;  ///< Boolean value set to indicate whether the bill has been paid.
@@ -30,7 +32,7 @@ class Bill
 		/**
 		 * @brief Default constructor for Bill.
 		*/
-		Bill(Customer * customer, Finance * f);
+		Bill(Customer * customer, Finance * f, Table* table);
 
 		/**
 		 * @brief Function to add items onto the bill
@@ -73,6 +75,18 @@ class Bill
 		 * @return Returns true if bill is paid and false otherwise.
 		*/
 		bool isPaid();
+
+		/**
+		 * @brief Function that returns a reference to the table the bill belongs to.
+		 * @return Returns a reference to a Table object.
+		*/
+		Table* getTable();
+
+		/**
+		 * @brief Function that returns a reference to the customer the bill belongs to.
+		 * @return Returns a reference to a Customer object.
+		*/
+		Customer* getCustomer();
 };
 
 #endif
