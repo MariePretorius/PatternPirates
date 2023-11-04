@@ -108,6 +108,15 @@ Customer* FoodOrder :: getCustomer()
 }
 
 /**
+ * @brief Returns a pointer to the bill the order belongs to.
+ * @return Bill object pointer.
+*/
+Bill* FoodOrder :: getBill()
+{
+    return this->bill;
+}
+
+/**
  * @brief Returns a random id between 1000 and 9999.
  * @return Return an integer value for the id.
 */

@@ -11,6 +11,7 @@
 #include "../tests/StockTests.h"
 #include "../tests/WaiterTests.h"
 #include "../tests/FloorTests.h"
+#include "../tests/KitchenTests.h"
 
 
 
@@ -27,6 +28,7 @@ void testing()
     bool waiterSuccess = false;
     bool floorSuccess = false;
     bool hostSuccess = false;
+    bool kitchenSuccess = false;
 
 
     CustomerTests* customerTests = new CustomerTests();
@@ -131,6 +133,35 @@ void testing()
     else
     {
         std::cout << "\033[35mCannot test Floor as there are dependencies that failed.\033[0m" << std::endl;
+    }
+
+    //Kitchen Tests
+    //tests the kitchen class
+    //requires FoodOrder, Ingredient, Shelf, Finance
+    if(foodOrderSuccess && stockSuccess && financeSuccess)
+    {
+        KitchenTests * kitchenTests = new KitchenTests();
+        try
+        {
+            kitchenTests->runTests();
+        }
+        catch (exception & e)
+        {
+            std::cout << "\033[1;36mAn error occurred during the Kitchen test.\033[0m" << std::endl;
+            cout << e.what() << endl;
+        }
+        catch (...)
+        {
+            std::cout << "\033[1;36mAn unknown error occurred during the Kitchen test.\033[0m" << std::endl;
+        }
+        delete kitchenTests;
+
+        kitchenSuccess = true;
+        std::cout << "\033[1;36mKitchen Test Successful!\033[0m" << std::endl;
+    }
+    else
+    {
+        std::cout << "\033[1;36mCannot test Kitchen as there are dependencies that failed.\033[0m" << std::endl;
     }
 }
 
