@@ -4,7 +4,7 @@
 /**
  * @brief Default constructor for Bill.
 */
-Bill :: Bill(Customer * customer, Finance * f)
+Bill :: Bill(Customer * customer, Finance * f, Table* table)
 {
     totalCost = 0.0;
     tab = false;
@@ -12,6 +12,7 @@ Bill :: Bill(Customer * customer, Finance * f)
     this->customer = customer;
     custID = customer->getCustomerID();
     this->bank = f;
+    this->table = table;
 }
 
 /**
@@ -129,6 +130,23 @@ bool Bill :: isPaid()
     return paid;
 }
 
+/**
+ * @brief Function that returns a reference to the table the bill belongs to.
+ * @return Returns a reference to a Table object.
+*/
+Table* Bill :: getTable()
+{
+    return this->table;
+}
+
+/**
+ * @brief Function that returns a reference to the customer the bill belongs to.
+ * @return Returns a reference to a Customer object.
+*/
+Customer* Bill :: getCustomer()
+{
+    return this->customer;
+}
 
 // example usage
 // std::cout << "\x1B[35m"; 
