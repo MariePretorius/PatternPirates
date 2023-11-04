@@ -33,5 +33,7 @@ public:
     double getFunds();
 
     void subtractFunds(double x);
+
+    //Kitchen* getKitchen();
 };
 #endif

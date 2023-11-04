@@ -44,7 +44,8 @@ public:
      * @brief Get the list of customers seated at the table.
      * @return A list of Customer objects currently seated at the table.
      */
-	list<Customer*> getCustomers();
+	list<Customer*> * getCustomers();
+
 
 	/**
      * @brief Get the capacity of the table.

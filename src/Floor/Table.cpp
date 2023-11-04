@@ -2,6 +2,8 @@
 
 Table::Table(int tableNumber, int capacity)
 {
+    //instantiate customers to prevent segfault when pushing to it later
+    this->customers = list<Customer*>();
     this->tableNumber = tableNumber;
     this->capacity = capacity;
 }
@@ -16,11 +18,13 @@ void Table::removeCustomers()
 {
     customers.clear();
     occupied = false;
+
 }
 
-list<Customer*> Table::getCustomers()
+//idk, c++ just stopped segfaulting when I made it a pointer.
+list<Customer*> * Table::getCustomers()
 {
-    return customers;
+    return &customers;
 }
 
 int Table::getCapacity()

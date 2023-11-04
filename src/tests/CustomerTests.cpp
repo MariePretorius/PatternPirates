@@ -16,8 +16,10 @@ void CustomerTests::runTests()
     customer.nextState();
     assert(customer.getStateName() == "Seated"); // Replace "NextState" with the expected next state name
 
+
     // Test getCustomerID() method
     assert(customer.getCustomerID() == 1); // Assuming nextID starts at 1
 
     cout << "All Customer tests passed" << endl;
+
 }

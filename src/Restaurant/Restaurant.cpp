@@ -14,8 +14,8 @@ Restaurant::Restaurant()
 {
     //Singleton function
     funds = new Finance();
-    floor = new Floor();
-    kitchen = new Kitchen();
+    floor = new Floor(funds);
+    kitchen = new Kitchen(funds);
 }
 
 Restaurant::Restaurant(Restaurant &restaurant)
@@ -29,21 +29,26 @@ void Restaurant::operator=(Restaurant &restaurant)
     //Singleton function
 
 }
-
+///
+///Setup part of Restaurant: get user input to set funds,buy stock and set thenumber of waiters
 void Restaurant::setup()
 {
     // setting the finance's amount for later use
-    double f = 420.69;
+    double f;
     cout << "\033[1;32mSetup Phase:\033[0m" << endl;
-    cout << "\033[1;32mAmount of finances for this round:\033[0m"<< endl;
+    cout << "\033[1;32mAmount of finances for this round:\033[0m";
+    cin>> f;
+    cout<< endl;
     funds->setFunds(f);
 
     //buy stock with finances - in shelf - use addStock - call kitchen's setup function # wait for Franco
-    cout << "\033[1;32mYour shelf:\033[0m" << endl;
-    //kitchen.setup(); //function to allow user to buy stock and save it in shelf
+    cout << "\033[1;32mYour shelf is currently empty\033[0m" << endl;
+    cout<<endl;
+    kitchen->buyStock(); //function to allow user to buy stock and save it in shelf
 
     cout << "\033[1;32mHow many waiters should be employed:\033[0m" << endl;
-    int w = 3;
+    int w;
+    cin>>w;
     for(int i = 0; i < w; i++)
     {
         floor->addWaiter();
@@ -53,6 +58,8 @@ void Restaurant::setup()
     cout << "\033[1;32mThe restaurant simulation will now begin:\033[0m" << endl;
     simulate();
 }
+///
+///Simulation part of Restaurant: starts the game loop
 
 void Restaurant::simulate()
 {
@@ -82,6 +89,7 @@ void Restaurant::simulate()
         } else
             pay="tab";
        Customer* newCustomer = new Customer(pay,split);
+       cout<<"\033[1;34m Customer state is:"<<newCustomer->getState()->getName()<<"\033[0m"<<endl;
        customers.push_back(newCustomer);
     }
 
@@ -101,23 +109,35 @@ void Restaurant::simulate()
     manager->setTables(floor->getTables());
     manager->assignCustomer();
 
-    // create function in floor to tell waiters to do rounds
-    //spawn floor + kitchen
+    floor->waitersGetOrders();
 
-    // waiters talk to customers - start iteration
+    //Loop added to call execute for all the foodorders. it moves them to the kitchen so it has someting to work with.
+    vector<FoodOrder*> * temp = floor->fetchOrders();
+    for(FoodOrder * foodOrder : *temp)
+    {
+        (*foodOrder).setKitchen(this->kitchen);
+        (*foodOrder).execute();
+    }
 
-    //table orders OR waits - customer-not for me
 
-    // waiter takes order if ready to order -  part of iteration-not for me
-    //waiter takes order to kitchen -  get orders + give to kitchen
-    //kitchen prepares items - kitchen -not for me
+    kitchen->startKitchenProcess();
+    //Franco - work on loops for all the orders and handling the all of them.
+
     //waiter takes order to correct table num - get order from kitchen + give to waiter
-    // customers eat - waiter+customer - not for me
-    //customer requests bill/tab - not sure
-    //waiter brings bill - call waiter.bill
+    // ask franco to remove the id input from takeDish - let restaurant just get all finished orders -- return list of finished orders
+    //kitchen->takeDish(); // Franco
+    // push through finished orders list to floor
+    floor->giveFinishedOrders(list); // Tristan
+    // when waiter gives finished orders to customers, change their state - should be eating state
+    floor->waitersDoRounds();  // this is to set the customers' state to RequestingBill - if they want a bill!
+
+    //waiter brings bill - call waiter.bill // change customer state to billPaid
     //customer pays with waiter - call pay function in waiter
-    //customer leaves rating + tip - at waiter
-    //customer leaves - customer
+    //customer leaves rating + tip - at waiter - maybe save in floor? So that we can output the results
+    //customer leaves - remove all customers from their table
+
     // tabs pay at end of round - at end of round call pay tabs
 
 }
+
+///
