@@ -99,6 +99,12 @@ class FoodOrder : public OrderCommand
 		int getRandomID();  //can add vecter imput to check against duplicates
 
 		/**
+		 * @brief Returns the Bill object pointer.
+		 * @return Return a pointer for the Bill object.
+		*/
+		Bill* getBill();
+
+		/**
 		 * @brief Sets the kitchen pointer.
 		 * @param k Pointer to a kitchen object.
 		*/
