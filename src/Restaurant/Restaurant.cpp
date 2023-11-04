@@ -142,12 +142,8 @@ void Restaurant::simulate()
 
     kitchen->startKitchenProcess();
     //Franco - work on loops for all the orders and handling the all of them.
-
-    //waiter takes order to correct table num - get order from kitchen + give to waiter
-    // ask franco to remove the id input from takeDish - let restaurant just get all finished orders -- return list of finished orders
-    //kitchen->takeDish(); // Franco
-    // push through finished orders list to floor
-    //floor->giveFinishedOrders(list); // Tristan
+    std::vector<Dish*> finishedOrder =kitchen->takeDishes();
+     //floor->giveFinishedOrders(finishedOrder);
     // when waiter gives finished orders to customers, change their state - should be eating state
     //floor->waitersDoRounds();  // this is to set the customers' state to RequestingBill - if they want a bill!
 
