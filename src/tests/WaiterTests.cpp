@@ -3,3 +3,7 @@
 //
 
 #include "WaiterTests.h"
+
+void WaiterTests::run() {
+
+}

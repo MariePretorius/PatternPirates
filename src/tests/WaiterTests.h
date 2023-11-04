@@ -7,7 +7,8 @@
 
 
 class WaiterTests {
-
+public:
+    void run();
 };
 
 
