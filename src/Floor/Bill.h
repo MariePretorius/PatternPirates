@@ -59,6 +59,13 @@ class Bill
 		void showBill() const;
 
 		/**
+		 * @brief Returns a string that displayes the current state of the bill.
+		 * @param testing Used in unit testing. 
+		 * @return Returns a string of the bill state.
+		*/
+		std::string showBill(bool testing);
+
+		/**
 		 * @brief Set the tab boolean value.
 		 * @param tab Boolean value to set the tab variable.
 		*/
@@ -66,7 +73,7 @@ class Bill
 
 		/**
 		 * @brief Pay the bill with the given amount if at least the cost is given.
-		 * @param id ID of the customer the bill belongs to
+		 * @param id ID of the customer the bill belongs to.
 		*/
 		void payBill(int id);
 
@@ -87,6 +94,12 @@ class Bill
 		 * @return Returns a reference to a Customer object.
 		*/
 		Customer* getCustomer();
+
+		/**
+		 * @brief Function that returns a boolean value true id the bill is a tab.
+		 * @return Returns a boolean value.
+		*/
+		bool getTab();
 };
 
 #endif

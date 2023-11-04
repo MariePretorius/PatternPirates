@@ -7,6 +7,7 @@
 
 #include "../Floor/Customer.h"
 #include "../Restaurant/Finance.h"
+#include "../Floor/Table.h"
 
 class BillTest 
 {
@@ -15,8 +16,9 @@ class BillTest
         void runTestScenario();
         void runTests();
     private:
-        Bill bill;
-        BillCaretaker caretaker;
+        Bill* bill;
+        BillCaretaker* caretaker;
+        Customer* cust;
 };
 
 #endif
