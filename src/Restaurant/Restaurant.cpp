@@ -146,6 +146,10 @@ void Restaurant::simulate()
 
     std::vector<Dish*> finishedOrder =kitchen->takeDishes();
     floor->giveFinishedOrders(finishedOrder);
+
+    floor->waitersPassOrdersToTables();
+    // when waiter gives finished orders to customers, change their state - should be eating state
+
     floor->waitersDoRounds();  // this is to set the customers' state to RequestingBill - if they want a bill!
 
     //waiter brings bill - call waiter.bill // change customer state to billPaid
