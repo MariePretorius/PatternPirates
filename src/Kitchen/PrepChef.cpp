@@ -19,11 +19,10 @@ PrepChef::PrepChef(Kitchen* thisKitchen) {
  */
 void PrepChef::handleOrder() {
     FoodOrder* currentOrder = kitchen->getNextOrder();
-    //if guard to account for null-return value
-    //was segfaulting due to a null-reference being passed into handleStock
-    if(currentOrder)
-    {
+    while (currentOrder) {
         handleStock(currentOrder);
+        this->nextChef->handleOrder();
+        FoodOrder* currentOrder = kitchen->getNextOrder();
     }
 }
 
@@ -59,5 +58,4 @@ void PrepChef::handleStock(FoodOrder* order) {
     }
 
     kitchen->setCurrentDish(condition);
-    this->nextChef->handleOrder();
 }
