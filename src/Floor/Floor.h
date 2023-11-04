@@ -33,6 +33,8 @@ public:
 
     vector<FoodOrder *> *fetchOrders();
 
+    void waitersDoRounds();
+
 private:
 
     Finance * finance;
