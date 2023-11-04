@@ -109,7 +109,7 @@ void Restaurant::simulate()
         } else
             pay="tab";
         Shelf*shelf = kitchen->getShelf();
-        vector<Stock*> stockList = shelf->getStockListVector(;
+        vector<Stock*> stockList = shelf->getStockListVector();
         Customer* newCustomer = new Customer(pay,split); // old definition
         //Customer* newCustomer = new Customer(pay,split,stockList);
         cout<<"\033[1;34m Customer state is:"<<newCustomer->getState()->getName()<<"\033[0m"<<endl;
