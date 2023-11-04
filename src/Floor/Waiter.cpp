@@ -52,12 +52,18 @@ void Waiter::createBill(bool split, Table *table) {
     if((*it)->getPaymentMethod())
     {
         //if split
+        //creates a bill for each customer
+        for(it; it != table->getCustomers()->end(); it++)
+        {
+            bills.push_back(new Bill(*it, this->finance));
+        }
 
         //creates a bill based on orders
     }
     else
     {
-
+        bills.push_back(new Bill())
+        //creates a bill for the whole table
     }
 }
 
@@ -106,4 +112,19 @@ void Waiter::getOrders() {
 
 std::vector<FoodOrder *> * Waiter::fetchOrders() {
     return &orders;
+}
+/**
+ * @brief Goes through this waiter's list of tables and checks if all customers a requesting bill
+ */
+void Waiter::doRounds() {
+    for (Table *t : tables) {
+        if(t->doneEating())
+        {
+            list<Customer *>::iterator customer = t->getCustomers()->begin();
+            for(customer; customer != t->getCustomers()->end(); customer++)
+            {
+
+            }
+        }
+    }
 }

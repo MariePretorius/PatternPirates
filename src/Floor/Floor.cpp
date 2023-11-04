@@ -131,12 +131,29 @@ void Floor::waitersGetOrders() {
 
     stashedOrders = *allOrders;
 }
-
+/**
+ *
+ * @return
+ */
 vector<FoodOrder *> *Floor::fetchOrders() {
     return &stashedOrders;
 }
 
 // when waiter gives finished orders to customers, change their state - should be eating state
 void Floor::waitersDoRounds() {
-
+    for(Waiter*w: waiters)
+    {
+        w->doRounds();
+    }
+}
+/**
+ * @brief Takes in finished orders and places them in the finishedOrders vector in Floor
+ *
+ * @param finishedOrders A vector of Dish pointers
+ */
+void Floor::giveFinishedOrders(vector<Dish *> finishedOrders) {
+    for(Dish*d: finishedOrders)
+    {
+        this->finishedOrders.push_back(d);
+    }
 }
