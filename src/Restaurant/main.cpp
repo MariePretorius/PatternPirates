@@ -192,7 +192,7 @@ int main(){
 
 
     testing();
-    ShannonTesting();
+    //ShannonTesting();
     Restaurant::instance()->setup();
 
 

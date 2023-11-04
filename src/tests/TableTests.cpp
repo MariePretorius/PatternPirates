@@ -22,12 +22,12 @@ void TableTests::runTests()
     customerList.push_back(&customer2);
     table.assignCustomers(customerList);
     assert(table.isOccupied() == true);
-    assert(table.getCustomers().size() == 2);
+    assert(table.getCustomers()->size() == 2);
 
     // Test removeCustomers() method
     table.removeCustomers();
     assert(table.isOccupied() == false);
-    assert(table.getCustomers().size() == 0);
+    assert(table.getCustomers()->size() == 0);
 
     std::cout << "All Table tests passed" << std::endl;
 }
