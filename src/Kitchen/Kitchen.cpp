@@ -66,29 +66,43 @@ void Kitchen::buyStock() {
     char continueBuying='Y';
     int counter=0;
 
-    double PriceArr[10]={30.50,48.60,12.99,50.20,10.00,17.10,60.00,
-                         20.00,30.05};
-    string OptionsArr[10] = {"Beef","Chicken","Breadrolls","Fish","Spinach",
-                             "Salad","Pizza base","Onions","Eggs"};
+    double PriceArr[30]={15.50,10.25,25.99,18.99,40.50,50.00,12.99,12.99,20.00,15.00,12.99,
+                         15.50,10.00,5.00,8.00,8.00,5.25,18.25,10.50,30.75,20.99,25.00,25.00,20.99,15.50,
+                         18.00,20.50,25.25,15.25,10.00};
+    string OptionsArr[30] = {"Rice","Flour","Eggs","Milk","Chicken",
+                             "Ground beeg","Pasta","Potatoes","Tomatoes","Onions",
+                             "Carrot","Bread","Sugar","Salt","Pepper","Cucumber",
+                             "Bell Pepper","Brocolli","Spinach","Cheese","Butter",
+                             "Olive Oil","Cereal","Apple","Banana","Orange","Grapes",
+                             "Peanut Butter","Yogurt","Chocolate"};
     do {
         cout << "\033[1;36mList of possible items for your shelf:\033[0m" << endl;
-        for (int i = 0; i < 9; ++i) {
-            cout << "\033[1;36m"+ to_string(i)+"\t"+OptionsArr[i]+" \033[0m" << endl;
+        for (int i = 0; i < 29; i++) {
+            cout << "\033[1;36m" + to_string(i)+ "\t" + OptionsArr[i] + "\t\t" + to_string(PriceArr[i]) + " \033[0m" << endl;
         }
         cout<<endl;
-        cout<<"\033[1;36mPlease enter the item number you want to buy:";
+        cout<<"\033[1;36mPlease enter the item number you want to buy:\033[0m";
         cin>>buyOption;
         cout<<endl;
-        cout<<OptionsArr[buyOption]<< " costs R" << PriceArr[buyOption]<<", enter quantity:" ;
+        cout<<"\033[1;36m" + OptionsArr[buyOption] + " costs R" + to_string(PriceArr[buyOption]) + ", enter quantity:\033[0m" ;
         cin>>quantity;
+        if (quantity * PriceArr[buyOption] > finance->getFunds()) {
+            cout << "\033[1;36mYou do not have enough funds left to make this purchase.\033[0m" << endl;
+            continue;
+        };
+        if (quantity + shelf->getCurrentCapacity() > shelf->getMaxCapacity()) {
+            cout << "\033[1;36mYou do not have enough space left on the shelf to make this purchase.\033[0m" << endl;
+            continue;
+        };
         shelf->addStock(new Ingredient(OptionsArr[buyOption],quantity,PriceArr[buyOption],counter++));
         finance->removeFunds(quantity*PriceArr[buyOption]);
-        cout<< to_string(quantity)+" [" + OptionsArr[buyOption] + "] has been bought !";
+        cout<< "\033[1;36m" + to_string(quantity) + " [" + OptionsArr[buyOption] + "] has been bought !\033[0m";
         cout<<endl;
-        cout<<"Amount of funds left: R"<< finance->getFunds()<<endl;
-        cout<<"Your shelf:"<<endl;
-        cout<<shelf->getStockList()<<endl;
-        cout<<"Do you want to buy more stock?[Y/n]: \033[0m";
+        cout<<"\033[1;36mAmount of funds left: R" << finance->getFunds() << "\033[0m" <<endl;
+        cout<<"\033[1;36mYour shelf:\033[0m"<<endl;
+        cout<< "\033[1;36m" + shelf->getStockList() + "\033[0m"<<endl;
+        cout << "\033[1;36mCurrent shelf capacity: \033[0m" << shelf->getCurrentCapacity() << "/" << shelf->getMaxCapacity() << endl;
+        cout<<"\033[1;36mDo you want to buy more stock?[Y/n]: \033[0m";
         cin>> continueBuying;
     } while ((continueBuying == 'Y' || continueBuying == 'y') && finance->getFunds() > 0 && shelf->getCurrentCapacity() < shelf->getMaxCapacity());
 }
@@ -115,6 +129,7 @@ Dish* Kitchen::getCurrentDish() {
 
 void Kitchen::startKitchenProcess() {
     this->prepChef->handleOrder();
+    delete this->prepChef;
 }
 
 Finance* Kitchen::getFinance() {
