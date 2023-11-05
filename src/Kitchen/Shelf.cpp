@@ -96,3 +96,19 @@ Shelf::Shelf() {
 std::vector<Stock *> Shelf::getStockListVector() {
     return stockList;
 }
+
+/**
+ * @brief returns the current capacity of the shelf
+ * @return an integer 
+ */
+int Shelf::getCurrentCapacity() {
+    return currentCapacity;
+}
+
+/**
+ * @brief returns the max capacity of the shelf
+ * @return an integer
+ */
+int Shelf::getMaxCapacity() {
+    return maxCapacity;
+}
