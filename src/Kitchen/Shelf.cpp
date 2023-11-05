@@ -13,6 +13,7 @@
 void Shelf::addStock(Stock * newStock)
 {
     this->stockList.push_back(newStock);
+    currentCapacity += newStock->getQuantity();
 }
 
 /**
@@ -86,7 +87,7 @@ Stock * Shelf::deductStock(std::string stock)
 Shelf::Shelf() {
     stockList = std::vector<Stock*>();
     currentCapacity = 0;
-    maxCapacity = 0;
+    this->maxCapacity = 50;
 }
 
 /**
