@@ -18,8 +18,8 @@ public:
     void removeStock(std::string stock);
     void clearStock();
     Stock * deductStock(std::string stock);
-
-
+    int getCurrentCapacity();
+    int getMaxCapacity();
     std::string getStockList();
     std::vector<Stock*> getStockListVector();
 private:

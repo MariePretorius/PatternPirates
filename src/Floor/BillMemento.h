@@ -6,7 +6,7 @@
 
 /**
  * @class BillMemento class.
- * The BillMemento class acts as the Memento participant in the Bill Memento design pattern.
+ * @brief The BillMemento class acts as the Memento participant in the Bill Memento design pattern.
 */
 class BillMemento 
 {
