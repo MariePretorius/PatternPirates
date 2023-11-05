@@ -9,8 +9,9 @@
 #include "Stock.h"
 
 class Ingredient : public Stock
-    {
+{
 public:
+    Ingredient(std::string name, int initialQuantity, double costPerUnit, int key);
     std::string getName() override;
     std::string getCondition();
     std::string getChoice();

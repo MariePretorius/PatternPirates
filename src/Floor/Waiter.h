@@ -9,6 +9,7 @@
 
 #include "Table.h"
 #include "../Restaurant/Finance.h"
+#include "Bill.h"
 class FoodOrder;
 class Order;
 class Waiter
@@ -22,13 +23,19 @@ public:
     void getOrdersFromCurrTable();
     void createBill(bool split, Table * currTable);
     std::vector<FoodOrder *> * fetchOrders();
-
+    void addDishToHand(Dish* dish);
     void getOrders();
+    std::vector<Table*> * getTables();
+    void passOrdersToTables();
+
+    void doRounds();
 
 private:
     Finance * finance;
     std::vector<Table *> tables;
     std::vector<FoodOrder *> orders;
+    std::vector<Bill*> bills;
+    std::vector<Dish*> dishesInHand;
     //Table * curr;
 };
 

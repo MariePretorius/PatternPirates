@@ -52,12 +52,18 @@ void Waiter::createBill(bool split, Table *table) {
     if((*it)->getPaymentMethod())
     {
         //if split
+        //creates a bill for each customer
+        for(it; it != table->getCustomers()->end(); it++)
+        {
+
+        }
 
         //creates a bill based on orders
     }
     else
     {
-
+        //bills.push_back(new Bill())
+        //creates a bill for the whole table
     }
 }
 
@@ -87,7 +93,7 @@ void Waiter::getOrders() {
                 }
                 //FoodOrder(std::vector<std::string> ingredients, std::vector<double> prices, int num, std::string method, int tableNumber, Customer& customer, Bill* bill);
                 FoodOrder * tempFoodOrder = new FoodOrder(vectorIngredients,vectorDouble,vectorIngredients.size(),
-                                                          (*customers)->getCookingMethod(), (*table)->getTableNumber(), **customers,new Bill(*customers,this->finance));
+                                                          (*customers)->getCookingMethod(), (*table)->getTableNumber(), **customers,new Bill(*customers,this->finance, *table));
                 this->orders.push_back(tempFoodOrder);
                 (*customers)->nextState();
                 std::cout << "\033[35mCustomer state has changed to:\t\t"<< (*customers)->getState()->getName() <<"!\033[0m" << std::endl;
@@ -107,3 +113,99 @@ void Waiter::getOrders() {
 std::vector<FoodOrder *> * Waiter::fetchOrders() {
     return &orders;
 }
+/**
+ * @brief Goes through this waiter's list of tables and checks if all customers a requesting bill, and then has them pay the bill
+ */
+void Waiter::doRounds() {
+    for (Table *t : tables) {
+        if(t->doneEating())
+        {
+            //writes up the bill for the table
+            list<Customer *>::iterator customer = t->getCustomers()->begin();
+            if((*customer)->getSplit())
+            {
+                //if splitting
+                for(customer; customer != t->getCustomers()->end(); customer++)
+                {
+                    for(Bill * b : bills)
+                    {
+                        if((*customer) == b->getCustomer())
+                        {
+                            b->payBill((*customer)->getCustomerID());
+                        }
+                    }
+                }
+                for(customer = t->getCustomers()->begin(); customer != t->getCustomers()->end(); customer++)
+                {
+                    (*customer)->nextState();
+                }
+            }
+            else
+            {
+                list<Customer *>::iterator customer = t->getCustomers()->begin();
+                //iterate through the bills associated with a table and then have one id pay it
+                for(Bill * b : bills)
+                {
+                    if(b->getTable() == t)
+                    {
+                        b->payBill((*customer)->getCustomerID());
+                    }
+                }
+                for(customer = t->getCustomers()->begin(); customer != t->getCustomers()->end(); customer++)
+                {
+                    (*customer)->nextState();
+                }
+            }
+
+        }
+    }
+}
+
+void Waiter::addDishToHand(Dish *dish) {
+    dishesInHand.push_back(dish);
+}
+
+std::vector<Table *> *Waiter::getTables() {
+    return &tables;
+}
+
+void Waiter::passOrdersToTables() {
+    //for each table
+    for(Table * t: tables)
+    {
+        //go to each customer
+        list<Customer*>::iterator customer = t->getCustomers()->begin();
+        vector<Dish*> otherHand = vector<Dish*>();
+        if(!t->getCustomers()->empty())
+        {
+            for(customer; customer != t->getCustomers()->end(); customer++)
+            {
+                bool given = false;
+                //go through list of dishes
+                vector<Dish*>::iterator d = dishesInHand.begin();
+                if(!dishesInHand.empty())
+                {
+                    while(!given)
+                    {
+                        //and check if it needs to go to this table
+
+                        if ((*d)->getTableId() == t->getTableNumber()) {
+                            //add it to a vector
+                            otherHand.push_back(*d);
+                            //remove from source
+                            vector<Dish *>::iterator it = std::find(dishesInHand.begin(), dishesInHand.end(), *d);
+                            dishesInHand.erase(d);
+                            given = true;
+                        }
+                        d++;
+                        //then throw the dishes onto the table
+                    }
+                }
+            }
+            t->assignDishes(&otherHand);
+        }
+
+    }
+}
+
+
