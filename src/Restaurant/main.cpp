@@ -36,6 +36,7 @@ void testing()
 
     CustomerTests* customerTests = new CustomerTests();
     //customerTests->runTests();
+    delete customerTests;
 
 
     //Finance Tests

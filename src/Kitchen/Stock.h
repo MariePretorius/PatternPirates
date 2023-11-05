@@ -19,6 +19,8 @@ public:
 
     virtual std::string toString();
 
+    int getQuantity();
+
 private:
     std::string name;
     int quantity;

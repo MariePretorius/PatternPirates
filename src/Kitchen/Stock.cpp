@@ -72,3 +72,7 @@ std::string Stock::toString() {
 Stock::~Stock() {
 
 }
+
+int Stock::getQuantity() {
+    return this->quantity;
+}
