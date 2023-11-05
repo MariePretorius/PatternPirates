@@ -9,7 +9,7 @@ Dish::Dish(double cond, Customer* customer, int tableId, Bill* bill) {
     this->bill = bill;
 }
 
-int Dish::getId() {
+int Dish::getTableId() {
     return tableId;
 }
 

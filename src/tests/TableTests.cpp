@@ -22,17 +22,11 @@ void TableTests::runTests()
     customerList.push_back(&customer2);
     table.assignCustomers(customerList);
     assert(table.isOccupied() == true);
-    assert(table.getCustomers().size() == 2);
+    assert(table.getCustomers()->size() == 2);
 
     // Test removeCustomers() method
     table.removeCustomers();
     assert(table.isOccupied() == false);
-    assert(table.getCustomers().size() == 0);
-
-    // Additional test cases
-    // Test with different table numbers, capacities, and combinations of occupied and unoccupied tables.
-    // Test edge cases and error handling for invalid inputs if applicable.
-
-    // If all assertions pass, the tests were successful
+    assert(table.getCustomers()->size() == 0);
     std::cout << "All Table tests passed" << std::endl;
 }
