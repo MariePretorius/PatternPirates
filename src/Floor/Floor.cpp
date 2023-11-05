@@ -19,6 +19,7 @@ Floor::Floor(Finance * finance)
     this->finance = finance;
     this->numberOfTables = 0;
     this->numberOfWaiters = 0;
+    this->ratings = new Ratings();
 }
 /**
  * @brief Gets the maximum number of Customers that can be seated
@@ -107,7 +108,7 @@ void Floor::addTable(int capacity)
  */
 void Floor::addWaiter()
 {
-    waiters.push_back(new Waiter(this->finance));
+    waiters.push_back(new Waiter(this->finance, this->ratings));
     numberOfWaiters++;
     std::cout << "\033[35mAdded new Waiter\033[0m" << std::endl;
 }
