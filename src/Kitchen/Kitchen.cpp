@@ -18,10 +18,14 @@ Kitchen::~Kitchen() {
         delete cIngredient;
     }
     cookedIngredients.clear();
+    for (Dish* order : completedOrders) {
+        delete order;
+    }
+    completedOrders.clear();
     
     delete this->currentDish;
-    delete this->currentOrder;
-    delete this->finance;
+    delete this->prepChef;
+    delete this->shelf;
 }
 
 FoodOrder* Kitchen::getNextOrder() {
