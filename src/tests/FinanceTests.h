@@ -9,6 +9,7 @@
 class FinanceTests {
 public:
     FinanceTests();
+    ~FinanceTests();
     bool tests();
 private:
     Finance * finance;
