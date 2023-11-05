@@ -78,6 +78,7 @@ void Restaurant::CleanUp() {
     delete floor;
     delete kitchen;
     delete funds;
+
     uniqueInstance=nullptr;
 
 
@@ -171,6 +172,14 @@ void Restaurant::simulate()
 
     cout << "\033[1;32m\"You have made R "<<funds->getFunds()<< " in this simulation round.\033[0m" << endl;
 
+
+
+    // Part of cleanUp , don't touch! And don't add code under this
+    delete manager;
+    for (Customer* c: customers) {
+        delete c;
+    }
+    //tables need to be deleted in floor
     CleanUp();
 
 }
