@@ -9,6 +9,7 @@
 #include "CustomerState.h"
 #include "Ratings.h"
 #include "../Kitchen/Ingredient.h"
+#include "../Kitchen/Stock.h"
 
 #include <list>
 #include <iostream>
@@ -24,7 +25,7 @@ private:
 	static int nextID; ///< A static variable to generate unique customer IDs.
 	int id; ///< The unique identifier for the customer.
 	string cookingMethod; ///< The method used for preparing the customer's order.
-	vector<Ingredient> ingredients; ///< A list of ingredients for the customer's order.
+	vector<Stock>* stock; ///< A list of ingredients for the customer's order.
 	string paymentMethod = "bill"; ///< The method of payment chosen by the customer.
 	bool split = false; ///< Indicates whether the customer's bill is split.
 	
@@ -36,7 +37,7 @@ public:
      * @param paymentMethod The method of payment chosen by the customer.
      * @param split Indicates whether the customer's bill is split.
      */
-	Customer(string paymentMethod, bool split, vector<Ingredient*> ingredients);
+	Customer(string paymentMethod, bool split, vector<Stock>* stock);
 
 	/**
      * @brief Transition to the next customer state.
