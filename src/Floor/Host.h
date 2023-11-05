@@ -60,6 +60,10 @@ public:
      * @param t list of all tables on the floor -called in Restaurant
 	*/
     void setTables(list<Table*> t);
+    /**
+     * @brief Destructor for Host
+     */
+    ~Host();
 
 };
 

@@ -160,3 +160,14 @@ void Restaurant::simulate()
 
 }
 
+Restaurant::~Restaurant() {
+    delete floor;
+    delete kitchen;
+    delete funds;
+    uniqueInstance=nullptr;
+
+
+}
+
+
+
