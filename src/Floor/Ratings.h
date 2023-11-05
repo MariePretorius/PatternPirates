@@ -19,6 +19,7 @@ public:
      * rating and other statistics are updated based on the provided rating.
      */
     void leaveRating(double rating);
+    int getOverallRating();
 };
 
 #endif
