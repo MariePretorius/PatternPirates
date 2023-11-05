@@ -6,15 +6,6 @@
 #include "Ingredient.h"
 
 /**
- * @brief Returns the name of the ingredient
- * @return a name
- */
-std::string Ingredient::getName()
-{
-    return name;
-}
-
-/**
  * @brief returns the cooking choice for this ingrdient.
  * @return a cookingChoice
  */
@@ -48,4 +39,8 @@ void Ingredient::setCondition(std::string condition)
 Ingredient::Ingredient(std::string name, int initialQuantity, double costPerUnit, int key) : Stock(name, initialQuantity, costPerUnit, key)
 {
     this->condition = "Uncooked";
+}
+
+Ingredient::~Ingredient() {
+
 }
