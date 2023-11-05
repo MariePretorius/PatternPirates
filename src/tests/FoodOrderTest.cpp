@@ -1,64 +1,57 @@
 #include "FoodOrderTest.h"
 #include <iostream>
-#include <cassert>
 
 FoodOrderTest::FoodOrderTest() 
 {
-    // Initialize a FoodOrder instance for testing
+    // Initialize FoodOrderTest instance for testing
     std::vector<std::string> ingredients = {"Ingredient1", "Ingredient2"};
     std::vector<double> prices = {5.0, 3.0};
     int numIngredients = ingredients.size();
     std::string cookingMethod = "Grill";
     int tableNumber = 1;
-    Customer* customer;
-    Kitchen* kitchen;
-    Bill* bill;
 
-    //foodOrder = new FoodOrder(ingredients, prices, numIngredients, cookingMethod, tableNumber, customer, bill);
+
+    Stock* s1 = new Stock("Ingredient1", 20, 5.0, 1);
+    Stock* s2 = new Stock("Ingredient2", 20, 3.0, 2);
+    std::vector<Stock*> stock = {s1, s2};
+
+    this->customer = new Customer("Bill", false, stock);
+    Finance* finance = new Finance();
+    Table* table =  new Table(1, 4);
+    Bill* bill = new Bill(customer, finance, table);
+    this->kitchen = new Kitchen(finance);
+
+    this->foodOrder = new FoodOrder(ingredients, prices, numIngredients, cookingMethod, tableNumber, *customer, bill);
+    foodOrder->setKitchen(kitchen);
 }
 
-FoodOrderTest::~FoodOrderTest()
-{
-    delete foodOrder;
-}
 
-void FoodOrderTest::testExecute() 
+void FoodOrderTest::testFoodOrder() 
 {
-    // Test the execute function (you can customize this test)
-    foodOrder->execute();
-    // ASSERT_TRUE(some_condition);
-}
-
-void FoodOrderTest::testAddToBill() 
-{
-    // Test the addToBill function (you can customize this test)
-    foodOrder->addToBill("NewIngredient", 2.5);
-    // ASSERT_TRUE(some_condition);
-}
-
-void FoodOrderTest::testGetters() 
-{
-    // Test getter functions
-    std::vector<std::string> ingr = {"Ingredient1", "Ingredient2"};
-    //assert(foodOrder->getIngredients() == ingr);
+    // Test FoodOrder operations
     assert(foodOrder->getCookingMethod() == "Grill");
     assert(foodOrder->getTableNumber() == 1);
-    // Add more getter tests as needed
-}
 
-void FoodOrderTest::testRandomID() 
-{
-    // Test the getRandomID function
-    int randomID = foodOrder->getRandomID();
-    assert(randomID >= 1000 && randomID <= 9999);
-    // You can add more tests for getRandomID if necessary
+    std::vector<std::string>* order = foodOrder->getIngredients();
+
+    std::vector<std::string> orderIngredients = *order;   //foodOrder.getIngredients();
+    assert(orderIngredients.size() == 2);
+    assert(orderIngredients[0] == "Ingredient1");
+    assert(orderIngredients[1] == "Ingredient2");
+
+    // Test execution
+    foodOrder->execute();
+
+    // Check if the order has been added to the kitchen
+    //assert(kitchen.getNumOrders() == 1);
+    //assert(kitchen.getOrder(0) == &foodOrder);
 }
 
 void FoodOrderTest::runTests() 
 {
-    testExecute();
-    testAddToBill();
-    testGetters();
-    testRandomID();
+    testFoodOrder();
+    std::cout << "\x1B[33m";
+    std::cout << "FoodOrder tests successful!" << std::endl;
+    std::cout << "\x1B[0m";
 }
 

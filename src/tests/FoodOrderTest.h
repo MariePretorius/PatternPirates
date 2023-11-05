@@ -5,19 +5,25 @@
 #include "../Floor/Customer.h"
 #include "../Floor/Bill.h"
 #include "../Kitchen/Kitchen.h"
+#include "../Kitchen/Stock.h"
+
+#include <vector>
+#include <cassert>
+
+#include <vector>
+#include <cassert>
 
 class FoodOrderTest 
 {
     public:
         FoodOrderTest();
-        ~FoodOrderTest();
-        void testExecute();
-        void testAddToBill();
-        void testGetters();
-        void testRandomID();
+        void testFoodOrder();
         void runTests();
     private:
         FoodOrder* foodOrder;
+        Kitchen* kitchen;
+        Customer* customer;
+        //Bill bill;
 };
 
 #endif
