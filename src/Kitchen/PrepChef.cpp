@@ -5,6 +5,11 @@ PrepChef::PrepChef(Kitchen* thisKitchen) {
     this->kitchen = thisKitchen;
 }
 
+PrepChef::~PrepChef() {
+    delete this->kitchen;
+    delete this->nextChef;
+}
+
 void PrepChef::handleOrder() {
     FoodOrder* currentOrder = kitchen->getNextOrder();
     while (currentOrder) {
