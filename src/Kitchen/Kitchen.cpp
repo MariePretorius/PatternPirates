@@ -52,25 +52,17 @@ void Kitchen::addDish(Dish* dish) {
     cout << "\033[1;36mA new order was just completed!  Order up!\033[0m" << endl;
 }
 
-Dish* Kitchen::takeDish(int id) {
-
-    list<Dish*>::iterator it = completedOrders.begin();
-
-    while(it != completedOrders.end())
-    {
-        if((*it)->getId() == id)
-        {
-            std::cout << "Order " << id << "was succesfully collected by a waiter :)" << std::endl;
-            return *it;
-        }
-        it++;
+std::vector<Dish*> Kitchen::takeDishes() {
+    if (completedOrders.empty()) {
+        std::cout << "Orders are not yet ready to be collected." << std::endl;
+    } else {
+        std::cout << "Orders was succesfully collected by a waiter :)" << std::endl;
+        return completedOrders;
     }
-    std::cout << "Order " << id << "is not yet ready to be collected." << std::endl;
-
 }
 
 void Kitchen::setCurrentDish(double cond) {
-    currentDish = new Dish(cond);
+    currentDish = new Dish(cond, currentOrder->getCustomer(),currentOrder->getTableNumber(),currentOrder->getBill());
 }
 
 void Kitchen::buyStock() {
@@ -94,7 +86,7 @@ void Kitchen::buyStock() {
         cout<<endl;
         cout<<OptionsArr[buyOption]<< " costs R" << PriceArr[buyOption]<<", enter quantity:" ;
         cin>>quantity;
-        shelf->addStock(new Stock(OptionsArr[buyOption],quantity,PriceArr[buyOption],counter++)); //Ingredient needs a constructor
+        shelf->addStock(new Ingredient(OptionsArr[buyOption],quantity,PriceArr[buyOption],counter++)); //Ingredient needs a constructor
         finance->removeFunds(quantity*PriceArr[buyOption]);
         cout<< to_string(quantity)+" [" + OptionsArr[buyOption] + "] has been bought !";
         cout<<endl;
@@ -103,7 +95,7 @@ void Kitchen::buyStock() {
         cout<<shelf->getStockList()<<endl;
         cout<<"Do you want to buy more stock?[Y/n]: \033[0m";
         cin>> continueBuying;
-    } while (continueBuying == 'Y');/*while (continueBuying=='Y'&& Shelf.getCurrCapacity<=Shelf.getMaxCapacity && finance.getFunds < 10)
+    } while (continueBuying == 'Y' || continueBuying == 'y');/*while (continueBuying=='Y'&& Shelf.getCurrCapacity<=Shelf.getMaxCapacity && finance.getFunds < 10)
     */ //create finance obj + add getCurrCapacity +getMaxCapacity to Shelf class
 
 }
@@ -128,7 +120,10 @@ Dish* Kitchen::getCurrentDish() {
 
 void Kitchen::startKitchenProcess() {
     this->prepChef->handleOrder();
+}
 
+Finance* Kitchen::getFinance() {
+    return this->finance;
 }
 
 

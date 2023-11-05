@@ -3,6 +3,8 @@
 #include "../Floor/Bill.h"
 #include "../Kitchen/Kitchen.h"
 
+#include <sstream>
+
 /**
  * @brief Default constructor for the class.
 */
@@ -42,6 +44,17 @@ FoodOrder :: FoodOrder(std::vector<std::string> ingredients, std::vector<double>
         
         addToBill(this->ingredients[i], this->prices[i]);
     }
+
+    // std::stringstream ss;
+    // std::string custId = "";
+    // ss << customer.getCustomerID();
+    // ss >> custId;
+
+    // std::cout << "\x1B[35m";
+
+    // std::cout << "Customer " << custId << ": Order created." << std::endl;
+
+    // std::cout << "\x1B[0m";
 }
 
 /**
@@ -105,6 +118,15 @@ int FoodOrder :: getTableNumber()
 Customer* FoodOrder :: getCustomer()
 {
     return this->customer;
+}
+
+/**
+ * @brief Returns a pointer to the bill the order belongs to.
+ * @return Bill object pointer.
+*/
+Bill* FoodOrder :: getBill()
+{
+    return this->bill;
 }
 
 /**

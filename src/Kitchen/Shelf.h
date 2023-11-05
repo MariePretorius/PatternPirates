@@ -19,8 +19,9 @@ public:
     void clearStock();
     Stock * deductStock(std::string stock);
 
-    std::string getStockList();
 
+    std::string getStockList();
+    std::vector<Stock*> getStockListVector();
 private:
 
     std::vector<Stock*> stockList;

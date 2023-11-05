@@ -4,7 +4,7 @@
 /**
  * @brief Default constructor for Bill.
 */
-Bill :: Bill(Customer * customer, Finance * f)
+Bill :: Bill(Customer * customer, Finance * f, Table* table)
 {
     totalCost = 0.0;
     tab = false;
@@ -12,6 +12,11 @@ Bill :: Bill(Customer * customer, Finance * f)
     this->customer = customer;
     custID = customer->getCustomerID();
     this->bank = f;
+    this->table = table;
+
+    std::cout << "\x1B[33m";
+    std::cout << "Customer " << custID << ": Bill Created" << std::endl;
+    std::cout << "\x1B[0m";
 }
 
 /**
@@ -49,7 +54,7 @@ void Bill :: restoreFromMemento(const BillMemento& memento)
 */
 void Bill :: showBill() const
 {
-    std::cout << "\x1B[35m";  //Change color to purple
+    std::cout << "\x1B[33m";  //Change color to purple
 
     std::cout << "Bill Items:" << std::endl;
     for (const std::string& item : items)
@@ -62,6 +67,30 @@ void Bill :: showBill() const
 }
 
 /**
+ * @brief Returns a string that displayes the current state of the bill.
+ * @return Returns a string of the bill state.
+*/
+std::string Bill :: showBill(bool testing)
+{
+    std::string out = "";
+    std::stringstream ss;
+    std::string cost = "";
+
+    out += "Bill Items:\n";
+    for (const std::string& item : items)
+    {
+        out += "- " + item + "\n";
+    }    
+
+    ss << totalCost;
+    ss >> cost;
+
+    out += "Total Cost: R" + cost + "\n";
+
+    return out;
+}
+
+/**
  * @brief Set the tab boolean value.
  * @param tab Boolean value to set the tab variable.
 */
@@ -69,7 +98,7 @@ void Bill :: setTab(bool tab)
 {
     this->tab = tab;
 
-    std::cout << "\x1B[35m";
+    std::cout << "\x1B[33m";
 
     //std::cout << "This bill has been set to a tab." << std::endl;
     std::cout << "Customer " << custID << " has set their bill to a tab." << std::endl;
@@ -93,7 +122,7 @@ void Bill :: payBill(int id)
         tip = costPaid * 0.15;
         costPaid = costPaid + tip;
 
-        std::cout << "\x1B[35m";
+        std::cout << "\x1B[33m";
 
         totalCost = 0.0;
         
@@ -112,13 +141,14 @@ void Bill :: payBill(int id)
     }
     else
     {
-        std::cout << "\x1B[35m";
+        std::cout << "\x1B[33m";
 
         std::cout << "ID given does not match the ID of this bill" << std::endl;
 
         std::cout << "\x1B[0m";
     }
 }
+
 
 /**
  * @brief Function to check whether the bill has been paid.
@@ -129,9 +159,35 @@ bool Bill :: isPaid()
     return paid;
 }
 
+/**
+ * @brief Function that returns a reference to the table the bill belongs to.
+ * @return Returns a reference to a Table object.
+*/
+Table* Bill :: getTable()
+{
+    return this->table;
+}
+
+/**
+ * @brief Function that returns a reference to the customer the bill belongs to.
+ * @return Returns a reference to a Customer object.
+*/
+Customer* Bill :: getCustomer()
+{
+    return this->customer;
+}
+
+/**
+ * @brief Function that returns a boolean value true id the bill is a tab.
+ * @return Returns a boolean value.
+*/
+bool Bill :: getTab()
+{
+    return this->tab;
+}
 
 // example usage
-// std::cout << "\x1B[35m"; 
+// std::cout << "\x1B[33m"; 
 
 // Bill bill;
 // BillCaretaker caretaker;
