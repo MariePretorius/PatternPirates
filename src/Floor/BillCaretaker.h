@@ -9,7 +9,7 @@
 
 /**
  * @class BillCaretaker class.
- * This class acts as the Caretaker in the Bill Memento design pattern.
+ * @brief This class acts as the Caretaker in the Bill Memento design pattern.
 */
 class BillCaretaker 
 {
