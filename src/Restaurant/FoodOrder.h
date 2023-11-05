@@ -17,7 +17,7 @@ class Bill;
 
 /**
  * @class FoodOrder Class
- * This class is the ConcreteCommand participant in the Command design pattern. It Inherits from the OrderCommand class.
+ * @brief This class is the ConcreteCommand participant in the Command design pattern. It Inherits from the OrderCommand class.
 */
 class FoodOrder : public OrderCommand
 {
