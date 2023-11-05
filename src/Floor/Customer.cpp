@@ -1,12 +1,19 @@
 #include "Customer.h"
 #include "WaitingForTable.h"
+
 int Customer::nextID = 1;
+
 double Customer::calculateRating()
 {
-    return 5.0;
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_real_distribution<double> distribution(1.0, 5.0);
+
+    double random_value = distribution(gen);
+    return random_value;
 }
 
-Customer::Customer(string paymentMethod, bool split)
+Customer::Customer(string paymentMethod, bool split, vector<Stock*> ingredients)
 {
     state = new WaitingForTable();
     if (split) {
@@ -36,6 +43,14 @@ Customer::Customer(string paymentMethod, bool split)
     mt19937 gen2(other());
     uniform_int_distribution<int> distribution2(1, 2);
     int otherNum = distribution2(gen2);
+
+    random_device ing;
+    mt19937 gen3(ing());
+    uniform_int_distribution<int> distribution3(0, stock.size() - 1);
+    for (int i = 0; i < 3; i++) {
+        int randomIndex = distribution3(gen3);
+        this->stock.push_back(stock[randomIndex]);
+    }
 }
 
 void Customer::nextState() 
@@ -45,8 +60,8 @@ void Customer::nextState()
 
 void Customer::leaveRating(Ratings allRatings)
 {
-    //double rating = calculateRating;
-    allRatings.leaveRating(3.0);
+    double rating = calculateRating();
+    allRatings.leaveRating(rating);
 }
 
 void Customer::notifyHost()
@@ -63,14 +78,22 @@ int Customer::getCustomerID()
     return id;
 }
 
-list<Ingredient> * Customer::getIngredients()
+vector<string> Customer::getIngredients()
 {
-    return &ingredients;
+    vector<string> ingredients;
+    for (int i = 0; i < 3; i++) {
+        ingredients.push_back(stock[i]->getName());
+    }
+    return ingredients;
 }
 
-list<double> Customer::getPrices()
+vector<double> Customer::getPrices()
 {
-    return list<double>();
+    vector<double> prices;
+    for (int i = 0; i < 3; i++) {
+        prices.push_back(stock[i]->getCostPerUnit());
+    }
+    return prices;
 }
 
 string Customer::getCookingMethod()

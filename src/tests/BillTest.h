@@ -8,6 +8,7 @@
 #include "../Floor/Customer.h"
 #include "../Restaurant/Finance.h"
 #include "../Floor/Table.h"
+#include "../Kitchen/Stock.h"
 
 class BillTest 
 {
