@@ -14,6 +14,7 @@
 #include "../tests/KitchenTests.h"
 #include "../tests/FoodOrderTest.h"
 #include "../tests/BillTest.h"
+#include "../tests/HostTests.h"
 
 
 
@@ -36,7 +37,7 @@ void testing()
 
 
     CustomerTests* customerTests = new CustomerTests();
-    //customerTests->runTests();
+    customerTests->runTests();
 
 
     //Finance Tests
@@ -108,7 +109,15 @@ void testing()
     // {
     //     std::cout << "\033[35mCannot test Waiter as there are dependencies that failed.\033[0m" << std::endl;
     // }
-
+    try {
+        HostTests *Monika_test = new HostTests();
+        Monika_test->TestScenario();
+        delete Monika_test;
+        hostSuccess = true;
+        cout << "\033[1;32mHost Test successful\033[0m" << endl;
+    }catch (exception e){
+        cout << "\033[1;32mError occurred in Host\033[0m" << endl;
+    }
 
     //Floor Tests
     //tests the floor class
@@ -167,6 +176,7 @@ void testing()
     // {
     //     std::cout << "\033[1;36mCannot test Kitchen as there are dependencies that failed.\033[0m" << std::endl;
     // }
+
 }
 
 void ShannonTesting()
@@ -200,7 +210,7 @@ void ShannonTesting()
 int main(){
 
 
-    testing();
+    //testing();
     //ShannonTesting();
     Restaurant::instance()->setup();
 
