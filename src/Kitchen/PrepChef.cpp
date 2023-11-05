@@ -12,6 +12,7 @@ void PrepChef::handleOrder() {
         this->nextChef->handleOrder();
         currentOrder = kitchen->getNextOrder();
     }
+    delete currentOrder;
 }
 
 void PrepChef::handleStock(FoodOrder* order) {
