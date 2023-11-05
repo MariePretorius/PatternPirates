@@ -174,6 +174,7 @@ void Waiter::doRounds() {
                 std::cout << "\033[35mThe table is not splitting the bill.\033[0m" << std::endl;
                 list<Customer *>::iterator customer = t->getCustomers()->begin();
                 //iterate through the bills associated with a table and then have one id pay it
+                //test comment
                 for(Bill * b : bills)
                 {
                     if(b->getTable() == t)
