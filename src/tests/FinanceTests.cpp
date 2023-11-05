@@ -11,6 +11,10 @@ FinanceTests::FinanceTests() {
     this->finance = new Finance(80000);
 }
 
+FinanceTests::~FinanceTests() {
+    delete this->finance;
+}
+
 bool FinanceTests::tests() {
     try
     {
