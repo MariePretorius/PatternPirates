@@ -13,7 +13,7 @@ double Customer::calculateRating()
     return random_value;
 }
 
-Customer::Customer(string paymentMethod, bool split, vector<Stock*> ingredients)
+Customer::Customer(string paymentMethod, bool split, vector<Stock*> stock)
 {
     state = new WaitingForTable();
     if (split) {
@@ -46,7 +46,7 @@ Customer::Customer(string paymentMethod, bool split, vector<Stock*> ingredients)
 
     random_device ing;
     mt19937 gen3(ing());
-    uniform_int_distribution<int> distribution3(0, stock.size() - 1);
+    uniform_int_distribution<int> distribution3(0, (stock.size() - 1));
     for (int i = 0; i < 3; i++) {
         int randomIndex = distribution3(gen3);
         this->stock.push_back(stock[randomIndex]);

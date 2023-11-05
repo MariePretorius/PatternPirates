@@ -11,10 +11,10 @@ void TableTests::runTests()
     assert(table.getTableNumber() == 1);
     assert(table.getCapacity() == 4);
     assert(table.isOccupied() == false);
-
+    vector<Stock *> stockVector = vector<Stock*>();
     // Create some Customer objects for testing
-    Customer customer1("bill", false);
-    Customer customer2("tab", true);
+    Customer customer1("bill", false, stockVector);
+    Customer customer2("tab", true, stockVector);
 
     // Test assignCustomers() method
     list<Customer*> customerList;

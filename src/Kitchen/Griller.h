@@ -1,3 +1,8 @@
+/**
+ * @file Griller.h
+ * @brief Declaration of the Griller class used as a ConcreteStrategy.
+ */
+
 #ifndef GRILLER_H
 #define GRILLER_H
 #include "Cook.h"
@@ -8,12 +13,24 @@
 
 #include "Cook.h"
 
+/**
+ * @class Friller
+ * @brief Represents a ConcreteStrategy, Griller, used to grill ingredients.
+ */
 class Griller : public Cook {
 
 
 	public:
-		void prepareStation() override;//override pure virtual function in Cook
-		Ingredient* cookIngredient(Ingredient* ingredient) override;//grill ingredient
+		/**
+		 * Prepare the fryer station by heating the stove.
+		 */
+		void prepareStation() override;
+		/**
+		 * Cook an ingredient using the griller and change its condition to grilled.
+		 * @param ingredient A pointer to the Ingredient to be grilled.
+		 * @return A pointer to the grilled Ingredient.
+		 */
+		Ingredient* cookIngredient(Ingredient* ingredient) override;
 
 };
 
