@@ -5,6 +5,7 @@
 #include "../Floor/Customer.h"
 #include "../Floor/Bill.h"
 #include "../Kitchen/Kitchen.h"
+#include "../Kitchen/Stock.h"
 
 #include <vector>
 #include <cassert>
