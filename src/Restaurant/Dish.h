@@ -3,13 +3,14 @@
 #include <list>
 #include "../Kitchen/Ingredient.h"
 #include "../Floor/Customer.h"
-#include "../Floor/Bill.h"
+class Bill;
+//#include "../Floor/Bill.h"
 using namespace std;
 
 class Dish {
 
 public: 			
-	int getId();	
+	int getTableId();
 	Dish(double cond, Customer* customer, int tableId, Bill* bill);
 	void addIngredient(Ingredient*);
 

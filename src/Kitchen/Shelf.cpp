@@ -65,3 +65,7 @@ Shelf::Shelf() {
     currentCapacity = 0;
     maxCapacity = 0;
 }
+
+std::vector<Stock *> Shelf::getStockListVector() {
+    return stockList;
+}

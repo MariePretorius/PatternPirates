@@ -6,6 +6,7 @@
 
 #include "Restaurant.h"
 #include "../tests/CustomerTests.h"
+
 #include "../tests/FinanceTests.h"
 #include "../tests/StockTests.h"
 //#include "../tests/WaiterTests.h"
@@ -13,6 +14,8 @@
 #include "../tests/KitchenTests.h"
 #include "../tests/FoodOrderTest.h"
 #include "../tests/BillTest.h"
+
+
 
 
 using namespace std;
@@ -195,8 +198,9 @@ void ShannonTesting()
 
 int main(){
 
+
     testing();
-    ShannonTesting();
+    //ShannonTesting();
     Restaurant::instance()->setup();
 
 
@@ -214,6 +218,7 @@ int main(){
     }
      */
     // CUSTOMER TESTS
+
 
 
     return 0;

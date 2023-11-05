@@ -10,7 +10,7 @@
 class Customer;
 class Host;
 class Waiter;
-
+class Dish;
 #include "Table.h"
 #include "../Restaurant/FoodOrder.h"
 
@@ -32,8 +32,9 @@ public:
     void addWaiter();
 
     vector<FoodOrder *> *fetchOrders();
-
+    void waitersPassOrdersToTables();
     void waitersDoRounds();
+    void giveFinishedOrders(vector<Dish*> finishedOrders);
 
 private:
 
@@ -44,6 +45,7 @@ private:
     std::vector<Customer *> customers;
     std::list<Waiter *> waiters;
     vector<FoodOrder *> stashedOrders;
+    vector<Dish *> finishedOrders;
 };
 
 
