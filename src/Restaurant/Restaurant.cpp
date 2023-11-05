@@ -155,7 +155,7 @@ void Restaurant::simulate()
     //customer pays with waiter - call pay function in waiter
     //customer leaves rating + tip - at waiter - maybe save in floor? So that we can output the results
     //customer leaves - remove all customers from their table
-
+    
     // tabs pay at end of round - at end of round call pay tabs
 
 }
