@@ -3,7 +3,13 @@
 //
 
 #include "WaiterTests.h"
+WaiterTests::WaiterTests() {
 
-void WaiterTests::run() {
+}
 
+bool WaiterTests::tests() {
+    Finance * finance = new Finance();
+
+    Waiter * waiter = new Waiter(finance);
+    assert(waiter->getTables()->size() == 0);
 }

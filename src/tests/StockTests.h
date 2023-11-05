@@ -4,10 +4,15 @@
 
 #ifndef PROJFINAL_STOCKTESTS_H
 #define PROJFINAL_STOCKTESTS_H
+#include "../Kitchen/Stock.h"
+#include "../Kitchen/Shelf.h"
+#include "../Kitchen/Ingredient.h"
 
-
+#include <cassert>
 class StockTests {
-
+public:
+    StockTests();
+    bool tests();
 };
 
 

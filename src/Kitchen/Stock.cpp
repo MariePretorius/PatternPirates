@@ -68,3 +68,7 @@ std::string Stock::toString() {
     //std::cout << "temp" << std::endl;
     return temp;
 }
+
+Stock::~Stock() {
+
+}

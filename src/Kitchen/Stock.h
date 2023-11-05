@@ -10,13 +10,14 @@
 class Stock {
 public:
     Stock(std::string name, int initialQuantity, double costPerUnit, int key);
-    void addStock(int quantity);
-    void removeStock(int quantity);
-    double getCostPerUnit();
+    ~Stock();
+    virtual void addStock(int quantity);
+    virtual void removeStock(int quantity);
+    virtual double getCostPerUnit();
 
     virtual std::string getName();
 
-    std::string toString();
+    virtual std::string toString();
 
 private:
     std::string name;

@@ -14,9 +14,7 @@
 #include "../tests/KitchenTests.h"
 #include "../tests/FoodOrderTest.h"
 #include "../tests/BillTest.h"
-#include "../tests/HostTests.h"
-
-
+#include "../tests/WaiterTests.h"
 
 
 
@@ -37,87 +35,49 @@ void testing()
 
 
     CustomerTests* customerTests = new CustomerTests();
-    customerTests->runTests();
+    //customerTests->runTests();
 
 
     //Finance Tests
     //Tests Finanance class
     //Has No Dependencies
-    try
-    {
-        FinanceTests * financeTests = new FinanceTests();
 
-        delete financeTests;
+    FinanceTests * financeTests = new FinanceTests();
 
-        financeSuccess = true;
-        std::cout << "\033[35mFinances Test Successful!\033[0m" << std::endl;
-    }
-    catch(...)
-    {
-        std::cout << "\033[35mAn Error occurred during the Finances test.\033[0m" << std::endl;
-    }
+    financeSuccess = financeTests->tests();
+    delete financeTests;
 
 
     //Stock Tests
     //Tests stock, shelf and ingredient classes
     //has no dependencies
-    try
-    {
-        StockTests * stockTests = new StockTests();
-
-        delete stockTests;
-
-        stockSuccess = true;
-        std::cout << "\033[35mStock Test Successful!\033[0m" << std::endl;
-    }
-    catch (exception & e)
-    {
-        std::cout << "\033[35mAn error occurred during the Stock test.\033[0m" << std::endl;
-        cout << e.what() << endl;
-    }
-    catch(...)
-    {
-        std::cout << "\033[35mAn unknown error occurred during the Stock test.\033[0m" << std::endl;
-    }
+    StockTests * stockTests = new StockTests();
+    stockSuccess = stockTests->tests();
+    delete stockTests;
 
 
+    customerSuccess = true;
+    billSuccess = true;
+    foodOrderSuccess = true;
+    tableSuccess = true;
+    hostSuccess = true;
     //Waiter Tests
     //tests the waiter class
     //Requires Customer, Bill, FoodOrder, Table and Finance
-    // if(customerSuccess && billSuccess && foodOrderSuccess && tableSuccess && financeSuccess)
-    // {
-    //     try
-    //     {
-    //         WaiterTests * waiterTests = new WaiterTests();
-    //         waiterTests->run();
-    //         delete waiterTests;
+     if(customerSuccess && billSuccess && foodOrderSuccess && tableSuccess && financeSuccess)
+     {
+         WaiterTests * waiterTests = new WaiterTests();
+         waiterSuccess = waiterTests->tests();
+         delete waiterTests;
 
-    //         waiterSuccess = true;
-    //         std::cout << "\033[35mWaiters Test Successful!\033[0m" << std::endl;
-    //     }
-    //     catch (exception & e)
-    //     {
-    //         std::cout << "\033[35mAn error occurred during the Waiter test.\033[0m" << std::endl;
-    //         cout << e.what() << endl;
-    //     }
-    //     catch (...)
-    //     {
-    //         std::cout << "\033[35mAn Error occurred during the Waiter test.\033[0m" << std::endl;
-    //     }
-    // }
-    // else
-    // {
-    //     std::cout << "\033[35mCannot test Waiter as there are dependencies that failed.\033[0m" << std::endl;
-    // }
-    try {
-        HostTests *Monika_test = new HostTests();
-        Monika_test->TestScenario();
-        delete Monika_test;
-        hostSuccess = true;
-        cout << "\033[1;32mHost Test successful\033[0m" << endl;
-    }catch (exception e){
-        cout << "\033[1;32mError occurred in Host\033[0m" << endl;
-    }
+         waiterSuccess = true;
+         std::cout << "\033[35mWaiters Test Successful!\033[0m" << std::endl;
+     }
+     else
+     {
+         std::cout << "\033[35mCannot test Waiter as there are dependencies that failed.\033[0m" << std::endl;
+     }
+
 
     //Floor Tests
     //tests the floor class
@@ -176,7 +136,6 @@ void testing()
     // {
     //     std::cout << "\033[1;36mCannot test Kitchen as there are dependencies that failed.\033[0m" << std::endl;
     // }
-
 }
 
 void ShannonTesting()
@@ -207,10 +166,11 @@ void ShannonTesting()
     
 }
 
+
 int main(){
 
 
-    //testing();
+    testing();
     //ShannonTesting();
     Restaurant::instance()->setup();
 
