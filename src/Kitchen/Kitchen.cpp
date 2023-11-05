@@ -96,11 +96,13 @@ void Kitchen::buyStock() {
 Ingredient* Kitchen::getUncookedIngredient() {
     Ingredient* nextIngredient = uncookedIngredients.front();
     uncookedIngredients.pop_front();
+    return nextIngredient;
 }
 
 Ingredient* Kitchen::getCookedIngredient() {
     Ingredient* nextIngredient = cookedIngredients.front();
     cookedIngredients.pop_front();
+    return nextIngredient;
 }
 
 int Kitchen::getIngredientAmt() {
