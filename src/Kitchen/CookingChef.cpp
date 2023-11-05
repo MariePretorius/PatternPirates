@@ -21,5 +21,7 @@ void CookingChef::handleOrder() {
         cook->prepareStation();
         kitchen->addCookedIngredient(cook->cookIngredient(ingredient));
     } 
+    delete fryer;
+    delete griller;
     this->nextChef->handleOrder();
 }
