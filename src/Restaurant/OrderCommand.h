@@ -3,7 +3,7 @@
 
 /**
  * @class OrderCommand Class
- * This class is abstract. This class is the Command participant in the Command design pattern.
+ * @brief This class is abstract. This class is the Command participant in the Command design pattern.
 */
 class OrderCommand
 {
