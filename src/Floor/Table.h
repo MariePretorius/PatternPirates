@@ -21,7 +21,7 @@ private:
 	int capacity; ///< The maximum number of customers the table can accommodate.
 	list<Customer*> customers; ///< A list of customers currently seated at the table.
 	bool occupied = false; ///< Indicates whether the table is currently occupied.
-     vector<Dish*> * dishes;
+  vector<Dish*> * dishes;
 public:
 	/**
      * @brief Constructor for the Table class.

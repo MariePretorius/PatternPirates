@@ -79,8 +79,6 @@ public:
 
 	vector<string> getIngredients();
 
-
-
 	/**
      * @brief Get the prices of the ordered items.
      * @return A list of prices for the customer's order items.

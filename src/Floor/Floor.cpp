@@ -9,7 +9,10 @@
 #include "../Restaurant/Finance.h"
 #include <random>
 #include <algorithm>
-
+/**
+ * @brief Constructor for the Floor class
+ * @param finance a pointer to a finance object
+ */
 Floor::Floor(Finance * finance)
 {
     this->stashedOrders = vector<FoodOrder*>();
@@ -17,7 +20,10 @@ Floor::Floor(Finance * finance)
     this->numberOfTables = 0;
     this->numberOfWaiters = 0;
 }
-
+/**
+ * @brief Gets the maximum number of Customers that can be seated
+ * @return Max Capacity
+ */
 int Floor::getCapacity()
 {
     //will iterate through tables list and add up the number of potentail customers
@@ -30,25 +36,35 @@ int Floor::getCapacity()
     }
     return tempTotal;
 }
-
+/**
+ * Instantiates a new host for the Floor
+ * @return A host object pointer
+ */
 Host *Floor::createHost()
 {
     return new Host(this);
 }
-
+/**
+ * @brief returns the number of waiters on the floor
+ * @return
+ */
 int Floor::getNumWaiters()
 {
     return numberOfWaiters;
 }
 
 /**
- *
+ *@brief Sets the number of waiters
  * @return
  */
 int Floor::setNumWaiters() {
     return 0;
 }
 
+/**
+ * @brief Adds a table of a given capacity to the Floor
+ * @param capacity Number of seats at this specific table
+ */
 void Floor::addTable(int capacity)
 {
     // add table to list
@@ -86,6 +102,9 @@ void Floor::addTable(int capacity)
     numberOfTables++;
 }
 
+/**
+ * @brief Adds a waiter to the Floor
+ */
 void Floor::addWaiter()
 {
     waiters.push_back(new Waiter(this->finance));
@@ -93,6 +112,10 @@ void Floor::addWaiter()
     std::cout << "\033[35mAdded new Waiter\033[0m" << std::endl;
 }
 
+/**
+ * @brief Adds a vector of new customers to the Queue in floor
+ * @param newCustomers vector of customer pointers
+ */
 void Floor::addCustomers(const vector<Customer *>& newCustomers)
 {
     for(Customer * c : newCustomers)
@@ -101,6 +124,10 @@ void Floor::addCustomers(const vector<Customer *>& newCustomers)
     }
 }
 
+/**
+ * @brief Gets the tables list in floor
+ * @return Table list
+ */
 std::list<Table *> Floor::getTables()
 {
     std::list<Table*> temp = std::list<Table*>();
@@ -116,6 +143,10 @@ std::list<Table *> Floor::getTables()
     return temp;
 }
 
+/**
+ * @brief All waiters go to their tables and fetch their orders. Once all their orders are fetched, they pass it through
+ * to floor's allOrders list
+ */
 void Floor::waitersGetOrders() {
     for(std::list<Waiter*>::iterator it = waiters.begin(); it != waiters.end();it++)
     {

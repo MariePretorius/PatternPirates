@@ -10,6 +10,7 @@ FoodOrderTest::FoodOrderTest()
     std::string cookingMethod = "Grill";
     int tableNumber = 1;
 
+
     Stock* s1 = new Stock("Ingredient1", 20, 5.0, 1);
     Stock* s2 = new Stock("Ingredient2", 20, 3.0, 2);
     std::vector<Stock*> stock = {s1, s2};
@@ -23,6 +24,7 @@ FoodOrderTest::FoodOrderTest()
     this->foodOrder = new FoodOrder(ingredients, prices, numIngredients, cookingMethod, tableNumber, *customer, bill);
     foodOrder->setKitchen(kitchen);
 }
+
 
 void FoodOrderTest::testFoodOrder() 
 {
