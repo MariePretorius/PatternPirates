@@ -42,7 +42,7 @@ protected:
     /**
      * @brief Destructor for Restaurant
      */
-    ~Restaurant();
+    void CleanUp();
 
 public:
     /**

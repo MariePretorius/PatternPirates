@@ -7,3 +7,7 @@ void Ratings::leaveRating(double rating)
 
     overallRating = totalRatings / numberOfRatings;
 }
+
+int Ratings::getOverallRating() {
+    return overallRating;
+}
