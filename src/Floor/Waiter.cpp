@@ -25,6 +25,10 @@ void Waiter::getOrdersFromCurrTable()
     //repeat for all waiters
 }
 
+/**
+ * @brief Waiter Constructor
+ * @param finance takes in a finance object
+ */
 Waiter::Waiter(Finance * finance)
 {
     this->finance = finance;
@@ -32,6 +36,10 @@ Waiter::Waiter(Finance * finance)
     orders = std::vector<FoodOrder*>();
 }
 
+/**
+ * @brief Adds a table to the waiter's list of tables which they wait
+ * @param newTable A table pointer
+ */
 void Waiter::addTableToWait(Table *newTable)
 {
     tables.push_back(newTable);
@@ -67,6 +75,9 @@ void Waiter::createBill(bool split, Table *table) {
     }
 }
 
+/**
+ * @brief The Waiter will go to each table and fetch the orders from each customer seated at each table
+ */
 void Waiter::getOrders() {
     //call getter for each customer
     for(vector<Table*>::iterator table = tables.begin(); table != tables.end(); table++)
@@ -110,6 +121,10 @@ void Waiter::getOrders() {
     //repeat for all waiters
 }
 
+/**
+ * @brief gets the Waiter's orders
+ * @return a vector of FoodOrder pointers
+ */
 std::vector<FoodOrder *> * Waiter::fetchOrders() {
     return &orders;
 }
@@ -161,14 +176,25 @@ void Waiter::doRounds() {
     }
 }
 
+/**
+ * @brief Adds a dish to the waiter's hand vector
+ * @param dish A dish pointer
+ */
 void Waiter::addDishToHand(Dish *dish) {
     dishesInHand.push_back(dish);
 }
 
+/**
+ * @brief Returns the list of all tables waited by this waiter
+ * @return a pointer to a vector of table pointers
+ */
 std::vector<Table *> *Waiter::getTables() {
     return &tables;
 }
 
+/**
+ * @brief Drops the orders off at their respective tables
+ */
 void Waiter::passOrdersToTables() {
     //for each table
     for(Table * t: tables)

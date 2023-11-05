@@ -18,6 +18,7 @@
 
 
 
+
 using namespace std;
 
 void testing()
@@ -170,10 +171,6 @@ void testing()
 
 void ShannonTesting()
 {
-    //FoodOrder TESTS
-    // FoodOrderTest foodOrderTest;
-    // foodOrderTest.runTests();
-
     //BILL TESTS
     BillTest billTest;
 
@@ -186,6 +183,17 @@ void ShannonTesting()
         std::cerr << e.what() << '\n';
     }
     
+    //FoodOrder TESTS
+    FoodOrderTest foodOrderTest;
+
+    try
+    {
+        foodOrderTest.runTests();
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
     
 }
 

@@ -24,7 +24,8 @@ FoodOrder :: FoodOrder() {}
 FoodOrder :: FoodOrder(std::vector<std::string> ingredients, std::vector<double> prices, int num, std::string method, int tableNumber, Customer& customer, Bill* bill) : bill(bill)
 {
     //added pre-instantiation to prevent segfault
-    ingredients = vector<string>();
+    this->ingredients = vector<std::string>();
+    this->prices = vector<double>();
     this->customer = &customer;
     //this->kitchen = &k;
     //this->bill = &bill;
@@ -40,7 +41,7 @@ FoodOrder :: FoodOrder(std::vector<std::string> ingredients, std::vector<double>
         //this->prices[i] = prices[i];
 
         //I'm not sure why you were pushing the same ingredient twice. Assumed it was a mistake.
-        //this->ingredients.push_back(ingredients[i]);
+        this->prices.push_back(prices[i]);
         
         addToBill(this->ingredients[i], this->prices[i]);
     }
