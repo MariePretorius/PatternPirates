@@ -2,9 +2,15 @@
 #include "WaitingForTable.h"
 
 int Customer::nextID = 1;
+
 double Customer::calculateRating()
 {
-    return 5.0;
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_real_distribution<double> distribution(1.0, 5.0);
+
+    double random_value = distribution(gen);
+    return random_value;
 }
 
 Customer::Customer(string paymentMethod, bool split, vector<Stock*> ingredients)
@@ -54,8 +60,8 @@ void Customer::nextState()
 
 void Customer::leaveRating(Ratings allRatings)
 {
-    //double rating = calculateRating;
-    allRatings.leaveRating(3.0);
+    double rating = calculateRating();
+    allRatings.leaveRating(rating);
 }
 
 void Customer::notifyHost()
