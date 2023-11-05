@@ -24,7 +24,7 @@ private:
 	static int nextID; ///< A static variable to generate unique customer IDs.
 	int id; ///< The unique identifier for the customer.
 	string cookingMethod; ///< The method used for preparing the customer's order.
-	list<Ingredient> ingredients; ///< A list of ingredients for the customer's order.
+	vector<Ingredient> ingredients; ///< A list of ingredients for the customer's order.
 	string paymentMethod = "bill"; ///< The method of payment chosen by the customer.
 	bool split = false; ///< Indicates whether the customer's bill is split.
 	
@@ -36,7 +36,7 @@ public:
      * @param paymentMethod The method of payment chosen by the customer.
      * @param split Indicates whether the customer's bill is split.
      */
-	Customer(string paymentMethod, bool split);
+	Customer(string paymentMethod, bool split, vector<Ingredient*> ingredients);
 
 	/**
      * @brief Transition to the next customer state.
@@ -76,7 +76,7 @@ public:
      * @return A list of Ingredient objects representing the customer's order.
      */
 
-	list<Ingredient> * getIngredients();
+	vector<Ingredient>* getIngredients();
 
 
 
