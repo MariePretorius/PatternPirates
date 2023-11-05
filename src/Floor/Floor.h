@@ -38,6 +38,8 @@ public:
 
 private:
 
+
+    Ratings * ratings;
     Finance * finance;
     std::list<Table*> tables;
     int numberOfTables;

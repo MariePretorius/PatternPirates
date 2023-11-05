@@ -29,11 +29,12 @@ void Waiter::getOrdersFromCurrTable()
  * @brief Waiter Constructor
  * @param finance takes in a finance object
  */
-Waiter::Waiter(Finance * finance)
+Waiter::Waiter(Finance * finance, Ratings * ratings)
 {
     this->finance = finance;
     tables = std::vector<Table*>();
     orders = std::vector<FoodOrder*>();
+    this->ratings = ratings;
 }
 
 /**
@@ -102,9 +103,11 @@ void Waiter::getOrders() {
                 {
                     vectorDouble.push_back(d);
                 }
+                Bill * temp = new Bill(*customers,this->finance, *table);
+                bills.push_back(temp);
                 //FoodOrder(std::vector<std::string> ingredients, std::vector<double> prices, int num, std::string method, int tableNumber, Customer& customer, Bill* bill);
                 FoodOrder * tempFoodOrder = new FoodOrder(vectorIngredients,vectorDouble,vectorIngredients.size(),
-                                                          (*customers)->getCookingMethod(), (*table)->getTableNumber(), **customers,new Bill(*customers,this->finance, *table));
+                                                          (*customers)->getCookingMethod(), (*table)->getTableNumber(), **customers,temp);
                 this->orders.push_back(tempFoodOrder);
                 (*customers)->nextState();
                 std::cout << "\033[35mCustomer state has changed to:\t\t"<< (*customers)->getState()->getName() <<"!\033[0m" << std::endl;
@@ -130,21 +133,55 @@ std::vector<FoodOrder *> * Waiter::fetchOrders() {
 }
 /**
  * @brief Goes through this waiter's list of tables and checks if all customers a requesting bill, and then has them pay the bill
+ * @return double The average Rating of all the waiter's tables
  */
 void Waiter::doRounds() {
+    std::cout << "\033[35mA Waiter is now doing their rounds.\033[0m" << std::endl;
     for (Table *t : tables) {
+        std::cout << "\033[35mA waiter is at table number"<< t->getTableNumber() <<"\033[0m" << std::endl;
         if(t->doneEating())
         {
+            std::cout << "\033[35mThe table is done eating.\033[0m" << std::endl;
             //writes up the bill for the table
             list<Customer *>::iterator customer = t->getCustomers()->begin();
             if((*customer)->getSplit())
             {
+                std::cout << "\033[35mThe table is splitting the bill.\033[0m" << std::endl;
                 //if splitting
                 for(customer; customer != t->getCustomers()->end(); customer++)
                 {
                     for(Bill * b : bills)
                     {
                         if((*customer) == b->getCustomer())
+                        {
+                            std::cout << "\033[35mThe bill belonging to customer number "<< (*customer)->getCustomerID() <<" has the following contents:\n \033[0m" << std::endl;
+                            b->showBill();
+                            if(!b->isPaid())
+                            {
+                                b->payBill((*customer)->getCustomerID());
+                            }
+                        }
+                    }
+                }
+                for(customer = t->getCustomers()->begin(); customer != t->getCustomers()->end(); customer++)
+                {
+                    (*customer)->getRating();
+                    (*customer)->nextState();
+                }
+            }
+            else
+            {
+                std::cout << "\033[35mThe table is not splitting the bill.\033[0m" << std::endl;
+                list<Customer *>::iterator customer = t->getCustomers()->begin();
+                //iterate through the bills associated with a table and then have one id pay it
+                //test comment
+                for(Bill * b : bills)
+                {
+                    if(b->getTable() == t)
+                    {
+                        std::cout << "\033[35mThe bill has the following contents:\n \033[0m" << std::endl;
+                        b->showBill();
+                        if(!b->isPaid())
                         {
                             b->payBill((*customer)->getCustomerID());
                         }
@@ -153,22 +190,8 @@ void Waiter::doRounds() {
                 for(customer = t->getCustomers()->begin(); customer != t->getCustomers()->end(); customer++)
                 {
                     (*customer)->nextState();
-                }
-            }
-            else
-            {
-                list<Customer *>::iterator customer = t->getCustomers()->begin();
-                //iterate through the bills associated with a table and then have one id pay it
-                for(Bill * b : bills)
-                {
-                    if(b->getTable() == t)
-                    {
-                        b->payBill((*customer)->getCustomerID());
-                    }
-                }
-                for(customer = t->getCustomers()->begin(); customer != t->getCustomers()->end(); customer++)
-                {
-                    (*customer)->nextState();
+                    cout << "\033[35mA customer left a rating of: \033[0m" << (*customer)->getRating() << endl;
+                    ratings->leaveRating((*customer)->getRating());
                 }
             }
 

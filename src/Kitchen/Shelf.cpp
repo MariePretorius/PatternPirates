@@ -87,7 +87,7 @@ Stock * Shelf::deductStock(std::string stock)
 Shelf::Shelf() {
     stockList = std::vector<Stock*>();
     currentCapacity = 0;
-    this->maxCapacity = 50;
+    this->maxCapacity = 99999999;
 }
 
 /**
