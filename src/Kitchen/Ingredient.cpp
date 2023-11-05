@@ -39,6 +39,7 @@ void Ingredient::setCondition(std::string condition)
 Ingredient::Ingredient(std::string name, int initialQuantity, double costPerUnit, int key) : Stock(name, initialQuantity, costPerUnit, key)
 {
     this->condition = "Uncooked";
+    this->cookingChoice = "";
 }
 
 Ingredient::~Ingredient() {
