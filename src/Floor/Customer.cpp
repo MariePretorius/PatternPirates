@@ -6,7 +6,7 @@ double Customer::calculateRating()
     return 5.0;
 }
 
-Customer::Customer(string paymentMethod, bool split, vector<Ingredient*> ingredients)
+Customer::Customer(string paymentMethod, bool split, vector<Stock>* ingredients)
 {
     state = new WaitingForTable();
     if (split) {
@@ -65,7 +65,7 @@ int Customer::getCustomerID()
 
 vector<Ingredient> * Customer::getIngredients()
 {
-    return &ingredients;
+    return nullptr;
 }
 
 list<double> Customer::getPrices()
