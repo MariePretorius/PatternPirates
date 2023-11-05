@@ -10,7 +10,12 @@ FoodOrderTest::FoodOrderTest()
     std::string cookingMethod = "Grill";
     int tableNumber = 1;
 
-    this->customer = new Customer("Bill", false);
+
+    Stock* s1 = new Stock("Ingredient1", 20, 5.0, 1);
+    Stock* s2 = new Stock("Ingredient2", 20, 3.0, 2);
+    std::vector<Stock*> stock = {s1, s2};
+
+    this->customer = new Customer("Bill", false, stock);
     Finance* finance = new Finance();
     Table* table =  new Table(1, 4);
     Bill* bill = new Bill(customer, finance, table);
@@ -19,6 +24,7 @@ FoodOrderTest::FoodOrderTest()
     this->foodOrder = new FoodOrder(ingredients, prices, numIngredients, cookingMethod, tableNumber, *customer, bill);
     foodOrder->setKitchen(kitchen);
 }
+
 
 void FoodOrderTest::testFoodOrder() 
 {
