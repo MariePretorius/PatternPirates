@@ -157,7 +157,6 @@ void Restaurant::simulate()
     floor->giveFinishedOrders(finishedOrder);
 
     floor->waitersPassOrdersToTables();
-    // when waiter gives finished orders to customers, change their state - should be eating state
 
     floor->waitersDoRounds();  // this is to set the customers' state to RequestingBill - if they want a bill!
 
@@ -173,13 +172,11 @@ void Restaurant::simulate()
     cout << "\033[1;32m\"You have made R "<<funds->getFunds()<< " in this simulation round.\033[0m" << endl;
 
 
-
+    //tables need to be deleted in floor
     // Part of cleanUp , don't touch! And don't add code under this
-    delete manager;
     for (Customer* c: customers) {
         delete c;
     }
-    //tables need to be deleted in floor
     CleanUp();
 
 }
