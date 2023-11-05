@@ -21,7 +21,6 @@ FoodOrder* Kitchen::getNextOrder() {
         return nextOrder;
     } else {
         cout << "\033[1;36mAll orders are handled,  for now...\033[0m" << endl;
-        //adding explicit null return value so that empty orders can be considered
         return nullptr;
     }
 }
@@ -41,10 +40,6 @@ void Kitchen::addUncookedIngredient(Ingredient* ingredient) {
 void Kitchen::addNewOrder(FoodOrder* newOrder) {
     orders.push_back(newOrder);
     cout << "\033[1;36mA new order was just added to the kitchen!\033[0m" << endl;
-}
-
-void Kitchen::notifyWaiter() {
-    //Notify waiter that dish is ready
 }
 
 void Kitchen::addDish(Dish* dish) {
@@ -86,7 +81,7 @@ void Kitchen::buyStock() {
         cout<<endl;
         cout<<OptionsArr[buyOption]<< " costs R" << PriceArr[buyOption]<<", enter quantity:" ;
         cin>>quantity;
-        shelf->addStock(new Ingredient(OptionsArr[buyOption],quantity,PriceArr[buyOption],counter++)); //Ingredient needs a constructor
+        shelf->addStock(new Ingredient(OptionsArr[buyOption],quantity,PriceArr[buyOption],counter++));
         finance->removeFunds(quantity*PriceArr[buyOption]);
         cout<< to_string(quantity)+" [" + OptionsArr[buyOption] + "] has been bought !";
         cout<<endl;
@@ -95,9 +90,7 @@ void Kitchen::buyStock() {
         cout<<shelf->getStockList()<<endl;
         cout<<"Do you want to buy more stock?[Y/n]: \033[0m";
         cin>> continueBuying;
-    } while (continueBuying == 'Y' || continueBuying == 'y');/*while (continueBuying=='Y'&& Shelf.getCurrCapacity<=Shelf.getMaxCapacity && finance.getFunds < 10)
-    */ //create finance obj + add getCurrCapacity +getMaxCapacity to Shelf class
-
+    } while ((continueBuying == 'Y' || continueBuying == 'y') && finance->getFunds() > 0 && shelf->getCurrentCapacity() < shelf->getMaxCapacity());
 }
 
 Ingredient* Kitchen::getUncookedIngredient() {
