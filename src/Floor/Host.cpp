@@ -158,8 +158,6 @@ bool Host::assignCustomer() {
 }
 
 Host::~Host() {
-    delete f;
-
 
 }
 
