@@ -7,6 +7,9 @@
 HostTests::HostTests() {
     Finance* funds = new Finance(10000);
     f = new Floor(funds);
+    for (int i = 0; i < 2; ++i) {
+        f->addWaiter();
+    }
     Kitchen* kitchen = new Kitchen(funds);
     int numTables = 10;
     int numCustomers=5;
@@ -16,7 +19,6 @@ HostTests::HostTests() {
     for (int i = 0; i < numTables; ++i) {
         r = rand()% maxCap+1;
         f->addTable(r);
-        cout<<"here"<<endl;
 
     }
     bool split;
@@ -32,16 +34,19 @@ HostTests::HostTests() {
             pay="bill";
         } else
             pay="tab";
-        Shelf*shelf = kitchen->getShelf();
+        Shelf*shelf = new Shelf();
+        shelf->addStock(new Ingredient("testHost",2,20.10,0));
         vector<Stock*> stockList = shelf->getStockListVector();
         Customer* newCustomer = new Customer(pay,split,stockList);
-        cout<<"\033[1;34m Customer state is:"<<newCustomer->getState()->getName()<<"\033[0m"<<endl;
         customers.push_back(newCustomer);
     }
+    f->addCustomers(customers);
     host = new Host(f);
 }
 
 void HostTests::TestScenario() {
+    tables = f->getTables();
+    //copy(temp.begin(),temp.end(),tables.begin());
     host->setTables(tables);
     host->setCustomers(customers);
     assert(host->first() != nullptr);
