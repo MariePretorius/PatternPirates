@@ -1,4 +1,9 @@
 /**
+ * @File Table.h
+ * @brief Declaration of the Table class
+*/
+
+/**
  * @class Table
  * @brief This class represents the tables customer will be seated at.
  */
