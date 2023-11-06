@@ -7,7 +7,7 @@ FoodOrderTest::FoodOrderTest()
     std::vector<std::string> ingredients = {"Ingredient1", "Ingredient2"};
     std::vector<double> prices = {5.0, 3.0};
     int numIngredients = ingredients.size();
-    std::string cookingMethod = "Grill";
+    std::vector<std::string> cookingMethod = {"Grill", "Grill"};
     int tableNumber = 1;
 
 
@@ -29,7 +29,8 @@ FoodOrderTest::FoodOrderTest()
 void FoodOrderTest::testFoodOrder() 
 {
     // Test FoodOrder operations
-    assert(foodOrder->getCookingMethod() == "Grill");
+    std::vector<std::string> cM = {"Grill", "Grill"};
+    assert(foodOrder->getCookingMethod() == cM);
     assert(foodOrder->getTableNumber() == 1);
 
     std::vector<std::string>* order = foodOrder->getIngredients();
