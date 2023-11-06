@@ -1,3 +1,8 @@
+/**
+ * @file BillMemento.h
+ * @brief Declaration of the BillMemento class.
+ */
+
 #ifndef BILLMEMENTO_H
 #define BILLMEMENTO_H
 

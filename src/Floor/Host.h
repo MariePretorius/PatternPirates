@@ -4,7 +4,10 @@
 #include "Floor.h"
 #include <sstream>
 #include <list>
-
+/**
+ * @file host.h
+ * @brief Declaration of Host class
+ */
 using namespace std;
     /**
      * @class Host
@@ -60,6 +63,10 @@ public:
      * @param t list of all tables on the floor -called in Restaurant
 	*/
     void setTables(list<Table*> t);
+    /**
+     * @brief Destructor for Host
+     */
+    ~Host();
 
 };
 

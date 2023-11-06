@@ -1,4 +1,9 @@
 /**
+ * @File Ratings.h
+ * @brief Declaration of the Ratings class
+*/
+
+/**
  * @class Ratings
  * @brief This class represents the ratings a customer leaves the restaurant when they leave.
  */
@@ -19,6 +24,7 @@ public:
      * rating and other statistics are updated based on the provided rating.
      */
     void leaveRating(double rating);
+    int getOverallRating();
 };
 
 #endif

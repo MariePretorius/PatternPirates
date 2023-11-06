@@ -1,4 +1,9 @@
 /**
+ * @File ReadyToOrder.h
+ * @brief Declaration of the ReadyToOrder state
+*/
+
+/**
  * @class ReadyToOrder
  * @brief This class is a state the customer is in when they are ready to order food.
  */

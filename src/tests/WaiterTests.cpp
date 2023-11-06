@@ -12,4 +12,7 @@ bool WaiterTests::tests() {
     Ratings * ratings = new Ratings();
     Waiter * waiter = new Waiter(finance, ratings);
     assert(waiter->getTables()->size() == 0);
+
+    delete finance;
+    delete waiter;
 }

@@ -20,6 +20,7 @@ class Floor
 {
 public:
     Floor(Finance * finance);
+    ~Floor();
     void addCustomers(const vector<Customer*>& newCustomers);
     void waitersGetOrders();
     Host * createHost();
@@ -38,7 +39,7 @@ public:
 
 private:
 
-
+    Host * host;
     Ratings * ratings;
     Finance * finance;
     std::list<Table*> tables;

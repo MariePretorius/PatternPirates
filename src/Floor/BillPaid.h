@@ -1,4 +1,9 @@
 /**
+ * @File BillPaid.h
+ * @brief Declaration of the BillPaid state
+*/
+
+/**
  * @class BillPaid
  * @brief This class is a state the customer will be in after paying the bill.
  */

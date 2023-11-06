@@ -1,3 +1,8 @@
+/**
+ * @file FoodOrder.h
+ * @brief Declaration of the FoodOrder class.
+ */
+
 #ifndef FOODORDER_H
 #define FOODORDER_H
 

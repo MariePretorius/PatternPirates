@@ -16,6 +16,7 @@ class Waiter
 {
 public:
     Waiter(Finance * finance, Ratings * ratings);
+    ~Waiter();
     void moveToNext();
     void addTableToWait(Table * newTable);
     void addOrder(FoodOrder * newOrder);

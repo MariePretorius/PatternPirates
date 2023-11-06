@@ -154,10 +154,11 @@ void Waiter::doRounds() {
                     {
                         if((*customer) == b->getCustomer())
                         {
-                            std::cout << "\033[35mThe bill belonging to customer number "<< (*customer)->getCustomerID() <<" has the following contents:\n \033[0m" << std::endl;
-                            b->showBill();
+
                             if(!b->isPaid())
                             {
+                                std::cout << "\033[35mThe bill belonging to customer number "<< (*customer)->getCustomerID() <<" has the following contents:\n \033[0m" << std::endl;
+                                b->showBill();
                                 b->payBill((*customer)->getCustomerID());
                             }
                         }
@@ -254,6 +255,19 @@ void Waiter::passOrdersToTables() {
             t->assignDishes(&otherHand);
         }
 
+    }
+}
+
+Waiter::~Waiter() {
+
+    for(Bill * c : bills)
+    {
+        delete c;
+    }
+
+    for(Dish * c : dishesInHand)
+    {
+        delete c;
     }
 }
 
