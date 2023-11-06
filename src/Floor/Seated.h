@@ -1,4 +1,9 @@
 /**
+ * @File Seated.h
+ * @brief Declaration of the Seated state
+*/
+
+/**
  * @class Seated
  * @brief This class is a state the customer will be in when they have been seated at a table.
  */

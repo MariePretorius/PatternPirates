@@ -1,4 +1,9 @@
 /**
+ * @File RequestingBill.h
+ * @brief Declaration of the RequestingBill state
+*/
+
+/**
  * @class RequestingBill
  * @brief This class is the state the customer will be in when they are ready to receive the bill.
  */
