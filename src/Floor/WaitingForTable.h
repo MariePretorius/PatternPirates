@@ -1,4 +1,9 @@
 /**
+ * @File WaitingForTable.h
+ * @brief Declaration of the WaitingForTable state
+*/
+
+/**
  * @class WaitingForTable
  * @brief This class is a state the customer can be in when they are waiting to be seated at a table.
  */

@@ -1,4 +1,9 @@
 /**
+ * @File OrderPlaced.h
+ * @brief Declaration of the OrderPlaced state
+*/
+
+/**
  * @class OrderPlaced
  * @brief This class is a state the customer will be in when they have placed their order.
  */

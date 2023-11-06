@@ -1,4 +1,9 @@
 /**
+ * @File Ratings.h
+ * @brief Declaration of the Ratings class
+*/
+
+/**
  * @class Ratings
  * @brief This class represents the ratings a customer leaves the restaurant when they leave.
  */
