@@ -168,14 +168,30 @@ void Restaurant::simulate()
     cout << "\033[1;32mSimulation phase is now done!\033[0m" << endl;
     //cout << "\033[1;32mThe average rating for this round is:\033[0m"<< getOverallRating << endl;
 
-    cout << "\033[1;32m\"You have made R "<<funds->getFunds()<< " in this simulation round.\033[0m" << endl;
+    cout << "\033[1;32mYou have made R "<<funds->getFunds()<< " in this simulation round.\033[0m" << endl;
 
-
-    // Part of cleanUp , don't touch! And don't add code under this
-    for (Customer* c: customers) {
-        delete c;
+    bool playAgain = false;
+    string ans;
+    cout << "\033[1;32mWould you like to play another round?(y/n)\033[0m" << endl;
+    cin >> ans;
+    if(ans == "y" || ans == "Y")
+    {
+        cout << "Lol no" << endl;
+        // Part of cleanUp , don't touch! And don't add code under this
+        for (Customer* c: customers) {
+            delete c;
+        }
+        CleanUp();
     }
-    CleanUp();
+    else
+    {
+        // Part of cleanUp , don't touch! And don't add code under this
+        for (Customer* c: customers) {
+            delete c;
+        }
+        CleanUp();
+    }
+
 
 }
 

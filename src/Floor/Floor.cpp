@@ -100,7 +100,7 @@ void Floor::addTable(int capacity)
     }
 
     (*it)->addTableToWait(temp);
-
+    temp->setWaiter(*it);
 
     numberOfTables++;
 }
