@@ -10,7 +10,6 @@ HostTests::HostTests() {
     for (int i = 0; i < 2; ++i) {
         f->addWaiter();
     }
-    Kitchen* kitchen = new Kitchen(funds);
     int numTables = 10;
     int numCustomers=5;
     srand(1234);
@@ -39,9 +38,11 @@ HostTests::HostTests() {
         vector<Stock*> stockList = shelf->getStockListVector();
         Customer* newCustomer = new Customer(pay,split,stockList);
         customers.push_back(newCustomer);
+        delete shelf;
     }
     f->addCustomers(customers);
     host = new Host(f);
+    delete funds;
 }
 
 void HostTests::TestScenario() {
@@ -55,4 +56,13 @@ void HostTests::TestScenario() {
     assert(host->isFull()== false);
     assert(host->getNextOpenTable() != nullptr);
     assert(host->assignCustomer()== true);
+}
+
+HostTests::~HostTests() {
+    delete host;
+    for (Customer* c: customers) {
+        delete c;
+    }
+    delete f;
+
 }
