@@ -2,22 +2,17 @@
 
 #include "../Kitchen/Kitchen.h"
 #include "../Floor/Customer.h"
-
-
 #include "Restaurant.h"
 #include "../tests/CustomerTests.h"
 
 #include "../tests/FinanceTests.h"
 #include "../tests/StockTests.h"
-//#include "../tests/WaiterTests.h"
+#include "../tests/WaiterTests.h"
 #include "../tests/FloorTests.h"
 #include "../tests/KitchenTests.h"
 #include "../tests/FoodOrderTest.h"
 #include "../tests/BillTest.h"
-#include "../tests/WaiterTests.h"
 #include "../tests/HostTests.h"
-
-
 
 using namespace std;
 
@@ -83,9 +78,10 @@ void testing()
 
     try {
         HostTests * ht = new HostTests();
-        //ht->TestScenario();
-        //delete ht;
+        ht->TestScenario();
+        delete ht;
         hostSuccess = true;
+        cout<<"\033[1;32mHost Tests successful\033[0m"<<endl;
     }catch (exception e){
         cout<<"Host has failed tests";
     }
@@ -180,7 +176,7 @@ void ShannonTesting()
 int main(){
 
 
-    //testing();
+    testing();
     //ShannonTesting();
     Restaurant::instance()->setup();
 

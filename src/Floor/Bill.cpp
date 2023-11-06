@@ -135,7 +135,7 @@ void Bill :: payBill(int id)
         ss >> cost;
 
         //std::cout << "Customer's bill has been paid. Total was: R" << cost << std::endl;
-        std::cout << "Customer " << custID << "'s bill has been paid." << std::endl;
+        std::cout << "Customer " << custID << "'s bill has been paid. Total was: R" << cost << std::endl;
 
         std::cout << "\x1B[0m";
     }

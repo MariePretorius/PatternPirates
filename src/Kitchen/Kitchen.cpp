@@ -70,7 +70,7 @@ void Kitchen::buyStock() {
                          15.50,10.00,5.00,8.00,8.00,5.25,18.25,10.50,30.75,20.99,25.00,25.00,20.99,15.50,
                          18.00,20.50,25.25,15.25,10.00};
     string OptionsArr[30] = {"Rice","Flour","Eggs","Milk","Chicken",
-                             "Ground beeg","Pasta","Potatoes","Tomatoes","Onions",
+                             "Ground beef","Pasta","Potatoes","Tomatoes","Onions",
                              "Carrot","Bread","Sugar","Salt","Pepper","Cucumber",
                              "Bell Pepper","Brocolli","Spinach","Cheese","Butter",
                              "Olive Oil","Cereal","Apple","Banana","Orange","Grapes",
@@ -78,18 +78,17 @@ void Kitchen::buyStock() {
     do {
         cout << "\033[1;36mList of possible items for your shelf:\033[0m" << endl;
         for (int i = 0; i < 29; i++) {
-            cout << "\033[1;36m" + to_string(i)+ "\t" + OptionsArr[i] + "\t\t" + to_string(PriceArr[i]) + " \033[0m" << endl;
+            cout << "\033[1;36m" + to_string(i)+ "\t" + OptionsArr[i] + "\t\t" << PriceArr[i] << " \033[0m" << endl;
         }
         cout<<endl;
         cout<<"\033[1;36mPlease enter the item number you want to buy:\033[0m";
         cin>>buyOption;
-        cout <<buyOption;
         //input validation
-       /* while ( buyOption >30)
+        while (buyOption < 0 || buyOption > 30)
         {
             cout<<"\033[1;36mPlease enter the item number you want to buy:\033[0m";
             cin>>buyOption;
-        }*/
+        }
         cout<<endl;
         cout<<"\033[1;36m" + OptionsArr[buyOption] + " costs R" + to_string(PriceArr[buyOption]) + ", enter quantity:\033[0m" ;
         cin>>quantity;

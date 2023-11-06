@@ -1,4 +1,9 @@
 /**
+ * @File Customer.h
+ * @brief Declaration of the Customer class
+*/
+
+/**
  * @class Customer
  * @brief This class represents the customers who enter the restaurant.
  */

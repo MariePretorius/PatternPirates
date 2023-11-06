@@ -21,6 +21,7 @@ Floor::Floor(Finance * finance)
     this->numberOfWaiters = 0;
     this->ratings = new Ratings();
     this->host = new Host(this);
+
 }
 /**
  * @brief Gets the maximum number of Customers that can be seated
@@ -245,11 +246,6 @@ Floor::~Floor() {
     }
 
     for(FoodOrder * f : stashedOrders)
-    {
-        delete f;
-    }
-
-    for(Dish * f : finishedOrders)
     {
         delete f;
     }

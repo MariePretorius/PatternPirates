@@ -17,6 +17,7 @@ class HostTests {
 public:
     HostTests();
     void TestScenario();
+    ~HostTests();
 private:
     Floor* f;
     list<Table*> tables;
