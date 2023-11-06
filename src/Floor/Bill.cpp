@@ -31,6 +31,17 @@ void Bill :: addItem(const std::string& item, double cost)
 }
 
 /**
+ * @brief Function to remove items onto the bill.
+ * @param item The menu item to be removed from the bill.
+ * @param cost The price of the menu item to be removed from the bill.
+*/
+void Bill :: removeItem(std::string item, double cost) 
+{
+    items.erase(std::remove(items.begin(), items.end(), item), items.end());
+    totalCost -= cost;
+}
+
+/**
  * @brief Function to create the Bill Memento.
  * @return BillMemento object is returned.
 */
