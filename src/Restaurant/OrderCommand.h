@@ -1,3 +1,8 @@
+/**
+ * @file OrderCommand.h
+ * @brief Declaration of the OrderCommand class.
+ */
+
 #ifndef ORDERCOMMAND_H
 #define ORDERCOMMAND_H
 

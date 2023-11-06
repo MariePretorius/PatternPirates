@@ -4,6 +4,10 @@ CookingChef::CookingChef() {
     this->nextChef = new HeadChef();
 }
 
+CookingChef::~CookingChef() {
+    delete this->cook;
+}
+
 void CookingChef::changeCook(Cook* cook) {
     this->cook = cook;
 }

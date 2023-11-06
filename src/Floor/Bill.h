@@ -1,3 +1,8 @@
+/**
+ * @file Bill.h
+ * @brief Declaration of the Bill class.
+ */
+
 #ifndef BILL_H
 #define BILL_H
 

@@ -10,7 +10,18 @@ Kitchen::Kitchen(Finance* finance){
 };
 
 Kitchen::~Kitchen() {
-
+    for (Ingredient* uIngredient : uncookedIngredients) {
+        delete uIngredient;
+    }
+    uncookedIngredients.clear();
+    for (Ingredient* cIngredient : cookedIngredients) {
+        delete cIngredient;
+    }
+    cookedIngredients.clear();
+    
+    delete this->currentDish;
+    delete this->currentOrder;
+    delete this->finance;
 }
 
 FoodOrder* Kitchen::getNextOrder() {

@@ -36,8 +36,8 @@ Customer::Customer(string paymentMethod, bool split, vector<Stock*> stock)
 
     //Changed to reference 'this' to make sure it was assigning to the correct variable.
     if (num == 1) {
-        this->cookingMethod = "grilled";
-    } else this->cookingMethod = "fried";
+        this->cookingMethod = "Grilled";
+    } else this->cookingMethod = "Fried";
 
     random_device other;
     mt19937 gen2(other());

@@ -1,4 +1,9 @@
 /**
+ * @File CustomerState.h
+ * @brief Declaration of the CustomerState class
+*/
+
+/**
  * @class CustomerState
  * @brief This class covers all states a customer can be in.
  */
