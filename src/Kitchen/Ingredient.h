@@ -14,6 +14,7 @@ public:
     Ingredient(std::string name, int initialQuantity, double costPerUnit, int key);
     ~Ingredient();
     std::string getCondition();
+    void setChoice(std::string newCookingChoice);
     std::string getChoice();
     void setCondition(std::string condition);
 
