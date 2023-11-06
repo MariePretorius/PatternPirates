@@ -14,6 +14,7 @@
 #include <iostream>
 #include <vector>
 #include <sstream>
+#include <algorithm>
 
 /**
  * @class Bill
@@ -40,11 +41,18 @@ class Bill
 		Bill(Customer * customer, Finance * f, Table* table);
 
 		/**
-		 * @brief Function to add items onto the bill
+		 * @brief Function to add items onto the bill.
 		 * @param item The menu item to be added onto the bill.
 		 * @param cost The price of the menu item to be added onto the bill.
 		*/
 		void addItem(const std::string& item, double cost);
+
+		/**
+		 * @brief Function to remove items onto the bill.
+		 * @param item The menu item to be removed from the bill.
+		 * @param cost The price of the menu item to be removed from the bill.
+		*/
+		void removeItem(std::string item, double cost);
 
 		/**
 		 * @brief Function to create the Bill Memento.

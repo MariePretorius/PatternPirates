@@ -1,5 +1,5 @@
 /**
- * @File Seated.h
+ * @file Seated.h
  * @brief Declaration of the Seated state
 */
 

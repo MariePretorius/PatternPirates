@@ -1,5 +1,5 @@
 /**
- * @File RequestingBill.h
+ * @file RequestingBill.h
  * @brief Declaration of the RequestingBill state
 */
 

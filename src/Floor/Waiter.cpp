@@ -92,7 +92,7 @@ void Waiter::getOrders() {
             {
                 vector<std::string> tempIngredient = ((*customers)->getIngredients());
                 vector<double> tempPrices = (*customers)->getPrices();
-                string method = (*customers)->getCookingMethod();
+                //vector<string> method = (*customers)->getCookingMethod();
                 vector<string> vectorIngredients = vector<string>();
                 vector<double> vectorDouble = vector<double>();
                 for(string ingredient : tempIngredient)

@@ -1,5 +1,5 @@
 /**
- * @File Ratings.h
+ * @file Ratings.h
  * @brief Declaration of the Ratings class
 */
 
