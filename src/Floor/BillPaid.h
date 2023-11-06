@@ -1,5 +1,5 @@
 /**
- * @File BillPaid.h
+ * @file BillPaid.h
  * @brief Declaration of the BillPaid state
 */
 

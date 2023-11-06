@@ -45,3 +45,7 @@ Ingredient::Ingredient(std::string name, int initialQuantity, double costPerUnit
 Ingredient::~Ingredient() {
 
 }
+
+void Ingredient::setChoice(std::string newCookingChoice) {
+    this->cookingChoice = newCookingChoice;
+}

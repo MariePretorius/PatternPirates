@@ -1,5 +1,5 @@
 /**
- * @File OrderPlaced.h
+ * @file OrderPlaced.h
  * @brief Declaration of the OrderPlaced state
 */
 

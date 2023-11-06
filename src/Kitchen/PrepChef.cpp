@@ -26,13 +26,19 @@ void PrepChef::handleStock(FoodOrder* order) {
     //Get the list of ingredients in order and handle the stock
     //Pointer reference had it stop complaining about segfaults...
     std::vector<std::string> * ingredients = order->getIngredients();
+    std::vector<std::string> cookingMethods = order->getCookingMethod();
     Shelf* currentShelf = kitchen->getShelf();
     //changing algorithm to accomidate for pointer
+    int counter = 0;
     for (const std::string& ingredient : *ingredients) {
         stockNeeded++;
         Ingredient* takenIngredient = (Ingredient*)currentShelf->deductStock(ingredient);
+        takenIngredient->setChoice(cookingMethods[counter]);
+        counter++;
         if (takenIngredient == NULL) {
             stockMissing++;
+            double cost = takenIngredient->getCostPerUnit();
+            order->removeFromBill(takenIngredient->getName(), cost);
         } else {
             kitchen->addUncookedIngredient(takenIngredient);
         }

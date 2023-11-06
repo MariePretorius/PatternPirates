@@ -1,5 +1,5 @@
 /**
- * @File Eating.h
+ * @file Eating.h
  * @brief Declaration of the Eating state
 */
 
