@@ -1,5 +1,5 @@
 /**
- * @File ReadyToOrder.h
+ * @file ReadyToOrder.h
  * @brief Declaration of the ReadyToOrder state
 */
 

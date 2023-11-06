@@ -1,5 +1,5 @@
 /**
- * @File CustomerState.h
+ * @file CustomerState.h
  * @brief Declaration of the CustomerState class
 */
 

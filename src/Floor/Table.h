@@ -1,5 +1,5 @@
 /**
- * @File Table.h
+ * @file Table.h
  * @brief Declaration of the Table class
 */
 
