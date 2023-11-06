@@ -29,7 +29,7 @@ class FoodOrder : public OrderCommand
 	private:
 		std::vector<std::string> ingredients;  ///< Vector containing the ingredients in the order.
 		int numberOfIngredients;  ///< Integer containing the number of ingredients in the order.
-		std::string cookingMethod;  ///< String containing the cooking method of the order.
+		std::vector<std::string> cookingMethod;  ///< String containing the cooking method of the order.
 		int tableNumber;  ///< Integer containing the table number this order belongs to.
 		Customer* customer;  ///< Reference to the customer that ordered this.
 		Kitchen* kitchen;  ///< Reference to the Kitchen object.
@@ -53,7 +53,7 @@ class FoodOrder : public OrderCommand
 		 * @param customer Reference to the customer who ordered this.
 		 * @param bill Reference to the bill for this order.
 		*/
-		FoodOrder(std::vector<std::string> ingredients, std::vector<double> prices, int num, std::string method, int tableNumber, Customer& customer, Bill* bill);
+		FoodOrder(std::vector<std::string> ingredients, std::vector<double> prices, int num, std::vector<std::string> method, int tableNumber, Customer& customer, Bill* bill);
 		
 		/**
 		 * @brief Destructor for this class.
@@ -73,6 +73,13 @@ class FoodOrder : public OrderCommand
 		void addToBill(std::string ingredient, double cost);
 
 		/**
+		 * @brief Function to remove a ingredients from the bill.
+		 * @param ingredient Single ingredient to remove from bill.
+		 * @param cost Cost of the ingredient being removed.
+		*/
+		void removeFromBill(std::string ingredient, double cost);
+
+		/**
 		 * @brief Returns the ingredient list.
 		 * @return Returns a vector of ingredients.
 		*/
@@ -81,9 +88,9 @@ class FoodOrder : public OrderCommand
 
 		/**
 		 * @brief Returns the cooking method.
-		 * @return Returns a string of the cooking method.
+		 * @return Returns a ector of strings of the cooking method.
 		*/
-		std::string getCookingMethod();
+		std::vector<std::string> getCookingMethod();
 
 		/**
 		 * @brief Returns the table number the order belongs to.

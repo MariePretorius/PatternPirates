@@ -6,17 +6,18 @@
 #define PROJ_WAITER_H
 
 #include <list>
-
+#include "Observer.h"
 #include "Table.h"
 #include "../Restaurant/Finance.h"
 #include "Bill.h"
 class FoodOrder;
 class Order;
-class Waiter
+class Waiter : public Observer
 {
 public:
     Waiter(Finance * finance, Ratings * ratings);
     ~Waiter();
+    void update() override;
     void moveToNext();
     void addTableToWait(Table * newTable);
     void addOrder(FoodOrder * newOrder);
@@ -38,6 +39,7 @@ private:
     std::vector<FoodOrder *> orders;
     std::vector<Bill*> bills;
     std::vector<Dish*> dishesInHand;
+    std::vector<CustomerState*> tableState;
     //Table * curr;
 };
 

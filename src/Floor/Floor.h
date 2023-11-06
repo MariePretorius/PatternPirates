@@ -1,7 +1,10 @@
 //
 // Created by Tristan on 2023/10/23.
 //
-
+/**
+ * @file The declaration for the floor Class
+ * @brief
+ */
 #ifndef PROJ_FLOOR_H
 #define PROJ_FLOOR_H
 
