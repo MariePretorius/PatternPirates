@@ -38,7 +38,7 @@ void PrepChef::handleStock(FoodOrder* order) {
         if (takenIngredient == NULL) {
             stockMissing++;
             double cost = takenIngredient->getCostPerUnit();
-            order->removeItem(takenIngredient->getName(), cost);
+            order->removeFromBill(takenIngredient->getName(), cost);
         } else {
             kitchen->addUncookedIngredient(takenIngredient);
         }
