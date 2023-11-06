@@ -32,6 +32,10 @@ public:
 	 */
 	CookingChef();
 	/**
+	 * Destructor for the CookingChef class.
+	 */
+	~CookingChef();
+	/**
 	 * Handle a food order in the kitchen by assigning the appropriate cook
 	 * and preparing ingredients.
 	 */

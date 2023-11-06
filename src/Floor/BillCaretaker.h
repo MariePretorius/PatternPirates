@@ -1,3 +1,8 @@
+/**
+ * @file BillCaretaker.h
+ * @brief Declaration of the BillCaretaker class.
+ */
+
 #ifndef BILLCARETAKER_H
 #define BILLCARETAKER_H
 

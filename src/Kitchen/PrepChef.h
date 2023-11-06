@@ -30,6 +30,10 @@ class PrepChef : public Chef {
 		 */
         PrepChef(Kitchen* thisKitchen);
 		/**
+		 * @brief Destructor for the PrepChef class.
+		 */
+		~PrepChef();
+		/**
 		 * @brief Handle an order from the kitchen.
 		 * Gets the next order from the kitchen and handles its stock.
 		 */
