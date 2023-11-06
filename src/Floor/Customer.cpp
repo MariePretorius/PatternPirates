@@ -56,6 +56,7 @@ Customer::Customer(string paymentMethod, bool split, vector<Stock*> stock)
 void Customer::nextState() 
 {
     this->state = state->getNextState();
+    this->notify();
 }
 
 void Customer::leaveRating(Ratings allRatings)
