@@ -15,15 +15,14 @@
 #include "Ratings.h"
 #include "../Kitchen/Ingredient.h"
 #include "../Kitchen/Stock.h"
-
 #include <list>
 #include <iostream>
 #include <string>
 #include <random>
-
+#include "ObserverSubject.h"
 using namespace std;
 
-class Customer {
+class Customer : public ObserverSubject{
 
 private:
 	CustomerState *state; ///< The current state of the customer.

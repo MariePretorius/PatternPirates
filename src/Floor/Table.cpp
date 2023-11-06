@@ -12,13 +12,16 @@ void Table::assignCustomers(list<Customer*> customers)
 {
     this->customers = customers;
     occupied = true;
+    for(Customer * c : customers)
+    {
+        c->attach(this->myWaiter);
+    }
 }
 
 void Table::removeCustomers()
 {
-    customers.clear();
     occupied = false;
-
+    customers.clear();
 }
 
 //idk, c++ just stopped segfaulting when I made it a pointer.
@@ -73,4 +76,8 @@ bool Table::doneEating()
             return true;
         } else return false;
     }
+}
+
+void Table::setWaiter(Observer *waiter) {
+    this->myWaiter = waiter;
 }

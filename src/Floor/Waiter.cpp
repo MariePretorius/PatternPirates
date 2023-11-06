@@ -29,11 +29,12 @@ void Waiter::getOrdersFromCurrTable()
  * @brief Waiter Constructor
  * @param finance takes in a finance object
  */
-Waiter::Waiter(Finance * finance, Ratings * ratings)
+Waiter::Waiter(Finance * finance, Ratings * ratings) : Observer()
 {
     this->finance = finance;
     tables = std::vector<Table*>();
     orders = std::vector<FoodOrder*>();
+    this->tableState = std::vector<CustomerState*>();
     this->ratings = ratings;
 }
 
@@ -44,6 +45,8 @@ Waiter::Waiter(Finance * finance, Ratings * ratings)
 void Waiter::addTableToWait(Table *newTable)
 {
     tables.push_back(newTable);
+    tableState.push_back(nullptr);
+
 }
 
 void Waiter::addOrder(FoodOrder *newOrder)
@@ -92,7 +95,7 @@ void Waiter::getOrders() {
             {
                 vector<std::string> tempIngredient = ((*customers)->getIngredients());
                 vector<double> tempPrices = (*customers)->getPrices();
-                string method = (*customers)->getCookingMethod();
+                //vector<string> method = (*customers)->getCookingMethod();
                 vector<string> vectorIngredients = vector<string>();
                 vector<double> vectorDouble = vector<double>();
                 for(string ingredient : tempIngredient)
@@ -109,7 +112,7 @@ void Waiter::getOrders() {
                 FoodOrder * tempFoodOrder = new FoodOrder(vectorIngredients,vectorDouble,vectorIngredients.size(),
                                                           (*customers)->getCookingMethod(), (*table)->getTableNumber(), **customers,temp);
                 this->orders.push_back(tempFoodOrder);
-                (*customers)->nextState();
+                //(*customers)->nextState();
                 std::cout << "\033[35mCustomer state has changed to:\t\t"<< (*customers)->getState()->getName() <<"!\033[0m" << std::endl;
             }
 
@@ -167,7 +170,7 @@ void Waiter::doRounds() {
                 for(customer = t->getCustomers()->begin(); customer != t->getCustomers()->end(); customer++)
                 {
                     (*customer)->getRating();
-                    (*customer)->nextState();
+                    //(*customer)->nextState();
                 }
             }
             else
@@ -190,7 +193,7 @@ void Waiter::doRounds() {
                 }
                 for(customer = t->getCustomers()->begin(); customer != t->getCustomers()->end(); customer++)
                 {
-                    (*customer)->nextState();
+                    //(*customer)->nextState();
                     cout << "\033[35mA customer left a rating of: \033[0m" << (*customer)->getRating() << endl;
                     ratings->leaveRating((*customer)->getRating());
                 }
@@ -246,6 +249,7 @@ void Waiter::passOrdersToTables() {
                             vector<Dish *>::iterator it = std::find(dishesInHand.begin(), dishesInHand.end(), *d);
                             dishesInHand.erase(d);
                             given = true;
+                            (*customer)->nextState();
                         }
                         d++;
                         //then throw the dishes onto the table
@@ -268,6 +272,20 @@ Waiter::~Waiter() {
     for(Dish * c : dishesInHand)
     {
         delete c;
+    }
+}
+
+void Waiter::update()
+{
+
+    for(int i = 0; i < tables.size(); i++)
+    {
+        if(tables[i]->isOccupied())
+        {
+            list<Customer*>::iterator temp = tables[i]->getCustomers()->begin();
+            tableState[i] = (*temp)->getState();
+            std::cout << "\033[35mA table changed its state to:\t\033[0m"<< tableState[i]->getName() << std::endl;
+        }
     }
 }
 
