@@ -21,11 +21,12 @@ FoodOrder :: FoodOrder() {}
  * @param k Reference to the kitchen object.
  * @param bill Reference to the bill for this order.
 */
-FoodOrder :: FoodOrder(std::vector<std::string> ingredients, std::vector<double> prices, int num, std::string method, int tableNumber, Customer& customer, Bill* bill) : bill(bill)
+FoodOrder :: FoodOrder(std::vector<std::string> ingredients, std::vector<double> prices, int num, std::vector<string> method, int tableNumber, Customer& customer, Bill* bill) : bill(bill)
 {
     //added pre-instantiation to prevent segfault
     this->ingredients = vector<std::string>();
     this->prices = vector<double>();
+    this->cookingMethod = vector<std::string>();
     this->customer = &customer;
     //this->kitchen = &k;
     //this->bill = &bill;
@@ -42,6 +43,7 @@ FoodOrder :: FoodOrder(std::vector<std::string> ingredients, std::vector<double>
 
         //I'm not sure why you were pushing the same ingredient twice. Assumed it was a mistake.
         this->prices.push_back(prices[i]);
+        this->cookingMethod.push_back(method[i]);
         
         addToBill(this->ingredients[i], this->prices[i]);
     }
@@ -108,7 +110,7 @@ std::vector<std::string> * FoodOrder :: getIngredients()
  * @brief Returns the cooking method.
  * @return Returns a string of the cooking method.
 */
-std::string FoodOrder :: getCookingMethod()
+std::vector<std::string> FoodOrder :: getCookingMethod()
 {
     return this->cookingMethod;
 }
