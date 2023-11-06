@@ -22,7 +22,7 @@ void Host::setCustomers(vector<Customer *> c) {
  * @param t a reference to the tables on the floor
  */
 void Host::setTables(list<Table *> t) {
-    tables = t;
+    this->tables = t;
 }
 
 /**
@@ -126,6 +126,10 @@ bool Host::assignCustomer() {
         amount = openTable->getCapacity();
 
         for (int i = 0; i < amount; ++i) {
+            if (customers.empty())
+            {
+                break;
+            }
             Customer* CustomerToBeSeated= customers.back();
             customers.pop_back();
             seatedCustomers.push_back(CustomerToBeSeated);
@@ -158,7 +162,6 @@ bool Host::assignCustomer() {
 }
 
 Host::~Host() {
-    delete f;
 
 
 }

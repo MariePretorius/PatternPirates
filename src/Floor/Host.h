@@ -4,7 +4,10 @@
 #include "Floor.h"
 #include <sstream>
 #include <list>
-
+/**
+ * @file host.h
+ * @brief Declaration of Host class
+ */
 using namespace std;
     /**
      * @class Host

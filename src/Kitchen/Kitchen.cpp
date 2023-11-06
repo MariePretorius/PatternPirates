@@ -89,11 +89,18 @@ void Kitchen::buyStock() {
     do {
         cout << "\033[1;36mList of possible items for your shelf:\033[0m" << endl;
         for (int i = 0; i < 29; i++) {
-            cout << "\033[1;36m" + to_string(i)+ "\t" + OptionsArr[i] + "\t\t" + to_string(PriceArr[i]) + " \033[0m" << endl;
+            cout << "\033[1;36m" + to_string(i)+ "\t" + OptionsArr[i] + "\t\t" << PriceArr[i] << " \033[0m" << endl;
         }
         cout<<endl;
         cout<<"\033[1;36mPlease enter the item number you want to buy:\033[0m";
         cin>>buyOption;
+        cout <<buyOption;
+        //input validation
+       /* while ( buyOption >30)
+        {
+            cout<<"\033[1;36mPlease enter the item number you want to buy:\033[0m";
+            cin>>buyOption;
+        }*/
         cout<<endl;
         cout<<"\033[1;36m" + OptionsArr[buyOption] + " costs R" + to_string(PriceArr[buyOption]) + ", enter quantity:\033[0m" ;
         cin>>quantity;

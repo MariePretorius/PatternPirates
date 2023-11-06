@@ -257,4 +257,17 @@ void Waiter::passOrdersToTables() {
     }
 }
 
+Waiter::~Waiter() {
+
+    for(Bill * c : bills)
+    {
+        delete c;
+    }
+
+    for(Dish * c : dishesInHand)
+    {
+        delete c;
+    }
+}
+
 

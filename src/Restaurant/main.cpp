@@ -2,21 +2,17 @@
 
 #include "../Kitchen/Kitchen.h"
 #include "../Floor/Customer.h"
-
-
 #include "Restaurant.h"
 #include "../tests/CustomerTests.h"
 
 #include "../tests/FinanceTests.h"
 #include "../tests/StockTests.h"
-//#include "../tests/WaiterTests.h"
+#include "../tests/WaiterTests.h"
 #include "../tests/FloorTests.h"
 #include "../tests/KitchenTests.h"
 #include "../tests/FoodOrderTest.h"
 #include "../tests/BillTest.h"
-#include "../tests/WaiterTests.h"
-
-
+#include "../tests/HostTests.h"
 
 using namespace std;
 
@@ -61,7 +57,7 @@ void testing()
     billSuccess = true;
     foodOrderSuccess = true;
     tableSuccess = true;
-    hostSuccess = true;
+
     //Waiter Tests
     //tests the waiter class
     //Requires Customer, Bill, FoodOrder, Table and Finance
@@ -80,6 +76,15 @@ void testing()
      }
 
 
+    try {
+        HostTests * ht = new HostTests();
+        ht->TestScenario();
+        delete ht;
+        hostSuccess = true;
+        cout<<"\033[1;32mHost Tests successful\033[0m"<<endl;
+    }catch (exception e){
+        cout<<"Host has failed tests";
+    }
     //Floor Tests
     //tests the floor class
     //requires waiter, host, table

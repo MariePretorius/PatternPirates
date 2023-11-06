@@ -75,10 +75,11 @@ void Restaurant::setup()
     simulate();
 }
 void Restaurant::CleanUp() {
+    delete funds;
     delete floor;
     delete kitchen;
-    delete funds;
 
+    delete uniqueInstance;
     uniqueInstance=nullptr;
 
 
@@ -158,10 +159,8 @@ void Restaurant::simulate()
 
     floor->waitersPassOrdersToTables();
 
-    floor->waitersDoRounds();  // this is to set the customers' state to RequestingBill - if they want a bill!
+    floor->waitersDoRounds();
 
-    //waiter brings bill - call waiter.bill // change customer state to billPaid
-    //customer pays with waiter - call pay function in waiter
     //customer leaves - remove all customers from their table
     
     // tabs pay at end of round - at end of round call pay tabs
@@ -172,7 +171,6 @@ void Restaurant::simulate()
     cout << "\033[1;32m\"You have made R "<<funds->getFunds()<< " in this simulation round.\033[0m" << endl;
 
 
-    //tables need to be deleted in floor
     // Part of cleanUp , don't touch! And don't add code under this
     for (Customer* c: customers) {
         delete c;

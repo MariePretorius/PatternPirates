@@ -20,6 +20,8 @@ Floor::Floor(Finance * finance)
     this->numberOfTables = 0;
     this->numberOfWaiters = 0;
     this->ratings = new Ratings();
+    this->host = new Host(this);
+
 }
 /**
  * @brief Gets the maximum number of Customers that can be seated
@@ -43,7 +45,7 @@ int Floor::getCapacity()
  */
 Host *Floor::createHost()
 {
-    return new Host(this);
+    return this->host;
 }
 /**
  * @brief returns the number of waiters on the floor
@@ -154,19 +156,19 @@ void Floor::waitersGetOrders() {
         (*it)->getOrders();
     }
 
-    vector<FoodOrder *> * allOrders = new vector<FoodOrder *>();
+    vector<FoodOrder *> allOrders = vector<FoodOrder *>();
     for(std::list<Waiter*>::iterator it = waiters.begin(); it != waiters.end();it++)
     {
         vector<FoodOrder*> * temp = (*it)->fetchOrders();
         vector<FoodOrder *>::iterator ij = temp->begin();
         for(int i = 0; i < temp->size(); i++)
         {
-            allOrders->push_back((*ij));
+            allOrders.push_back((*ij));
             ij++;
         }
     }
 
-    stashedOrders = *allOrders;
+    stashedOrders = allOrders;
 }
 /**
  * @brief Returns all the orders collected by the waiters
@@ -228,4 +230,28 @@ void Floor::waitersPassOrdersToTables() {
         w->passOrdersToTables();
     }
 
+}
+
+Floor::~Floor() {
+    delete host;
+    delete ratings;
+    for(Table * t : tables)
+    {
+        delete t;
+    }
+
+    for(Waiter * w : waiters)
+    {
+        delete w;
+    }
+
+    for(FoodOrder * f : stashedOrders)
+    {
+        delete f;
+    }
+
+    for(Dish * f : finishedOrders)
+    {
+        delete f;
+    }
 }
