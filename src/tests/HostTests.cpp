@@ -16,10 +16,13 @@ HostTests::HostTests() {
     for (int i = 0; i < numTables; ++i) {
         r = rand()% maxCap+1;
         f->addTable(r);
+        cout<<"here"<<endl;
+
     }
     bool split;
     int paymentMethod;
     string pay="";
+
     for (int i = 0; i < numCustomers; ++i) {
         r = rand()%2;
         split=r ;       // if 0-dont split else if 1 split

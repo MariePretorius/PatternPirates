@@ -1,6 +1,9 @@
 #ifndef RESTAURANT_H
 #define RESTAURANT_H
-
+/**
+ * @file Restaurant.h
+ * @brief Declaration of Restaurant class
+ */
 #include "Finance.h"
 #include "../Floor/Floor.h"
 #include "../Kitchen/Kitchen.h"
