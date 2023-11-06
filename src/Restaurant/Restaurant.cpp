@@ -79,7 +79,7 @@ void Restaurant::CleanUp() {
     delete floor;
     delete kitchen;
 
-
+    delete uniqueInstance;
     uniqueInstance=nullptr;
 
 

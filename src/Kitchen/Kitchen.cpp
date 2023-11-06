@@ -83,6 +83,13 @@ void Kitchen::buyStock() {
         cout<<endl;
         cout<<"\033[1;36mPlease enter the item number you want to buy:\033[0m";
         cin>>buyOption;
+        cout <<buyOption;
+        //input validation
+       /* while ( buyOption >30)
+        {
+            cout<<"\033[1;36mPlease enter the item number you want to buy:\033[0m";
+            cin>>buyOption;
+        }*/
         cout<<endl;
         cout<<"\033[1;36m" + OptionsArr[buyOption] + " costs R" + to_string(PriceArr[buyOption]) + ", enter quantity:\033[0m" ;
         cin>>quantity;

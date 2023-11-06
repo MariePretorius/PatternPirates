@@ -180,7 +180,7 @@ void ShannonTesting()
 int main(){
 
 
-    testing();
+    //testing();
     //ShannonTesting();
     Restaurant::instance()->setup();
 
