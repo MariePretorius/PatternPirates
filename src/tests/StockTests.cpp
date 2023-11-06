@@ -28,5 +28,10 @@ bool StockTests::tests() {
     Stock * temp = shelf->deductStock("randomStock1");
     assert(temp == stock1);
     std::cout << "\033[35mStock Test Successful!\033[0m" << std::endl;
+
+    delete stock1;
+    delete stock2;
+    delete shelf;
+
     return true;
 }

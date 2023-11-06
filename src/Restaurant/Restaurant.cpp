@@ -164,7 +164,7 @@ void Restaurant::simulate()
     //waiter brings bill - call waiter.bill // change customer state to billPaid
     //customer pays with waiter - call pay function in waiter
     //customer leaves - remove all customers from their table
-
+    
     // tabs pay at end of round - at end of round call pay tabs
 
     cout << "\033[1;32mSimulation phase is now done!\033[0m" << endl;

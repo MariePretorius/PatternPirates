@@ -9,7 +9,10 @@ WaiterTests::WaiterTests() {
 
 bool WaiterTests::tests() {
     Finance * finance = new Finance();
-
-    Waiter * waiter = new Waiter(finance);
+    Ratings * ratings = new Ratings();
+    Waiter * waiter = new Waiter(finance, ratings);
     assert(waiter->getTables()->size() == 0);
+
+    delete finance;
+    delete waiter;
 }

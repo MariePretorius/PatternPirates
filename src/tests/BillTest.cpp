@@ -5,15 +5,26 @@
 BillTest::BillTest() 
 {
     // Initialize Bill and BillCaretaker instances for testing
-    Stock* s1 = new Stock("Ingredient1", 20, 5.0, 1);
-    Stock* s2 = new Stock("Ingredient2", 20, 3.0, 2);
+    this->s1 = new Stock("Ingredient1", 20, 5.0, 1);
+    this->s2 = new Stock("Ingredient2", 20, 3.0, 2);
     std::vector<Stock*> stock = {s1, s2};
 
-    Customer* cust = new Customer("Bill", false, stock);
-    Finance* f = new Finance();
-    Table* t = new Table(999, 4);
-    bill = new Bill(cust, f, t);
-    caretaker = new BillCaretaker();
+    this->cust = new Customer("Bill", false, stock);
+    this->f = new Finance();
+    this->t = new Table(999, 4);
+    this->bill = new Bill(cust, f, t);
+    this->caretaker = new BillCaretaker();
+}
+
+BillTest::~BillTest()
+{
+    delete this->s1;
+    delete this->s2;
+    delete this->cust;
+    delete this->f;
+    delete this->t;
+    delete this->bill;
+    delete this->caretaker;
 }
 
 void BillTest::runTestScenario() 
