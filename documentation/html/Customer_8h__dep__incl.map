@@ -1,0 +1,15 @@
+<map id="src/Floor/Customer.h" name="src/Floor/Customer.h">
+<area shape="rect" id="node1" title="Declaration of the Customer class." alt="" coords="137,5,293,32"/>
+<area shape="rect" id="node2" href="$Bill_8h.html" title="Declaration of the Bill class." alt="" coords="13,229,127,256"/>
+<area shape="rect" id="node4" href="$Table_8h.html" title="Declaration of the Table class." alt="" coords="151,155,279,181"/>
+<area shape="rect" id="node8" href="$Dish_8h.html" title="Definition of the Dish class." alt="" coords="295,80,456,107"/>
+<area shape="rect" id="node3" href="$Waiter_8h.html" title="The declaration of the waiter class." alt="" coords="5,304,140,331"/>
+<area shape="rect" id="node5" href="$Floor_8h.html" title="Declaration of Floor class." alt="" coords="253,229,380,256"/>
+<area shape="rect" id="node6" href="$Host_8h_source.html" title=" " alt="" coords="165,304,289,331"/>
+<area shape="rect" id="node7" href="$Restaurant_8h.html" title="Declaration of Restaurant class." alt="" coords="226,379,429,405"/>
+<area shape="rect" id="node9" href="$HeadChef_8h.html" title="Declaration of the HeadChef class." alt="" coords="559,304,733,331"/>
+<area shape="rect" id="node12" href="$Kitchen_8h.html" title="Definition of the Kitchen class." alt="" coords="339,155,497,181"/>
+<area shape="rect" id="node10" href="$CookingChef_8h.html" title="Declaration of the CookingChef class." alt="" coords="509,379,701,405"/>
+<area shape="rect" id="node11" href="$PrepChef_8h.html" title="This file contains the implementation of the PrepChef class." alt="" coords="454,453,622,480"/>
+<area shape="rect" id="node13" href="$Chef_8h.html" title="Declaration of the Chef class." alt="" coords="455,229,594,256"/>
+</map>

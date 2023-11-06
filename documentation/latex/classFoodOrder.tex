@@ -1,0 +1,230 @@
+\hypertarget{classFoodOrder}{}\doxysection{Food\+Order Class Reference}
+\label{classFoodOrder}\index{FoodOrder@{FoodOrder}}
+
+
+This class is the Concrete\+Command participant in the Command design pattern. It Inherits from the \mbox{\hyperlink{classOrderCommand}{Order\+Command}} class.  
+
+
+
+
+Inheritance diagram for Food\+Order\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{classFoodOrder__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Food\+Order\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{classFoodOrder__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFoodOrder_a693d594ee1112539984fad11c3ac8e8b}\label{classFoodOrder_a693d594ee1112539984fad11c3ac8e8b}} 
+\mbox{\hyperlink{classFoodOrder_a693d594ee1112539984fad11c3ac8e8b}{Food\+Order}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classFoodOrder_a13056489fdc23f40d51ad04d481bd1f1}{Food\+Order}} (std\+::vector$<$ std\+::string $>$ ingredients, std\+::vector$<$ double $>$ prices, int num, std\+::vector$<$ std\+::string $>$ method, int table\+Number, \mbox{\hyperlink{classCustomer}{Customer}} \&customer, \mbox{\hyperlink{classBill}{Bill}} $\ast$bill)
+\item 
+\mbox{\Hypertarget{classFoodOrder_a986441c5458b1acd5d23e98e15d804b2}\label{classFoodOrder_a986441c5458b1acd5d23e98e15d804b2}} 
+\mbox{\hyperlink{classFoodOrder_a986441c5458b1acd5d23e98e15d804b2}{$\sim$\+Food\+Order}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for this class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFoodOrder_ad3d9dd3d4def52e5863bd3bc51992d14}\label{classFoodOrder_ad3d9dd3d4def52e5863bd3bc51992d14}} 
+void \mbox{\hyperlink{classFoodOrder_ad3d9dd3d4def52e5863bd3bc51992d14}{execute}} ()
+\begin{DoxyCompactList}\small\item\em Execute function to pass order to kitchen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFoodOrder_a508e7893b4905a46b153a52eadd66b04}{add\+To\+Bill}} (std\+::string ingredient, double cost)
+\begin{DoxyCompactList}\small\item\em Function to add all the ingredients onto the bill. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFoodOrder_a5d330939167ca8b5ce03b276479e6d9b}{remove\+From\+Bill}} (std\+::string ingredient, double cost)
+\begin{DoxyCompactList}\small\item\em Function to remove a ingredients from the bill. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ $\ast$ \mbox{\hyperlink{classFoodOrder_aa2a7401f8f2319890207c5fae86b186c}{get\+Ingredients}} ()
+\begin{DoxyCompactList}\small\item\em Returns the ingredient list. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classFoodOrder_a78ac573b12d0d8d7a2e0156948ef39d1}{get\+Cooking\+Method}} ()
+\begin{DoxyCompactList}\small\item\em Returns the cooking method. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFoodOrder_a6f4e2f2e21c3f002233512bede2e04f1}{get\+Table\+Number}} ()
+\begin{DoxyCompactList}\small\item\em Returns the table number the order belongs to. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCustomer}{Customer}} $\ast$ \mbox{\hyperlink{classFoodOrder_afefa737b72bf190dce2d1ff680476479}{get\+Customer}} ()
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the customer the order belongs to. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFoodOrder_ac16b3387893ddb8ad2261b9a004295f8}{get\+Random\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Returns a random id between 1000 and 9999. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBill}{Bill}} $\ast$ \mbox{\hyperlink{classFoodOrder_a69a86480aa22c8cc79d719f3af92794b}{get\+Bill}} ()
+\begin{DoxyCompactList}\small\item\em Returns the \mbox{\hyperlink{classBill}{Bill}} object pointer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFoodOrder_a000346c49fea854cdfc2020415f32ac1}{set\+Kitchen}} (\mbox{\hyperlink{classKitchen}{Kitchen}} $\ast$k)
+\begin{DoxyCompactList}\small\item\em Sets the kitchen pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is the Concrete\+Command participant in the Command design pattern. It Inherits from the \mbox{\hyperlink{classOrderCommand}{Order\+Command}} class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFoodOrder_a13056489fdc23f40d51ad04d481bd1f1}\label{classFoodOrder_a13056489fdc23f40d51ad04d481bd1f1}} 
+\index{FoodOrder@{FoodOrder}!FoodOrder@{FoodOrder}}
+\index{FoodOrder@{FoodOrder}!FoodOrder@{FoodOrder}}
+\doxysubsubsection{\texorpdfstring{FoodOrder()}{FoodOrder()}}
+{\footnotesize\ttfamily Food\+Order\+::\+Food\+Order (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{ingredients,  }\item[{std\+::vector$<$ double $>$}]{prices,  }\item[{int}]{num,  }\item[{std\+::vector$<$ std\+::string $>$}]{method,  }\item[{int}]{table\+Number,  }\item[{\mbox{\hyperlink{classCustomer}{Customer}} \&}]{customer,  }\item[{\mbox{\hyperlink{classBill}{Bill}} $\ast$}]{bill }\end{DoxyParamCaption})}
+
+Parameterized constructor for the class. 
+\begin{DoxyParams}{Parameters}
+{\em ingredients} & List of ingredients in the order. \\
+\hline
+{\em prices} & List of prices for the ingredients. \\
+\hline
+{\em num} & Number of ingredients in order. \\
+\hline
+{\em method} & The cooking method of the order. \\
+\hline
+{\em table\+Number} & \mbox{\hyperlink{classTable}{Table}} number the order came from. \\
+\hline
+{\em customer} & Reference to the customer who ordered this. \\
+\hline
+{\em bill} & Reference to the bill for this order. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFoodOrder_a508e7893b4905a46b153a52eadd66b04}\label{classFoodOrder_a508e7893b4905a46b153a52eadd66b04}} 
+\index{FoodOrder@{FoodOrder}!addToBill@{addToBill}}
+\index{addToBill@{addToBill}!FoodOrder@{FoodOrder}}
+\doxysubsubsection{\texorpdfstring{addToBill()}{addToBill()}}
+{\footnotesize\ttfamily void Food\+Order\+::add\+To\+Bill (\begin{DoxyParamCaption}\item[{std\+::string}]{ingredient,  }\item[{double}]{cost }\end{DoxyParamCaption})}
+
+
+
+Function to add all the ingredients onto the bill. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ingredient} & Single ingredient to add to bill. \\
+\hline
+{\em cost} & Cost of the ingredient being added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFoodOrder_a69a86480aa22c8cc79d719f3af92794b}\label{classFoodOrder_a69a86480aa22c8cc79d719f3af92794b}} 
+\index{FoodOrder@{FoodOrder}!getBill@{getBill}}
+\index{getBill@{getBill}!FoodOrder@{FoodOrder}}
+\doxysubsubsection{\texorpdfstring{getBill()}{getBill()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBill}{Bill}} $\ast$ Food\+Order\+::get\+Bill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the \mbox{\hyperlink{classBill}{Bill}} object pointer. 
+
+Returns a pointer to the bill the order belongs to.
+
+\begin{DoxyReturn}{Returns}
+Return a pointer for the \mbox{\hyperlink{classBill}{Bill}} object.
+
+\mbox{\hyperlink{classBill}{Bill}} object pointer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFoodOrder_a78ac573b12d0d8d7a2e0156948ef39d1}\label{classFoodOrder_a78ac573b12d0d8d7a2e0156948ef39d1}} 
+\index{FoodOrder@{FoodOrder}!getCookingMethod@{getCookingMethod}}
+\index{getCookingMethod@{getCookingMethod}!FoodOrder@{FoodOrder}}
+\doxysubsubsection{\texorpdfstring{getCookingMethod()}{getCookingMethod()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Food\+Order\+::get\+Cooking\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the cooking method. 
+
+\begin{DoxyReturn}{Returns}
+Returns a ector of strings of the cooking method.
+
+Returns a string of the cooking method. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFoodOrder_afefa737b72bf190dce2d1ff680476479}\label{classFoodOrder_afefa737b72bf190dce2d1ff680476479}} 
+\index{FoodOrder@{FoodOrder}!getCustomer@{getCustomer}}
+\index{getCustomer@{getCustomer}!FoodOrder@{FoodOrder}}
+\doxysubsubsection{\texorpdfstring{getCustomer()}{getCustomer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCustomer}{Customer}} $\ast$ Food\+Order\+::get\+Customer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a pointer to the customer the order belongs to. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classCustomer}{Customer}} object pointer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFoodOrder_aa2a7401f8f2319890207c5fae86b186c}\label{classFoodOrder_aa2a7401f8f2319890207c5fae86b186c}} 
+\index{FoodOrder@{FoodOrder}!getIngredients@{getIngredients}}
+\index{getIngredients@{getIngredients}!FoodOrder@{FoodOrder}}
+\doxysubsubsection{\texorpdfstring{getIngredients()}{getIngredients()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ $\ast$ Food\+Order\+::get\+Ingredients (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the ingredient list. 
+
+\begin{DoxyReturn}{Returns}
+Returns a vector of ingredients. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFoodOrder_ac16b3387893ddb8ad2261b9a004295f8}\label{classFoodOrder_ac16b3387893ddb8ad2261b9a004295f8}} 
+\index{FoodOrder@{FoodOrder}!getRandomID@{getRandomID}}
+\index{getRandomID@{getRandomID}!FoodOrder@{FoodOrder}}
+\doxysubsubsection{\texorpdfstring{getRandomID()}{getRandomID()}}
+{\footnotesize\ttfamily int Food\+Order\+::get\+Random\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a random id between 1000 and 9999. 
+
+\begin{DoxyReturn}{Returns}
+Return an integer value for the id. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFoodOrder_a6f4e2f2e21c3f002233512bede2e04f1}\label{classFoodOrder_a6f4e2f2e21c3f002233512bede2e04f1}} 
+\index{FoodOrder@{FoodOrder}!getTableNumber@{getTableNumber}}
+\index{getTableNumber@{getTableNumber}!FoodOrder@{FoodOrder}}
+\doxysubsubsection{\texorpdfstring{getTableNumber()}{getTableNumber()}}
+{\footnotesize\ttfamily int Food\+Order\+::get\+Table\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the table number the order belongs to. 
+
+\begin{DoxyReturn}{Returns}
+Returns integer value of the table number. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFoodOrder_a5d330939167ca8b5ce03b276479e6d9b}\label{classFoodOrder_a5d330939167ca8b5ce03b276479e6d9b}} 
+\index{FoodOrder@{FoodOrder}!removeFromBill@{removeFromBill}}
+\index{removeFromBill@{removeFromBill}!FoodOrder@{FoodOrder}}
+\doxysubsubsection{\texorpdfstring{removeFromBill()}{removeFromBill()}}
+{\footnotesize\ttfamily void Food\+Order\+::remove\+From\+Bill (\begin{DoxyParamCaption}\item[{std\+::string}]{ingredient,  }\item[{double}]{cost }\end{DoxyParamCaption})}
+
+
+
+Function to remove a ingredients from the bill. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ingredient} & Single ingredient to remove from bill. \\
+\hline
+{\em cost} & Cost of the ingredient being removed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFoodOrder_a000346c49fea854cdfc2020415f32ac1}\label{classFoodOrder_a000346c49fea854cdfc2020415f32ac1}} 
+\index{FoodOrder@{FoodOrder}!setKitchen@{setKitchen}}
+\index{setKitchen@{setKitchen}!FoodOrder@{FoodOrder}}
+\doxysubsubsection{\texorpdfstring{setKitchen()}{setKitchen()}}
+{\footnotesize\ttfamily void Food\+Order\+::set\+Kitchen (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKitchen}{Kitchen}} $\ast$}]{k }\end{DoxyParamCaption})}
+
+
+
+Sets the kitchen pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & Pointer to a kitchen object. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Restaurant/\mbox{\hyperlink{FoodOrder_8h}{Food\+Order.\+h}}\item 
+src/\+Restaurant/Food\+Order.\+cpp\end{DoxyCompactItemize}

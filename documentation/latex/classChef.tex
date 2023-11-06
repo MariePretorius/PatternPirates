@@ -1,0 +1,70 @@
+\hypertarget{classChef}{}\doxysection{Chef Class Reference}
+\label{classChef}\index{Chef@{Chef}}
+
+
+Represents a chef in a restaurant kitchen.  
+
+
+
+
+{\ttfamily \#include $<$Chef.\+h$>$}
+
+
+
+Inheritance diagram for Chef\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classChef__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Chef\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{classChef__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classChef_a1038672d15ee8ef35426fa3b22302f2b}{handle\+Order}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classChef_afc06a34f1b5626899012395ed0c8a7f8}\label{classChef_afc06a34f1b5626899012395ed0c8a7f8}} 
+\mbox{\hyperlink{classChef}{Chef}} $\ast$ \mbox{\hyperlink{classChef_afc06a34f1b5626899012395ed0c8a7f8}{next\+Chef}}
+\begin{DoxyCompactList}\small\item\em A pointer to the next chef in the Chain of Responsibility. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classChef_a2745061516e1c0db438974bc25972831}\label{classChef_a2745061516e1c0db438974bc25972831}} 
+static \mbox{\hyperlink{classKitchen}{Kitchen}} $\ast$ \mbox{\hyperlink{classChef_a2745061516e1c0db438974bc25972831}{kitchen}} = nullptr
+\begin{DoxyCompactList}\small\item\em A pointer to the \mbox{\hyperlink{classKitchen}{Kitchen}} where the chef works. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a chef in a restaurant kitchen. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classChef_a1038672d15ee8ef35426fa3b22302f2b}\label{classChef_a1038672d15ee8ef35426fa3b22302f2b}} 
+\index{Chef@{Chef}!handleOrder@{handleOrder}}
+\index{handleOrder@{handleOrder}!Chef@{Chef}}
+\doxysubsubsection{\texorpdfstring{handleOrder()}{handleOrder()}}
+{\footnotesize\ttfamily virtual void Chef\+::handle\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Pure virtual function to handle food orders. 
+
+Implemented in \mbox{\hyperlink{classPrepChef_a31c6448e984e6fe26c72bfd9da9e55ba}{Prep\+Chef}}, \mbox{\hyperlink{classHeadChef_a4b18ad8df3507e1b82b48421f0816f82}{Head\+Chef}}, and \mbox{\hyperlink{classCookingChef_a8554070729e1c30686eef556a34d4f85}{Cooking\+Chef}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Kitchen/\mbox{\hyperlink{Chef_8h}{Chef.\+h}}\item 
+src/\+Kitchen/Chef.\+cpp\end{DoxyCompactItemize}

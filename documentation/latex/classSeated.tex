@@ -1,0 +1,84 @@
+\hypertarget{classSeated}{}\doxysection{Seated Class Reference}
+\label{classSeated}\index{Seated@{Seated}}
+
+
+This class is a state the customer will be in when they have been seated at a table.  
+
+
+
+
+{\ttfamily \#include $<$Seated.\+h$>$}
+
+
+
+Inheritance diagram for Seated\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classSeated__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Seated\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classSeated__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCustomerState}{Customer\+State}} $\ast$ \mbox{\hyperlink{classSeated_a6f545315ecf21ea8f53c9100dbeba960}{get\+Next\+State}} () override
+\begin{DoxyCompactList}\small\item\em Get the next state of the customer after being seated. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classSeated_a0cee88ba9e5168513a239f4437153ca7}{get\+Name}} () override
+\begin{DoxyCompactList}\small\item\em Get the name of the \char`\"{}\+Seated\char`\"{} state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is a state the customer will be in when they have been seated at a table. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSeated_a0cee88ba9e5168513a239f4437153ca7}\label{classSeated_a0cee88ba9e5168513a239f4437153ca7}} 
+\index{Seated@{Seated}!getName@{getName}}
+\index{getName@{getName}!Seated@{Seated}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string Seated\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the name of the \char`\"{}\+Seated\char`\"{} state. 
+
+\begin{DoxyReturn}{Returns}
+A string containing the name of the state. This function returns the name of the \char`\"{}\+Seated\char`\"{} state, which helps identify the current state of the customer. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCustomerState_af1077636f2f4eb94fd3103cb357a7fa5}{Customer\+State}}.
+
+\mbox{\Hypertarget{classSeated_a6f545315ecf21ea8f53c9100dbeba960}\label{classSeated_a6f545315ecf21ea8f53c9100dbeba960}} 
+\index{Seated@{Seated}!getNextState@{getNextState}}
+\index{getNextState@{getNextState}!Seated@{Seated}}
+\doxysubsubsection{\texorpdfstring{getNextState()}{getNextState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCustomerState}{Customer\+State}} $\ast$ Seated\+::get\+Next\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the next state of the customer after being seated. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the next state of the customer. This function is used to determine the state that the customer should transition to after being seated at the restaurant. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCustomerState_aeaaa4d13414deeffa1e9be22292128d4}{Customer\+State}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Floor/\mbox{\hyperlink{Seated_8h}{Seated.\+h}}\item 
+src/\+Floor/Seated.\+cpp\end{DoxyCompactItemize}

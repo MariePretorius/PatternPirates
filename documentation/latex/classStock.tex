@@ -1,0 +1,144 @@
+\hypertarget{classStock}{}\doxysection{Stock Class Reference}
+\label{classStock}\index{Stock@{Stock}}
+
+
+The Abstract class of the template design pattern.  
+
+
+
+
+{\ttfamily \#include $<$Stock.\+h$>$}
+
+
+
+Inheritance diagram for Stock\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{classStock__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStock_af9ce02615934c1352af85901e073c449}{Stock}} (std\+::string name, int initial\+Quantity, double cost\+Per\+Unit, int key)
+\begin{DoxyCompactList}\small\item\em The constructor for the \mbox{\hyperlink{classStock}{Stock}} object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classStock_a71b85f650e1249e278527c7268d425ec}{add\+Stock}} (int quantity)
+\begin{DoxyCompactList}\small\item\em Adds the given quantity to the stock. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classStock_ab128ed0a721eb95ecf80ab7739dd5595}{remove\+Stock}} (int quantity)
+\begin{DoxyCompactList}\small\item\em Removes stock of the given quantity. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classStock_ade393e54cc0e27adf39ddf851dd88c52}{get\+Cost\+Per\+Unit}} ()
+\begin{DoxyCompactList}\small\item\em returns the cost per unit for the stock item \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classStock_ad73b0411dcb5addd5a22fd02e5f06d84}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em returns the name of the stock item \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classStock_ae740172dd83d825e7d10b68ac68f28be}{to\+String}} ()
+\begin{DoxyCompactList}\small\item\em returns a string represent ation of this stock item \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStock_a2cfa071ab8b83d25f26f772cbc1778d5}\label{classStock_a2cfa071ab8b83d25f26f772cbc1778d5}} 
+int {\bfseries get\+Quantity} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The Abstract class of the template design pattern. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classStock_af9ce02615934c1352af85901e073c449}\label{classStock_af9ce02615934c1352af85901e073c449}} 
+\index{Stock@{Stock}!Stock@{Stock}}
+\index{Stock@{Stock}!Stock@{Stock}}
+\doxysubsubsection{\texorpdfstring{Stock()}{Stock()}}
+{\footnotesize\ttfamily Stock\+::\+Stock (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{int}]{initial\+Quantity,  }\item[{double}]{cost\+Per\+Unit,  }\item[{int}]{key }\end{DoxyParamCaption})}
+
+
+
+The constructor for the \mbox{\hyperlink{classStock}{Stock}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the item \\
+\hline
+{\em initial\+Quantity} & The intial amount of the item \\
+\hline
+{\em cost\+Per\+Unit} & The cost per unit of the item \\
+\hline
+{\em key} & The key for the item \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classStock_a71b85f650e1249e278527c7268d425ec}\label{classStock_a71b85f650e1249e278527c7268d425ec}} 
+\index{Stock@{Stock}!addStock@{addStock}}
+\index{addStock@{addStock}!Stock@{Stock}}
+\doxysubsubsection{\texorpdfstring{addStock()}{addStock()}}
+{\footnotesize\ttfamily void Stock\+::add\+Stock (\begin{DoxyParamCaption}\item[{int}]{quantity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adds the given quantity to the stock. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em quantity} & an int \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classStock_ade393e54cc0e27adf39ddf851dd88c52}\label{classStock_ade393e54cc0e27adf39ddf851dd88c52}} 
+\index{Stock@{Stock}!getCostPerUnit@{getCostPerUnit}}
+\index{getCostPerUnit@{getCostPerUnit}!Stock@{Stock}}
+\doxysubsubsection{\texorpdfstring{getCostPerUnit()}{getCostPerUnit()}}
+{\footnotesize\ttfamily double Stock\+::get\+Cost\+Per\+Unit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+returns the cost per unit for the stock item 
+
+\begin{DoxyReturn}{Returns}
+a double for the cost 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStock_ad73b0411dcb5addd5a22fd02e5f06d84}\label{classStock_ad73b0411dcb5addd5a22fd02e5f06d84}} 
+\index{Stock@{Stock}!getName@{getName}}
+\index{getName@{getName}!Stock@{Stock}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Stock\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+returns the name of the stock item 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStock_ab128ed0a721eb95ecf80ab7739dd5595}\label{classStock_ab128ed0a721eb95ecf80ab7739dd5595}} 
+\index{Stock@{Stock}!removeStock@{removeStock}}
+\index{removeStock@{removeStock}!Stock@{Stock}}
+\doxysubsubsection{\texorpdfstring{removeStock()}{removeStock()}}
+{\footnotesize\ttfamily void Stock\+::remove\+Stock (\begin{DoxyParamCaption}\item[{int}]{quantity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Removes stock of the given quantity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em quantity} & an int \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classStock_ae740172dd83d825e7d10b68ac68f28be}\label{classStock_ae740172dd83d825e7d10b68ac68f28be}} 
+\index{Stock@{Stock}!toString@{toString}}
+\index{toString@{toString}!Stock@{Stock}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily std\+::string Stock\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+returns a string represent ation of this stock item 
+
+\begin{DoxyReturn}{Returns}
+a string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Kitchen/\mbox{\hyperlink{Stock_8h}{Stock.\+h}}\item 
+src/\+Kitchen/Stock.\+cpp\end{DoxyCompactItemize}

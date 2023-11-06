@@ -1,0 +1,241 @@
+\hypertarget{classCustomer}{}\doxysection{Customer Class Reference}
+\label{classCustomer}\index{Customer@{Customer}}
+
+
+This class represents the customers who enter the restaurant.  
+
+
+
+
+{\ttfamily \#include $<$Customer.\+h$>$}
+
+
+
+Inheritance diagram for Customer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{classCustomer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Customer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{classCustomer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCustomer_a4989beda0ebbb49116f5528722fac8ae}{Customer}} (string payment\+Method, bool split, vector$<$ \mbox{\hyperlink{classStock}{Stock}} $\ast$ $>$ stock)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classCustomer}{Customer}} class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCustomer_a249b386b7b87261a05da883a26d894f7}\label{classCustomer_a249b386b7b87261a05da883a26d894f7}} 
+void \mbox{\hyperlink{classCustomer_a249b386b7b87261a05da883a26d894f7}{next\+State}} ()
+\begin{DoxyCompactList}\small\item\em Transition to the next customer state. This function transitions the customer to their next state based on the current state and the restaurant\textquotesingle{}s policies. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCustomer_aee0d6c60cd3bc86c349593a9e78abad9}{leave\+Rating}} (\mbox{\hyperlink{classRatings}{Ratings}} all\+Ratings)
+\begin{DoxyCompactList}\small\item\em Leave a rating based on all received ratings. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCustomer_adcd63f42af4274039c5488eb9c8f06e4}\label{classCustomer_adcd63f42af4274039c5488eb9c8f06e4}} 
+void \mbox{\hyperlink{classCustomer_adcd63f42af4274039c5488eb9c8f06e4}{notify\+Host}} ()
+\begin{DoxyCompactList}\small\item\em Notify the restaurant host of the customer\textquotesingle{}s status. This function notifies the host of the customer\textquotesingle{}s arrival. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCustomerState}{Customer\+State}} $\ast$ \mbox{\hyperlink{classCustomer_ab2cabd38f33ae4d2f1bea0a6e1defdc8}{get\+State}} ()
+\begin{DoxyCompactList}\small\item\em Get the current state of the customer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCustomer_a236d5d040cafabeb6f84296d3e101ff1}{get\+Customer\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Get the unique customer ID. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \mbox{\hyperlink{classCustomer_a4700efe62127095d79d486ad74974b88}{get\+Ingredients}} ()
+\begin{DoxyCompactList}\small\item\em Get the list of ingredients for the customer\textquotesingle{}s order. \end{DoxyCompactList}\item 
+vector$<$ double $>$ \mbox{\hyperlink{classCustomer_a1fa8f85e11e627eb94cbec34097d5775}{get\+Prices}} ()
+\begin{DoxyCompactList}\small\item\em Get the prices of the ordered items. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \mbox{\hyperlink{classCustomer_a8aef40c325a89aabcd6ecf73912e8956}{get\+Cooking\+Method}} ()
+\begin{DoxyCompactList}\small\item\em Get the cooking method for the order. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCustomer_a20a360a729ebbc68e5e88481f8517a8f}{get\+Payment\+Method}} ()
+\begin{DoxyCompactList}\small\item\em Get the chosen payment method. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classCustomer_a683ee8bd9804a4a4b0c5b0eddb685e67}{get\+Rating}} ()
+\begin{DoxyCompactList}\small\item\em Get the customer\textquotesingle{}s rating. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCustomer_abcb9e4ae9868574612398153dd9aa633}{get\+Split}} ()
+\begin{DoxyCompactList}\small\item\em Check if the bill is split. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classCustomer_ae944f58136402ba3e01d63b27501bf95}{get\+State\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Get the name of the customer\textquotesingle{}s current state. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classCustomer_a72d42dbad4802885d0e0d6c7effd0e51}{get\+Payment\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Get the name of the chosen payment method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents the customers who enter the restaurant. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCustomer_a4989beda0ebbb49116f5528722fac8ae}\label{classCustomer_a4989beda0ebbb49116f5528722fac8ae}} 
+\index{Customer@{Customer}!Customer@{Customer}}
+\index{Customer@{Customer}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{Customer()}{Customer()}}
+{\footnotesize\ttfamily Customer\+::\+Customer (\begin{DoxyParamCaption}\item[{string}]{payment\+Method,  }\item[{bool}]{split,  }\item[{vector$<$ \mbox{\hyperlink{classStock}{Stock}} $\ast$ $>$}]{stock }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{classCustomer}{Customer}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em payment\+Method} & The method of payment chosen by the customer. \\
+\hline
+{\em split} & Indicates whether the customer\textquotesingle{}s bill is split. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCustomer_a8aef40c325a89aabcd6ecf73912e8956}\label{classCustomer_a8aef40c325a89aabcd6ecf73912e8956}} 
+\index{Customer@{Customer}!getCookingMethod@{getCookingMethod}}
+\index{getCookingMethod@{getCookingMethod}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{getCookingMethod()}{getCookingMethod()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Customer\+::get\+Cooking\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the cooking method for the order. 
+
+\begin{DoxyReturn}{Returns}
+The method used for preparing the customer\textquotesingle{}s order. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCustomer_a236d5d040cafabeb6f84296d3e101ff1}\label{classCustomer_a236d5d040cafabeb6f84296d3e101ff1}} 
+\index{Customer@{Customer}!getCustomerID@{getCustomerID}}
+\index{getCustomerID@{getCustomerID}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{getCustomerID()}{getCustomerID()}}
+{\footnotesize\ttfamily int Customer\+::get\+Customer\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the unique customer ID. 
+
+\begin{DoxyReturn}{Returns}
+The unique identifier for the customer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCustomer_a4700efe62127095d79d486ad74974b88}\label{classCustomer_a4700efe62127095d79d486ad74974b88}} 
+\index{Customer@{Customer}!getIngredients@{getIngredients}}
+\index{getIngredients@{getIngredients}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{getIngredients()}{getIngredients()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Customer\+::get\+Ingredients (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the list of ingredients for the customer\textquotesingle{}s order. 
+
+\begin{DoxyReturn}{Returns}
+A list of \mbox{\hyperlink{classIngredient}{Ingredient}} objects representing the customer\textquotesingle{}s order. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCustomer_a20a360a729ebbc68e5e88481f8517a8f}\label{classCustomer_a20a360a729ebbc68e5e88481f8517a8f}} 
+\index{Customer@{Customer}!getPaymentMethod@{getPaymentMethod}}
+\index{getPaymentMethod@{getPaymentMethod}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{getPaymentMethod()}{getPaymentMethod()}}
+{\footnotesize\ttfamily bool Customer\+::get\+Payment\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the chosen payment method. 
+
+\begin{DoxyReturn}{Returns}
+The method of payment chosen by the customer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCustomer_a72d42dbad4802885d0e0d6c7effd0e51}\label{classCustomer_a72d42dbad4802885d0e0d6c7effd0e51}} 
+\index{Customer@{Customer}!getPaymentName@{getPaymentName}}
+\index{getPaymentName@{getPaymentName}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{getPaymentName()}{getPaymentName()}}
+{\footnotesize\ttfamily string Customer\+::get\+Payment\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the name of the chosen payment method. 
+
+\begin{DoxyReturn}{Returns}
+A string containing the name of the chosen payment method. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCustomer_a1fa8f85e11e627eb94cbec34097d5775}\label{classCustomer_a1fa8f85e11e627eb94cbec34097d5775}} 
+\index{Customer@{Customer}!getPrices@{getPrices}}
+\index{getPrices@{getPrices}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{getPrices()}{getPrices()}}
+{\footnotesize\ttfamily vector$<$ double $>$ Customer\+::get\+Prices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the prices of the ordered items. 
+
+\begin{DoxyReturn}{Returns}
+A list of prices for the customer\textquotesingle{}s order items. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCustomer_a683ee8bd9804a4a4b0c5b0eddb685e67}\label{classCustomer_a683ee8bd9804a4a4b0c5b0eddb685e67}} 
+\index{Customer@{Customer}!getRating@{getRating}}
+\index{getRating@{getRating}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{getRating()}{getRating()}}
+{\footnotesize\ttfamily double Customer\+::get\+Rating (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the customer\textquotesingle{}s rating. 
+
+\begin{DoxyReturn}{Returns}
+The customer\textquotesingle{}s overall rating based on their dining experience. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCustomer_abcb9e4ae9868574612398153dd9aa633}\label{classCustomer_abcb9e4ae9868574612398153dd9aa633}} 
+\index{Customer@{Customer}!getSplit@{getSplit}}
+\index{getSplit@{getSplit}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{getSplit()}{getSplit()}}
+{\footnotesize\ttfamily bool Customer\+::get\+Split (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check if the bill is split. 
+
+\begin{DoxyReturn}{Returns}
+True if the customer\textquotesingle{}s bill is split, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCustomer_ab2cabd38f33ae4d2f1bea0a6e1defdc8}\label{classCustomer_ab2cabd38f33ae4d2f1bea0a6e1defdc8}} 
+\index{Customer@{Customer}!getState@{getState}}
+\index{getState@{getState}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCustomerState}{Customer\+State}} $\ast$ Customer\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the current state of the customer. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the current state of the customer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCustomer_ae944f58136402ba3e01d63b27501bf95}\label{classCustomer_ae944f58136402ba3e01d63b27501bf95}} 
+\index{Customer@{Customer}!getStateName@{getStateName}}
+\index{getStateName@{getStateName}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{getStateName()}{getStateName()}}
+{\footnotesize\ttfamily string Customer\+::get\+State\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the name of the customer\textquotesingle{}s current state. 
+
+\begin{DoxyReturn}{Returns}
+A string containing the name of the current state. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCustomer_aee0d6c60cd3bc86c349593a9e78abad9}\label{classCustomer_aee0d6c60cd3bc86c349593a9e78abad9}} 
+\index{Customer@{Customer}!leaveRating@{leaveRating}}
+\index{leaveRating@{leaveRating}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{leaveRating()}{leaveRating()}}
+{\footnotesize\ttfamily void Customer\+::leave\+Rating (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRatings}{Ratings}}}]{all\+Ratings }\end{DoxyParamCaption})}
+
+
+
+Leave a rating based on all received ratings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em all\+Ratings} & A \mbox{\hyperlink{classRatings}{Ratings}} object containing all received ratings. This function allows the customer to leave a rating based on the received ratings for their dining experience. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Floor/\mbox{\hyperlink{Customer_8h}{Customer.\+h}}\item 
+src/\+Floor/Customer.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,79 @@
+\hypertarget{classObserverSubject}{}\doxysection{Observer\+Subject Class Reference}
+\label{classObserverSubject}\index{ObserverSubject@{ObserverSubject}}
+
+
+The class from which an observable class will inherit.  
+
+
+
+
+{\ttfamily \#include $<$Observer\+Subject.\+h$>$}
+
+
+
+Inheritance diagram for Observer\+Subject\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{classObserverSubject__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classObserverSubject_a59988dc07069ad175164cc395459d8ec}\label{classObserverSubject_a59988dc07069ad175164cc395459d8ec}} 
+\mbox{\hyperlink{classObserverSubject_a59988dc07069ad175164cc395459d8ec}{Observer\+Subject}} ()
+\begin{DoxyCompactList}\small\item\em The constructor for the \mbox{\hyperlink{classObserverSubject}{Observer\+Subject}} class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classObserverSubject_a6517d204ecc9b3a120b5b68bbe73f409}\label{classObserverSubject_a6517d204ecc9b3a120b5b68bbe73f409}} 
+\mbox{\hyperlink{classObserverSubject_a6517d204ecc9b3a120b5b68bbe73f409}{$\sim$\+Observer\+Subject}} ()
+\begin{DoxyCompactList}\small\item\em The destructor for the \mbox{\hyperlink{classObserverSubject}{Observer\+Subject}} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObserverSubject_ad22f445f77738ab7ae8ac6f1f83aeabe}{attach}} (\mbox{\hyperlink{classObserver}{Observer}} $\ast$observer)
+\begin{DoxyCompactList}\small\item\em Adds a given observer to the list of Observers to be notified. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObserverSubject_a095652f2d65893ec740412a2d5506ba2}{detach}} (\mbox{\hyperlink{classObserver}{Observer}} $\ast$observer)
+\begin{DoxyCompactList}\small\item\em Removes a given observer from the list of observers to be notified. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classObserverSubject_a20e9603f3b196958c87f71dbe609b712}\label{classObserverSubject_a20e9603f3b196958c87f71dbe609b712}} 
+void \mbox{\hyperlink{classObserverSubject_a20e9603f3b196958c87f71dbe609b712}{notify}} ()
+\begin{DoxyCompactList}\small\item\em notifies all Observers in the vector to check their subject\textquotesingle{}s state \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class from which an observable class will inherit. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classObserverSubject_ad22f445f77738ab7ae8ac6f1f83aeabe}\label{classObserverSubject_ad22f445f77738ab7ae8ac6f1f83aeabe}} 
+\index{ObserverSubject@{ObserverSubject}!attach@{attach}}
+\index{attach@{attach}!ObserverSubject@{ObserverSubject}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}}
+{\footnotesize\ttfamily void Observer\+Subject\+::attach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classObserver}{Observer}} $\ast$}]{observer }\end{DoxyParamCaption})}
+
+
+
+Adds a given observer to the list of Observers to be notified. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & The \mbox{\hyperlink{classObserver}{Observer}} object to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classObserverSubject_a095652f2d65893ec740412a2d5506ba2}\label{classObserverSubject_a095652f2d65893ec740412a2d5506ba2}} 
+\index{ObserverSubject@{ObserverSubject}!detach@{detach}}
+\index{detach@{detach}!ObserverSubject@{ObserverSubject}}
+\doxysubsubsection{\texorpdfstring{detach()}{detach()}}
+{\footnotesize\ttfamily void Observer\+Subject\+::detach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classObserver}{Observer}} $\ast$}]{observer }\end{DoxyParamCaption})}
+
+
+
+Removes a given observer from the list of observers to be notified. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & The \mbox{\hyperlink{classObserver}{Observer}} object to be removed \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Floor/\mbox{\hyperlink{ObserverSubject_8h}{Observer\+Subject.\+h}}\item 
+src/\+Floor/Observer\+Subject.\+cpp\end{DoxyCompactItemize}

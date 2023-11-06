@@ -1,0 +1,78 @@
+\hypertarget{classFryer}{}\doxysection{Fryer Class Reference}
+\label{classFryer}\index{Fryer@{Fryer}}
+
+
+Represents a Concrete\+Strategy, \mbox{\hyperlink{classFryer}{Fryer}}, used to fry ingredients.  
+
+
+
+
+{\ttfamily \#include $<$Fryer.\+h$>$}
+
+
+
+Inheritance diagram for Fryer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=121pt]{classFryer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Fryer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=121pt]{classFryer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classFryer_a0fdb40ee62bdc22d607918973d1432dc}{prepare\+Station}} () override
+\item 
+\mbox{\hyperlink{classIngredient}{Ingredient}} $\ast$ \mbox{\hyperlink{classFryer_a8edb14ea0ceb118f883b05edfa18b6cd}{cook\+Ingredient}} (\mbox{\hyperlink{classIngredient}{Ingredient}} $\ast$ingredient) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a Concrete\+Strategy, \mbox{\hyperlink{classFryer}{Fryer}}, used to fry ingredients. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFryer_a8edb14ea0ceb118f883b05edfa18b6cd}\label{classFryer_a8edb14ea0ceb118f883b05edfa18b6cd}} 
+\index{Fryer@{Fryer}!cookIngredient@{cookIngredient}}
+\index{cookIngredient@{cookIngredient}!Fryer@{Fryer}}
+\doxysubsubsection{\texorpdfstring{cookIngredient()}{cookIngredient()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIngredient}{Ingredient}} $\ast$ Fryer\+::cook\+Ingredient (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIngredient}{Ingredient}} $\ast$}]{ingredient }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\hyperlink{classCook}{Cook}} an ingredient using the fryer and change its condition to fried. 
+\begin{DoxyParams}{Parameters}
+{\em ingredient} & A pointer to the \mbox{\hyperlink{classIngredient}{Ingredient}} to be fried. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the fried \mbox{\hyperlink{classIngredient}{Ingredient}}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCook_a7958930755f85eac38e4f7d0e1ad6b61}{Cook}}.
+
+\mbox{\Hypertarget{classFryer_a0fdb40ee62bdc22d607918973d1432dc}\label{classFryer_a0fdb40ee62bdc22d607918973d1432dc}} 
+\index{Fryer@{Fryer}!prepareStation@{prepareStation}}
+\index{prepareStation@{prepareStation}!Fryer@{Fryer}}
+\doxysubsubsection{\texorpdfstring{prepareStation()}{prepareStation()}}
+{\footnotesize\ttfamily void Fryer\+::prepare\+Station (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Prepare the fryer station by filling with oil and heating it. 
+
+Implements \mbox{\hyperlink{classCook_ad02a20a4529be145309a034efdc2b62b}{Cook}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Kitchen/\mbox{\hyperlink{Fryer_8h}{Fryer.\+h}}\item 
+src/\+Kitchen/Fryer.\+cpp\end{DoxyCompactItemize}

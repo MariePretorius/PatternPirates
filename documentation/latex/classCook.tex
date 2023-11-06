@@ -1,0 +1,59 @@
+\hypertarget{classCook}{}\doxysection{Cook Class Reference}
+\label{classCook}\index{Cook@{Cook}}
+
+
+Represents a Strategy that is used to define a fryer and a griller strategy.  
+
+
+
+
+{\ttfamily \#include $<$Cook.\+h$>$}
+
+
+
+Inheritance diagram for Cook\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{classCook__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classCook_ad02a20a4529be145309a034efdc2b62b}{prepare\+Station}} ()=0
+\item 
+virtual \mbox{\hyperlink{classIngredient}{Ingredient}} $\ast$ \mbox{\hyperlink{classCook_a7958930755f85eac38e4f7d0e1ad6b61}{cook\+Ingredient}} (\mbox{\hyperlink{classIngredient}{Ingredient}} $\ast$ingredient)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a Strategy that is used to define a fryer and a griller strategy. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCook_a7958930755f85eac38e4f7d0e1ad6b61}\label{classCook_a7958930755f85eac38e4f7d0e1ad6b61}} 
+\index{Cook@{Cook}!cookIngredient@{cookIngredient}}
+\index{cookIngredient@{cookIngredient}!Cook@{Cook}}
+\doxysubsubsection{\texorpdfstring{cookIngredient()}{cookIngredient()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classIngredient}{Ingredient}}$\ast$ Cook\+::cook\+Ingredient (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIngredient}{Ingredient}} $\ast$}]{ingredient }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Pure virtual function to cook an ingredient. 
+
+Implemented in \mbox{\hyperlink{classGriller_a05ad34c7e0986cc6793b6b796446bb28}{Griller}}, and \mbox{\hyperlink{classFryer_a8edb14ea0ceb118f883b05edfa18b6cd}{Fryer}}.
+
+\mbox{\Hypertarget{classCook_ad02a20a4529be145309a034efdc2b62b}\label{classCook_ad02a20a4529be145309a034efdc2b62b}} 
+\index{Cook@{Cook}!prepareStation@{prepareStation}}
+\index{prepareStation@{prepareStation}!Cook@{Cook}}
+\doxysubsubsection{\texorpdfstring{prepareStation()}{prepareStation()}}
+{\footnotesize\ttfamily virtual void Cook\+::prepare\+Station (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Pure virtual function to prepare a specifc chef station. 
+
+Implemented in \mbox{\hyperlink{classGriller_ae5a03bdf0346a44bc7f534365cf62cbd}{Griller}}, and \mbox{\hyperlink{classFryer_a0fdb40ee62bdc22d607918973d1432dc}{Fryer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Kitchen/\mbox{\hyperlink{Cook_8h}{Cook.\+h}}\end{DoxyCompactItemize}

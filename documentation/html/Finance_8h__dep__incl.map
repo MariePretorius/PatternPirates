@@ -1,0 +1,11 @@
+<map id="src/Restaurant/Finance.h" name="src/Restaurant/Finance.h">
+<area shape="rect" id="node1" title="The declaration for the Finance class." alt="" coords="135,5,317,32"/>
+<area shape="rect" id="node2" href="$Bill_8h.html" title="Declaration of the Bill class." alt="" coords="15,80,130,107"/>
+<area shape="rect" id="node3" href="$Waiter_8h.html" title="The declaration of the waiter class." alt="" coords="5,155,140,181"/>
+<area shape="rect" id="node4" href="$Kitchen_8h.html" title="Definition of the Kitchen class." alt="" coords="205,80,364,107"/>
+<area shape="rect" id="node9" href="$Restaurant_8h.html" title="Declaration of Restaurant class." alt="" coords="327,155,530,181"/>
+<area shape="rect" id="node5" href="$Chef_8h.html" title="Declaration of the Chef class." alt="" coords="165,155,303,181"/>
+<area shape="rect" id="node6" href="$CookingChef_8h.html" title="Declaration of the CookingChef class." alt="" coords="129,304,321,331"/>
+<area shape="rect" id="node7" href="$PrepChef_8h.html" title="This file contains the implementation of the PrepChef class." alt="" coords="207,379,375,405"/>
+<area shape="rect" id="node8" href="$HeadChef_8h.html" title="Declaration of the HeadChef class." alt="" coords="147,229,321,256"/>
+</map>

@@ -1,0 +1,84 @@
+\hypertarget{classBillPaid}{}\doxysection{Bill\+Paid Class Reference}
+\label{classBillPaid}\index{BillPaid@{BillPaid}}
+
+
+This class is a state the customer will be in after paying the bill.  
+
+
+
+
+{\ttfamily \#include $<$Bill\+Paid.\+h$>$}
+
+
+
+Inheritance diagram for Bill\+Paid\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classBillPaid__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bill\+Paid\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classBillPaid__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCustomerState}{Customer\+State}} $\ast$ \mbox{\hyperlink{classBillPaid_aff3b5ffb65e485526ebabc35af66070b}{get\+Next\+State}} () override
+\begin{DoxyCompactList}\small\item\em Get the next state of the customer. This function returns the next state that the customer transitions to after their bill has been paid. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classBillPaid_a6acc6ed7c73ec1079ad192d8e905d15c}{get\+Name}} () override
+\begin{DoxyCompactList}\small\item\em Get the name of the customer state. This function returns the name of the customer state, which is \char`\"{}\+Bill\+Paid.\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is a state the customer will be in after paying the bill. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBillPaid_a6acc6ed7c73ec1079ad192d8e905d15c}\label{classBillPaid_a6acc6ed7c73ec1079ad192d8e905d15c}} 
+\index{BillPaid@{BillPaid}!getName@{getName}}
+\index{getName@{getName}!BillPaid@{BillPaid}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string Bill\+Paid\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the name of the customer state. This function returns the name of the customer state, which is \char`\"{}\+Bill\+Paid.\char`\"{}. 
+
+\begin{DoxyReturn}{Returns}
+The name of the customer state. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCustomerState_af1077636f2f4eb94fd3103cb357a7fa5}{Customer\+State}}.
+
+\mbox{\Hypertarget{classBillPaid_aff3b5ffb65e485526ebabc35af66070b}\label{classBillPaid_aff3b5ffb65e485526ebabc35af66070b}} 
+\index{BillPaid@{BillPaid}!getNextState@{getNextState}}
+\index{getNextState@{getNextState}!BillPaid@{BillPaid}}
+\doxysubsubsection{\texorpdfstring{getNextState()}{getNextState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCustomerState}{Customer\+State}} $\ast$ Bill\+Paid\+::get\+Next\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the next state of the customer. This function returns the next state that the customer transitions to after their bill has been paid. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the next customer state. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCustomerState_aeaaa4d13414deeffa1e9be22292128d4}{Customer\+State}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Floor/\mbox{\hyperlink{BillPaid_8h}{Bill\+Paid.\+h}}\item 
+src/\+Floor/Bill\+Paid.\+cpp\end{DoxyCompactItemize}

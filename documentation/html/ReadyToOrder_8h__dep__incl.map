@@ -1,0 +1,5 @@
+<map id="src/Floor/ReadyToOrder.h" name="src/Floor/ReadyToOrder.h">
+<area shape="rect" id="node1" title="Declaration of the ReadyToOrder state." alt="" coords="12,5,196,32"/>
+<area shape="rect" id="node2" href="$Seated_8h.html" title="Declaration of the Seated state." alt="" coords="35,80,173,107"/>
+<area shape="rect" id="node3" href="$WaitingForTable_8h.html" title="Declaration of the WaitingForTable state." alt="" coords="5,155,203,181"/>
+</map>

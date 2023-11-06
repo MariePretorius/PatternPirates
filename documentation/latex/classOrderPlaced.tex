@@ -1,0 +1,84 @@
+\hypertarget{classOrderPlaced}{}\doxysection{Order\+Placed Class Reference}
+\label{classOrderPlaced}\index{OrderPlaced@{OrderPlaced}}
+
+
+This class is a state the customer will be in when they have placed their order.  
+
+
+
+
+{\ttfamily \#include $<$Order\+Placed.\+h$>$}
+
+
+
+Inheritance diagram for Order\+Placed\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classOrderPlaced__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Order\+Placed\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classOrderPlaced__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCustomerState}{Customer\+State}} $\ast$ \mbox{\hyperlink{classOrderPlaced_a23a2689836e328650471580593f09724}{get\+Next\+State}} () override
+\begin{DoxyCompactList}\small\item\em Get the next state of the customer after placing an order. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classOrderPlaced_ace13c30a77bdd79fe85717fce6bb54d6}{get\+Name}} () override
+\begin{DoxyCompactList}\small\item\em Get the name of the \char`\"{}\+Order\+Placed\char`\"{} state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is a state the customer will be in when they have placed their order. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classOrderPlaced_ace13c30a77bdd79fe85717fce6bb54d6}\label{classOrderPlaced_ace13c30a77bdd79fe85717fce6bb54d6}} 
+\index{OrderPlaced@{OrderPlaced}!getName@{getName}}
+\index{getName@{getName}!OrderPlaced@{OrderPlaced}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string Order\+Placed\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the name of the \char`\"{}\+Order\+Placed\char`\"{} state. 
+
+\begin{DoxyReturn}{Returns}
+A string containing the name of the state. This function returns the name of the \char`\"{}\+Order\+Placed\char`\"{} state, which helps identify the current state of the customer. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCustomerState_af1077636f2f4eb94fd3103cb357a7fa5}{Customer\+State}}.
+
+\mbox{\Hypertarget{classOrderPlaced_a23a2689836e328650471580593f09724}\label{classOrderPlaced_a23a2689836e328650471580593f09724}} 
+\index{OrderPlaced@{OrderPlaced}!getNextState@{getNextState}}
+\index{getNextState@{getNextState}!OrderPlaced@{OrderPlaced}}
+\doxysubsubsection{\texorpdfstring{getNextState()}{getNextState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCustomerState}{Customer\+State}} $\ast$ Order\+Placed\+::get\+Next\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the next state of the customer after placing an order. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the next state of the customer. This function is used to determine the state that the customer should transition to after placing their order but before receiving their food. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCustomerState_aeaaa4d13414deeffa1e9be22292128d4}{Customer\+State}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Floor/\mbox{\hyperlink{OrderPlaced_8h}{Order\+Placed.\+h}}\item 
+src/\+Floor/Order\+Placed.\+cpp\end{DoxyCompactItemize}
