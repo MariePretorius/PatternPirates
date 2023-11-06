@@ -1,0 +1,186 @@
+\hypertarget{classHost}{}\doxysection{Host Class Reference}
+\label{classHost}\index{Host@{Host}}
+
+
+\mbox{\hyperlink{classHost}{Host}} is responsible for the seating of customers at the start of the simulation. \mbox{\hyperlink{classHost}{Host}} is an Iterator.  
+
+
+
+
+{\ttfamily \#include $<$Host.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHost_a8c63e208058f9856f5bb5e6d1d05a9cf}{Host}} (\mbox{\hyperlink{classFloor}{Floor}} $\ast$fl)
+\begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{classHost}{Host}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTable}{Table}} $\ast$ \mbox{\hyperlink{classHost_a5652f463f1cc8c7d7b86d84ed2cffc44}{first}} ()
+\begin{DoxyCompactList}\small\item\em First returns the first table on the floor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTable}{Table}} $\ast$ \mbox{\hyperlink{classHost_a3da23c0f83b1e2e5fb39a89f8cbd4ee5}{next}} (\mbox{\hyperlink{classTable}{Table}} $\ast$curr)
+\begin{DoxyCompactList}\small\item\em next returns a pointer to the next table on the floor based on the current table \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classHost_aa0a9e605ca40e149ef68a7299ca9e5bf}{is\+Full}} ()
+\begin{DoxyCompactList}\small\item\em is\+Full iterates over all the tables on the floor and checks to see if all tables are occupied. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTable}{Table}} $\ast$ \mbox{\hyperlink{classHost_aac0d5464b527fdc4f4f36e69b8e61479}{get\+Next\+Open\+Table}} ()
+\begin{DoxyCompactList}\small\item\em get\+Next\+Open\+Table iterates over all the tables on the floor and returns the first table that isn\textquotesingle{}t occupied \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classHost_abb12e142b04818622bb273a9c4dae10f}{assign\+Customer}} ()
+\begin{DoxyCompactList}\small\item\em Assign\+Customer calls get\+Next\+Open\+Table and seats the number of customers at the open table based on the table\textquotesingle{}s capacity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHost_a980b3a6debc310aade80fc5928fd8739}{set\+Customers}} (vector$<$ \mbox{\hyperlink{classCustomer}{Customer}} $\ast$ $>$ c)
+\begin{DoxyCompactList}\small\item\em Set\+Customers just sets the waiting customers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHost_a97a690fb1e6f74f537da6cc09e2a3ff0}{set\+Tables}} (list$<$ \mbox{\hyperlink{classTable}{Table}} $\ast$ $>$ t)
+\begin{DoxyCompactList}\small\item\em set\+Tables sets the tables on the floor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHost_a6c14f16c39ae6bc5db2672e0141adccd}\label{classHost_a6c14f16c39ae6bc5db2672e0141adccd}} 
+\mbox{\hyperlink{classHost_a6c14f16c39ae6bc5db2672e0141adccd}{$\sim$\+Host}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classHost}{Host}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classHost}{Host}} is responsible for the seating of customers at the start of the simulation. \mbox{\hyperlink{classHost}{Host}} is an Iterator. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHost_a8c63e208058f9856f5bb5e6d1d05a9cf}\label{classHost_a8c63e208058f9856f5bb5e6d1d05a9cf}} 
+\index{Host@{Host}!Host@{Host}}
+\index{Host@{Host}!Host@{Host}}
+\doxysubsubsection{\texorpdfstring{Host()}{Host()}}
+{\footnotesize\ttfamily Host\+::\+Host (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFloor}{Floor}} $\ast$}]{fl }\end{DoxyParamCaption})}
+
+
+
+Default constructor for \mbox{\hyperlink{classHost}{Host}}. 
+
+Default constructor called in floor when everything is set up so that customers can be seated.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fl} & A reference to the floor so that host can seat customers at tables on the floor.\\
+\hline
+{\em fl} & a reference to the floor object \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classHost_abb12e142b04818622bb273a9c4dae10f}\label{classHost_abb12e142b04818622bb273a9c4dae10f}} 
+\index{Host@{Host}!assignCustomer@{assignCustomer}}
+\index{assignCustomer@{assignCustomer}!Host@{Host}}
+\doxysubsubsection{\texorpdfstring{assignCustomer()}{assignCustomer()}}
+{\footnotesize\ttfamily bool Host\+::assign\+Customer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Assign\+Customer calls get\+Next\+Open\+Table and seats the number of customers at the open table based on the table\textquotesingle{}s capacity. 
+
+assign\+Customer calls get\+Next\+Open\+Table and then gets the capacity of that open table and then assigns that many customers to this table
+
+\begin{DoxyReturn}{Returns}
+returns true if all customers were seated or returns false if there are more customers, but the restaurant is full 
+\end{DoxyReturn}
+Find an open table and then seat the table\textquotesingle{}s capacity amount of customers\mbox{\Hypertarget{classHost_a5652f463f1cc8c7d7b86d84ed2cffc44}\label{classHost_a5652f463f1cc8c7d7b86d84ed2cffc44}} 
+\index{Host@{Host}!first@{first}}
+\index{first@{first}!Host@{Host}}
+\doxysubsubsection{\texorpdfstring{first()}{first()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTable}{Table}} $\ast$ Host\+::first (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+First returns the first table on the floor. 
+
+first returns the first table to be accessed on the floor
+
+\begin{DoxyReturn}{Returns}
+returns a reference to the first table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHost_aac0d5464b527fdc4f4f36e69b8e61479}\label{classHost_aac0d5464b527fdc4f4f36e69b8e61479}} 
+\index{Host@{Host}!getNextOpenTable@{getNextOpenTable}}
+\index{getNextOpenTable@{getNextOpenTable}!Host@{Host}}
+\doxysubsubsection{\texorpdfstring{getNextOpenTable()}{getNextOpenTable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTable}{Table}} $\ast$ Host\+::get\+Next\+Open\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Next\+Open\+Table iterates over all the tables on the floor and returns the first table that isn\textquotesingle{}t occupied 
+
+get\+Next\+Open\+Table loops over all the tables on the floor in search of an open table. \begin{DoxyReturn}{Returns}
+returns a reference to the first open table or it returns a null pointer if all tables are occupied 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHost_aa0a9e605ca40e149ef68a7299ca9e5bf}\label{classHost_aa0a9e605ca40e149ef68a7299ca9e5bf}} 
+\index{Host@{Host}!isFull@{isFull}}
+\index{isFull@{isFull}!Host@{Host}}
+\doxysubsubsection{\texorpdfstring{isFull()}{isFull()}}
+{\footnotesize\ttfamily bool Host\+::is\+Full (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+is\+Full iterates over all the tables on the floor and checks to see if all tables are occupied. 
+
+is\+Full iterates over all the tables in search of an open table.
+
+\begin{DoxyReturn}{Returns}
+returns true if no poen table was found and returns false if an open table was found 
+\end{DoxyReturn}
+See if there are any tables that are still open\mbox{\Hypertarget{classHost_a3da23c0f83b1e2e5fb39a89f8cbd4ee5}\label{classHost_a3da23c0f83b1e2e5fb39a89f8cbd4ee5}} 
+\index{Host@{Host}!next@{next}}
+\index{next@{next}!Host@{Host}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTable}{Table}} $\ast$ Host\+::next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTable}{Table}} $\ast$}]{curr }\end{DoxyParamCaption})}
+
+
+
+next returns a pointer to the next table on the floor based on the current table 
+
+
+\begin{DoxyParams}{Parameters}
+{\em curr} & a reference to the current table of which we want to the the next table.\\
+\hline
+\end{DoxyParams}
+next iterates over all the tables to find the table that comes after the current table 
+\begin{DoxyParams}{Parameters}
+{\em curr} & a reference to the current table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns a reference to the next table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHost_a980b3a6debc310aade80fc5928fd8739}\label{classHost_a980b3a6debc310aade80fc5928fd8739}} 
+\index{Host@{Host}!setCustomers@{setCustomers}}
+\index{setCustomers@{setCustomers}!Host@{Host}}
+\doxysubsubsection{\texorpdfstring{setCustomers()}{setCustomers()}}
+{\footnotesize\ttfamily void Host\+::set\+Customers (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classCustomer}{Customer}} $\ast$ $>$}]{c }\end{DoxyParamCaption})}
+
+
+
+Set\+Customers just sets the waiting customers. 
+
+set\+Customers sets the waiting customers so that the \mbox{\hyperlink{classHost}{Host}} can iterate over them and seat them at open tables
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & list of customers waiting to be seated -\/ called in \mbox{\hyperlink{classRestaurant}{Restaurant}}\\
+\hline
+{\em c} & a reference to the customers \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHost_a97a690fb1e6f74f537da6cc09e2a3ff0}\label{classHost_a97a690fb1e6f74f537da6cc09e2a3ff0}} 
+\index{Host@{Host}!setTables@{setTables}}
+\index{setTables@{setTables}!Host@{Host}}
+\doxysubsubsection{\texorpdfstring{setTables()}{setTables()}}
+{\footnotesize\ttfamily void Host\+::set\+Tables (\begin{DoxyParamCaption}\item[{list$<$ \mbox{\hyperlink{classTable}{Table}} $\ast$ $>$}]{t }\end{DoxyParamCaption})}
+
+
+
+set\+Tables sets the tables on the floor 
+
+set\+Tables sets the tables on the floor so that the host can iterate over them to seat customers at open tables
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & list of all tables on the floor -\/called in \mbox{\hyperlink{classRestaurant}{Restaurant}}\\
+\hline
+{\em t} & a reference to the tables on the floor \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Floor/Host.\+h\item 
+src/\+Floor/Host.\+cpp\end{DoxyCompactItemize}

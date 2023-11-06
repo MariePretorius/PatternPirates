@@ -1,0 +1,84 @@
+\hypertarget{classReadyToOrder}{}\doxysection{Ready\+To\+Order Class Reference}
+\label{classReadyToOrder}\index{ReadyToOrder@{ReadyToOrder}}
+
+
+This class is a state the customer is in when they are ready to order food.  
+
+
+
+
+{\ttfamily \#include $<$Ready\+To\+Order.\+h$>$}
+
+
+
+Inheritance diagram for Ready\+To\+Order\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classReadyToOrder__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ready\+To\+Order\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classReadyToOrder__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCustomerState}{Customer\+State}} $\ast$ \mbox{\hyperlink{classReadyToOrder_a25d8bfb0318628efaf9431afd14b4939}{get\+Next\+State}} () override
+\begin{DoxyCompactList}\small\item\em Get the next state of the customer after being ready to order. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classReadyToOrder_a52e8be8d2d334b36d219ed1f66809214}{get\+Name}} () override
+\begin{DoxyCompactList}\small\item\em Get the name of the \char`\"{}\+Ready\+To\+Order\char`\"{} state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is a state the customer is in when they are ready to order food. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classReadyToOrder_a52e8be8d2d334b36d219ed1f66809214}\label{classReadyToOrder_a52e8be8d2d334b36d219ed1f66809214}} 
+\index{ReadyToOrder@{ReadyToOrder}!getName@{getName}}
+\index{getName@{getName}!ReadyToOrder@{ReadyToOrder}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string Ready\+To\+Order\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the name of the \char`\"{}\+Ready\+To\+Order\char`\"{} state. 
+
+\begin{DoxyReturn}{Returns}
+A string containing the name of the state. This function returns the name of the \char`\"{}\+Ready\+To\+Order\char`\"{} state, which helps identify the current state of the customer. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCustomerState_af1077636f2f4eb94fd3103cb357a7fa5}{Customer\+State}}.
+
+\mbox{\Hypertarget{classReadyToOrder_a25d8bfb0318628efaf9431afd14b4939}\label{classReadyToOrder_a25d8bfb0318628efaf9431afd14b4939}} 
+\index{ReadyToOrder@{ReadyToOrder}!getNextState@{getNextState}}
+\index{getNextState@{getNextState}!ReadyToOrder@{ReadyToOrder}}
+\doxysubsubsection{\texorpdfstring{getNextState()}{getNextState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCustomerState}{Customer\+State}} $\ast$ Ready\+To\+Order\+::get\+Next\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the next state of the customer after being ready to order. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the next state of the customer. This function is used to determine the state that the customer should transition to after being ready to place an order. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCustomerState_aeaaa4d13414deeffa1e9be22292128d4}{Customer\+State}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Floor/\mbox{\hyperlink{ReadyToOrder_8h}{Ready\+To\+Order.\+h}}\item 
+src/\+Floor/Ready\+To\+Order.\+cpp\end{DoxyCompactItemize}

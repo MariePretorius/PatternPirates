@@ -1,11 +1,27 @@
+/**
+ * @file OrderCommand.h
+ * @brief Declaration of the OrderCommand class.
+ */
+
 #ifndef ORDERCOMMAND_H
 #define ORDERCOMMAND_H
 
-class OrderCommand {
+/**
+ * @class OrderCommand Class
+ * @brief This class is abstract. This class is the Command participant in the Command design pattern.
+*/
+class OrderCommand
+{
+	public:
+		/**
+		 * @brief Default constructor for the class.
+		*/
+		OrderCommand();
 
-
-public:
-	OrderCommand();
+		/**
+		 * @brief Pure virtual function for the execute command.
+		*/
+		virtual void execute() = 0;
 };
 
 #endif

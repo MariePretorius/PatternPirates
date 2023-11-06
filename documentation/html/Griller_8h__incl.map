@@ -1,0 +1,10 @@
+<map id="src/Kitchen/Griller.h" name="src/Kitchen/Griller.h">
+<area shape="rect" id="node1" title="Declaration of the Griller class used as a ConcreteStrategy." alt="" coords="185,5,335,32"/>
+<area shape="rect" id="node2" href="$Cook_8h.html" title="Declaration of the Cook class." alt="" coords="5,80,72,107"/>
+<area shape="rect" id="node3" href="$Ingredient_8h_source.html" title=" " alt="" coords="97,80,197,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="220,80,300,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="324,80,388,107"/>
+<area shape="rect" id="node8" title=" " alt="" coords="412,80,479,107"/>
+<area shape="rect" id="node4" href="$Stock_8h.html" title="The declaration of the stock class." alt="" coords="111,155,182,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="117,229,176,256"/>
+</map>

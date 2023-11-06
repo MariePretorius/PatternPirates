@@ -1,0 +1,106 @@
+\hypertarget{classIngredient}{}\doxysection{Ingredient Class Reference}
+\label{classIngredient}\index{Ingredient@{Ingredient}}
+
+
+is the concrete class of the Template method design pattern  
+
+
+
+
+{\ttfamily \#include $<$Ingredient.\+h$>$}
+
+
+
+Inheritance diagram for Ingredient\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{classIngredient__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ingredient\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{classIngredient__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classIngredient_aebbd4019f2e64e3538f36f1725c0dfc1}{Ingredient}} (std\+::string name, int initial\+Quantity, double cost\+Per\+Unit, int key)
+\begin{DoxyCompactList}\small\item\em Constructor for the ingredient object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIngredient_a4dc9d2f9d39092e5b794047dd701263b}\label{classIngredient_a4dc9d2f9d39092e5b794047dd701263b}} 
+std\+::string {\bfseries get\+Condition} ()
+\item 
+\mbox{\Hypertarget{classIngredient_a49a028431f82cc9a53e8a2d9325a444f}\label{classIngredient_a49a028431f82cc9a53e8a2d9325a444f}} 
+void {\bfseries set\+Choice} (std\+::string new\+Cooking\+Choice)
+\item 
+std\+::string \mbox{\hyperlink{classIngredient_acdf464d88adbc19991c3a0c912d82dec}{get\+Choice}} ()
+\begin{DoxyCompactList}\small\item\em returns the cooking choice for this ingrdient. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIngredient_a268d1d7e5dc47c139bdade88aaa758ab}{set\+Condition}} (std\+::string condition)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+is the concrete class of the Template method design pattern 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classIngredient_aebbd4019f2e64e3538f36f1725c0dfc1}\label{classIngredient_aebbd4019f2e64e3538f36f1725c0dfc1}} 
+\index{Ingredient@{Ingredient}!Ingredient@{Ingredient}}
+\index{Ingredient@{Ingredient}!Ingredient@{Ingredient}}
+\doxysubsubsection{\texorpdfstring{Ingredient()}{Ingredient()}}
+{\footnotesize\ttfamily Ingredient\+::\+Ingredient (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{int}]{initial\+Quantity,  }\item[{double}]{cost\+Per\+Unit,  }\item[{int}]{key }\end{DoxyParamCaption})}
+
+
+
+Constructor for the ingredient object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the ingredient \\
+\hline
+{\em initial\+Quantity} & Amount of ingredient \\
+\hline
+{\em cost\+Per\+Unit} & Cost of each ingredient \\
+\hline
+{\em key} & key for the ingredient \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIngredient_acdf464d88adbc19991c3a0c912d82dec}\label{classIngredient_acdf464d88adbc19991c3a0c912d82dec}} 
+\index{Ingredient@{Ingredient}!getChoice@{getChoice}}
+\index{getChoice@{getChoice}!Ingredient@{Ingredient}}
+\doxysubsubsection{\texorpdfstring{getChoice()}{getChoice()}}
+{\footnotesize\ttfamily std\+::string Ingredient\+::get\+Choice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns the cooking choice for this ingrdient. 
+
+\begin{DoxyReturn}{Returns}
+a cooking\+Choice 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIngredient_a268d1d7e5dc47c139bdade88aaa758ab}\label{classIngredient_a268d1d7e5dc47c139bdade88aaa758ab}} 
+\index{Ingredient@{Ingredient}!setCondition@{setCondition}}
+\index{setCondition@{setCondition}!Ingredient@{Ingredient}}
+\doxysubsubsection{\texorpdfstring{setCondition()}{setCondition()}}
+{\footnotesize\ttfamily void Ingredient\+::set\+Condition (\begin{DoxyParamCaption}\item[{std\+::string}]{condition }\end{DoxyParamCaption})}
+
+Sets the condition of the ingredient 
+\begin{DoxyParams}{Parameters}
+{\em condition} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Kitchen/Ingredient.\+h\item 
+src/\+Kitchen/Ingredient.\+cpp\end{DoxyCompactItemize}

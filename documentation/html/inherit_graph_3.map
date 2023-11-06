@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classChef.html" title="Represents a chef in a restaurant kitchen." alt="" coords="5,56,57,83"/>
+<area shape="rect" id="node2" href="$classCookingChef.html" title="Declaration of the CookingChef class, secondly used in the CoR." alt="" coords="105,5,211,32"/>
+<area shape="rect" id="node3" href="$classHeadChef.html" title="Declaration of the HeadChef class, thirdly used in the CoR." alt="" coords="115,56,201,83"/>
+<area shape="rect" id="node4" href="$classPrepChef.html" title="Declaration of the PrepChef class, first used in the CoR." alt="" coords="117,107,199,133"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Customer" name="Customer">
+<area shape="rect" id="node1" title="This class represents the customers who enter the restaurant." alt="" coords="27,80,113,107"/>
+<area shape="rect" id="node2" href="$classObserverSubject.html" title="The class from which an observable class will inherit." alt="" coords="5,5,135,32"/>
+</map>

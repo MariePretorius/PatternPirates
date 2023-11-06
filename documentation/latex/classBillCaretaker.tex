@@ -1,0 +1,77 @@
+\hypertarget{classBillCaretaker}{}\doxysection{Bill\+Caretaker Class Reference}
+\label{classBillCaretaker}\index{BillCaretaker@{BillCaretaker}}
+
+
+This class acts as the Caretaker in the \mbox{\hyperlink{classBill}{Bill}} Memento design pattern.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBillCaretaker_a91562589db6e7fbb2a2549b568fa74f0}\label{classBillCaretaker_a91562589db6e7fbb2a2549b568fa74f0}} 
+\mbox{\hyperlink{classBillCaretaker_a91562589db6e7fbb2a2549b568fa74f0}{Bill\+Caretaker}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{classBillCaretaker}{Bill\+Caretaker}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBillCaretaker_a61d049ad40ba1654d3d1aa84223d8e96}{save\+Memento}} (const \mbox{\hyperlink{classBillMemento}{Bill\+Memento}} \&memento)
+\begin{DoxyCompactList}\small\item\em Saves the memento in the vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBillMemento}{Bill\+Memento}} \mbox{\hyperlink{classBillCaretaker_abda6cf868c1b559a1a28e37420ecb54a}{get\+Memento}} (int index) const
+\begin{DoxyCompactList}\small\item\em Returns the memento at a certain index. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBillCaretaker_a26a8eb2aeb2244b9d34c9a758258bf2b}{get\+Memento\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Function that returns the amount of the mementos stored in the vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class acts as the Caretaker in the \mbox{\hyperlink{classBill}{Bill}} Memento design pattern. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBillCaretaker_abda6cf868c1b559a1a28e37420ecb54a}\label{classBillCaretaker_abda6cf868c1b559a1a28e37420ecb54a}} 
+\index{BillCaretaker@{BillCaretaker}!getMemento@{getMemento}}
+\index{getMemento@{getMemento}!BillCaretaker@{BillCaretaker}}
+\doxysubsubsection{\texorpdfstring{getMemento()}{getMemento()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBillMemento}{Bill\+Memento}} Bill\+Caretaker\+::get\+Memento (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Returns the memento at a certain index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of the memento you want returned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a \mbox{\hyperlink{classBillMemento}{Bill\+Memento}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBillCaretaker_a26a8eb2aeb2244b9d34c9a758258bf2b}\label{classBillCaretaker_a26a8eb2aeb2244b9d34c9a758258bf2b}} 
+\index{BillCaretaker@{BillCaretaker}!getMementoCount@{getMementoCount}}
+\index{getMementoCount@{getMementoCount}!BillCaretaker@{BillCaretaker}}
+\doxysubsubsection{\texorpdfstring{getMementoCount()}{getMementoCount()}}
+{\footnotesize\ttfamily int Bill\+Caretaker\+::get\+Memento\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Function that returns the amount of the mementos stored in the vector. 
+
+\begin{DoxyReturn}{Returns}
+Returns integer value of the amount of mementos. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBillCaretaker_a61d049ad40ba1654d3d1aa84223d8e96}\label{classBillCaretaker_a61d049ad40ba1654d3d1aa84223d8e96}} 
+\index{BillCaretaker@{BillCaretaker}!saveMemento@{saveMemento}}
+\index{saveMemento@{saveMemento}!BillCaretaker@{BillCaretaker}}
+\doxysubsubsection{\texorpdfstring{saveMemento()}{saveMemento()}}
+{\footnotesize\ttfamily void Bill\+Caretaker\+::save\+Memento (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classBillMemento}{Bill\+Memento}} \&}]{memento }\end{DoxyParamCaption})}
+
+
+
+Saves the memento in the vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em memento} & \mbox{\hyperlink{classBillMemento}{Bill\+Memento}} object to save. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Floor/\mbox{\hyperlink{BillCaretaker_8h}{Bill\+Caretaker.\+h}}\item 
+src/\+Floor/Bill\+Caretaker.\+cpp\end{DoxyCompactItemize}

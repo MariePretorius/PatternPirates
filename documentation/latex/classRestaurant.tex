@@ -1,0 +1,124 @@
+\hypertarget{classRestaurant}{}\doxysection{Restaurant Class Reference}
+\label{classRestaurant}\index{Restaurant@{Restaurant}}
+
+
+\mbox{\hyperlink{classRestaurant}{Restaurant}} is a facade and a singleton. It is responsible for the game loop.  
+
+
+
+
+{\ttfamily \#include $<$Restaurant.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classRestaurant_a2e0df9e7801ae275c85da6965db3e0e8}{setup}} ()
+\item 
+void \mbox{\hyperlink{classRestaurant_a7717835eecbb8071d68ab22fde650eda}{simulate}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classRestaurant}{Restaurant}} $\ast$ \mbox{\hyperlink{classRestaurant_a718d24df92d626c2b3377afe7fdbdfab}{instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRestaurant_af72b2ed0971d325dc5d5dbf91e8462b5}{Restaurant}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor made protected so that outside classes can\textquotesingle{}t call it. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRestaurant_a0acbda90b1d7bd3f9ad043839a2e3629}{Restaurant}} (\mbox{\hyperlink{classRestaurant}{Restaurant}} \&restaurant)
+\begin{DoxyCompactList}\small\item\em Default copy constructor made protected so that outside classes can\textquotesingle{}t call it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRestaurant_a74487a120278bbcea590b60f0f419cf6}{operator=}} (\mbox{\hyperlink{classRestaurant}{Restaurant}} \&restaurant)
+\begin{DoxyCompactList}\small\item\em Operator overloading of operator= made protected so that outside classes can\textquotesingle{}t call it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRestaurant_a85d567ba9a1525503136e691943b235f}\label{classRestaurant_a85d567ba9a1525503136e691943b235f}} 
+void \mbox{\hyperlink{classRestaurant_a85d567ba9a1525503136e691943b235f}{Clean\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classRestaurant}{Restaurant}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classRestaurant}{Restaurant}} is a facade and a singleton. It is responsible for the game loop. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRestaurant_af72b2ed0971d325dc5d5dbf91e8462b5}\label{classRestaurant_af72b2ed0971d325dc5d5dbf91e8462b5}} 
+\index{Restaurant@{Restaurant}!Restaurant@{Restaurant}}
+\index{Restaurant@{Restaurant}!Restaurant@{Restaurant}}
+\doxysubsubsection{\texorpdfstring{Restaurant()}{Restaurant()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Restaurant\+::\+Restaurant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Default constructor made protected so that outside classes can\textquotesingle{}t call it. 
+
+Default constructor initialises the funds,kitchen and floor. It is protected and only accessed in the instance function. \mbox{\Hypertarget{classRestaurant_a0acbda90b1d7bd3f9ad043839a2e3629}\label{classRestaurant_a0acbda90b1d7bd3f9ad043839a2e3629}} 
+\index{Restaurant@{Restaurant}!Restaurant@{Restaurant}}
+\index{Restaurant@{Restaurant}!Restaurant@{Restaurant}}
+\doxysubsubsection{\texorpdfstring{Restaurant()}{Restaurant()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Restaurant\+::\+Restaurant (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRestaurant}{Restaurant}} \&}]{restaurant }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Default copy constructor made protected so that outside classes can\textquotesingle{}t call it. 
+
+Copy constructor doesn\textquotesingle{}t do anything, its just declared and protected so that no other class can initialise another restaurant object 
+\begin{DoxyParams}{Parameters}
+{\em restaurant} & object which should be copied \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRestaurant_a718d24df92d626c2b3377afe7fdbdfab}\label{classRestaurant_a718d24df92d626c2b3377afe7fdbdfab}} 
+\index{Restaurant@{Restaurant}!instance@{instance}}
+\index{instance@{instance}!Restaurant@{Restaurant}}
+\doxysubsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRestaurant}{Restaurant}} $\ast$ Restaurant\+::instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+instance is part of the singleton pattern it ensures that there is only one instance of \mbox{\hyperlink{classRestaurant}{Restaurant}} \begin{DoxyReturn}{Returns}
+returns the unuque\+Instance
+\end{DoxyReturn}
+instance checks if unique\+Instance is null. If it is, it then initiates unique\+Instance and then returns it. \begin{DoxyReturn}{Returns}
+returns the unique\+Instance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRestaurant_a74487a120278bbcea590b60f0f419cf6}\label{classRestaurant_a74487a120278bbcea590b60f0f419cf6}} 
+\index{Restaurant@{Restaurant}!operator=@{operator=}}
+\index{operator=@{operator=}!Restaurant@{Restaurant}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily void Restaurant\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRestaurant}{Restaurant}} \&}]{restaurant }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Operator overloading of operator= made protected so that outside classes can\textquotesingle{}t call it. 
+
+Overloading operator= and since it is protected, ensures that no other class can call this and creating another instance of restaurant 
+\begin{DoxyParams}{Parameters}
+{\em restaurant} & object that needs to be created \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRestaurant_a2e0df9e7801ae275c85da6965db3e0e8}\label{classRestaurant_a2e0df9e7801ae275c85da6965db3e0e8}} 
+\index{Restaurant@{Restaurant}!setup@{setup}}
+\index{setup@{setup}!Restaurant@{Restaurant}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void Restaurant\+::setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+setup instantiates the kitchen, funds and floor. It also gets user input to populate the shelf with ingredients.
+
+Setup part of \mbox{\hyperlink{classRestaurant}{Restaurant}} gets user input to set funds,buy stock and set the number of waiters employed \mbox{\Hypertarget{classRestaurant_a7717835eecbb8071d68ab22fde650eda}\label{classRestaurant_a7717835eecbb8071d68ab22fde650eda}} 
+\index{Restaurant@{Restaurant}!simulate@{simulate}}
+\index{simulate@{simulate}!Restaurant@{Restaurant}}
+\doxysubsubsection{\texorpdfstring{simulate()}{simulate()}}
+{\footnotesize\ttfamily void Restaurant\+::simulate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+simulate is responsible for the game loop , calling all the necessary functions from floor and kitchen
+
+Simulation part of \mbox{\hyperlink{classRestaurant}{Restaurant}} creates the customers waiting to be seated,all the tables on the floor and tells the host to seat all the customers.\+Then sends the waiters to wait on the occupied tables.\+Simulation is also responsible for the transferring of orders from waiters to the kitchen and finished orders back from the kitchen to the waiters Creating randomized customers to queue to be seated at tables
+
+sending customers vector to floor for storing so that host can seat the customers
+
+Creating all the tables on the floor so that host and waiter can access the tables
+
+Creating \mbox{\hyperlink{classHost}{Host}} who will get waiting customers and seating them at tables
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Restaurant/\mbox{\hyperlink{Restaurant_8h}{Restaurant.\+h}}\item 
+src/\+Restaurant/Restaurant.\+cpp\end{DoxyCompactItemize}

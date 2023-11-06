@@ -1,0 +1,66 @@
+\hypertarget{classGriller}{}\doxysection{Griller Class Reference}
+\label{classGriller}\index{Griller@{Griller}}
+
+
+Inheritance diagram for Griller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=127pt]{classGriller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Griller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=127pt]{classGriller__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classGriller_ae5a03bdf0346a44bc7f534365cf62cbd}{prepare\+Station}} () override
+\item 
+\mbox{\hyperlink{classIngredient}{Ingredient}} $\ast$ \mbox{\hyperlink{classGriller_a05ad34c7e0986cc6793b6b796446bb28}{cook\+Ingredient}} (\mbox{\hyperlink{classIngredient}{Ingredient}} $\ast$ingredient) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGriller_a05ad34c7e0986cc6793b6b796446bb28}\label{classGriller_a05ad34c7e0986cc6793b6b796446bb28}} 
+\index{Griller@{Griller}!cookIngredient@{cookIngredient}}
+\index{cookIngredient@{cookIngredient}!Griller@{Griller}}
+\doxysubsubsection{\texorpdfstring{cookIngredient()}{cookIngredient()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIngredient}{Ingredient}} $\ast$ Griller\+::cook\+Ingredient (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIngredient}{Ingredient}} $\ast$}]{ingredient }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\hyperlink{classCook}{Cook}} an ingredient using the griller and change its condition to grilled. 
+\begin{DoxyParams}{Parameters}
+{\em ingredient} & A pointer to the \mbox{\hyperlink{classIngredient}{Ingredient}} to be grilled. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the grilled \mbox{\hyperlink{classIngredient}{Ingredient}}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCook_a7958930755f85eac38e4f7d0e1ad6b61}{Cook}}.
+
+\mbox{\Hypertarget{classGriller_ae5a03bdf0346a44bc7f534365cf62cbd}\label{classGriller_ae5a03bdf0346a44bc7f534365cf62cbd}} 
+\index{Griller@{Griller}!prepareStation@{prepareStation}}
+\index{prepareStation@{prepareStation}!Griller@{Griller}}
+\doxysubsubsection{\texorpdfstring{prepareStation()}{prepareStation()}}
+{\footnotesize\ttfamily void Griller\+::prepare\+Station (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Prepare the fryer station by heating the stove. 
+
+Implements \mbox{\hyperlink{classCook_ad02a20a4529be145309a034efdc2b62b}{Cook}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Kitchen/\mbox{\hyperlink{Griller_8h}{Griller.\+h}}\item 
+src/\+Kitchen/Griller.\+cpp\end{DoxyCompactItemize}
