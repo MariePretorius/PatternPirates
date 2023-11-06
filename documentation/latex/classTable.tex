@@ -1,0 +1,163 @@
+\hypertarget{classTable}{}\doxysection{Table Class Reference}
+\label{classTable}\index{Table@{Table}}
+
+
+This class represents the tables customer will be seated at.  
+
+
+
+
+{\ttfamily \#include $<$Table.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTable_ada87a10881c7be79cbb9d895be71fe9b}{Table}} (int table\+Number, int capacity)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classTable}{Table}} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTable_a42268c7ea88196acd40d3d2969f645ed}{assign\+Customers}} (list$<$ \mbox{\hyperlink{classCustomer}{Customer}} $\ast$ $>$ customers)
+\begin{DoxyCompactList}\small\item\em Assign a list of customers to the table. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTable_aef0b0f28f9a44672f0dc02500115c41b}\label{classTable_aef0b0f28f9a44672f0dc02500115c41b}} 
+void \mbox{\hyperlink{classTable_aef0b0f28f9a44672f0dc02500115c41b}{remove\+Customers}} ()
+\begin{DoxyCompactList}\small\item\em Remove all customers from the table. This function removes all customers currently seated at the table. \end{DoxyCompactList}\item 
+list$<$ \mbox{\hyperlink{classCustomer}{Customer}} $\ast$ $>$ $\ast$ \mbox{\hyperlink{classTable_a5a306b46d5d7096ed71202f63ba5d57e}{get\+Customers}} ()
+\begin{DoxyCompactList}\small\item\em Get the list of customers seated at the table. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTable_a4e32a8981d47615478503512bcc58b09}{get\+Capacity}} ()
+\begin{DoxyCompactList}\small\item\em Get the capacity of the table. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTable_a16300a294b7a845688eb99af5671b1c1}{get\+Table\+Number}} ()
+\begin{DoxyCompactList}\small\item\em Get the table number. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTable_aa1a9241f0a322ef6daa51ce7ea1ae67a}{is\+Occupied}} ()
+\begin{DoxyCompactList}\small\item\em Check if the table is currently occupied. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTable_ad95e82a505351f2abe7a1ccd67bf32f6}{assign\+Dishes}} (vector$<$ \mbox{\hyperlink{classDish}{Dish}} $\ast$ $>$ $\ast$dishes)
+\begin{DoxyCompactList}\small\item\em Assign a vector of \mbox{\hyperlink{classDish}{Dish}} pointers to the \mbox{\hyperlink{classRestaurant}{Restaurant}}. This function sets the dishes on the \mbox{\hyperlink{classTable}{Table}} by assigning a vector of \mbox{\hyperlink{classDish}{Dish}} pointers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTable_ac8bd90129e5f014262c39c681ecee6a9}\label{classTable_ac8bd90129e5f014262c39c681ecee6a9}} 
+void \mbox{\hyperlink{classTable_ac8bd90129e5f014262c39c681ecee6a9}{check\+Dishes}} ()
+\begin{DoxyCompactList}\small\item\em Check the state of the Customers and clear the dishes if necessary. This function checks the state of the Customers at the \mbox{\hyperlink{classTable}{Table}} and clears the dishes if all customers are in the \char`\"{}\+Bill Requested\char`\"{} state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTable_a91251021369b4920f0460b7f23f695ba}{done\+Eating}} ()
+\begin{DoxyCompactList}\small\item\em Check if all customers have finished eating. This function checks the state of all customers to determine if they have finished eating. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents the tables customer will be seated at. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTable_ada87a10881c7be79cbb9d895be71fe9b}\label{classTable_ada87a10881c7be79cbb9d895be71fe9b}} 
+\index{Table@{Table}!Table@{Table}}
+\index{Table@{Table}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{Table()}{Table()}}
+{\footnotesize\ttfamily Table\+::\+Table (\begin{DoxyParamCaption}\item[{int}]{table\+Number,  }\item[{int}]{capacity }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{classTable}{Table}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+Number} & The unique identifier for the table. \\
+\hline
+{\em capacity} & The maximum number of customers the table can accommodate. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTable_a42268c7ea88196acd40d3d2969f645ed}\label{classTable_a42268c7ea88196acd40d3d2969f645ed}} 
+\index{Table@{Table}!assignCustomers@{assignCustomers}}
+\index{assignCustomers@{assignCustomers}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{assignCustomers()}{assignCustomers()}}
+{\footnotesize\ttfamily void Table\+::assign\+Customers (\begin{DoxyParamCaption}\item[{list$<$ \mbox{\hyperlink{classCustomer}{Customer}} $\ast$ $>$}]{customers }\end{DoxyParamCaption})}
+
+
+
+Assign a list of customers to the table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em customers} & A list of \mbox{\hyperlink{classCustomer}{Customer}} objects to be assigned to the table. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTable_ad95e82a505351f2abe7a1ccd67bf32f6}\label{classTable_ad95e82a505351f2abe7a1ccd67bf32f6}} 
+\index{Table@{Table}!assignDishes@{assignDishes}}
+\index{assignDishes@{assignDishes}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{assignDishes()}{assignDishes()}}
+{\footnotesize\ttfamily void Table\+::assign\+Dishes (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classDish}{Dish}} $\ast$ $>$ $\ast$}]{dishes }\end{DoxyParamCaption})}
+
+
+
+Assign a vector of \mbox{\hyperlink{classDish}{Dish}} pointers to the \mbox{\hyperlink{classRestaurant}{Restaurant}}. This function sets the dishes on the \mbox{\hyperlink{classTable}{Table}} by assigning a vector of \mbox{\hyperlink{classDish}{Dish}} pointers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dishes} & A vector of \mbox{\hyperlink{classDish}{Dish}} pointers to be assigned to the \mbox{\hyperlink{classTable}{Table}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTable_a91251021369b4920f0460b7f23f695ba}\label{classTable_a91251021369b4920f0460b7f23f695ba}} 
+\index{Table@{Table}!doneEating@{doneEating}}
+\index{doneEating@{doneEating}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{doneEating()}{doneEating()}}
+{\footnotesize\ttfamily bool Table\+::done\+Eating (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check if all customers have finished eating. This function checks the state of all customers to determine if they have finished eating. 
+
+\begin{DoxyReturn}{Returns}
+True if all customers have finished eating; False otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTable_a4e32a8981d47615478503512bcc58b09}\label{classTable_a4e32a8981d47615478503512bcc58b09}} 
+\index{Table@{Table}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily int Table\+::get\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the capacity of the table. 
+
+\begin{DoxyReturn}{Returns}
+The maximum number of customers the table can accommodate. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTable_a5a306b46d5d7096ed71202f63ba5d57e}\label{classTable_a5a306b46d5d7096ed71202f63ba5d57e}} 
+\index{Table@{Table}!getCustomers@{getCustomers}}
+\index{getCustomers@{getCustomers}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getCustomers()}{getCustomers()}}
+{\footnotesize\ttfamily list$<$ \mbox{\hyperlink{classCustomer}{Customer}} $\ast$ $>$ $\ast$ Table\+::get\+Customers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the list of customers seated at the table. 
+
+\begin{DoxyReturn}{Returns}
+A list of \mbox{\hyperlink{classCustomer}{Customer}} objects currently seated at the table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTable_a16300a294b7a845688eb99af5671b1c1}\label{classTable_a16300a294b7a845688eb99af5671b1c1}} 
+\index{Table@{Table}!getTableNumber@{getTableNumber}}
+\index{getTableNumber@{getTableNumber}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getTableNumber()}{getTableNumber()}}
+{\footnotesize\ttfamily int Table\+::get\+Table\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the table number. 
+
+\begin{DoxyReturn}{Returns}
+The unique identifier for the table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTable_aa1a9241f0a322ef6daa51ce7ea1ae67a}\label{classTable_aa1a9241f0a322ef6daa51ce7ea1ae67a}} 
+\index{Table@{Table}!isOccupied@{isOccupied}}
+\index{isOccupied@{isOccupied}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{isOccupied()}{isOccupied()}}
+{\footnotesize\ttfamily bool Table\+::is\+Occupied (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check if the table is currently occupied. 
+
+\begin{DoxyReturn}{Returns}
+True if the table is occupied, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Floor/\mbox{\hyperlink{Table_8h}{Table.\+h}}\item 
+src/\+Floor/Table.\+cpp\end{DoxyCompactItemize}

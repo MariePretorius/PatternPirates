@@ -1,0 +1,220 @@
+\hypertarget{classBill}{}\doxysection{Bill Class Reference}
+\label{classBill}\index{Bill@{Bill}}
+
+
+The \mbox{\hyperlink{classBill}{Bill}} class is the originator in the Memento pattern.  
+
+
+
+
+{\ttfamily \#include $<$Bill.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBill_a59778bdd23e6ec957ce5ced2c8290e75}\label{classBill_a59778bdd23e6ec957ce5ced2c8290e75}} 
+\mbox{\hyperlink{classBill_a59778bdd23e6ec957ce5ced2c8290e75}{Bill}} (\mbox{\hyperlink{classCustomer}{Customer}} $\ast$customer, \mbox{\hyperlink{classFinance}{Finance}} $\ast$f, \mbox{\hyperlink{classTable}{Table}} $\ast$table)
+\begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{classBill}{Bill}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBill_a56cb494b104c2919cc7664c85822f7f1}{add\+Item}} (const std\+::string \&item, double cost)
+\begin{DoxyCompactList}\small\item\em Function to add items onto the bill. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBill_ad28940a69a8310ad39968847e1597977}{remove\+Item}} (std\+::string item, double cost)
+\begin{DoxyCompactList}\small\item\em Function to remove items onto the bill. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBillMemento}{Bill\+Memento}} \mbox{\hyperlink{classBill_ac48917caeeb44097483bae1c9052eb07}{create\+Memento}} () const
+\begin{DoxyCompactList}\small\item\em Function to create the \mbox{\hyperlink{classBill}{Bill}} Memento. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBill_af52787cf391ede696dc714b988aab7c5}{restore\+From\+Memento}} (const \mbox{\hyperlink{classBillMemento}{Bill\+Memento}} \&memento)
+\begin{DoxyCompactList}\small\item\em Restores the info from the given Memento. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBill_adb62a90a152b98137f49a7e35bec8cfd}\label{classBill_adb62a90a152b98137f49a7e35bec8cfd}} 
+void \mbox{\hyperlink{classBill_adb62a90a152b98137f49a7e35bec8cfd}{show\+Bill}} () const
+\begin{DoxyCompactList}\small\item\em Displayes the current state of the bill. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classBill_a1d33934f9e46335f2cd8c50151273ed2}{show\+Bill}} (bool testing)
+\begin{DoxyCompactList}\small\item\em Returns a string that displayes the current state of the bill. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBill_aaeb0e3ae6a70d0a725550611523f8b4d}{set\+Tab}} (bool tab)
+\begin{DoxyCompactList}\small\item\em Set the tab boolean value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBill_abb3d3729516930d8863d23f18c9ce48e}{pay\+Bill}} (int id)
+\begin{DoxyCompactList}\small\item\em Pay the bill with the given amount if at least the cost is given. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBill_a6c60fd311a37365aece6a733fdb26803}{is\+Paid}} ()
+\begin{DoxyCompactList}\small\item\em Function to check whether the bill has been paid. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTable}{Table}} $\ast$ \mbox{\hyperlink{classBill_a7c0ba707b32775ccd8c36c9d793bbe1b}{get\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Function that returns a reference to the table the bill belongs to. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCustomer}{Customer}} $\ast$ \mbox{\hyperlink{classBill_a65461ee3a139acebd98cf8f96d61fe95}{get\+Customer}} ()
+\begin{DoxyCompactList}\small\item\em Function that returns a reference to the customer the bill belongs to. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBill_a1321096549c9a530a291c9857360b5a8}{get\+Tab}} ()
+\begin{DoxyCompactList}\small\item\em Function that returns a boolean value true id the bill is a tab. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classBill}{Bill}} class is the originator in the Memento pattern. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBill_a56cb494b104c2919cc7664c85822f7f1}\label{classBill_a56cb494b104c2919cc7664c85822f7f1}} 
+\index{Bill@{Bill}!addItem@{addItem}}
+\index{addItem@{addItem}!Bill@{Bill}}
+\doxysubsubsection{\texorpdfstring{addItem()}{addItem()}}
+{\footnotesize\ttfamily void Bill\+::add\+Item (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{item,  }\item[{double}]{cost }\end{DoxyParamCaption})}
+
+
+
+Function to add items onto the bill. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The menu item to be added onto the bill. \\
+\hline
+{\em cost} & The price of the menu item to be added onto the bill. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBill_ac48917caeeb44097483bae1c9052eb07}\label{classBill_ac48917caeeb44097483bae1c9052eb07}} 
+\index{Bill@{Bill}!createMemento@{createMemento}}
+\index{createMemento@{createMemento}!Bill@{Bill}}
+\doxysubsubsection{\texorpdfstring{createMemento()}{createMemento()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBillMemento}{Bill\+Memento}} Bill\+::create\+Memento (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Function to create the \mbox{\hyperlink{classBill}{Bill}} Memento. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classBillMemento}{Bill\+Memento}} object is returned. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBill_a65461ee3a139acebd98cf8f96d61fe95}\label{classBill_a65461ee3a139acebd98cf8f96d61fe95}} 
+\index{Bill@{Bill}!getCustomer@{getCustomer}}
+\index{getCustomer@{getCustomer}!Bill@{Bill}}
+\doxysubsubsection{\texorpdfstring{getCustomer()}{getCustomer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCustomer}{Customer}} $\ast$ Bill\+::get\+Customer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function that returns a reference to the customer the bill belongs to. 
+
+\begin{DoxyReturn}{Returns}
+Returns a reference to a \mbox{\hyperlink{classCustomer}{Customer}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBill_a1321096549c9a530a291c9857360b5a8}\label{classBill_a1321096549c9a530a291c9857360b5a8}} 
+\index{Bill@{Bill}!getTab@{getTab}}
+\index{getTab@{getTab}!Bill@{Bill}}
+\doxysubsubsection{\texorpdfstring{getTab()}{getTab()}}
+{\footnotesize\ttfamily bool Bill\+::get\+Tab (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function that returns a boolean value true id the bill is a tab. 
+
+\begin{DoxyReturn}{Returns}
+Returns a boolean value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBill_a7c0ba707b32775ccd8c36c9d793bbe1b}\label{classBill_a7c0ba707b32775ccd8c36c9d793bbe1b}} 
+\index{Bill@{Bill}!getTable@{getTable}}
+\index{getTable@{getTable}!Bill@{Bill}}
+\doxysubsubsection{\texorpdfstring{getTable()}{getTable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTable}{Table}} $\ast$ Bill\+::get\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function that returns a reference to the table the bill belongs to. 
+
+\begin{DoxyReturn}{Returns}
+Returns a reference to a \mbox{\hyperlink{classTable}{Table}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBill_a6c60fd311a37365aece6a733fdb26803}\label{classBill_a6c60fd311a37365aece6a733fdb26803}} 
+\index{Bill@{Bill}!isPaid@{isPaid}}
+\index{isPaid@{isPaid}!Bill@{Bill}}
+\doxysubsubsection{\texorpdfstring{isPaid()}{isPaid()}}
+{\footnotesize\ttfamily bool Bill\+::is\+Paid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to check whether the bill has been paid. 
+
+\begin{DoxyReturn}{Returns}
+Returns true if bill is paid and false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBill_abb3d3729516930d8863d23f18c9ce48e}\label{classBill_abb3d3729516930d8863d23f18c9ce48e}} 
+\index{Bill@{Bill}!payBill@{payBill}}
+\index{payBill@{payBill}!Bill@{Bill}}
+\doxysubsubsection{\texorpdfstring{payBill()}{payBill()}}
+{\footnotesize\ttfamily void Bill\+::pay\+Bill (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Pay the bill with the given amount if at least the cost is given. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ID of the customer the bill belongs to.\\
+\hline
+{\em id} & ID of the customer the bill belongs to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBill_ad28940a69a8310ad39968847e1597977}\label{classBill_ad28940a69a8310ad39968847e1597977}} 
+\index{Bill@{Bill}!removeItem@{removeItem}}
+\index{removeItem@{removeItem}!Bill@{Bill}}
+\doxysubsubsection{\texorpdfstring{removeItem()}{removeItem()}}
+{\footnotesize\ttfamily void Bill\+::remove\+Item (\begin{DoxyParamCaption}\item[{std\+::string}]{item,  }\item[{double}]{cost }\end{DoxyParamCaption})}
+
+
+
+Function to remove items onto the bill. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The menu item to be removed from the bill. \\
+\hline
+{\em cost} & The price of the menu item to be removed from the bill. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBill_af52787cf391ede696dc714b988aab7c5}\label{classBill_af52787cf391ede696dc714b988aab7c5}} 
+\index{Bill@{Bill}!restoreFromMemento@{restoreFromMemento}}
+\index{restoreFromMemento@{restoreFromMemento}!Bill@{Bill}}
+\doxysubsubsection{\texorpdfstring{restoreFromMemento()}{restoreFromMemento()}}
+{\footnotesize\ttfamily void Bill\+::restore\+From\+Memento (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classBillMemento}{Bill\+Memento}} \&}]{memento }\end{DoxyParamCaption})}
+
+
+
+Restores the info from the given Memento. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em memento} & \mbox{\hyperlink{classBillMemento}{Bill\+Memento}} object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBill_aaeb0e3ae6a70d0a725550611523f8b4d}\label{classBill_aaeb0e3ae6a70d0a725550611523f8b4d}} 
+\index{Bill@{Bill}!setTab@{setTab}}
+\index{setTab@{setTab}!Bill@{Bill}}
+\doxysubsubsection{\texorpdfstring{setTab()}{setTab()}}
+{\footnotesize\ttfamily void Bill\+::set\+Tab (\begin{DoxyParamCaption}\item[{bool}]{tab }\end{DoxyParamCaption})}
+
+
+
+Set the tab boolean value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & Boolean value to set the tab variable. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBill_a1d33934f9e46335f2cd8c50151273ed2}\label{classBill_a1d33934f9e46335f2cd8c50151273ed2}} 
+\index{Bill@{Bill}!showBill@{showBill}}
+\index{showBill@{showBill}!Bill@{Bill}}
+\doxysubsubsection{\texorpdfstring{showBill()}{showBill()}}
+{\footnotesize\ttfamily std\+::string Bill\+::show\+Bill (\begin{DoxyParamCaption}\item[{bool}]{testing }\end{DoxyParamCaption})}
+
+
+
+Returns a string that displayes the current state of the bill. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em testing} & Used in unit testing. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a string of the bill state.
+
+Returns a string of the bill state. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Floor/\mbox{\hyperlink{Bill_8h}{Bill.\+h}}\item 
+src/\+Floor/Bill.\+cpp\end{DoxyCompactItemize}

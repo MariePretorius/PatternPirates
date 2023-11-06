@@ -1,0 +1,5 @@
+<map id="PrepChef" name="PrepChef">
+<area shape="rect" id="node1" title="Declaration of the PrepChef class, first used in the CoR." alt="" coords="5,171,87,197"/>
+<area shape="rect" id="node2" href="$classChef.html" title="Represents a chef in a restaurant kitchen." alt="" coords="20,95,72,121"/>
+<area shape="rect" id="node3" href="$classKitchen.html" title="Represents the kitchen in the restaurant." alt="" coords="11,5,81,32"/>
+</map>

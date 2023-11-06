@@ -1,0 +1,134 @@
+\hypertarget{classWaiter}{}\doxysection{Waiter Class Reference}
+\label{classWaiter}\index{Waiter@{Waiter}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWaiter_aa859a5fc6d7b6e7bc70c5cb84cb35608}{Waiter}} (\mbox{\hyperlink{classFinance}{Finance}} $\ast$finance, \mbox{\hyperlink{classRatings}{Ratings}} $\ast$ratings)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWaiter}{Waiter}} Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWaiter_ab673aeb1b29f34188ffd764fab457125}\label{classWaiter_ab673aeb1b29f34188ffd764fab457125}} 
+void {\bfseries move\+To\+Next} ()
+\item 
+void \mbox{\hyperlink{classWaiter_a180ab92237e4f33cd932bf6975735e14}{add\+Table\+To\+Wait}} (\mbox{\hyperlink{classTable}{Table}} $\ast$new\+Table)
+\begin{DoxyCompactList}\small\item\em Adds a table to the waiter\textquotesingle{}s list of tables which they wait. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWaiter_a90a8d57e0f90b22d55f24607ff25a4a1}\label{classWaiter_a90a8d57e0f90b22d55f24607ff25a4a1}} 
+void {\bfseries add\+Order} (\mbox{\hyperlink{classFoodOrder}{Food\+Order}} $\ast$new\+Order)
+\item 
+\mbox{\Hypertarget{classWaiter_a25d92137a5b5a009af572bc9cee2e859}\label{classWaiter_a25d92137a5b5a009af572bc9cee2e859}} 
+std\+::vector$<$ \mbox{\hyperlink{classFoodOrder}{Food\+Order}} $\ast$ $>$ $\ast$ {\bfseries give\+Orders} ()
+\item 
+\mbox{\Hypertarget{classWaiter_a7b9dacc31f2024086e107653b3e46882}\label{classWaiter_a7b9dacc31f2024086e107653b3e46882}} 
+void {\bfseries get\+Orders\+From\+Curr\+Table} ()
+\item 
+\mbox{\Hypertarget{classWaiter_a77960c7c53f3074c9f10ca0d3ea633a6}\label{classWaiter_a77960c7c53f3074c9f10ca0d3ea633a6}} 
+void {\bfseries create\+Bill} (bool split, \mbox{\hyperlink{classTable}{Table}} $\ast$curr\+Table)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classFoodOrder}{Food\+Order}} $\ast$ $>$ $\ast$ \mbox{\hyperlink{classWaiter_a4ae759c97c8ae103380bb9486e69b8ed}{fetch\+Orders}} ()
+\begin{DoxyCompactList}\small\item\em gets the \mbox{\hyperlink{classWaiter}{Waiter}}\textquotesingle{}s orders \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWaiter_ad69141181b222eb0ccd6802be27ec04e}{add\+Dish\+To\+Hand}} (\mbox{\hyperlink{classDish}{Dish}} $\ast$dish)
+\begin{DoxyCompactList}\small\item\em Adds a dish to the waiter\textquotesingle{}s hand vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWaiter_a737a8485cae033848eb9879a4e259ae0}\label{classWaiter_a737a8485cae033848eb9879a4e259ae0}} 
+void \mbox{\hyperlink{classWaiter_a737a8485cae033848eb9879a4e259ae0}{get\+Orders}} ()
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classWaiter}{Waiter}} will go to each table and fetch the orders from each customer seated at each table. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classTable}{Table}} $\ast$ $>$ $\ast$ \mbox{\hyperlink{classWaiter_acb52fb772ad6162dfdcd1ccf4614f1de}{get\+Tables}} ()
+\begin{DoxyCompactList}\small\item\em Returns the list of all tables waited by this waiter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWaiter_a6049aaf8fc1a0be08c06fb1560401fbd}\label{classWaiter_a6049aaf8fc1a0be08c06fb1560401fbd}} 
+void \mbox{\hyperlink{classWaiter_a6049aaf8fc1a0be08c06fb1560401fbd}{pass\+Orders\+To\+Tables}} ()
+\begin{DoxyCompactList}\small\item\em Drops the orders off at their respective tables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWaiter_acccd38aefffb323cca7bc83d7deaf336}{do\+Rounds}} ()
+\begin{DoxyCompactList}\small\item\em Goes through this waiter\textquotesingle{}s list of tables and checks if all customers a requesting bill, and then has them pay the bill. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWaiter_aa859a5fc6d7b6e7bc70c5cb84cb35608}\label{classWaiter_aa859a5fc6d7b6e7bc70c5cb84cb35608}} 
+\index{Waiter@{Waiter}!Waiter@{Waiter}}
+\index{Waiter@{Waiter}!Waiter@{Waiter}}
+\doxysubsubsection{\texorpdfstring{Waiter()}{Waiter()}}
+{\footnotesize\ttfamily Waiter\+::\+Waiter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFinance}{Finance}} $\ast$}]{finance,  }\item[{\mbox{\hyperlink{classRatings}{Ratings}} $\ast$}]{ratings }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classWaiter}{Waiter}} Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em finance} & takes in a finance object \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWaiter_ad69141181b222eb0ccd6802be27ec04e}\label{classWaiter_ad69141181b222eb0ccd6802be27ec04e}} 
+\index{Waiter@{Waiter}!addDishToHand@{addDishToHand}}
+\index{addDishToHand@{addDishToHand}!Waiter@{Waiter}}
+\doxysubsubsection{\texorpdfstring{addDishToHand()}{addDishToHand()}}
+{\footnotesize\ttfamily void Waiter\+::add\+Dish\+To\+Hand (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDish}{Dish}} $\ast$}]{dish }\end{DoxyParamCaption})}
+
+
+
+Adds a dish to the waiter\textquotesingle{}s hand vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dish} & A dish pointer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWaiter_a180ab92237e4f33cd932bf6975735e14}\label{classWaiter_a180ab92237e4f33cd932bf6975735e14}} 
+\index{Waiter@{Waiter}!addTableToWait@{addTableToWait}}
+\index{addTableToWait@{addTableToWait}!Waiter@{Waiter}}
+\doxysubsubsection{\texorpdfstring{addTableToWait()}{addTableToWait()}}
+{\footnotesize\ttfamily void Waiter\+::add\+Table\+To\+Wait (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTable}{Table}} $\ast$}]{new\+Table }\end{DoxyParamCaption})}
+
+
+
+Adds a table to the waiter\textquotesingle{}s list of tables which they wait. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Table} & A table pointer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWaiter_acccd38aefffb323cca7bc83d7deaf336}\label{classWaiter_acccd38aefffb323cca7bc83d7deaf336}} 
+\index{Waiter@{Waiter}!doRounds@{doRounds}}
+\index{doRounds@{doRounds}!Waiter@{Waiter}}
+\doxysubsubsection{\texorpdfstring{doRounds()}{doRounds()}}
+{\footnotesize\ttfamily void Waiter\+::do\+Rounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Goes through this waiter\textquotesingle{}s list of tables and checks if all customers a requesting bill, and then has them pay the bill. 
+
+\begin{DoxyReturn}{Returns}
+double The average Rating of all the waiter\textquotesingle{}s tables 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWaiter_a4ae759c97c8ae103380bb9486e69b8ed}\label{classWaiter_a4ae759c97c8ae103380bb9486e69b8ed}} 
+\index{Waiter@{Waiter}!fetchOrders@{fetchOrders}}
+\index{fetchOrders@{fetchOrders}!Waiter@{Waiter}}
+\doxysubsubsection{\texorpdfstring{fetchOrders()}{fetchOrders()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classFoodOrder}{Food\+Order}} $\ast$ $>$ $\ast$ Waiter\+::fetch\+Orders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+gets the \mbox{\hyperlink{classWaiter}{Waiter}}\textquotesingle{}s orders 
+
+\begin{DoxyReturn}{Returns}
+a vector of \mbox{\hyperlink{classFoodOrder}{Food\+Order}} pointers 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWaiter_acb52fb772ad6162dfdcd1ccf4614f1de}\label{classWaiter_acb52fb772ad6162dfdcd1ccf4614f1de}} 
+\index{Waiter@{Waiter}!getTables@{getTables}}
+\index{getTables@{getTables}!Waiter@{Waiter}}
+\doxysubsubsection{\texorpdfstring{getTables()}{getTables()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classTable}{Table}} $\ast$ $>$ $\ast$ Waiter\+::get\+Tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the list of all tables waited by this waiter. 
+
+\begin{DoxyReturn}{Returns}
+a pointer to a vector of table pointers 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Floor/Waiter.\+h\item 
+src/\+Floor/Waiter.\+cpp\end{DoxyCompactItemize}

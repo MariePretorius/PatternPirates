@@ -1,0 +1,60 @@
+\hypertarget{classDish}{}\doxysection{Dish Class Reference}
+\label{classDish}\index{Dish@{Dish}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classDish_a86652634f1444504f365bf4abab2c83b}{get\+Table\+Id}} ()
+\item 
+\mbox{\hyperlink{classDish_aeb51340f0e6a2bffe731adae2ea2b51b}{Dish}} (double cond, \mbox{\hyperlink{classCustomer}{Customer}} $\ast$customer, int table\+Id, \mbox{\hyperlink{classBill}{Bill}} $\ast$bill)
+\item 
+void \mbox{\hyperlink{classDish_aead8d2458b3871f0273c93a62d150c56}{add\+Ingredient}} (\mbox{\hyperlink{classIngredient}{Ingredient}} $\ast$)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDish_aeb51340f0e6a2bffe731adae2ea2b51b}\label{classDish_aeb51340f0e6a2bffe731adae2ea2b51b}} 
+\index{Dish@{Dish}!Dish@{Dish}}
+\index{Dish@{Dish}!Dish@{Dish}}
+\doxysubsubsection{\texorpdfstring{Dish()}{Dish()}}
+{\footnotesize\ttfamily Dish\+::\+Dish (\begin{DoxyParamCaption}\item[{double}]{cond,  }\item[{\mbox{\hyperlink{classCustomer}{Customer}} $\ast$}]{customer,  }\item[{int}]{table\+Id,  }\item[{\mbox{\hyperlink{classBill}{Bill}} $\ast$}]{bill }\end{DoxyParamCaption})}
+
+Constructor for the \mbox{\hyperlink{classDish}{Dish}} class. 
+\begin{DoxyParams}{Parameters}
+{\em cond} & The condition of the dish. \\
+\hline
+{\em customer} & A pointer to the \mbox{\hyperlink{classCustomer}{Customer}} who ordered the dish. \\
+\hline
+{\em table\+Id} & The ID of the table where the dish is served. \\
+\hline
+{\em bill} & A pointer to the \mbox{\hyperlink{classBill}{Bill}} associated with the dish. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDish_aead8d2458b3871f0273c93a62d150c56}\label{classDish_aead8d2458b3871f0273c93a62d150c56}} 
+\index{Dish@{Dish}!addIngredient@{addIngredient}}
+\index{addIngredient@{addIngredient}!Dish@{Dish}}
+\doxysubsubsection{\texorpdfstring{addIngredient()}{addIngredient()}}
+{\footnotesize\ttfamily void Dish\+::add\+Ingredient (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIngredient}{Ingredient}} $\ast$}]{ingredient }\end{DoxyParamCaption})}
+
+Add an ingredient to the dish. 
+\begin{DoxyParams}{Parameters}
+{\em ingredient} & A pointer to the \mbox{\hyperlink{classIngredient}{Ingredient}} to be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDish_a86652634f1444504f365bf4abab2c83b}\label{classDish_a86652634f1444504f365bf4abab2c83b}} 
+\index{Dish@{Dish}!getTableId@{getTableId}}
+\index{getTableId@{getTableId}!Dish@{Dish}}
+\doxysubsubsection{\texorpdfstring{getTableId()}{getTableId()}}
+{\footnotesize\ttfamily int Dish\+::get\+Table\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the table ID where the dish is served. \begin{DoxyReturn}{Returns}
+The table ID. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Restaurant/\mbox{\hyperlink{Dish_8h}{Dish.\+h}}\item 
+src/\+Restaurant/Dish.\+cpp\end{DoxyCompactItemize}

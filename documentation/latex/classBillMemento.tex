@@ -1,0 +1,74 @@
+\hypertarget{classBillMemento}{}\doxysection{Bill\+Memento Class Reference}
+\label{classBillMemento}\index{BillMemento@{BillMemento}}
+
+
+The \mbox{\hyperlink{classBillMemento}{Bill\+Memento}} class acts as the Memento participant in the \mbox{\hyperlink{classBill}{Bill}} Memento design pattern.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBillMemento_a6ccc366b976eb424ded905014ebf9a47}{Bill\+Memento}} (const std\+::vector$<$ std\+::string $>$ \&bill\+Items, double cost)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for the \mbox{\hyperlink{classBillMemento}{Bill\+Memento}} class. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classBillMemento_a599cc3185567f8d2299b70fae35279c7}{get\+Items}} () const
+\begin{DoxyCompactList}\small\item\em Returns the vector containing the items on the bill. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classBillMemento_aab19f4ff0a5ee5a53d8b923571ddb8ac}{get\+Total\+Cost}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current total cost of the bill. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classBillMemento}{Bill\+Memento}} class acts as the Memento participant in the \mbox{\hyperlink{classBill}{Bill}} Memento design pattern. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBillMemento_a6ccc366b976eb424ded905014ebf9a47}\label{classBillMemento_a6ccc366b976eb424ded905014ebf9a47}} 
+\index{BillMemento@{BillMemento}!BillMemento@{BillMemento}}
+\index{BillMemento@{BillMemento}!BillMemento@{BillMemento}}
+\doxysubsubsection{\texorpdfstring{BillMemento()}{BillMemento()}}
+{\footnotesize\ttfamily Bill\+Memento\+::\+Bill\+Memento (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{bill\+Items,  }\item[{double}]{cost }\end{DoxyParamCaption})}
+
+
+
+Parameterized constructor for the \mbox{\hyperlink{classBillMemento}{Bill\+Memento}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bill\+Items} & Menu items to be initialized on the bill. \\
+\hline
+{\em cost} & Joined cost of the menu items that are being added onto the bill. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBillMemento_a599cc3185567f8d2299b70fae35279c7}\label{classBillMemento_a599cc3185567f8d2299b70fae35279c7}} 
+\index{BillMemento@{BillMemento}!getItems@{getItems}}
+\index{getItems@{getItems}!BillMemento@{BillMemento}}
+\doxysubsubsection{\texorpdfstring{getItems()}{getItems()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ \& Bill\+Memento\+::get\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the vector containing the items on the bill. 
+
+\begin{DoxyReturn}{Returns}
+Returns a vector of strings containing the items on the bill. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBillMemento_aab19f4ff0a5ee5a53d8b923571ddb8ac}\label{classBillMemento_aab19f4ff0a5ee5a53d8b923571ddb8ac}} 
+\index{BillMemento@{BillMemento}!getTotalCost@{getTotalCost}}
+\index{getTotalCost@{getTotalCost}!BillMemento@{BillMemento}}
+\doxysubsubsection{\texorpdfstring{getTotalCost()}{getTotalCost()}}
+{\footnotesize\ttfamily double Bill\+Memento\+::get\+Total\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the current total cost of the bill. 
+
+\begin{DoxyReturn}{Returns}
+Returns a double representing the current total price of the bill. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Floor/\mbox{\hyperlink{BillMemento_8h}{Bill\+Memento.\+h}}\item 
+src/\+Floor/Bill\+Memento.\+cpp\end{DoxyCompactItemize}

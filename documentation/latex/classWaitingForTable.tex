@@ -1,0 +1,84 @@
+\hypertarget{classWaitingForTable}{}\doxysection{Waiting\+For\+Table Class Reference}
+\label{classWaitingForTable}\index{WaitingForTable@{WaitingForTable}}
+
+
+This class is a state the customer can be in when they are waiting to be seated at a table.  
+
+
+
+
+{\ttfamily \#include $<$Waiting\+For\+Table.\+h$>$}
+
+
+
+Inheritance diagram for Waiting\+For\+Table\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{classWaitingForTable__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Waiting\+For\+Table\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{classWaitingForTable__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCustomerState}{Customer\+State}} $\ast$ \mbox{\hyperlink{classWaitingForTable_a9621d430b851c044812dbc1016af2be0}{get\+Next\+State}} () override
+\begin{DoxyCompactList}\small\item\em Get the next state of the customer after waiting for a table. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classWaitingForTable_a4a7d9ba2ae9a5b6062b382b91e777306}{get\+Name}} () override
+\begin{DoxyCompactList}\small\item\em Get the name of the \char`\"{}\+Waiting\+For\+Table\char`\"{} state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is a state the customer can be in when they are waiting to be seated at a table. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWaitingForTable_a4a7d9ba2ae9a5b6062b382b91e777306}\label{classWaitingForTable_a4a7d9ba2ae9a5b6062b382b91e777306}} 
+\index{WaitingForTable@{WaitingForTable}!getName@{getName}}
+\index{getName@{getName}!WaitingForTable@{WaitingForTable}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string Waiting\+For\+Table\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the name of the \char`\"{}\+Waiting\+For\+Table\char`\"{} state. 
+
+\begin{DoxyReturn}{Returns}
+A string containing the name of the state. This function returns the name of the \char`\"{}\+Waiting\+For\+Table\char`\"{} state, which helps identify the current state of the customer. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCustomerState_af1077636f2f4eb94fd3103cb357a7fa5}{Customer\+State}}.
+
+\mbox{\Hypertarget{classWaitingForTable_a9621d430b851c044812dbc1016af2be0}\label{classWaitingForTable_a9621d430b851c044812dbc1016af2be0}} 
+\index{WaitingForTable@{WaitingForTable}!getNextState@{getNextState}}
+\index{getNextState@{getNextState}!WaitingForTable@{WaitingForTable}}
+\doxysubsubsection{\texorpdfstring{getNextState()}{getNextState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCustomerState}{Customer\+State}} $\ast$ Waiting\+For\+Table\+::get\+Next\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the next state of the customer after waiting for a table. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the next state of the customer. This function is used to determine the state that the customer should transition to after waiting for a table to become available. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCustomerState_aeaaa4d13414deeffa1e9be22292128d4}{Customer\+State}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Floor/\mbox{\hyperlink{WaitingForTable_8h}{Waiting\+For\+Table.\+h}}\item 
+src/\+Floor/Waiting\+For\+Table.\+cpp\end{DoxyCompactItemize}

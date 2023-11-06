@@ -1,0 +1,4 @@
+<map id="RequestingBill" name="RequestingBill">
+<area shape="rect" id="node1" title="This class is the state the customer will be in when they are ready to receive the bill." alt="" coords="7,80,123,107"/>
+<area shape="rect" id="node2" href="$classCustomerState.html" title="This class covers all states a customer can be in." alt="" coords="5,5,124,32"/>
+</map>

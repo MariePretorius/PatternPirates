@@ -1,0 +1,12 @@
+<map id="src/Restaurant/Dish.h" name="src/Restaurant/Dish.h">
+<area shape="rect" id="node1" title="Definition of the Dish class." alt="" coords="247,5,409,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,155,48,181"/>
+<area shape="rect" id="node3" href="$Ingredient_8h_source.html" title=" " alt="" coords="581,155,747,181"/>
+<area shape="rect" id="node6" href="$Customer_8h.html" title="Declaration of the Customer class." alt="" coords="255,80,401,107"/>
+<area shape="rect" id="node4" href="$Stock_8h_source.html" title=" " alt="" coords="521,229,591,256"/>
+<area shape="rect" id="node5" title=" " alt="" coords="349,304,408,331"/>
+<area shape="rect" id="node7" href="$CustomerState_8h.html" title="Declaration of the CustomerState class." alt="" coords="325,155,456,181"/>
+<area shape="rect" id="node8" title=" " alt="" coords="416,229,496,256"/>
+<area shape="rect" id="node9" href="$Ratings_8h.html" title="Declaration of the Ratings class." alt="" coords="123,155,205,181"/>
+<area shape="rect" id="node10" title=" " alt="" coords="229,155,301,181"/>
+</map>

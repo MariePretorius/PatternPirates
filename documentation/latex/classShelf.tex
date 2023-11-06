@@ -1,0 +1,134 @@
+\hypertarget{classShelf}{}\doxysection{Shelf Class Reference}
+\label{classShelf}\index{Shelf@{Shelf}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classShelf_abb45551000814ead7cdf342c2681f64e}\label{classShelf_abb45551000814ead7cdf342c2681f64e}} 
+\mbox{\hyperlink{classShelf_abb45551000814ead7cdf342c2681f64e}{Shelf}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for the shelf. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classShelf_a0bd1685f1b747052cedc4ad12eeb2c7d}{add\+Stock}} (\mbox{\hyperlink{classStock}{Stock}} $\ast$new\+Stock)
+\begin{DoxyCompactList}\small\item\em Adds the passed in stock item to the list of stock. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classShelf_a2cef92b7b36b86129b251ab4615e0d24}{remove\+Stock}} (std\+::string stock)
+\begin{DoxyCompactList}\small\item\em Removes stock items from the shelf. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classShelf_a9f7bb3642b64318078f42388cb71eb0c}\label{classShelf_a9f7bb3642b64318078f42388cb71eb0c}} 
+void \mbox{\hyperlink{classShelf_a9f7bb3642b64318078f42388cb71eb0c}{clear\+Stock}} ()
+\begin{DoxyCompactList}\small\item\em deletes all stock items \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStock}{Stock}} $\ast$ \mbox{\hyperlink{classShelf_a4104de52e84b86879a27aa0e53c17c81}{deduct\+Stock}} (std\+::string stock)
+\begin{DoxyCompactList}\small\item\em returns the pointer to a the stock item so it\textquotesingle{}s amount can be manipulated \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classShelf_a25305d20439dd12005eb3feb7b3e0b0d}{get\+Current\+Capacity}} ()
+\begin{DoxyCompactList}\small\item\em returns the current capacity of the shelf \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classShelf_a6e619ad5e4b1225901e00982d58fe5ec}{get\+Max\+Capacity}} ()
+\begin{DoxyCompactList}\small\item\em returns the max capacity of the shelf \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classShelf_accbdaa1b038ea2671e501d3da158b74d}{get\+Stock\+List}} ()
+\begin{DoxyCompactList}\small\item\em returns a printable list of all the items in the shelf \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classStock}{Stock}} $\ast$ $>$ \mbox{\hyperlink{classShelf_aebf7c5c69f29da952128255b7a52a20b}{get\+Stock\+List\+Vector}} ()
+\begin{DoxyCompactList}\small\item\em returns a traversable vector of all the items in the shelf \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classShelf_a0bd1685f1b747052cedc4ad12eeb2c7d}\label{classShelf_a0bd1685f1b747052cedc4ad12eeb2c7d}} 
+\index{Shelf@{Shelf}!addStock@{addStock}}
+\index{addStock@{addStock}!Shelf@{Shelf}}
+\doxysubsubsection{\texorpdfstring{addStock()}{addStock()}}
+{\footnotesize\ttfamily void Shelf\+::add\+Stock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classStock}{Stock}} $\ast$}]{new\+Stock }\end{DoxyParamCaption})}
+
+
+
+Adds the passed in stock item to the list of stock. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Stock} & A \mbox{\hyperlink{classStock}{Stock}} pointer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classShelf_a4104de52e84b86879a27aa0e53c17c81}\label{classShelf_a4104de52e84b86879a27aa0e53c17c81}} 
+\index{Shelf@{Shelf}!deductStock@{deductStock}}
+\index{deductStock@{deductStock}!Shelf@{Shelf}}
+\doxysubsubsection{\texorpdfstring{deductStock()}{deductStock()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classStock}{Stock}} $\ast$ Shelf\+::deduct\+Stock (\begin{DoxyParamCaption}\item[{std\+::string}]{stock }\end{DoxyParamCaption})}
+
+
+
+returns the pointer to a the stock item so it\textquotesingle{}s amount can be manipulated 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stock} & The name of the item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The stock item requested 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classShelf_a25305d20439dd12005eb3feb7b3e0b0d}\label{classShelf_a25305d20439dd12005eb3feb7b3e0b0d}} 
+\index{Shelf@{Shelf}!getCurrentCapacity@{getCurrentCapacity}}
+\index{getCurrentCapacity@{getCurrentCapacity}!Shelf@{Shelf}}
+\doxysubsubsection{\texorpdfstring{getCurrentCapacity()}{getCurrentCapacity()}}
+{\footnotesize\ttfamily int Shelf\+::get\+Current\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns the current capacity of the shelf 
+
+\begin{DoxyReturn}{Returns}
+an integer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classShelf_a6e619ad5e4b1225901e00982d58fe5ec}\label{classShelf_a6e619ad5e4b1225901e00982d58fe5ec}} 
+\index{Shelf@{Shelf}!getMaxCapacity@{getMaxCapacity}}
+\index{getMaxCapacity@{getMaxCapacity}!Shelf@{Shelf}}
+\doxysubsubsection{\texorpdfstring{getMaxCapacity()}{getMaxCapacity()}}
+{\footnotesize\ttfamily int Shelf\+::get\+Max\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns the max capacity of the shelf 
+
+\begin{DoxyReturn}{Returns}
+an integer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classShelf_accbdaa1b038ea2671e501d3da158b74d}\label{classShelf_accbdaa1b038ea2671e501d3da158b74d}} 
+\index{Shelf@{Shelf}!getStockList@{getStockList}}
+\index{getStockList@{getStockList}!Shelf@{Shelf}}
+\doxysubsubsection{\texorpdfstring{getStockList()}{getStockList()}}
+{\footnotesize\ttfamily std\+::string Shelf\+::get\+Stock\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns a printable list of all the items in the shelf 
+
+\begin{DoxyReturn}{Returns}
+string representation of the list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classShelf_aebf7c5c69f29da952128255b7a52a20b}\label{classShelf_aebf7c5c69f29da952128255b7a52a20b}} 
+\index{Shelf@{Shelf}!getStockListVector@{getStockListVector}}
+\index{getStockListVector@{getStockListVector}!Shelf@{Shelf}}
+\doxysubsubsection{\texorpdfstring{getStockListVector()}{getStockListVector()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classStock}{Stock}} $\ast$ $>$ Shelf\+::get\+Stock\+List\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns a traversable vector of all the items in the shelf 
+
+\begin{DoxyReturn}{Returns}
+a stock pointer vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classShelf_a2cef92b7b36b86129b251ab4615e0d24}\label{classShelf_a2cef92b7b36b86129b251ab4615e0d24}} 
+\index{Shelf@{Shelf}!removeStock@{removeStock}}
+\index{removeStock@{removeStock}!Shelf@{Shelf}}
+\doxysubsubsection{\texorpdfstring{removeStock()}{removeStock()}}
+{\footnotesize\ttfamily void Shelf\+::remove\+Stock (\begin{DoxyParamCaption}\item[{std\+::string}]{stock }\end{DoxyParamCaption})}
+
+
+
+Removes stock items from the shelf. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stock} & name of the stock item \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Kitchen/Shelf.\+h\item 
+src/\+Kitchen/Shelf.\+cpp\end{DoxyCompactItemize}
