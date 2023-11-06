@@ -1,5 +1,5 @@
 /**
- * @File WaitingForTable.h
+ * @file WaitingForTable.h
  * @brief Declaration of the WaitingForTable state
 */
 

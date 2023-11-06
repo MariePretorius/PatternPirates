@@ -1,5 +1,5 @@
 /**
- * @File Customer.h
+ * @file Customer.h
  * @brief Declaration of the Customer class
 */
 
@@ -15,21 +15,20 @@
 #include "Ratings.h"
 #include "../Kitchen/Ingredient.h"
 #include "../Kitchen/Stock.h"
-
 #include <list>
 #include <iostream>
 #include <string>
 #include <random>
-
+#include "ObserverSubject.h"
 using namespace std;
 
-class Customer {
+class Customer : public ObserverSubject{
 
 private:
 	CustomerState *state; ///< The current state of the customer.
 	static int nextID; ///< A static variable to generate unique customer IDs.
 	int id; ///< The unique identifier for the customer.
-	string cookingMethod; ///< The method used for preparing the customer's order.
+	vector<string> cookingMethod; ///< The method used for preparing the customer's order.
 	vector<Stock*> stock; ///< A list of ingredients for the customer's order.
 	string paymentMethod = "bill"; ///< The method of payment chosen by the customer.
 	bool split = false; ///< Indicates whether the customer's bill is split.
@@ -94,7 +93,7 @@ public:
      * @brief Get the cooking method for the order.
      * @return The method used for preparing the customer's order.
      */
-	string getCookingMethod();
+	vector<string> getCookingMethod();
 
 	/**
      * @brief Get the chosen payment method.

@@ -32,12 +32,12 @@ Customer::Customer(string paymentMethod, bool split, vector<Stock*> stock)
     random_device rd;
     mt19937 gen(rd());
     uniform_int_distribution<int> distribution(1, 2);
-    int num = distribution(gen);
-
-    //Changed to reference 'this' to make sure it was assigning to the correct variable.
-    if (num == 1) {
-        this->cookingMethod = "Grilled";
-    } else this->cookingMethod = "Fried";
+    for (int i = 0; i < 3; i++) {
+        int randIndex = distribution(gen);
+        if (randIndex == 1) {
+            this->cookingMethod.push_back("Grilled");
+        } else this->cookingMethod.push_back("Fried");
+    }
 
     random_device other;
     mt19937 gen2(other());
@@ -56,6 +56,7 @@ Customer::Customer(string paymentMethod, bool split, vector<Stock*> stock)
 void Customer::nextState() 
 {
     this->state = state->getNextState();
+    this->notify();
 }
 
 void Customer::leaveRating(Ratings allRatings)
@@ -96,10 +97,10 @@ vector<double> Customer::getPrices()
     return prices;
 }
 
-string Customer::getCookingMethod()
+vector<string> Customer::getCookingMethod()
 {
     //Added this line becuase waiter didn't like that the variable it was fetching was private for some reason
-    string temp = cookingMethod;
+    vector<string> temp = cookingMethod;
     //cout<<cookingMethod<<endl;
     return temp;
 }

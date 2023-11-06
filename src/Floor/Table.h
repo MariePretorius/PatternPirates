@@ -1,5 +1,5 @@
 /**
- * @File Table.h
+ * @file Table.h
  * @brief Declaration of the Table class
 */
 
@@ -16,17 +16,17 @@
 #include "Customer.h"
 #include <vector>
 #include "../Restaurant/Dish.h"
-
+class Observer;
 using namespace std;
 
-class Table {
-
+class Table{
 private:
 	int tableNumber; ///< The unique identifier for the table.
 	int capacity; ///< The maximum number of customers the table can accommodate.
 	list<Customer*> customers; ///< A list of customers currently seated at the table.
 	bool occupied = false; ///< Indicates whether the table is currently occupied.
-  vector<Dish*> * dishes;
+    vector<Dish*> * dishes;
+    Observer * myWaiter;
 public:
 	/**
      * @brief Constructor for the Table class.
@@ -92,6 +92,12 @@ public:
      * @return True if all customers have finished eating; False otherwise.
      */
      bool doneEating();
+     /**
+      * @brief Sets this table's waiter
+      * This function will set the table's waiter member variable to the one passed in the parameter
+      * @param waiter A pointer to a Waiter object
+      */
+     void setWaiter(Observer * waiter);
 };
 
 #endif

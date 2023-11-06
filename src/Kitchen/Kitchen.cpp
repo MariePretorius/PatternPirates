@@ -10,7 +10,7 @@ Kitchen::Kitchen(Finance* finance){
 };
 
 Kitchen::~Kitchen() {
-    
+
 }
 
 FoodOrder* Kitchen::getNextOrder() {
