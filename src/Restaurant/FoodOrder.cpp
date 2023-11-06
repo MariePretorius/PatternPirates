@@ -86,6 +86,16 @@ void FoodOrder :: addToBill(std::string ingredient, double cost)
 }
 
 /**
+ * @brief Function to remove a ingredients from the bill.
+ * @param ingredient Single ingredient to remove from bill.
+ * @param cost Cost of the ingredient being removed.
+*/
+void FoodOrder :: removeFromBill(std::string ingredient, double cost)
+{
+    this->bill->removeItem(ingredient, cost);
+}
+
+/**
  * @brief Returns the ingredient list.
  * @return Returns a vector of ingredients.
 */
