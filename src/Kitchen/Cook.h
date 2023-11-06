@@ -1,3 +1,7 @@
+/**
+ * @file Cook.h
+ * @brief Declaration of the Cook class.
+ */
 #ifndef COOK_H
 #define COOK_H
 class Ingredient;
