@@ -1,5 +1,5 @@
 /**
- * @File Customer.h
+ * @file Customer.h
  * @brief Declaration of the Customer class
 */
 
