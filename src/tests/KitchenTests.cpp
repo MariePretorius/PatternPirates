@@ -47,11 +47,11 @@ void KitchenTests::runTests() {
     std::vector<std::string> food5{"Apple", "Egg", "Grapes", "Steak", "Brocolli"};
     std::vector<double> prices5{5, 12, 10, 45, 20};
 
-    kitchen->addNewOrder(new FoodOrder(food1,prices1,5,"Grilled",2,*customer1,bill1));
-    kitchen->addNewOrder(new FoodOrder(food2,prices2,5,"Fried",2,*customer2,bill2));
-    kitchen->addNewOrder(new FoodOrder(food3,prices3,5,"Grilled",2,*customer3,bill3));
-    kitchen->addNewOrder(new FoodOrder(food4,prices4,5,"Fried",2,*customer4,bill4));
-    kitchen->addNewOrder(new FoodOrder(food5,prices5,5,"Grilled",2,*customer5,bill5));
+    kitchen->addNewOrder(new FoodOrder(food1,prices1,5,{"Fried","Fried","Grilled","Fried","Grilled"},2,*customer1,bill1));
+    kitchen->addNewOrder(new FoodOrder(food2,prices2,5,{"Fried","Grilled","Grilled","Fried","Grilled"},2,*customer2,bill2));
+    kitchen->addNewOrder(new FoodOrder(food3,prices3,5,{"Grilled","Fried","Grilled","Grilled","Grilled"},2,*customer3,bill3));
+    kitchen->addNewOrder(new FoodOrder(food4,prices4,5,{"Fried","Fried","Grilled","Fried","Grilled"},2,*customer4,bill4));
+    kitchen->addNewOrder(new FoodOrder(food5,prices5,5,{"Fried","Grilled","Grilled","Fried","Fried"},2,*customer5,bill5));
 
     kitchen->startKitchenProcess();
 }
