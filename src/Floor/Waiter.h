@@ -15,7 +15,8 @@ class Order;
 class Waiter
 {
 public:
-    Waiter(Finance * finance);
+    Waiter(Finance * finance, Ratings * ratings);
+    ~Waiter();
     void moveToNext();
     void addTableToWait(Table * newTable);
     void addOrder(FoodOrder * newOrder);
@@ -31,6 +32,7 @@ public:
     void doRounds();
 
 private:
+    Ratings * ratings;
     Finance * finance;
     std::vector<Table *> tables;
     std::vector<FoodOrder *> orders;

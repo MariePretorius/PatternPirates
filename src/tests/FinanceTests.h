@@ -4,9 +4,15 @@
 
 #ifndef PROJFINAL_FINANCETESTS_H
 #define PROJFINAL_FINANCETESTS_H
-
-
+#include "../Restaurant/Finance.h"
+#include <cassert>
 class FinanceTests {
+public:
+    FinanceTests();
+    ~FinanceTests();
+    bool tests();
+private:
+    Finance * finance;
 
 };
 

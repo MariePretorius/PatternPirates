@@ -4,6 +4,10 @@ CookingChef::CookingChef() {
     this->nextChef = new HeadChef();
 }
 
+CookingChef::~CookingChef() {
+    delete this->cook;
+}
+
 void CookingChef::changeCook(Cook* cook) {
     this->cook = cook;
 }
@@ -21,5 +25,7 @@ void CookingChef::handleOrder() {
         cook->prepareStation();
         kitchen->addCookedIngredient(cook->cookIngredient(ingredient));
     } 
+    delete fryer;
+    delete griller;
     this->nextChef->handleOrder();
 }

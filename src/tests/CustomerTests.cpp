@@ -7,7 +7,8 @@ CustomerTests::CustomerTests()
 
 void CustomerTests::runTests()
 {
-    Customer customer("bill", false);
+    vector<Stock *> stockVector = vector<Stock*>();
+    Customer customer("bill", false, stockVector);
     assert(customer.getStateName() == "Waiting For Table");
     assert(customer.getPaymentName() == "bill");
     assert(customer.getSplit() == false);

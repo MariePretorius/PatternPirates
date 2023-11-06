@@ -1,6 +1,9 @@
 #ifndef RESTAURANT_H
 #define RESTAURANT_H
-
+/**
+ * @file Restaurant.h
+ * @brief Declaration of Restaurant class
+ */
 #include "Finance.h"
 #include "../Floor/Floor.h"
 #include "../Kitchen/Kitchen.h"
@@ -27,18 +30,22 @@ public:
 
 protected:
     /**
-     * Default constructor made protected so that outside classes can't call it
+     * @brief Default constructor made protected so that outside classes can't call it
      */
 	Restaurant();
 
     /**
-     * Default copy constructor made protected so that outside classes can't call it
+     * @brief Default copy constructor made protected so that outside classes can't call it
      */
 	Restaurant(Restaurant& restaurant);
     /**
-     * Operator overloading of operator= made protected so that outside classes can't call it
+     * @brief Operator overloading of operator= made protected so that outside classes can't call it
      */
 	void operator=(Restaurant& restaurant);
+    /**
+     * @brief Destructor for Restaurant
+     */
+    void CleanUp();
 
 public:
     /**

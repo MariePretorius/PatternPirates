@@ -4,8 +4,14 @@ class Ingredient;
 class Cook {
 
 public:
-	virtual void prepareStation() = 0;//pure virtual function
-	virtual Ingredient* cookIngredient(Ingredient* ingredient) = 0;//pure virtual function
+	/**
+     * Pure virtual function to prepare a specifc chef station.
+     */
+	virtual void prepareStation() = 0;
+	/**
+     * Pure virtual function to cook an ingredient.
+     */
+	virtual Ingredient* cookIngredient(Ingredient* ingredient) = 0;
 };
 
 #endif

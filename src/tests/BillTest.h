@@ -14,12 +14,17 @@ class BillTest
 {
     public:
         BillTest();
+        ~BillTest();
         void runTestScenario();
         void runTests();
     private:
         Bill* bill;
         BillCaretaker* caretaker;
         Customer* cust;
+        Finance* f;
+        Table* t;
+        Stock* s1;
+        Stock* s2;
 };
 
 #endif

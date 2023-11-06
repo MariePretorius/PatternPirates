@@ -74,6 +74,17 @@ void Restaurant::setup()
     cout << "\033[1;32mThe restaurant simulation will now begin:\033[0m" << endl;
     simulate();
 }
+void Restaurant::CleanUp() {
+    delete funds;
+    delete floor;
+    delete kitchen;
+
+    delete uniqueInstance;
+    uniqueInstance=nullptr;
+
+
+}
+
 /**
  * Simulation part of Restaurant creates the customers waiting to be seated,all the tables on the floor and tells the host to
  * seat all the customers.Then sends the waiters to wait on the occupied tables.Simulation is also responsible for
@@ -110,8 +121,7 @@ void Restaurant::simulate()
             pay="tab";
         Shelf*shelf = kitchen->getShelf();
         vector<Stock*> stockList = shelf->getStockListVector();
-        Customer* newCustomer = new Customer(pay,split); // old definition
-        //Customer* newCustomer = new Customer(pay,split,stockList);
+        Customer* newCustomer = new Customer(pay,split,stockList);
         cout<<"\033[1;34m Customer state is:"<<newCustomer->getState()->getName()<<"\033[0m"<<endl;
         customers.push_back(newCustomer);
     }
@@ -148,16 +158,27 @@ void Restaurant::simulate()
     floor->giveFinishedOrders(finishedOrder);
 
     floor->waitersPassOrdersToTables();
-    // when waiter gives finished orders to customers, change their state - should be eating state
 
-    floor->waitersDoRounds();  // this is to set the customers' state to RequestingBill - if they want a bill!
+    floor->waitersDoRounds();
 
-    //waiter brings bill - call waiter.bill // change customer state to billPaid
-    //customer pays with waiter - call pay function in waiter
-    //customer leaves rating + tip - at waiter - maybe save in floor? So that we can output the results
     //customer leaves - remove all customers from their table
-
+    
     // tabs pay at end of round - at end of round call pay tabs
 
+    cout << "\033[1;32mSimulation phase is now done!\033[0m" << endl;
+    //cout << "\033[1;32mThe average rating for this round is:\033[0m"<< getOverallRating << endl;
+
+    cout << "\033[1;32m\"You have made R "<<funds->getFunds()<< " in this simulation round.\033[0m" << endl;
+
+
+    // Part of cleanUp , don't touch! And don't add code under this
+    for (Customer* c: customers) {
+        delete c;
+    }
+    CleanUp();
+
 }
+
+
+
 
