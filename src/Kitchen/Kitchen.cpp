@@ -10,18 +10,7 @@ Kitchen::Kitchen(Finance* finance){
 };
 
 Kitchen::~Kitchen() {
-    for (Ingredient* uIngredient : uncookedIngredients) {
-        delete uIngredient;
-    }
-    uncookedIngredients.clear();
-    for (Ingredient* cIngredient : cookedIngredients) {
-        delete cIngredient;
-    }
-    cookedIngredients.clear();
-    
-    delete this->currentDish;
-    delete this->currentOrder;
-    delete this->finance;
+
 }
 
 FoodOrder* Kitchen::getNextOrder() {
@@ -81,7 +70,7 @@ void Kitchen::buyStock() {
                          15.50,10.00,5.00,8.00,8.00,5.25,18.25,10.50,30.75,20.99,25.00,25.00,20.99,15.50,
                          18.00,20.50,25.25,15.25,10.00};
     string OptionsArr[30] = {"Rice","Flour","Eggs","Milk","Chicken",
-                             "Ground beeg","Pasta","Potatoes","Tomatoes","Onions",
+                             "Ground beef","Pasta","Potatoes","Tomatoes","Onions",
                              "Carrot","Bread","Sugar","Salt","Pepper","Cucumber",
                              "Bell Pepper","Brocolli","Spinach","Cheese","Butter",
                              "Olive Oil","Cereal","Apple","Banana","Orange","Grapes",
@@ -94,13 +83,12 @@ void Kitchen::buyStock() {
         cout<<endl;
         cout<<"\033[1;36mPlease enter the item number you want to buy:\033[0m";
         cin>>buyOption;
-        cout <<buyOption;
         //input validation
-       /* while ( buyOption >30)
+        while (buyOption < 0 || buyOption > 30)
         {
             cout<<"\033[1;36mPlease enter the item number you want to buy:\033[0m";
             cin>>buyOption;
-        }*/
+        }
         cout<<endl;
         cout<<"\033[1;36m" + OptionsArr[buyOption] + " costs R" + to_string(PriceArr[buyOption]) + ", enter quantity:\033[0m" ;
         cin>>quantity;

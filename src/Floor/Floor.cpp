@@ -249,9 +249,4 @@ Floor::~Floor() {
     {
         delete f;
     }
-
-    for(Dish * f : finishedOrders)
-    {
-        delete f;
-    }
 }
