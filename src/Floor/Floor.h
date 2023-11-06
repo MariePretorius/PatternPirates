@@ -7,17 +7,48 @@
 
 #include <list>
 
-class Table;
+class Customer;
+class Host;
+class Waiter;
+class Dish;
+#include "Table.h"
+#include "../Restaurant/FoodOrder.h"
+
+class Finance;
 
 class Floor
 {
 public:
-    Floor();
+    Floor(Finance * finance);
+    ~Floor();
+    void addCustomers(const vector<Customer*>& newCustomers);
+    void waitersGetOrders();
+    Host * createHost();
     int getCapacity();
+    std::list<Table*> getTables();
+    int getNumWaiters();
+    int setNumWaiters();
+
+    void addTable(int capacity);
+    void addWaiter();
+
+    vector<FoodOrder *> *fetchOrders();
+    void waitersPassOrdersToTables();
+    void waitersDoRounds();
+    void giveFinishedOrders(vector<Dish*> finishedOrders);
 
 private:
-    //std::list<Table> tables;
+
+    Host * host;
+    Ratings * ratings;
+    Finance * finance;
+    std::list<Table*> tables;
     int numberOfTables;
+    int numberOfWaiters;
+    std::vector<Customer *> customers;
+    std::list<Waiter *> waiters;
+    vector<FoodOrder *> stashedOrders;
+    vector<Dish *> finishedOrders;
 };
 
 

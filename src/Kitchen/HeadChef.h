@@ -1,17 +1,27 @@
+/**
+ * @file HeadChef.h
+ * @brief Declaration of the HeadChef class.
+ */
+
 #ifndef HEADCHEF_H
 #define HEADCHEF_H
+#include "Chef.h"
+#include <list>
+#include "../Restaurant/Dish.h"
 
-class HeadChef : Chef {
+#include "Chef.h"
+#include "../Restaurant/Dish.h"
 
-private:
-	List<Ingredient*> cookedIngredients;
-
-	Dish* prepareOrder();
-
-public:
-	void setIngredients(List<Ingredient*> cookedIngredients);
-
-	void handleOrder();
+/**
+ * @class HeadChef
+ * @brief Declaration of the HeadChef class, thirdly used in the CoR.
+ */
+class HeadChef : public Chef {
+	public:
+	/**
+	 * Handle assembling a dish as the head chef.
+	 */
+		void handleOrder();
 };
 
 #endif
