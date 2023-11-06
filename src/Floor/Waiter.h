@@ -8,24 +8,36 @@
 #include <list>
 
 #include "Table.h"
+#include "../Restaurant/Finance.h"
+#include "Bill.h"
+class FoodOrder;
 class Order;
-
 class Waiter
 {
 public:
-    Waiter();
+    Waiter(Finance * finance, Ratings * ratings);
+    ~Waiter();
     void moveToNext();
     void addTableToWait(Table * newTable);
-    void addOrder(Order * newOrder);
-    std::vector<Order*> * giveOrders();
+    void addOrder(FoodOrder * newOrder);
+    std::vector<FoodOrder*> * giveOrders();
     void getOrdersFromCurrTable();
     void createBill(bool split, Table * currTable);
-
+    std::vector<FoodOrder *> * fetchOrders();
+    void addDishToHand(Dish* dish);
     void getOrders();
+    std::vector<Table*> * getTables();
+    void passOrdersToTables();
+
+    void doRounds();
 
 private:
+    Ratings * ratings;
+    Finance * finance;
     std::vector<Table *> tables;
-    std::vector<Order *> orders;
+    std::vector<FoodOrder *> orders;
+    std::vector<Bill*> bills;
+    std::vector<Dish*> dishesInHand;
     //Table * curr;
 };
 

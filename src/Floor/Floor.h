@@ -10,14 +10,18 @@
 class Customer;
 class Host;
 class Waiter;
-
+class Dish;
 #include "Table.h"
+#include "../Restaurant/FoodOrder.h"
+
+class Finance;
 
 class Floor
 {
 public:
-    Floor();
-    void addCustomers(vector<Customer*> newCustomers);
+    Floor(Finance * finance);
+    ~Floor();
+    void addCustomers(const vector<Customer*>& newCustomers);
     void waitersGetOrders();
     Host * createHost();
     int getCapacity();
@@ -28,13 +32,23 @@ public:
     void addTable(int capacity);
     void addWaiter();
 
+    vector<FoodOrder *> *fetchOrders();
+    void waitersPassOrdersToTables();
+    void waitersDoRounds();
+    void giveFinishedOrders(vector<Dish*> finishedOrders);
+
 private:
 
+    Host * host;
+    Ratings * ratings;
+    Finance * finance;
     std::list<Table*> tables;
     int numberOfTables;
     int numberOfWaiters;
     std::vector<Customer *> customers;
     std::list<Waiter *> waiters;
+    vector<FoodOrder *> stashedOrders;
+    vector<Dish *> finishedOrders;
 };
 
 

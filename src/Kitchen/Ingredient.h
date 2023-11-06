@@ -9,15 +9,15 @@
 #include "Stock.h"
 
 class Ingredient : public Stock
-    {
+{
 public:
-    std::string getName() override;
+    Ingredient(std::string name, int initialQuantity, double costPerUnit, int key);
+    ~Ingredient();
     std::string getCondition();
     std::string getChoice();
     void setCondition(std::string condition);
 
 private:
-    std::string name;
     std::string condition;
     std::string cookingChoice;
 };

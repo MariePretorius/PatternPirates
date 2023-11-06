@@ -3,6 +3,8 @@
 #include "../Floor/Bill.h"
 #include "../Kitchen/Kitchen.h"
 
+#include <sstream>
+
 /**
  * @brief Default constructor for the class.
 */
@@ -19,8 +21,11 @@ FoodOrder :: FoodOrder() {}
  * @param k Reference to the kitchen object.
  * @param bill Reference to the bill for this order.
 */
-FoodOrder :: FoodOrder(std::vector<std::string> ingredients, std::vector<double> prices, int num, std::string method, int tableNumber, Customer& customer, Kitchen* k, Bill* bill) : kitchen{k}, bill(bill)
+FoodOrder :: FoodOrder(std::vector<std::string> ingredients, std::vector<double> prices, int num, std::string method, int tableNumber, Customer& customer, Bill* bill) : bill(bill)
 {
+    //added pre-instantiation to prevent segfault
+    this->ingredients = vector<std::string>();
+    this->prices = vector<double>();
     this->customer = &customer;
     //this->kitchen = &k;
     //this->bill = &bill;
@@ -34,10 +39,23 @@ FoodOrder :: FoodOrder(std::vector<std::string> ingredients, std::vector<double>
         //this->ingredients[i] = ingredients[i];
         this->ingredients.push_back(ingredients[i]);
         //this->prices[i] = prices[i];
-        this->ingredients.push_back(ingredients[i]);
+
+        //I'm not sure why you were pushing the same ingredient twice. Assumed it was a mistake.
+        this->prices.push_back(prices[i]);
         
         addToBill(this->ingredients[i], this->prices[i]);
     }
+
+    // std::stringstream ss;
+    // std::string custId = "";
+    // ss << customer.getCustomerID();
+    // ss >> custId;
+
+    // std::cout << "\x1B[35m";
+
+    // std::cout << "Customer " << custId << ": Order created." << std::endl;
+
+    // std::cout << "\x1B[0m";
 }
 
 /**
@@ -54,7 +72,7 @@ FoodOrder :: ~FoodOrder()
 */
 void FoodOrder :: execute()
 {
-    kitchen->addNewOrder(*this);
+    kitchen->addNewOrder(this);
 }
 
 /**
@@ -71,9 +89,9 @@ void FoodOrder :: addToBill(std::string ingredient, double cost)
  * @brief Returns the ingredient list.
  * @return Returns a vector of ingredients.
 */
-std::list<std::string> FoodOrder :: getIngredients()
+std::vector<std::string> * FoodOrder :: getIngredients()
 {
-    return this->ingredients;
+    return &this->ingredients;
 }
 
 /**
@@ -101,6 +119,15 @@ int FoodOrder :: getTableNumber()
 Customer* FoodOrder :: getCustomer()
 {
     return this->customer;
+}
+
+/**
+ * @brief Returns a pointer to the bill the order belongs to.
+ * @return Bill object pointer.
+*/
+Bill* FoodOrder :: getBill()
+{
+    return this->bill;
 }
 
 /**
@@ -152,6 +179,15 @@ int FoodOrder :: getRandomID()   //add vector if necessary
     // ids.push_back(randomNumber);
     
     // return randomNumber;
+}
+
+/**
+ * @brief Sets the kitchen pointer.
+ * @param k Pointer to a kitchen object.
+*/
+void FoodOrder :: setKitchen(Kitchen* k)
+{
+    this->kitchen = k;
 }
 
 // In Waiter: 

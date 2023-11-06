@@ -1,7 +1,10 @@
 #include "Restaurant.h"
 
 Restaurant* Restaurant::uniqueInstance=0;
-
+/**
+ * instance checks if uniqueInstance is null. If it is, it then initiates uniqueInstance and then returns it.
+ * @return returns the uniqueInstance
+ */
 Restaurant *Restaurant::instance()
 {
     if(uniqueInstance==0){
@@ -10,42 +13,58 @@ Restaurant *Restaurant::instance()
     return uniqueInstance;
 }
 
+/**
+ * Default constructor initialises the funds,kitchen and floor. It is protected and only accessed in the instance function.
+ */
 Restaurant::Restaurant()
 {
     //Singleton function
     funds = new Finance();
-    floor = new Floor();
-    kitchen = new Kitchen();
+    floor = new Floor(funds);
+    kitchen = new Kitchen(funds);
 }
 
+/**
+ * Copy constructor doesn't do anything, its just declared and protected so that no other class can initialise another restaurant object
+ * @param restaurant object which should be copied
+ */
 Restaurant::Restaurant(Restaurant &restaurant)
 {
     //Singleton function
 
 }
 
+/**
+ * Overloading operator= and since it is protected, ensures that no other class can call this and creating another instance of restaurant
+ * @param restaurant object that needs to be created
+ */
 void Restaurant::operator=(Restaurant &restaurant)
 {
     //Singleton function
-
 }
+
+/**
+ * Setup part of Restaurant gets user input to set funds,buy stock and set the number of waiters employed
+ */
 
 void Restaurant::setup()
 {
     // setting the finance's amount for later use
-    double f = 420.69;
+    double f;
     cout << "\033[1;32mSetup Phase:\033[0m" << endl;
-    cout << "\033[1;32mAmount of finances for this round:\033[0m"<< endl;
+    cout << "\033[1;32mAmount of finances for this round:\033[0m";
+    cin>> f;
+    cout<< endl;
     funds->setFunds(f);
 
     //buy stock with finances - in shelf - use addStock - call kitchen's setup function # wait for Franco
-    cout << "\033[1;32mYour shelf:\033[0m" << endl;
-
+    cout << "\033[1;32mYour shelf is currently empty\033[0m" << endl;
+    cout<<endl;
     kitchen->buyStock(); //function to allow user to buy stock and save it in shelf
 
-
     cout << "\033[1;32mHow many waiters should be employed:\033[0m" << endl;
-    int w = 3;
+    int w;
+    cin>>w;
     for(int i = 0; i < w; i++)
     {
         floor->addWaiter();
@@ -55,6 +74,23 @@ void Restaurant::setup()
     cout << "\033[1;32mThe restaurant simulation will now begin:\033[0m" << endl;
     simulate();
 }
+void Restaurant::CleanUp() {
+    delete funds;
+    delete floor;
+    delete kitchen;
+
+    delete uniqueInstance;
+    uniqueInstance=nullptr;
+
+
+}
+
+/**
+ * Simulation part of Restaurant creates the customers waiting to be seated,all the tables on the floor and tells the host to
+ * seat all the customers.Then sends the waiters to wait on the occupied tables.Simulation is also responsible for
+ * the transferring of orders from waiters to the kitchen and finished orders back from the kitchen to the waiters
+ */
+
 
 void Restaurant::simulate()
 {
@@ -83,8 +119,11 @@ void Restaurant::simulate()
             pay="bill";
         } else
             pay="tab";
-       Customer* newCustomer = new Customer(pay,split);
-       customers.push_back(newCustomer);
+        Shelf*shelf = kitchen->getShelf();
+        vector<Stock*> stockList = shelf->getStockListVector();
+        Customer* newCustomer = new Customer(pay,split,stockList);
+        cout<<"\033[1;34m Customer state is:"<<newCustomer->getState()->getName()<<"\033[0m"<<endl;
+        customers.push_back(newCustomer);
     }
 
     /// sending customers vector to floor for storing so that host can seat the customers
@@ -103,26 +142,46 @@ void Restaurant::simulate()
     manager->setTables(floor->getTables());
     manager->assignCustomer();
 
+    floor->waitersGetOrders();
 
-    // use loop for this part:
+    //Loop added to call execute for all the foodorders. it moves them to the kitchen so it has someting to work with.
+    vector<FoodOrder*> * temp = floor->fetchOrders();
+    for(FoodOrder * foodOrder : *temp)
+    {
+        (*foodOrder).setKitchen(this->kitchen);
+        (*foodOrder).execute();
+    }
 
-    // create function in floor to tell waiters to do rounds
-    //spawn floor + kitchen
+    kitchen->startKitchenProcess();
 
-    // waiters talk to customers - start iteration
+    std::vector<Dish*> finishedOrder =kitchen->takeDishes();
+    floor->giveFinishedOrders(finishedOrder);
 
-    //table orders OR waits - customer-not for me
+    floor->waitersPassOrdersToTables();
 
-    // waiter takes order if ready to order -  part of iteration
-    //waiter takes order to kitchen -  get orders + give to kitchen
-    //kitchen prepares items - kitchen -not for me
-    //waiter takes order to correct table num - get order from kitchen + give to waiter
-    // customers eat - waiter+customer - not for me
-    //customer requests bill/tab - not sure
-    //waiter brings bill - call waiter.bill
+    floor->waitersDoRounds();  // this is to set the customers' state to RequestingBill - if they want a bill!
+
+    //waiter brings bill - call waiter.bill // change customer state to billPaid
     //customer pays with waiter - call pay function in waiter
-    //customer leaves rating + tip - at waiter
-    //customer leaves - customer
+    //customer leaves - remove all customers from their table
+    
     // tabs pay at end of round - at end of round call pay tabs
 
+    cout << "\033[1;32mSimulation phase is now done!\033[0m" << endl;
+    //cout << "\033[1;32mThe average rating for this round is:\033[0m"<< getOverallRating << endl;
+
+    cout << "\033[1;32m\"You have made R "<<funds->getFunds()<< " in this simulation round.\033[0m" << endl;
+
+
+    //tables and host need to be deleted in floor
+    // Part of cleanUp , don't touch! And don't add code under this
+    for (Customer* c: customers) {
+        delete c;
+    }
+    CleanUp();
+
 }
+
+
+
+

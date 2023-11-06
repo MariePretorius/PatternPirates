@@ -1,36 +1,26 @@
 #include "CustomerTests.h"
+#include <cassert>
 
 CustomerTests::CustomerTests()
 {
-    
 }
 
 void CustomerTests::runTests()
 {
-    cout << "\033[34mCUSTOMER CLASS TESTS\033[0m" << endl;
-    cout << endl;
+    vector<Stock *> stockVector = vector<Stock*>();
+    Customer customer("bill", false, stockVector);
+    assert(customer.getStateName() == "Waiting For Table");
+    assert(customer.getPaymentName() == "bill");
+    assert(customer.getSplit() == false);
 
-    Customer customer("bill", false);
-    
-    cout << "Expected Output:" << endl;
-    cout << endl;
+    // Test nextState() method
+    customer.nextState();
+    assert(customer.getStateName() == "Seated"); // Replace "NextState" with the expected next state name
 
-    cout << "Customer ID: 1" << endl;
-    cout << "Customer State: Waiting For Table" << endl;
 
-    cout << "Payment Method: bill" << endl;
-    cout << "Cooking Method: grilled / fried" << endl;
-    cout << "Splt: false" << endl;
-    cout << "Rating: 5.0" << endl;
+    // Test getCustomerID() method
+    assert(customer.getCustomerID() == 1); // Assuming nextID starts at 1
 
-    cout << endl;
-    cout << "Generated Output:" << endl;
-
-    cout << "Customer ID: " << customer.getCustomerID() << endl;
-    cout << "Customer State: " << customer.getState() << endl;
-    cout << "Payment Method: " << customer.getPaymentMethod() << endl;
-    cout << "Cooking Method: " << customer.getCookingMethod() << endl;
-    cout << "Split: " << customer.getSplit() << endl;
-    cout << "Rating: " << customer.getRating() << endl;
+    cout << "All Customer tests passed" << endl;
 
 }

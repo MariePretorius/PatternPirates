@@ -1,15 +1,21 @@
 #include "Customer.h"
 #include "WaitingForTable.h"
+
 int Customer::nextID = 1;
+
 double Customer::calculateRating()
 {
-    return 5.0;
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_real_distribution<double> distribution(1.0, 5.0);
+
+    double random_value = distribution(gen);
+    return random_value;
 }
 
-Customer::Customer(string paymentMethod, bool split)
+Customer::Customer(string paymentMethod, bool split, vector<Stock*> stock)
 {
     state = new WaitingForTable();
-
     if (split) {
         this->split = true;
     } else this->split = false;
@@ -28,14 +34,23 @@ Customer::Customer(string paymentMethod, bool split)
     uniform_int_distribution<int> distribution(1, 2);
     int num = distribution(gen);
 
+    //Changed to reference 'this' to make sure it was assigning to the correct variable.
     if (num == 1) {
-        cookingMethod = "grilled";
-    } else cookingMethod = "fried";
+        this->cookingMethod = "grilled";
+    } else this->cookingMethod = "fried";
 
     random_device other;
     mt19937 gen2(other());
     uniform_int_distribution<int> distribution2(1, 2);
     int otherNum = distribution2(gen2);
+
+    random_device ing;
+    mt19937 gen3(ing());
+    uniform_int_distribution<int> distribution3(0, (stock.size() - 1));
+    for (int i = 0; i < 3; i++) {
+        int randomIndex = distribution3(gen3);
+        this->stock.push_back(stock[randomIndex]);
+    }
 }
 
 void Customer::nextState() 
@@ -45,8 +60,8 @@ void Customer::nextState()
 
 void Customer::leaveRating(Ratings allRatings)
 {
-    //double rating = calculateRating;
-    allRatings.leaveRating(3.0);
+    double rating = calculateRating();
+    allRatings.leaveRating(rating);
 }
 
 void Customer::notifyHost()
@@ -63,19 +78,30 @@ int Customer::getCustomerID()
     return id;
 }
 
-list<Ingredient> Customer::getIngredients()
+vector<string> Customer::getIngredients()
 {
+    vector<string> ingredients;
+    for (int i = 0; i < 3; i++) {
+        ingredients.push_back(stock[i]->getName());
+    }
     return ingredients;
 }
 
-list<double> Customer::getPrices()
+vector<double> Customer::getPrices()
 {
-    return list<double>();
+    vector<double> prices;
+    for (int i = 0; i < 3; i++) {
+        prices.push_back(stock[i]->getCostPerUnit());
+    }
+    return prices;
 }
 
 string Customer::getCookingMethod()
 {
-    return cookingMethod;
+    //Added this line becuase waiter didn't like that the variable it was fetching was private for some reason
+    string temp = cookingMethod;
+    //cout<<cookingMethod<<endl;
+    return temp;
 }
 
 bool Customer::getPaymentMethod()
@@ -93,4 +119,14 @@ double Customer::getRating()
 bool Customer::getSplit()
 {
     return split;
+}
+
+string Customer::getStateName()
+{
+    return state->getName();
+}
+
+string Customer::getPaymentName()
+{
+    return paymentMethod;
 }
