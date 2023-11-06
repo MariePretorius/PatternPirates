@@ -69,21 +69,23 @@ $(function() {
 <div class="title">Cook.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef COOK_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define COOK_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">class </span><a class="code" href="classIngredient.html">Ingredient</a>;</div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="classCook.html">    4</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCook.html">Cook</a> {</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classCook.html#ad02a20a4529be145309a034efdc2b62b">   10</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classCook.html#ad02a20a4529be145309a034efdc2b62b">prepareStation</a>() = 0;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classCook.html#a7958930755f85eac38e4f7d0e1ad6b61">   14</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classIngredient.html">Ingredient</a>* <a class="code" href="classCook.html#a7958930755f85eac38e4f7d0e1ad6b61">cookIngredient</a>(<a class="code" href="classIngredient.html">Ingredient</a>* ingredient) = 0;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;};</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassCook_html"><div class="ttname"><a href="classCook.html">Cook</a></div><div class="ttdef"><b>Definition:</b> Cook.h:4</div></div>
+<a href="Cook_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef COOK_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define COOK_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">class </span><a class="code" href="classIngredient.html">Ingredient</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classCook.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCook.html">Cook</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classCook.html#ad02a20a4529be145309a034efdc2b62b">   19</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classCook.html#ad02a20a4529be145309a034efdc2b62b">prepareStation</a>() = 0;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classCook.html#a7958930755f85eac38e4f7d0e1ad6b61">   23</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classIngredient.html">Ingredient</a>* <a class="code" href="classCook.html#a7958930755f85eac38e4f7d0e1ad6b61">cookIngredient</a>(<a class="code" href="classIngredient.html">Ingredient</a>* ingredient) = 0;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassCook_html"><div class="ttname"><a href="classCook.html">Cook</a></div><div class="ttdoc">Represents a Strategy that is used to define a fryer and a griller strategy.</div><div class="ttdef"><b>Definition:</b> Cook.h:13</div></div>
 <div class="ttc" id="aclassCook_html_a7958930755f85eac38e4f7d0e1ad6b61"><div class="ttname"><a href="classCook.html#a7958930755f85eac38e4f7d0e1ad6b61">Cook::cookIngredient</a></div><div class="ttdeci">virtual Ingredient * cookIngredient(Ingredient *ingredient)=0</div></div>
 <div class="ttc" id="aclassCook_html_ad02a20a4529be145309a034efdc2b62b"><div class="ttname"><a href="classCook.html#ad02a20a4529be145309a034efdc2b62b">Cook::prepareStation</a></div><div class="ttdeci">virtual void prepareStation()=0</div></div>
-<div class="ttc" id="aclassIngredient_html"><div class="ttname"><a href="classIngredient.html">Ingredient</a></div><div class="ttdef"><b>Definition:</b> Ingredient.h:12</div></div>
+<div class="ttc" id="aclassIngredient_html"><div class="ttname"><a href="classIngredient.html">Ingredient</a></div><div class="ttdoc">is the concrete class of the Template method design pattern</div><div class="ttdef"><b>Definition:</b> Ingredient.h:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['_7ecookingchef_364',['~CookingChef',['../classCookingChef.html#aadc5c6c7a91cd0fca15cc2be7dea6a0f',1,'CookingChef']]],
-  ['_7efoodorder_365',['~FoodOrder',['../classFoodOrder.html#a986441c5458b1acd5d23e98e15d804b2',1,'FoodOrder']]],
-  ['_7ehost_366',['~Host',['../classHost.html#a6c14f16c39ae6bc5db2672e0141adccd',1,'Host']]],
-  ['_7ekitchen_367',['~Kitchen',['../classKitchen.html#a45a8b292b8a8b83e264c3fa521d3a4dd',1,'Kitchen']]],
-  ['_7eprepchef_368',['~PrepChef',['../classPrepChef.html#aa84935d63e6762ee9ff9f1b5feadcdfa',1,'PrepChef']]]
+  ['waiter_396',['Waiter',['../classWaiter.html#aa859a5fc6d7b6e7bc70c5cb84cb35608',1,'Waiter']]],
+  ['waitersgetorders_397',['waitersGetOrders',['../classFloor.html#a1c56a84046561ffe6cb0e3844e67005e',1,'Floor']]],
+  ['waiterspassorderstotables_398',['waitersPassOrdersToTables',['../classFloor.html#a59385697eff4997fc9f10398940f9206',1,'Floor']]]
 ];

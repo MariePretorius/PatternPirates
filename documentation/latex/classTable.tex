@@ -33,7 +33,9 @@ void \mbox{\hyperlink{classTable_ad95e82a505351f2abe7a1ccd67bf32f6}{assign\+Dish
 void \mbox{\hyperlink{classTable_ac8bd90129e5f014262c39c681ecee6a9}{check\+Dishes}} ()
 \begin{DoxyCompactList}\small\item\em Check the state of the Customers and clear the dishes if necessary. This function checks the state of the Customers at the \mbox{\hyperlink{classTable}{Table}} and clears the dishes if all customers are in the \char`\"{}\+Bill Requested\char`\"{} state. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classTable_a91251021369b4920f0460b7f23f695ba}{done\+Eating}} ()
-\begin{DoxyCompactList}\small\item\em Check if all customers have finished eating. This function checks the state of all customers to determine if they have finished eating. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check if all customers have finished eating. This function checks the state of all customers to determine if they have finished eating. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTable_a263a87a6c7b10520a3864d84299be3f3}{set\+Waiter}} (\mbox{\hyperlink{classObserver}{Observer}} $\ast$waiter)
+\begin{DoxyCompactList}\small\item\em Sets this table\textquotesingle{}s waiter This function will set the table\textquotesingle{}s waiter member variable to the one passed in the parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -155,6 +157,21 @@ Check if the table is currently occupied.
 \begin{DoxyReturn}{Returns}
 True if the table is occupied, false otherwise. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classTable_a263a87a6c7b10520a3864d84299be3f3}\label{classTable_a263a87a6c7b10520a3864d84299be3f3}} 
+\index{Table@{Table}!setWaiter@{setWaiter}}
+\index{setWaiter@{setWaiter}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{setWaiter()}{setWaiter()}}
+{\footnotesize\ttfamily void Table\+::set\+Waiter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classObserver}{Observer}} $\ast$}]{waiter }\end{DoxyParamCaption})}
+
+
+
+Sets this table\textquotesingle{}s waiter This function will set the table\textquotesingle{}s waiter member variable to the one passed in the parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em waiter} & A pointer to a \mbox{\hyperlink{classWaiter}{Waiter}} object \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

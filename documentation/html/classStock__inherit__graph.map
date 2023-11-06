@@ -1,4 +1,4 @@
 <map id="Stock" name="Stock">
-<area shape="rect" id="node1" title=" " alt="" coords="20,5,79,32"/>
-<area shape="rect" id="node2" href="$classIngredient.html" title=" " alt="" coords="5,80,93,107"/>
+<area shape="rect" id="node1" title="The Abstract class of the template design pattern." alt="" coords="20,5,79,32"/>
+<area shape="rect" id="node2" href="$classIngredient.html" title="is the concrete class of the Template method design pattern" alt="" coords="5,80,93,107"/>
 </map>

@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classTable.html" title="This class represents the tables customer will be seated at." alt="" coords="5,5,61,32"/>
+<area shape="rect" id="node1" href="$classStock.html" title="The Abstract class of the template design pattern." alt="" coords="5,5,64,32"/>
+<area shape="rect" id="node2" href="$classIngredient.html" title="is the concrete class of the Template method design pattern" alt="" coords="112,5,200,32"/>
 </map>

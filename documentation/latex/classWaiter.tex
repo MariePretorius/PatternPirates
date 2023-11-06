@@ -1,10 +1,42 @@
 \hypertarget{classWaiter}{}\doxysection{Waiter Class Reference}
 \label{classWaiter}\index{Waiter@{Waiter}}
+
+
+Acts as the \mbox{\hyperlink{classObserver}{Observer}} and Iterator for the \mbox{\hyperlink{classObserver}{Observer}} and Iterator patterns.  
+
+
+
+
+{\ttfamily \#include $<$Waiter.\+h$>$}
+
+
+
+Inheritance diagram for Waiter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=141pt]{classWaiter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Waiter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=141pt]{classWaiter__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classWaiter_aa859a5fc6d7b6e7bc70c5cb84cb35608}{Waiter}} (\mbox{\hyperlink{classFinance}{Finance}} $\ast$finance, \mbox{\hyperlink{classRatings}{Ratings}} $\ast$ratings)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWaiter}{Waiter}} Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWaiter_aac49ea80a55993df1009899cb9c7e58e}\label{classWaiter_aac49ea80a55993df1009899cb9c7e58e}} 
+void \mbox{\hyperlink{classWaiter_aac49ea80a55993df1009899cb9c7e58e}{update}} () override
+\begin{DoxyCompactList}\small\item\em Update function for the \mbox{\hyperlink{classObserver}{Observer}}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classWaiter_ab673aeb1b29f34188ffd764fab457125}\label{classWaiter_ab673aeb1b29f34188ffd764fab457125}} 
 void {\bfseries move\+To\+Next} ()
 \item 
@@ -37,6 +69,9 @@ void \mbox{\hyperlink{classWaiter_a6049aaf8fc1a0be08c06fb1560401fbd}{pass\+Order
 void \mbox{\hyperlink{classWaiter_acccd38aefffb323cca7bc83d7deaf336}{do\+Rounds}} ()
 \begin{DoxyCompactList}\small\item\em Goes through this waiter\textquotesingle{}s list of tables and checks if all customers a requesting bill, and then has them pay the bill. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Acts as the \mbox{\hyperlink{classObserver}{Observer}} and Iterator for the \mbox{\hyperlink{classObserver}{Observer}} and Iterator patterns. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classWaiter_aa859a5fc6d7b6e7bc70c5cb84cb35608}\label{classWaiter_aa859a5fc6d7b6e7bc70c5cb84cb35608}} 
@@ -130,5 +165,5 @@ a pointer to a vector of table pointers
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/\+Floor/Waiter.\+h\item 
+src/\+Floor/\mbox{\hyperlink{Waiter_8h}{Waiter.\+h}}\item 
 src/\+Floor/Waiter.\+cpp\end{DoxyCompactItemize}

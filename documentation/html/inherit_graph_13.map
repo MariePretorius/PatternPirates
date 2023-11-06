@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classOrderCommand.html" title="This class is abstract. This class is the Command participant in the Command design pattern." alt="" coords="5,5,131,32"/>
-<area shape="rect" id="node2" href="$classFoodOrder.html" title="This class is the ConcreteCommand participant in the Command design pattern. It Inherits from the Ord..." alt="" coords="179,5,268,32"/>
+<area shape="rect" id="node1" href="$classObserverSubject.html" title="The class from which an observable class will inherit." alt="" coords="5,5,135,32"/>
+<area shape="rect" id="node2" href="$classCustomer.html" title="This class represents the customers who enter the restaurant." alt="" coords="183,5,268,32"/>
 </map>

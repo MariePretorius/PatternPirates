@@ -16,5 +16,6 @@ var searchData=
   ['addwaiter_13',['addWaiter',['../classFloor.html#a723a74c8f710bc0edf3caf5beb0ef790',1,'Floor']]],
   ['assigncustomer_14',['assignCustomer',['../classHost.html#abb12e142b04818622bb273a9c4dae10f',1,'Host']]],
   ['assigncustomers_15',['assignCustomers',['../classTable.html#a42268c7ea88196acd40d3d2969f645ed',1,'Table']]],
-  ['assigndishes_16',['assignDishes',['../classTable.html#ad95e82a505351f2abe7a1ccd67bf32f6',1,'Table']]]
+  ['assigndishes_16',['assignDishes',['../classTable.html#ad95e82a505351f2abe7a1ccd67bf32f6',1,'Table']]],
+  ['attach_17',['attach',['../classObserverSubject.html#ad22f445f77738ab7ae8ac6f1f83aeabe',1,'ObserverSubject']]]
 ];

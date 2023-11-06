@@ -99,7 +99,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:aa1a9241f0a322ef6daa51ce7ea1ae67a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the table is currently occupied.  <a href="classTable.html#aa1a9241f0a322ef6daa51ce7ea1ae67a">More...</a><br /></td></tr>
 <tr class="separator:aa1a9241f0a322ef6daa51ce7ea1ae67a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad95e82a505351f2abe7a1ccd67bf32f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTable.html#ad95e82a505351f2abe7a1ccd67bf32f6">assignDishes</a> (vector&lt; <a class="el" href="classDish.html">Dish</a> * &gt; *dishes)</td></tr>
-<tr class="memdesc:ad95e82a505351f2abe7a1ccd67bf32f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign a vector of <a class="el" href="classDish.html">Dish</a> pointers to the <a class="el" href="classRestaurant.html" title="Restaurant is a facade and a singleton. It is responsible for the game loop.">Restaurant</a>. This function sets the dishes on the <a class="el" href="classTable.html" title="This class represents the tables customer will be seated at.">Table</a> by assigning a vector of <a class="el" href="classDish.html">Dish</a> pointers.  <a href="classTable.html#ad95e82a505351f2abe7a1ccd67bf32f6">More...</a><br /></td></tr>
+<tr class="memdesc:ad95e82a505351f2abe7a1ccd67bf32f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign a vector of <a class="el" href="classDish.html" title="Represents a completed order and a finished dish that is given to customers by a waiter.">Dish</a> pointers to the <a class="el" href="classRestaurant.html" title="Restaurant is a facade and a singleton. It is responsible for the game loop.">Restaurant</a>. This function sets the dishes on the <a class="el" href="classTable.html" title="This class represents the tables customer will be seated at.">Table</a> by assigning a vector of <a class="el" href="classDish.html" title="Represents a completed order and a finished dish that is given to customers by a waiter.">Dish</a> pointers.  <a href="classTable.html#ad95e82a505351f2abe7a1ccd67bf32f6">More...</a><br /></td></tr>
 <tr class="separator:ad95e82a505351f2abe7a1ccd67bf32f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8bd90129e5f014262c39c681ecee6a9"><td class="memItemLeft" align="right" valign="top"><a id="ac8bd90129e5f014262c39c681ecee6a9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTable.html#ac8bd90129e5f014262c39c681ecee6a9">checkDishes</a> ()</td></tr>
@@ -108,6 +108,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a91251021369b4920f0460b7f23f695ba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTable.html#a91251021369b4920f0460b7f23f695ba">doneEating</a> ()</td></tr>
 <tr class="memdesc:a91251021369b4920f0460b7f23f695ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if all customers have finished eating. This function checks the state of all customers to determine if they have finished eating.  <a href="classTable.html#a91251021369b4920f0460b7f23f695ba">More...</a><br /></td></tr>
 <tr class="separator:a91251021369b4920f0460b7f23f695ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a263a87a6c7b10520a3864d84299be3f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTable.html#a263a87a6c7b10520a3864d84299be3f3">setWaiter</a> (<a class="el" href="classObserver.html">Observer</a> *waiter)</td></tr>
+<tr class="memdesc:a263a87a6c7b10520a3864d84299be3f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets this table's waiter This function will set the table's waiter member variable to the one passed in the parameter.  <a href="classTable.html#a263a87a6c7b10520a3864d84299be3f3">More...</a><br /></td></tr>
+<tr class="separator:a263a87a6c7b10520a3864d84299be3f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class represents the tables customer will be seated at. </p>
@@ -192,10 +195,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
       </table>
 </div><div class="memdoc">
 
-<p>Assign a vector of <a class="el" href="classDish.html">Dish</a> pointers to the <a class="el" href="classRestaurant.html" title="Restaurant is a facade and a singleton. It is responsible for the game loop.">Restaurant</a>. This function sets the dishes on the <a class="el" href="classTable.html" title="This class represents the tables customer will be seated at.">Table</a> by assigning a vector of <a class="el" href="classDish.html">Dish</a> pointers. </p>
+<p>Assign a vector of <a class="el" href="classDish.html" title="Represents a completed order and a finished dish that is given to customers by a waiter.">Dish</a> pointers to the <a class="el" href="classRestaurant.html" title="Restaurant is a facade and a singleton. It is responsible for the game loop.">Restaurant</a>. This function sets the dishes on the <a class="el" href="classTable.html" title="This class represents the tables customer will be seated at.">Table</a> by assigning a vector of <a class="el" href="classDish.html" title="Represents a completed order and a finished dish that is given to customers by a waiter.">Dish</a> pointers. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dishes</td><td>A vector of <a class="el" href="classDish.html">Dish</a> pointers to be assigned to the <a class="el" href="classTable.html" title="This class represents the tables customer will be seated at.">Table</a>. </td></tr>
+    <tr><td class="paramname">dishes</td><td>A vector of <a class="el" href="classDish.html" title="Represents a completed order and a finished dish that is given to customers by a waiter.">Dish</a> pointers to be assigned to the <a class="el" href="classTable.html" title="This class represents the tables customer will be seated at.">Table</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -299,6 +302,32 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Check if the table is currently occupied. </p>
 <dl class="section return"><dt>Returns</dt><dd>True if the table is occupied, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a263a87a6c7b10520a3864d84299be3f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a263a87a6c7b10520a3864d84299be3f3">&#9670;&nbsp;</a></span>setWaiter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Table::setWaiter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classObserver.html">Observer</a> *&#160;</td>
+          <td class="paramname"><em>waiter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets this table's waiter This function will set the table's waiter member variable to the one passed in the parameter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">waiter</td><td>A pointer to a <a class="el" href="classWaiter.html" title="Acts as the Observer and Iterator for the Observer and Iterator patterns.">Waiter</a> object </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
