@@ -1,0 +1,73 @@
+\hypertarget{classCustomerState}{}\doxysection{Customer\+State Class Reference}
+\label{classCustomerState}\index{CustomerState@{CustomerState}}
+
+
+This class covers all states a customer can be in.  
+
+
+
+
+{\ttfamily \#include $<$Customer\+State.\+h$>$}
+
+
+
+Inheritance diagram for Customer\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCustomerState__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classCustomerState}{Customer\+State}} $\ast$ \mbox{\hyperlink{classCustomerState_aeaaa4d13414deeffa1e9be22292128d4}{get\+Next\+State}} ()=0
+\begin{DoxyCompactList}\small\item\em Get the next state of the customer. \end{DoxyCompactList}\item 
+virtual string \mbox{\hyperlink{classCustomerState_af1077636f2f4eb94fd3103cb357a7fa5}{get\+Name}} ()=0
+\begin{DoxyCompactList}\small\item\em Get the name of the customer state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class covers all states a customer can be in. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCustomerState_af1077636f2f4eb94fd3103cb357a7fa5}\label{classCustomerState_af1077636f2f4eb94fd3103cb357a7fa5}} 
+\index{CustomerState@{CustomerState}!getName@{getName}}
+\index{getName@{getName}!CustomerState@{CustomerState}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily virtual string Customer\+State\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the name of the customer state. 
+
+\begin{DoxyReturn}{Returns}
+A string containing the name of the state. This pure virtual function must be implemented by derived classes. It returns the name of the specific customer state, helping to identify the current state of the customer. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWaitingForTable_a4a7d9ba2ae9a5b6062b382b91e777306}{Waiting\+For\+Table}}, \mbox{\hyperlink{classSeated_a0cee88ba9e5168513a239f4437153ca7}{Seated}}, \mbox{\hyperlink{classReadyToOrder_a52e8be8d2d334b36d219ed1f66809214}{Ready\+To\+Order}}, \mbox{\hyperlink{classOrderPlaced_ace13c30a77bdd79fe85717fce6bb54d6}{Order\+Placed}}, \mbox{\hyperlink{classEating_a3e0935a3462d0ee2b88508dbb0fb216e}{Eating}}, and \mbox{\hyperlink{classBillPaid_a6acc6ed7c73ec1079ad192d8e905d15c}{Bill\+Paid}}.
+
+\mbox{\Hypertarget{classCustomerState_aeaaa4d13414deeffa1e9be22292128d4}\label{classCustomerState_aeaaa4d13414deeffa1e9be22292128d4}} 
+\index{CustomerState@{CustomerState}!getNextState@{getNextState}}
+\index{getNextState@{getNextState}!CustomerState@{CustomerState}}
+\doxysubsubsection{\texorpdfstring{getNextState()}{getNextState()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classCustomerState}{Customer\+State}}$\ast$ Customer\+State\+::get\+Next\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the next state of the customer. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the next state of the customer. This pure virtual function must be implemented by derived classes. It is used to determine the state that the customer should transition to. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWaitingForTable_a9621d430b851c044812dbc1016af2be0}{Waiting\+For\+Table}}, \mbox{\hyperlink{classSeated_a6f545315ecf21ea8f53c9100dbeba960}{Seated}}, \mbox{\hyperlink{classReadyToOrder_a25d8bfb0318628efaf9431afd14b4939}{Ready\+To\+Order}}, \mbox{\hyperlink{classOrderPlaced_a23a2689836e328650471580593f09724}{Order\+Placed}}, \mbox{\hyperlink{classEating_a18867cf07d355326848d0cee6cf8c8c1}{Eating}}, and \mbox{\hyperlink{classBillPaid_aff3b5ffb65e485526ebabc35af66070b}{Bill\+Paid}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Floor/\mbox{\hyperlink{CustomerState_8h}{Customer\+State.\+h}}\end{DoxyCompactItemize}

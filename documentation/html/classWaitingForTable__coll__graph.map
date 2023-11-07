@@ -1,0 +1,4 @@
+<map id="WaitingForTable" name="WaitingForTable">
+<area shape="rect" id="node1" title="This class is a state the customer can be in when they are waiting to be seated at a table." alt="" coords="5,80,131,107"/>
+<area shape="rect" id="node2" href="$classCustomerState.html" title="This class covers all states a customer can be in." alt="" coords="9,5,127,32"/>
+</map>

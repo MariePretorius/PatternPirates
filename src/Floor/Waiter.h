@@ -1,7 +1,10 @@
 //
 // Created by Tristan on 2023/10/23.
 //
-
+/**
+ * @file Waiter.h
+ * @brief The declaration of the waiter class
+ */
 #ifndef PROJ_WAITER_H
 #define PROJ_WAITER_H
 
@@ -12,6 +15,10 @@
 #include "Bill.h"
 class FoodOrder;
 class Order;
+/**
+ * @class Waiter
+ * @brief Acts as the Observer and Iterator for the Observer and Iterator patterns
+ */
 class Waiter : public Observer
 {
 public:
@@ -33,13 +40,13 @@ public:
     void doRounds();
 
 private:
-    Ratings * ratings;
-    Finance * finance;
-    std::vector<Table *> tables;
-    std::vector<FoodOrder *> orders;
-    std::vector<Bill*> bills;
-    std::vector<Dish*> dishesInHand;
-    std::vector<CustomerState*> tableState;
+    Ratings * ratings; ///< The Ratings object
+    Finance * finance; ///< The Finance object
+    std::vector<Table *> tables; ///< A vector of all the tables this waiter manages
+    std::vector<FoodOrder *> orders; ///< A list of the orders that the waiter currently holds
+    std::vector<Bill*> bills; ///< The bills that the waiter currently has
+    std::vector<Dish*> dishesInHand; ///< The dishes that the waiter is currently delivering to tables
+    std::vector<CustomerState*> tableState; ///< A vector of the state of each table
     //Table * curr;
 };
 

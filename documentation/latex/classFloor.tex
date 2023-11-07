@@ -1,0 +1,195 @@
+\hypertarget{classFloor}{}\doxysection{Floor Class Reference}
+\label{classFloor}\index{Floor@{Floor}}
+
+
+\mbox{\hyperlink{classFloor}{Floor}} acts as the gateway to the \char`\"{}\+Service\char`\"{} portion of the restaurant.  
+
+
+
+
+{\ttfamily \#include $<$Floor.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFloor_a4842360c515577de6b4e5dd21fd88162}{Floor}} (\mbox{\hyperlink{classFinance}{Finance}} $\ast$finance)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classFloor}{Floor}} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFloor_a70496458014f9895e283d08fb57c2064}{add\+Customers}} (const vector$<$ \mbox{\hyperlink{classCustomer}{Customer}} $\ast$ $>$ \&new\+Customers)
+\begin{DoxyCompactList}\small\item\em Adds a vector of new customers to the Queue in floor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFloor_a1c56a84046561ffe6cb0e3844e67005e}\label{classFloor_a1c56a84046561ffe6cb0e3844e67005e}} 
+void \mbox{\hyperlink{classFloor_a1c56a84046561ffe6cb0e3844e67005e}{waiters\+Get\+Orders}} ()
+\begin{DoxyCompactList}\small\item\em All waiters go to their tables and fetch their orders. Once all their orders are fetched, they pass it through to floor\textquotesingle{}s all\+Orders list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHost}{Host}} $\ast$ \mbox{\hyperlink{classFloor_a4dae9276d2b1421b6c544c8ed97d0df8}{create\+Host}} ()
+\item 
+int \mbox{\hyperlink{classFloor_a3a6a1745b086101b2b9d9f4a4075c244}{get\+Capacity}} ()
+\begin{DoxyCompactList}\small\item\em Gets the maximum number of Customers that can be seated. \end{DoxyCompactList}\item 
+std\+::list$<$ \mbox{\hyperlink{classTable}{Table}} $\ast$ $>$ \mbox{\hyperlink{classFloor_aab1f94e76d21995817cecd85814a6edb}{get\+Tables}} ()
+\begin{DoxyCompactList}\small\item\em Gets the tables list in floor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFloor_ae19b85264045f6857cab11d03f58a68b}{get\+Num\+Waiters}} ()
+\begin{DoxyCompactList}\small\item\em returns the number of waiters on the floor \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFloor_a3293a1bf75d2d0b9fe22a74c1fd14459}{set\+Num\+Waiters}} ()
+\begin{DoxyCompactList}\small\item\em Sets the number of waiters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFloor_ad73aef8785ff608d31f11605230934ab}{add\+Table}} (int capacity)
+\begin{DoxyCompactList}\small\item\em Adds a table of a given capacity to the \mbox{\hyperlink{classFloor}{Floor}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFloor_a723a74c8f710bc0edf3caf5beb0ef790}\label{classFloor_a723a74c8f710bc0edf3caf5beb0ef790}} 
+void \mbox{\hyperlink{classFloor_a723a74c8f710bc0edf3caf5beb0ef790}{add\+Waiter}} ()
+\begin{DoxyCompactList}\small\item\em Adds a waiter to the \mbox{\hyperlink{classFloor}{Floor}}. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classFoodOrder}{Food\+Order}} $\ast$ $>$ $\ast$ \mbox{\hyperlink{classFloor_a93e11deb19a41ffb5a9b59bc6e6adf34}{fetch\+Orders}} ()
+\begin{DoxyCompactList}\small\item\em Returns all the orders collected by the waiters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFloor_a59385697eff4997fc9f10398940f9206}\label{classFloor_a59385697eff4997fc9f10398940f9206}} 
+void \mbox{\hyperlink{classFloor_a59385697eff4997fc9f10398940f9206}{waiters\+Pass\+Orders\+To\+Tables}} ()
+\begin{DoxyCompactList}\small\item\em Tells all waiters to pass the orders to their respective tables. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFloor_a092241dcef56f00a4d1120855fb718ce}\label{classFloor_a092241dcef56f00a4d1120855fb718ce}} 
+void {\bfseries waiters\+Do\+Rounds} ()
+\item 
+void \mbox{\hyperlink{classFloor_a7eef527522dd33b1a3566dd9a4ebbeaf}{give\+Finished\+Orders}} (vector$<$ \mbox{\hyperlink{classDish}{Dish}} $\ast$ $>$ finished\+Orders)
+\begin{DoxyCompactList}\small\item\em Takes in finished orders and places them in the finished\+Orders vector in \mbox{\hyperlink{classFloor}{Floor}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classFloor}{Floor}} acts as the gateway to the \char`\"{}\+Service\char`\"{} portion of the restaurant. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFloor_a4842360c515577de6b4e5dd21fd88162}\label{classFloor_a4842360c515577de6b4e5dd21fd88162}} 
+\index{Floor@{Floor}!Floor@{Floor}}
+\index{Floor@{Floor}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{Floor()}{Floor()}}
+{\footnotesize\ttfamily Floor\+::\+Floor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFinance}{Finance}} $\ast$}]{finance }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{classFloor}{Floor}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em finance} & a pointer to a finance object \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFloor_a70496458014f9895e283d08fb57c2064}\label{classFloor_a70496458014f9895e283d08fb57c2064}} 
+\index{Floor@{Floor}!addCustomers@{addCustomers}}
+\index{addCustomers@{addCustomers}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{addCustomers()}{addCustomers()}}
+{\footnotesize\ttfamily void Floor\+::add\+Customers (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classCustomer}{Customer}} $\ast$ $>$ \&}]{new\+Customers }\end{DoxyParamCaption})}
+
+
+
+Adds a vector of new customers to the Queue in floor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Customers} & vector of customer pointers \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFloor_ad73aef8785ff608d31f11605230934ab}\label{classFloor_ad73aef8785ff608d31f11605230934ab}} 
+\index{Floor@{Floor}!addTable@{addTable}}
+\index{addTable@{addTable}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{addTable()}{addTable()}}
+{\footnotesize\ttfamily void Floor\+::add\+Table (\begin{DoxyParamCaption}\item[{int}]{capacity }\end{DoxyParamCaption})}
+
+
+
+Adds a table of a given capacity to the \mbox{\hyperlink{classFloor}{Floor}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & Number of seats at this specific table \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFloor_a4dae9276d2b1421b6c544c8ed97d0df8}\label{classFloor_a4dae9276d2b1421b6c544c8ed97d0df8}} 
+\index{Floor@{Floor}!createHost@{createHost}}
+\index{createHost@{createHost}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{createHost()}{createHost()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHost}{Host}} $\ast$ Floor\+::create\+Host (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Instantiates a new host for the \mbox{\hyperlink{classFloor}{Floor}} \begin{DoxyReturn}{Returns}
+A host object pointer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFloor_a93e11deb19a41ffb5a9b59bc6e6adf34}\label{classFloor_a93e11deb19a41ffb5a9b59bc6e6adf34}} 
+\index{Floor@{Floor}!fetchOrders@{fetchOrders}}
+\index{fetchOrders@{fetchOrders}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{fetchOrders()}{fetchOrders()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classFoodOrder}{Food\+Order}} $\ast$ $>$ $\ast$ Floor\+::fetch\+Orders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns all the orders collected by the waiters. 
+
+\begin{DoxyReturn}{Returns}
+vector of \mbox{\hyperlink{classFoodOrder}{Food\+Order}} pointers 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFloor_a3a6a1745b086101b2b9d9f4a4075c244}\label{classFloor_a3a6a1745b086101b2b9d9f4a4075c244}} 
+\index{Floor@{Floor}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily int Floor\+::get\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the maximum number of Customers that can be seated. 
+
+\begin{DoxyReturn}{Returns}
+Max Capacity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFloor_ae19b85264045f6857cab11d03f58a68b}\label{classFloor_ae19b85264045f6857cab11d03f58a68b}} 
+\index{Floor@{Floor}!getNumWaiters@{getNumWaiters}}
+\index{getNumWaiters@{getNumWaiters}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{getNumWaiters()}{getNumWaiters()}}
+{\footnotesize\ttfamily int Floor\+::get\+Num\+Waiters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns the number of waiters on the floor 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFloor_aab1f94e76d21995817cecd85814a6edb}\label{classFloor_aab1f94e76d21995817cecd85814a6edb}} 
+\index{Floor@{Floor}!getTables@{getTables}}
+\index{getTables@{getTables}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{getTables()}{getTables()}}
+{\footnotesize\ttfamily std\+::list$<$ \mbox{\hyperlink{classTable}{Table}} $\ast$ $>$ Floor\+::get\+Tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the tables list in floor. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classTable}{Table}} list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFloor_a7eef527522dd33b1a3566dd9a4ebbeaf}\label{classFloor_a7eef527522dd33b1a3566dd9a4ebbeaf}} 
+\index{Floor@{Floor}!giveFinishedOrders@{giveFinishedOrders}}
+\index{giveFinishedOrders@{giveFinishedOrders}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{giveFinishedOrders()}{giveFinishedOrders()}}
+{\footnotesize\ttfamily void Floor\+::give\+Finished\+Orders (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classDish}{Dish}} $\ast$ $>$}]{finished\+Orders }\end{DoxyParamCaption})}
+
+
+
+Takes in finished orders and places them in the finished\+Orders vector in \mbox{\hyperlink{classFloor}{Floor}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em finished\+Orders} & A vector of \mbox{\hyperlink{classDish}{Dish}} pointers \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFloor_a3293a1bf75d2d0b9fe22a74c1fd14459}\label{classFloor_a3293a1bf75d2d0b9fe22a74c1fd14459}} 
+\index{Floor@{Floor}!setNumWaiters@{setNumWaiters}}
+\index{setNumWaiters@{setNumWaiters}!Floor@{Floor}}
+\doxysubsubsection{\texorpdfstring{setNumWaiters()}{setNumWaiters()}}
+{\footnotesize\ttfamily int Floor\+::set\+Num\+Waiters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets the number of waiters. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Floor/\mbox{\hyperlink{Floor_8h}{Floor.\+h}}\item 
+src/\+Floor/Floor.\+cpp\end{DoxyCompactItemize}

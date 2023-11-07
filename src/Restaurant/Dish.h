@@ -12,6 +12,10 @@ class Bill;
 //#include "../Floor/Bill.h"
 using namespace std;
 
+/**
+ * @class Dish
+ * @brief Represents a completed order and a finished dish that is given to customers by a waiter.
+ */
 class Dish {
 
 public: 		

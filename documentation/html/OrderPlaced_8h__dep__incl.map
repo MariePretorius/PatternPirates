@@ -1,0 +1,6 @@
+<map id="src/Floor/OrderPlaced.h" name="src/Floor/OrderPlaced.h">
+<area shape="rect" id="node1" title="Declaration of the OrderPlaced state." alt="" coords="17,5,191,32"/>
+<area shape="rect" id="node2" href="$ReadyToOrder_8h.html" title="Declaration of the ReadyToOrder state." alt="" coords="12,80,196,107"/>
+<area shape="rect" id="node3" href="$Seated_8h.html" title="Declaration of the Seated state." alt="" coords="35,155,173,181"/>
+<area shape="rect" id="node4" href="$WaitingForTable_8h.html" title="Declaration of the WaitingForTable state." alt="" coords="5,229,203,256"/>
+</map>

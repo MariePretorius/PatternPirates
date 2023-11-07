@@ -1,0 +1,12 @@
+<map id="src/Floor/WaitingForTable.h" name="src/Floor/WaitingForTable.h">
+<area shape="rect" id="node1" title="Declaration of the WaitingForTable state." alt="" coords="5,5,203,32"/>
+<area shape="rect" id="node2" href="$CustomerState_8h.html" title="Declaration of the CustomerState class." alt="" coords="152,528,283,555"/>
+<area shape="rect" id="node5" href="$Seated_8h.html" title="Declaration of the Seated state." alt="" coords="103,80,182,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="141,603,200,629"/>
+<area shape="rect" id="node4" title=" " alt="" coords="224,603,304,629"/>
+<area shape="rect" id="node6" href="$ReadyToOrder_8h.html" title="Declaration of the ReadyToOrder state." alt="" coords="154,155,278,181"/>
+<area shape="rect" id="node7" href="$OrderPlaced_8h.html" title="Declaration of the OrderPlaced state." alt="" coords="205,229,318,256"/>
+<area shape="rect" id="node8" href="$Eating_8h.html" title="Declaration of the Eating state." alt="" coords="255,304,329,331"/>
+<area shape="rect" id="node9" href="$RequestingBill_8h.html" title="Declaration of the RequestingBill state." alt="" coords="305,379,433,405"/>
+<area shape="rect" id="node10" href="$BillPaid_8h.html" title="Declaration of the BillPaid state." alt="" coords="356,453,439,480"/>
+</map>

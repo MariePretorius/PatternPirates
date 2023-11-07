@@ -1,0 +1,8 @@
+<map id="src/Kitchen/Kitchen.h" name="src/Kitchen/Kitchen.h">
+<area shape="rect" id="node1" title="Definition of the Kitchen class." alt="" coords="129,5,287,32"/>
+<area shape="rect" id="node2" href="$Chef_8h.html" title="Declaration of the Chef class." alt="" coords="41,80,180,107"/>
+<area shape="rect" id="node6" href="$Restaurant_8h.html" title="Declaration of Restaurant class." alt="" coords="204,80,407,107"/>
+<area shape="rect" id="node3" href="$CookingChef_8h.html" title="Declaration of the CookingChef class." alt="" coords="5,229,197,256"/>
+<area shape="rect" id="node4" href="$PrepChef_8h.html" title="This file contains the implementation of the PrepChef class." alt="" coords="84,304,252,331"/>
+<area shape="rect" id="node5" href="$HeadChef_8h.html" title="Declaration of the HeadChef class." alt="" coords="24,155,197,181"/>
+</map>

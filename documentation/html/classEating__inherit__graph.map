@@ -1,0 +1,4 @@
+<map id="Eating" name="Eating">
+<area shape="rect" id="node1" title="This class is a state a customer is in while they are eating." alt="" coords="33,80,96,107"/>
+<area shape="rect" id="node2" href="$classCustomerState.html" title="This class covers all states a customer can be in." alt="" coords="5,5,124,32"/>
+</map>
