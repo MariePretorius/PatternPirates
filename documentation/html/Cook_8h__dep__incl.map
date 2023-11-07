@@ -1,0 +1,7 @@
+<map id="src/Kitchen/Cook.h" name="src/Kitchen/Cook.h">
+<area shape="rect" id="node1" title="Declaration of the Cook class." alt="" coords="30,5,173,32"/>
+<area shape="rect" id="node2" href="$CookingChef_8h.html" title="Declaration of the CookingChef class." alt="" coords="5,155,197,181"/>
+<area shape="rect" id="node4" href="$Fryer_8h.html" title="Declaration of the Fryer class used as a ConcreteStrategy." alt="" coords="30,80,173,107"/>
+<area shape="rect" id="node5" href="$Griller_8h.html" title="Declaration of the Griller class used as a ConcreteStrategy." alt="" coords="197,80,347,107"/>
+<area shape="rect" id="node3" href="$PrepChef_8h.html" title="This file contains the implementation of the PrepChef class." alt="" coords="17,229,185,256"/>
+</map>

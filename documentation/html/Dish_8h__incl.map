@@ -1,0 +1,14 @@
+<map id="src/Restaurant/Dish.h" name="src/Restaurant/Dish.h">
+<area shape="rect" id="node1" title="Definition of the Dish class." alt="" coords="383,5,545,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="861,229,904,256"/>
+<area shape="rect" id="node3" href="$Ingredient_8h_source.html" title=" " alt="" coords="5,155,171,181"/>
+<area shape="rect" id="node6" href="$Customer_8h.html" title="Declaration of the Customer class." alt="" coords="391,80,537,107"/>
+<area shape="rect" id="node4" href="$Stock_8h.html" title="The declaration of the stock class." alt="" coords="150,229,221,256"/>
+<area shape="rect" id="node5" title=" " alt="" coords="229,304,288,331"/>
+<area shape="rect" id="node7" href="$CustomerState_8h.html" title="Declaration of the CustomerState class." alt="" coords="296,155,427,181"/>
+<area shape="rect" id="node8" title=" " alt="" coords="399,229,479,256"/>
+<area shape="rect" id="node9" href="$Ratings_8h.html" title="Declaration of the Ratings class." alt="" coords="501,155,584,181"/>
+<area shape="rect" id="node10" title=" " alt="" coords="608,155,680,181"/>
+<area shape="rect" id="node11" href="$ObserverSubject_8h.html" title="provides an interface for the Waiters to observe their customers" alt="" coords="704,155,845,181"/>
+<area shape="rect" id="node12" href="$Observer_8h.html" title="Declaration of observer class." alt="" coords="729,229,821,256"/>
+</map>

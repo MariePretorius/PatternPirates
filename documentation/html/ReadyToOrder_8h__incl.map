@@ -1,0 +1,10 @@
+<map id="src/Floor/ReadyToOrder.h" name="src/Floor/ReadyToOrder.h">
+<area shape="rect" id="node1" title="Declaration of the ReadyToOrder state." alt="" coords="5,5,189,32"/>
+<area shape="rect" id="node2" href="$CustomerState_8h.html" title="Declaration of the CustomerState class." alt="" coords="87,379,217,405"/>
+<area shape="rect" id="node5" href="$OrderPlaced_8h.html" title="Declaration of the OrderPlaced state." alt="" coords="89,80,202,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="76,453,135,480"/>
+<area shape="rect" id="node4" title=" " alt="" coords="159,453,239,480"/>
+<area shape="rect" id="node6" href="$Eating_8h.html" title="Declaration of the Eating state." alt="" coords="139,155,213,181"/>
+<area shape="rect" id="node7" href="$RequestingBill_8h.html" title="Declaration of the RequestingBill state." alt="" coords="189,229,317,256"/>
+<area shape="rect" id="node8" href="$BillPaid_8h.html" title="Declaration of the BillPaid state." alt="" coords="240,304,323,331"/>
+</map>

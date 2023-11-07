@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classObserver.html" title=" " alt="" coords="5,5,87,32"/>
+<area shape="rect" id="node2" href="$classWaiter.html" title="Acts as the Observer and Iterator for the Observer and Iterator patterns." alt="" coords="135,5,199,32"/>
+</map>

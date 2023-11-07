@@ -1,0 +1,259 @@
+\hypertarget{classKitchen}{}\doxysection{Kitchen Class Reference}
+\label{classKitchen}\index{Kitchen@{Kitchen}}
+
+
+Represents the kitchen in the restaurant.  
+
+
+
+
+{\ttfamily \#include $<$Kitchen.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKitchen_ae036e99d55b41436d83c7b2f85eb8a97}{Kitchen}} (\mbox{\hyperlink{classFinance}{Finance}} $\ast$finance)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classKitchen}{Kitchen}} class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classKitchen_a45a8b292b8a8b83e264c3fa521d3a4dd}\label{classKitchen_a45a8b292b8a8b83e264c3fa521d3a4dd}} 
+\mbox{\hyperlink{classKitchen_a45a8b292b8a8b83e264c3fa521d3a4dd}{$\sim$\+Kitchen}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{classKitchen}{Kitchen}} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKitchen_a8b951fe1b71b8346ea4f3338a01c8889}{add\+New\+Order}} (\mbox{\hyperlink{classFoodOrder}{Food\+Order}} $\ast$new\+Order)
+\begin{DoxyCompactList}\small\item\em Add a new food order to the kitchen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classKitchen_a2beb67f19655ae58100c6b7deae1c973}\label{classKitchen_a2beb67f19655ae58100c6b7deae1c973}} 
+void {\bfseries notify\+Waiter} ()
+\item 
+void \mbox{\hyperlink{classKitchen_ac1ffcf49e3172c32382d61b91ae92c3b}{add\+Dish}} (\mbox{\hyperlink{classDish}{Dish}} $\ast$dish)
+\begin{DoxyCompactList}\small\item\em Add a completed dish to the kitchen. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classDish}{Dish}} $\ast$ $>$ \mbox{\hyperlink{classKitchen_ac160111f9445962d547aa791436d5e09}{take\+Dishes}} ()
+\begin{DoxyCompactList}\small\item\em Take the completed dishes from the kitchen. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classFoodOrder}{Food\+Order}} $\ast$ \mbox{\hyperlink{classKitchen_a67cc83d35b5c2f75d34d0514ee1aea80}{get\+Next\+Order}} ()
+\begin{DoxyCompactList}\small\item\em Get the next food order from the kitchen. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classShelf}{Shelf}} $\ast$ \mbox{\hyperlink{classKitchen_a7cee7d608c789d39357386ad800053a7}{get\+Shelf}} ()
+\begin{DoxyCompactList}\small\item\em Get the kitchen\textquotesingle{}s shelf. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKitchen_abbbf411fcd59f551b0eb53b5e9cfb9ac}{add\+Cooked\+Ingredient}} (\mbox{\hyperlink{classIngredient}{Ingredient}} $\ast$ingredient)
+\begin{DoxyCompactList}\small\item\em Add a cooked ingredient to the kitchen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKitchen_a64f86ce981d5cea5b0307fde8ee2ccb4}{add\+Uncooked\+Ingredient}} (\mbox{\hyperlink{classIngredient}{Ingredient}} $\ast$ingredient)
+\begin{DoxyCompactList}\small\item\em Add an uncooked ingredient to the kitchen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKitchen_ab969f9305a7ebe47f37712ceaf20ff79}{set\+Current\+Dish}} (double cond)
+\item 
+\mbox{\Hypertarget{classKitchen_ac3d422d857b0d99f7151a54583b2b940}\label{classKitchen_ac3d422d857b0d99f7151a54583b2b940}} 
+void \mbox{\hyperlink{classKitchen_ac3d422d857b0d99f7151a54583b2b940}{buy\+Stock}} ()
+\begin{DoxyCompactList}\small\item\em Buy stock items for the kitchen\textquotesingle{}s shelf. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIngredient}{Ingredient}} $\ast$ \mbox{\hyperlink{classKitchen_a86d3e58b08599b76858a1e0454abcf84}{get\+Uncooked\+Ingredient}} ()
+\begin{DoxyCompactList}\small\item\em Get an uncooked ingredient from the kitchen. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIngredient}{Ingredient}} $\ast$ \mbox{\hyperlink{classKitchen_aafee671e0e333aeac3eec971fc051a35}{get\+Cooked\+Ingredient}} ()
+\begin{DoxyCompactList}\small\item\em Get a cooked ingredient from the kitchen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classKitchen_aa9b2508c822293e122b1b28c6e8ac3a0}{get\+Ingredient\+Amt}} ()
+\begin{DoxyCompactList}\small\item\em Get the number of uncooked ingredients in the kitchen. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDish}{Dish}} $\ast$ \mbox{\hyperlink{classKitchen_afe22dadc217121d55823499a9408f3ea}{get\+Current\+Dish}} ()
+\begin{DoxyCompactList}\small\item\em Get the current dish being prepared in the kitchen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classKitchen_a3a0a1ffa39ad47f803c676fc71695cec}\label{classKitchen_a3a0a1ffa39ad47f803c676fc71695cec}} 
+void \mbox{\hyperlink{classKitchen_a3a0a1ffa39ad47f803c676fc71695cec}{start\+Kitchen\+Process}} ()
+\begin{DoxyCompactList}\small\item\em Start the kitchen process, handled by the \mbox{\hyperlink{classPrepChef}{Prep\+Chef}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classFinance}{Finance}} $\ast$ \mbox{\hyperlink{classKitchen_ac5a3708df4f5574d45570fd2391c7951}{get\+Finance}} ()
+\begin{DoxyCompactList}\small\item\em Get the finance information of the kitchen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the kitchen in the restaurant. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKitchen_ae036e99d55b41436d83c7b2f85eb8a97}\label{classKitchen_ae036e99d55b41436d83c7b2f85eb8a97}} 
+\index{Kitchen@{Kitchen}!Kitchen@{Kitchen}}
+\index{Kitchen@{Kitchen}!Kitchen@{Kitchen}}
+\doxysubsubsection{\texorpdfstring{Kitchen()}{Kitchen()}}
+{\footnotesize\ttfamily Kitchen\+::\+Kitchen (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFinance}{Finance}} $\ast$}]{finance }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{classKitchen}{Kitchen}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em finance} & A pointer to the \mbox{\hyperlink{classFinance}{Finance}} object. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKitchen_abbbf411fcd59f551b0eb53b5e9cfb9ac}\label{classKitchen_abbbf411fcd59f551b0eb53b5e9cfb9ac}} 
+\index{Kitchen@{Kitchen}!addCookedIngredient@{addCookedIngredient}}
+\index{addCookedIngredient@{addCookedIngredient}!Kitchen@{Kitchen}}
+\doxysubsubsection{\texorpdfstring{addCookedIngredient()}{addCookedIngredient()}}
+{\footnotesize\ttfamily void Kitchen\+::add\+Cooked\+Ingredient (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIngredient}{Ingredient}} $\ast$}]{ingredient }\end{DoxyParamCaption})}
+
+
+
+Add a cooked ingredient to the kitchen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ingredient} & A pointer to the \mbox{\hyperlink{classIngredient}{Ingredient}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKitchen_ac1ffcf49e3172c32382d61b91ae92c3b}\label{classKitchen_ac1ffcf49e3172c32382d61b91ae92c3b}} 
+\index{Kitchen@{Kitchen}!addDish@{addDish}}
+\index{addDish@{addDish}!Kitchen@{Kitchen}}
+\doxysubsubsection{\texorpdfstring{addDish()}{addDish()}}
+{\footnotesize\ttfamily void Kitchen\+::add\+Dish (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDish}{Dish}} $\ast$}]{dish }\end{DoxyParamCaption})}
+
+
+
+Add a completed dish to the kitchen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dish} & A pointer to the completed \mbox{\hyperlink{classDish}{Dish}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKitchen_a8b951fe1b71b8346ea4f3338a01c8889}\label{classKitchen_a8b951fe1b71b8346ea4f3338a01c8889}} 
+\index{Kitchen@{Kitchen}!addNewOrder@{addNewOrder}}
+\index{addNewOrder@{addNewOrder}!Kitchen@{Kitchen}}
+\doxysubsubsection{\texorpdfstring{addNewOrder()}{addNewOrder()}}
+{\footnotesize\ttfamily void Kitchen\+::add\+New\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFoodOrder}{Food\+Order}} $\ast$}]{new\+Order }\end{DoxyParamCaption})}
+
+
+
+Add a new food order to the kitchen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Order} & A pointer to the new \mbox{\hyperlink{classFoodOrder}{Food\+Order}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKitchen_a64f86ce981d5cea5b0307fde8ee2ccb4}\label{classKitchen_a64f86ce981d5cea5b0307fde8ee2ccb4}} 
+\index{Kitchen@{Kitchen}!addUncookedIngredient@{addUncookedIngredient}}
+\index{addUncookedIngredient@{addUncookedIngredient}!Kitchen@{Kitchen}}
+\doxysubsubsection{\texorpdfstring{addUncookedIngredient()}{addUncookedIngredient()}}
+{\footnotesize\ttfamily void Kitchen\+::add\+Uncooked\+Ingredient (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIngredient}{Ingredient}} $\ast$}]{ingredient }\end{DoxyParamCaption})}
+
+
+
+Add an uncooked ingredient to the kitchen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ingredient} & A pointer to the \mbox{\hyperlink{classIngredient}{Ingredient}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKitchen_aafee671e0e333aeac3eec971fc051a35}\label{classKitchen_aafee671e0e333aeac3eec971fc051a35}} 
+\index{Kitchen@{Kitchen}!getCookedIngredient@{getCookedIngredient}}
+\index{getCookedIngredient@{getCookedIngredient}!Kitchen@{Kitchen}}
+\doxysubsubsection{\texorpdfstring{getCookedIngredient()}{getCookedIngredient()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIngredient}{Ingredient}} $\ast$ Kitchen\+::get\+Cooked\+Ingredient (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get a cooked ingredient from the kitchen. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the cooked \mbox{\hyperlink{classIngredient}{Ingredient}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKitchen_afe22dadc217121d55823499a9408f3ea}\label{classKitchen_afe22dadc217121d55823499a9408f3ea}} 
+\index{Kitchen@{Kitchen}!getCurrentDish@{getCurrentDish}}
+\index{getCurrentDish@{getCurrentDish}!Kitchen@{Kitchen}}
+\doxysubsubsection{\texorpdfstring{getCurrentDish()}{getCurrentDish()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDish}{Dish}} $\ast$ Kitchen\+::get\+Current\+Dish (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the current dish being prepared in the kitchen. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the current \mbox{\hyperlink{classDish}{Dish}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKitchen_ac5a3708df4f5574d45570fd2391c7951}\label{classKitchen_ac5a3708df4f5574d45570fd2391c7951}} 
+\index{Kitchen@{Kitchen}!getFinance@{getFinance}}
+\index{getFinance@{getFinance}!Kitchen@{Kitchen}}
+\doxysubsubsection{\texorpdfstring{getFinance()}{getFinance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classFinance}{Finance}} $\ast$ Kitchen\+::get\+Finance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the finance information of the kitchen. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the \mbox{\hyperlink{classFinance}{Finance}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKitchen_aa9b2508c822293e122b1b28c6e8ac3a0}\label{classKitchen_aa9b2508c822293e122b1b28c6e8ac3a0}} 
+\index{Kitchen@{Kitchen}!getIngredientAmt@{getIngredientAmt}}
+\index{getIngredientAmt@{getIngredientAmt}!Kitchen@{Kitchen}}
+\doxysubsubsection{\texorpdfstring{getIngredientAmt()}{getIngredientAmt()}}
+{\footnotesize\ttfamily int Kitchen\+::get\+Ingredient\+Amt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the number of uncooked ingredients in the kitchen. 
+
+\begin{DoxyReturn}{Returns}
+The number of uncooked ingredients. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKitchen_a67cc83d35b5c2f75d34d0514ee1aea80}\label{classKitchen_a67cc83d35b5c2f75d34d0514ee1aea80}} 
+\index{Kitchen@{Kitchen}!getNextOrder@{getNextOrder}}
+\index{getNextOrder@{getNextOrder}!Kitchen@{Kitchen}}
+\doxysubsubsection{\texorpdfstring{getNextOrder()}{getNextOrder()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classFoodOrder}{Food\+Order}} $\ast$ Kitchen\+::get\+Next\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the next food order from the kitchen. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the next \mbox{\hyperlink{classFoodOrder}{Food\+Order}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKitchen_a7cee7d608c789d39357386ad800053a7}\label{classKitchen_a7cee7d608c789d39357386ad800053a7}} 
+\index{Kitchen@{Kitchen}!getShelf@{getShelf}}
+\index{getShelf@{getShelf}!Kitchen@{Kitchen}}
+\doxysubsubsection{\texorpdfstring{getShelf()}{getShelf()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classShelf}{Shelf}} $\ast$ Kitchen\+::get\+Shelf (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the kitchen\textquotesingle{}s shelf. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the \mbox{\hyperlink{classShelf}{Shelf}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKitchen_a86d3e58b08599b76858a1e0454abcf84}\label{classKitchen_a86d3e58b08599b76858a1e0454abcf84}} 
+\index{Kitchen@{Kitchen}!getUncookedIngredient@{getUncookedIngredient}}
+\index{getUncookedIngredient@{getUncookedIngredient}!Kitchen@{Kitchen}}
+\doxysubsubsection{\texorpdfstring{getUncookedIngredient()}{getUncookedIngredient()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIngredient}{Ingredient}} $\ast$ Kitchen\+::get\+Uncooked\+Ingredient (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get an uncooked ingredient from the kitchen. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the uncooked \mbox{\hyperlink{classIngredient}{Ingredient}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKitchen_ab969f9305a7ebe47f37712ceaf20ff79}\label{classKitchen_ab969f9305a7ebe47f37712ceaf20ff79}} 
+\index{Kitchen@{Kitchen}!setCurrentDish@{setCurrentDish}}
+\index{setCurrentDish@{setCurrentDish}!Kitchen@{Kitchen}}
+\doxysubsubsection{\texorpdfstring{setCurrentDish()}{setCurrentDish()}}
+{\footnotesize\ttfamily void Kitchen\+::set\+Current\+Dish (\begin{DoxyParamCaption}\item[{double}]{cond }\end{DoxyParamCaption})}
+
+Set the current dish being prepared. 
+\begin{DoxyParams}{Parameters}
+{\em cond} & The condition of the dish. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKitchen_ac160111f9445962d547aa791436d5e09}\label{classKitchen_ac160111f9445962d547aa791436d5e09}} 
+\index{Kitchen@{Kitchen}!takeDishes@{takeDishes}}
+\index{takeDishes@{takeDishes}!Kitchen@{Kitchen}}
+\doxysubsubsection{\texorpdfstring{takeDishes()}{takeDishes()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classDish}{Dish}} $\ast$ $>$ Kitchen\+::take\+Dishes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Take the completed dishes from the kitchen. 
+
+\begin{DoxyReturn}{Returns}
+A vector of pointers to completed Dishes. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Kitchen/\mbox{\hyperlink{Kitchen_8h}{Kitchen.\+h}}\item 
+src/\+Kitchen/Kitchen.\+cpp\end{DoxyCompactItemize}

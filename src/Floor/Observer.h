@@ -1,7 +1,10 @@
 //
 // Created by Tristan on 2023/11/06.
 //
-
+/**
+ * @file Observer.h
+ * @brief Declaration of observer class
+ */
 #ifndef PROJFINAL_OBSERVER_H
 #define PROJFINAL_OBSERVER_H
 
@@ -11,8 +14,17 @@
  */
 class Observer {
 public:
+    /**
+     * @brief Constructor for the observer
+     */
     Observer();
+    /**
+     * @brief Destructor for the obaserver
+     */
     ~Observer();
+    /**
+     * @brief Update function for the Observer
+     */
     virtual void update() = 0;
 };
 

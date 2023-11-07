@@ -1,0 +1,4 @@
+<map id="Fryer" name="Fryer">
+<area shape="rect" id="node1" title="Represents a ConcreteStrategy, Fryer, used to fry ingredients." alt="" coords="5,80,60,107"/>
+<area shape="rect" id="node2" href="$classCook.html" title="Represents a Strategy that is used to define a fryer and a griller strategy." alt="" coords="5,5,60,32"/>
+</map>
